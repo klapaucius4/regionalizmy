@@ -52,7 +52,6 @@ function my_login_logo_one() {
         background-image: url('<?= get_template_directory_uri(); ?>/img/logo.png');
         width: 320px;
         height: 36px;
-        margin-bottom: 30px;
         background-size: contain;
     } 
     </style>
