@@ -42,5 +42,17 @@ function wp_admin_remove_menu_pages() {
     remove_menu_page( 'edit.php' );                   //Posts
 
 }
-
 add_action( 'admin_init', 'wp_admin_remove_menu_pages' );
+
+
+function my_login_logo_one() { 
+    ?>
+    <style type="text/css"> 
+    body.login div#login h1 a {
+        background-image: url('<?= get_template_directory_uri(); ?>/img/logo.png');
+        padding-bottom: 30px;
+    } 
+    </style>
+    <?php 
+}
+add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
