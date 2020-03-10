@@ -50,7 +50,8 @@ function my_login_logo_one() {
     <style type="text/css"> 
     body.login div#login h1 a {
         background-image: url('<?= get_template_directory_uri(); ?>/img/logo.png');
-        padding-bottom: 30px;
+        width: 480px;
+        height: 54px;
     } 
     </style>
     <?php 
