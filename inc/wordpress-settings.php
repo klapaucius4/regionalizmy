@@ -35,3 +35,10 @@ endif;
 add_action( 'after_setup_theme', 'regionalizmy_setup' );
 
 
+
+function wp_admin_remove_menu_pages() {
+
+    remove_menu_page( 'edit-comments.php' );          //Comments
+}
+
+add_action( 'admin_init', 'wp_admin_remove_menu_pages' );
