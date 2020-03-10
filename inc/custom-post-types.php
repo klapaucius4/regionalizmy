@@ -12,3 +12,14 @@ register_post_type('regionalizmy_phrase', array(
         'menu_icon' => 'dashicons-editor-ol',
     )
 );
+
+register_post_type('regionalizmy_county', array(
+        'labels' => array(
+            'name'          => __('Powiaty', 'regionalizmy'),
+            'singular_name' => __('Powiat', 'regionalizmy'),
+        ),
+        'public' => true,
+        'supports' => array( 'title' ),
+        'menu_icon' => 'dashicons-admin-site',
+    )
+);
