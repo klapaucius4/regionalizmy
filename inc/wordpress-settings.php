@@ -52,6 +52,8 @@ function my_login_logo_one() {
         background-image: url('<?= get_template_directory_uri(); ?>/img/logo.png');
         width: 480px;
         height: 54px;
+
+        background-size: contain;
     } 
     </style>
     <?php 
