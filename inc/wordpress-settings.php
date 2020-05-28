@@ -30,6 +30,11 @@ if ( ! function_exists( 'regionalizmy_setup' ) ) :
 
         */
 
+
+
+        //hide admin bar
+        show_admin_bar(false);
+
     }
 endif;
 add_action( 'after_setup_theme', 'regionalizmy_setup' );
@@ -58,3 +63,22 @@ function my_login_logo_one() {
     <?php 
 }
 add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
+
+
+
+
+
+/**
+ * save ACF structure to .json file
+ */
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+ 
+function my_acf_json_save_point( $path ) {
+    
+    // update path
+    $path = get_template_directory_uri() . '/acf-json';
+
+    // return
+    return $path;
+    
+}
