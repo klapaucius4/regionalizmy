@@ -65,19 +65,18 @@ function my_login_logo_one() {
 add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
 
 
-
-
-
 /**
  * save ACF structure to .json file
  */
+
 add_filter('acf/settings/save_json', 'my_acf_json_save_point');
  
 function my_acf_json_save_point( $path ) {
     
     // update path
-    $path = get_template_directory_uri() . '/acf-json';
-
+    $path = get_template_directory() . '/acf-data';
+    
+    
     // return
     return $path;
     
