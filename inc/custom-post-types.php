@@ -24,6 +24,30 @@ register_post_type('regionalizmy_county', array(
         'taxonomies' => array('regionalizmy_province'),
     )
 );
+// Add the custom columns to the regionalizmy_county post type:
+add_filter( 'manage_regionalizmy_county_posts_columns', 'set_custom_edit_regionalizmy_county_columns' );
+function set_custom_edit_regionalizmy_county_columns($columns) {
+    // unset( $columns['author'] );
+
+    $columns['county_town'] = __( 'Miasto powiatowe', 'your_text_domain' );
+
+    return $columns;
+}
+
+// Add the data to the custom columns for the regionalizmy_county post type:
+add_action( 'manage_regionalizmy_county_posts_custom_column' , 'custom_regionalizmy_county_column', 10, 2 );
+function custom_regionalizmy_county_column( $column, $post_id ) {
+    switch ( $column ) {
+
+        case 'county_town' :
+            echo get_field( 'miasto_na_prawach_powiatu', $post_id )?("<b>".get_the_title($post_id)."</b>"):get_field('miasto_powiatowe', $post_id); 
+            break;
+
+    }
+}
+
+
+
 register_taxonomy('regionalizmy_province', array('regionalizmy_county'), array(
     'labels' => array(
         'name' => __('Województwa', 'regionalizmy'),
