@@ -88,6 +88,28 @@
             "load_terms": 1,
             "return_format": "id",
             "multiple": 0
+        },
+        {
+            "key": "field_5efbb2c4d63ef",
+            "label": "Miasto",
+            "name": "miasto",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "regionalizmy_city",
+            "field_type": "radio",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "multiple": 0
         }
     ],
     "location": [
@@ -107,5 +129,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593203951
+    "modified": 1593553628
 }
