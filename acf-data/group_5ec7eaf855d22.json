@@ -71,10 +71,17 @@
             "multiple": 0
         },
         {
+<<<<<<< HEAD
             "key": "field_5ef7ac5de5952",
             "label": "Koordynaty",
             "name": "koordynaty",
             "type": "group",
+=======
+            "key": "field_5efbb2c4d63ef",
+            "label": "Miasto",
+            "name": "miasto",
+            "type": "taxonomy",
+>>>>>>> 9cdffaedbc0c54b9b9af1b699caf6c36a3ed56f0
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -83,6 +90,7 @@
                 "class": "",
                 "id": ""
             },
+<<<<<<< HEAD
             "layout": "block",
             "sub_fields": [
                 {
@@ -124,6 +132,16 @@
                     "maxlength": ""
                 }
             ]
+=======
+            "taxonomy": "regionalizmy_city",
+            "field_type": "radio",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "multiple": 0
+>>>>>>> 9cdffaedbc0c54b9b9af1b699caf6c36a3ed56f0
         }
     ],
     "location": [
@@ -143,5 +161,9 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
+<<<<<<< HEAD
     "modified": 1593289947
+=======
+    "modified": 1593553628
+>>>>>>> 9cdffaedbc0c54b9b9af1b699caf6c36a3ed56f0
 }
