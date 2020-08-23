@@ -35,6 +35,7 @@ while($myQuery->have_posts()):
   if(!$coordinates = get_field('koordynaty')){
     continue;
   }
+  continue;
 ?>
   var counties = [<?= $coordinates; ?>];
   L.polygon(counties).addTo(map);
