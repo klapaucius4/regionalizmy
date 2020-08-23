@@ -84,7 +84,7 @@ function custom_regionalizmy_county_column( $column, $post_id ) {
             if(get_field( 'miasto_na_prawach_powiatu', $post_id )){
                 $city = get_the_title($post_id);
             }else{
-                $city = get_field('miasto_powiatowe', $post_id);
+                $city = get_field('miasto', $post_id);
                 var_dump($city); exit;
                 $cityObject = get_term_by('', $value, $taxonomy, $output, $filter);
             }
