@@ -24,9 +24,21 @@ var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_la
 }).addTo(map);
 
 
-var countries = [<?= reg_get_map_coordinates(); ?>];
-L.polygon(countries).addTo(map);
+<?php
+$args = array(
+  'post_type' => 'regionalizmy_county',
+  'posts_per_page' => -1
+);
+$myQuery = array($args);
 
+while($myQuery->have_posts()):
+  if(!$coordinates = get_field('koordynaty')){
+    continue;
+  }
+?>
+  var counties = [<?= $coordinates; ?>];
+  L.polygon(counties).addTo(map);
+<?php endwhile; wp_reset_postdata(); ?>
 
 map.setView({ lat: 51.759445, lng: 19.457216 }, 4);
 
