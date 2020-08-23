@@ -29,14 +29,14 @@ $args = array(
   'post_type' => 'regionalizmy_county',
   'posts_per_page' => -1
 );
-$myQuery = array($args);
+$myQuery = new WP_Query($args);
 
 while($myQuery->have_posts()):
   $coordinates = get_field('koordynaty');
   if(!$coordinates){
     continue;
   }
-  var_dump($coordinates); exit;
+  // var_dump($coordinates); exit;
 ?>
   var counties = [<?= $coordinates; ?>];
   L.polygon(counties).addTo(map);
