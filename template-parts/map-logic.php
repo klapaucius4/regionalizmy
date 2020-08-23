@@ -25,7 +25,7 @@ var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_la
 
 
 <?php
-/*
+
 $args = array(
   'post_type' => 'regionalizmy_county',
   'posts_per_page' => 10,
@@ -47,9 +47,7 @@ while($myQuery->have_posts()):
 ?>
   var counties = [<?= $coordinates; ?>];
   L.polygon(counties).addTo(map);
-<?php endwhile; wp_reset_postdata();
-*/
-?>
+<?php endwhile; wp_reset_postdata(); ?>
 
 var counties = [<?= null; ?>];
 L.polygon(counties).addTo(map);
