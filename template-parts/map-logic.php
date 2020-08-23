@@ -28,7 +28,7 @@ var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_la
 
 $args = array(
   'post_type' => 'regionalizmy_county',
-  'posts_per_page' => 10,
+  'posts_per_page' => -1,
   'meta_query' => array(
       array(
         'key' => 'koordynaty',
@@ -41,7 +41,6 @@ $myQuery = new WP_Query($args);
 while($myQuery->have_posts()): $myQuery->the_post();
   $coordinates = get_field('koordynaty');
   if(!$coordinates){
-    var_dump('testtt'); exit;
     continue;
   }
 ?>
