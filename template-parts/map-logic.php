@@ -48,6 +48,9 @@ while($myQuery->have_posts()):
   L.polygon(counties).addTo(map);
 <?php endwhile; wp_reset_postdata(); ?>
 
+var counties = [<?= null; ?>];
+L.polygon(counties).addTo(map);
+
 map.setView({ lat: 51.759445, lng: 19.457216 }, 4);
 
 </script>
