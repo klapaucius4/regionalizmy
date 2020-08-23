@@ -80,7 +80,15 @@ function custom_regionalizmy_county_column( $column, $post_id ) {
     switch ( $column ) {
 
         case 'county_town' :
-            echo get_field( 'miasto_na_prawach_powiatu', $post_id )?("<b>".get_the_title($post_id)."</b>"):get_field('miasto_powiatowe', $post_id); 
+            $city = '';
+            if(get_field( 'miasto_na_prawach_powiatu', $post_id )){
+                $city = get_the_title($post_id);
+            }else{
+                $city = get_field('miasto_powiatowe', $post_id);
+                var_dump($city); exit;
+                $cityObject = get_term_by('', $value, $taxonomy, $output, $filter);
+            }
+            //echo get_field( 'miasto_na_prawach_powiatu', $post_id )?("<b>".."</b>"):get_field('miasto_powiatowe', $post_id); 
             break;
 
     }
