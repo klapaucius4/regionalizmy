@@ -32,7 +32,8 @@ $args = array(
 $myQuery = array($args);
 
 while($myQuery->have_posts()):
-  if(!$coordinates = get_field('koordynaty')){
+  $coordinates = get_field('koordynaty');
+  if(!$coordinates){
     continue;
   }
   var_dump($coordinates); exit;
