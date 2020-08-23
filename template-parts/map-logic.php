@@ -51,6 +51,6 @@ while($myQuery->have_posts()): $myQuery->the_post();
 var counties = [<?= null; ?>];
 L.polygon(counties).addTo(map);
 
-map.setView({ lat: 51.759445, lng: 19.457216 }, 4);
+map.setView({ lat: 51.759445, lng: 19.457216 }, 7);
 
 </script>
