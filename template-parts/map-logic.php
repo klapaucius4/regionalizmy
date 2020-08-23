@@ -29,12 +29,12 @@ var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_la
 $args = array(
   'post_type' => 'regionalizmy_county',
   'posts_per_page' => 10,
-  // 'meta_query' => array(
-  //     array(
-  //     'key' => 'koordynaty',
-  //     'compare' => 'EXISTS'
-  //     )
-  //   )
+  'meta_query' => array(
+      array(
+        'key' => 'koordynaty',
+        'compare' => 'EXISTS'
+      )
+    )
 );
 $myQuery = new WP_Query($args);
 
@@ -43,7 +43,6 @@ while($myQuery->have_posts()): $myQuery->the_post();
   if(!$coordinates){
     continue;
   }
-  // var_dump($coordinates); exit;
 ?>
   var counties = [<?= $coordinates; ?>];
   L.polygon(counties).addTo(map);
