@@ -81,7 +81,7 @@ function custom_regionalizmy_county_column( $column, $post_id ) {
 
         case 'county_town' :
             if(get_field( 'miasto_na_prawach_powiatu', $post_id )){
-                echo "TAK";
+                echo "&#x2714;";
             }else{
                 echo "-";
             }
