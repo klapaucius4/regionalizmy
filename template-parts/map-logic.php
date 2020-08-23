@@ -38,12 +38,12 @@ $args = array(
 );
 $myQuery = new WP_Query($args);
 
-while($myQuery->have_posts()):
+while($myQuery->have_posts()): $myQuery->the_post();
   $coordinates = get_field('koordynaty');
   if(!$coordinates){
     continue;
   }
-  var_dump($coordinates); exit;
+  // var_dump($coordinates); exit;
 ?>
   var counties = [<?= $coordinates; ?>];
   L.polygon(counties).addTo(map);
