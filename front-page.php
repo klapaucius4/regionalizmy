@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div style="width: 100%; height: 66vh;"></div>
+          <div id="rgm-map" style="width: 100%; height: 66vh;"></div>
         </div>
       </div>
     </div>

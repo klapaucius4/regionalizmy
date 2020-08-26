@@ -2,7 +2,7 @@
 <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
 <script>
 
-var map = L.map('map');
+var map = L.map('rgm-map');
 
 map.createPane('labels');
 
