@@ -54,7 +54,7 @@ function my_login_logo_one() {
     ?>
     <style type="text/css"> 
     body.login div#login h1 a {
-        background-image: url('<?= get_template_directory_uri(); ?>/img/logo.png');
+        background-image: url('<?= get_template_directory_uri(); ?>/img/logo.svg');
         width: 320px;
         height: 36px;
         background-size: contain;
