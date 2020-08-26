@@ -24,17 +24,19 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
           <div class="post-preview">
-            <a href="post.html">
+            <a href="<?= get_the_permalink(); ?>">
               <h2 class="post-title">
                 <?= get_the_title(); ?>
               </h2>
               <h3 class="post-subtitle">
                 Problems look mighty small from 150 miles up
               </h3>
-              <button class="btn btn-success" onclick="toggleOn()">On by API</button>
-              <button class="btn btn-danger" onclick="toggleOff()">Off by API</button>
             </a>
             <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
+            <p>
+              <button class="btn btn-success" onclick="toggleOn()">Znam</button>
+              <button class="btn btn-danger" onclick="toggleOff()">Nie znam</button>
+            </p>
           </div>
           <hr>
         <?php endwhile; ?>
