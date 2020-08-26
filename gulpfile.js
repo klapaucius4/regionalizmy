@@ -64,6 +64,12 @@ function modules() {
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'));
+  // Leaflet
+  var leaflet = gulp.src([
+    './node_modules/leaflet/dist/*',
+    // '!./node_modules/leaflet/dist/core.js'
+  ])
+  .pipe(gulp.dest('./vendor/leaflet'));
   return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery);
 }
 
