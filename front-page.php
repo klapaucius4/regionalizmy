@@ -31,6 +31,8 @@
               <h3 class="post-subtitle">
                 Problems look mighty small from 150 miles up
               </h3>
+              <button class="btn btn-success" onclick="toggleOn()">On by API</button>
+              <button class="btn btn-danger" onclick="toggleOff()">Off by API</button>
             </a>
             <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
           </div>
