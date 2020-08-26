@@ -21,7 +21,8 @@
     $myQuery = new WP_Query($args);
     if($myQuery->have_posts()):
     ?>
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <!-- <div class="col-lg-8 col-md-10 mx-auto"> -->
+      <div class="col-md-12">
         <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
           <div class="post-preview">
             <a href="post.html">
