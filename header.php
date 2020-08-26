@@ -57,7 +57,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('<?= get_template_directory_uri(); ?>/img/front-page-bg.svg')">
+  <header class="masthead">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">

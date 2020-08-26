@@ -7,6 +7,7 @@ header.masthead {
   background-color: $gray-600;
   background-attachment: scroll;
   position: relative;
+  background-image: url('../img/front-page-bg.svg'); 
   @include background-cover;
   .overlay {
     position: absolute;
