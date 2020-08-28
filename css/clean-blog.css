@@ -170,7 +170,7 @@ img::-moz-selection {
 
 header.masthead {
   margin-bottom: 50px;
-  background: no-repeat center center;
+  background: no-repeat right center;
   background-attachment: scroll;
   position: relative;
   background-image: url("../img/front-page-bg.svg");
