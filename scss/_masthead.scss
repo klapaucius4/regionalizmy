@@ -3,7 +3,7 @@ header.masthead {
   // TIP: Background images are set within the HTML using inline CSS!
   margin-bottom: 50px;
   background: no-repeat right center;
-  // background-color: $gray-600;
+  background-color: $gray-600;
   background-attachment: scroll;
   position: relative;
   background-image: url('../img/front-page-bg.svg'); 
@@ -15,7 +15,7 @@ header.masthead {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: $gray-900;
+    // background-color: $gray-900;
     // opacity: 0.5;
     background-image: url('../img/folk-bg.jpg');
     background-repeat: repeat;

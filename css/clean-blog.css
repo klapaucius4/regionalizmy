@@ -171,6 +171,7 @@ img::-moz-selection {
 header.masthead {
   margin-bottom: 50px;
   background: no-repeat right center;
+  background-color: #868e96;
   background-attachment: scroll;
   position: relative;
   background-image: url("../img/front-page-bg.svg");
@@ -183,7 +184,6 @@ header.masthead .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #212529;
   background-image: url("../img/folk-bg.jpg");
   background-repeat: repeat;
   z-index: -1;
