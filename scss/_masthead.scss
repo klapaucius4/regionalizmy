@@ -2,11 +2,11 @@
 header.masthead {
   // TIP: Background images are set within the HTML using inline CSS!
   margin-bottom: 50px;
-  background: no-repeat right center;
+  // background: no-repeat right center;
   
   background-attachment: scroll;
   position: relative;
-  background-image: url('../img/front-page-bg.svg'); 
+  background-image: url('../img/front-page-bg.svg') right center no-repeat, url('../img/front-page-bg2.svg') left center no-repeat; 
   background-size: contain;
   // @include background-cover;
   .overlay {
