@@ -188,6 +188,7 @@ header.masthead .overlay {
 header.masthead .overlay.bg1 {
   background-color: #4b4b5b;
   z-index: -1;
+  opacity: 0.9;
 }
 
 header.masthead .overlay.bg2 {
