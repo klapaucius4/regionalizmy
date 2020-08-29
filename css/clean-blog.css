@@ -171,7 +171,6 @@ img::-moz-selection {
 header.masthead {
   margin-bottom: 50px;
   background: no-repeat right center;
-  background-color: #4b4b5b;
   background-attachment: scroll;
   position: relative;
   background-image: url("../img/front-page-bg.svg");
@@ -184,9 +183,17 @@ header.masthead .overlay {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+header.masthead .overlay__1 {
+  background-color: #4b4b5b;
+  z-index: -1;
+}
+
+header.masthead .overlay__2 {
   background-image: url("../img/folk-bg.jpg");
   background-repeat: repeat;
-  z-index: -1;
+  z-index: -2;
 }
 
 header.masthead .page-heading,

@@ -3,8 +3,7 @@ header.masthead {
   // TIP: Background images are set within the HTML using inline CSS!
   margin-bottom: 50px;
   background: no-repeat right center;
-  // background-color: $gray-600;
-  background-color: $themeColor2;
+  
   background-attachment: scroll;
   position: relative;
   background-image: url('../img/front-page-bg.svg'); 
@@ -16,11 +15,17 @@ header.masthead {
     left: 0;
     height: 100%;
     width: 100%;
-    // background-color: $gray-900;
-    // opacity: 0.5;
-    background-image: url('../img/folk-bg.jpg');
-    background-repeat: repeat;
-    z-index: -1;
+    
+    
+    &__1{
+      background-color: $themeColor2;
+      z-index: -1;
+    }
+    &__2{
+      background-image: url('../img/folk-bg.jpg');
+      background-repeat: repeat;
+      z-index: -2;
+    }
   }
   .page-heading,
   .post-heading,
