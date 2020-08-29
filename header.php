@@ -58,8 +58,8 @@
 
   <!-- Page Header -->
   <header class="masthead">
-    <div class="overlay__1"></div>
-    <div class="overlay__2"></div>
+    <div class="overlay bg1"></div>
+    <div class="overla bg2"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">

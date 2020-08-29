@@ -17,11 +17,11 @@ header.masthead {
     width: 100%;
     
     
-    &__1{
+    .bg1{
       background-color: $themeColor2;
       z-index: -1;
     }
-    &__2{
+    .bg2{
       background-image: url('../img/folk-bg.jpg');
       background-repeat: repeat;
       z-index: -2;
