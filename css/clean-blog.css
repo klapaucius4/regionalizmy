@@ -185,12 +185,12 @@ header.masthead .overlay {
   width: 100%;
 }
 
-header.masthead .overlay .bg1 {
+header.masthead .overlay.bg1 {
   background-color: #4b4b5b;
   z-index: -1;
 }
 
-header.masthead .overlay .bg2 {
+header.masthead .overlay.bg2 {
   background-image: url("../img/folk-bg.jpg");
   background-repeat: repeat;
   z-index: -2;
