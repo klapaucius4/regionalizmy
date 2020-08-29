@@ -172,7 +172,7 @@ header.masthead {
   margin-bottom: 50px;
   background-attachment: scroll;
   position: relative;
-  background-image: url("../img/front-page-bg2.svg") right center no-repeat;
+  background: url("../img/front-page-bg2.svg") right center no-repeat;
   background-size: contain;
 }
 
