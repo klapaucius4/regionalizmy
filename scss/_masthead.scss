@@ -6,8 +6,8 @@ header.masthead {
   
   background-attachment: scroll;
   position: relative;
-  background: url('../img/front-page-bg2.svg') right center no-repeat, url('../img/front-page-bg.svg') left center no-repeat; 
-  background-size: contain;
+  background: url('../img/front-page-bg.svg') right center no-repeat, url('../img/front-page-bg2.svg') left center no-repeat; 
+  background-size: 30%;
   // @include background-cover;
   .overlay {
     position: absolute;
