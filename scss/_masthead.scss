@@ -6,7 +6,9 @@ header.masthead {
   
   background-attachment: scroll;
   position: relative;
-  background: url('../img/front-page-bg2.svg') right center no-repeat; 
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-image: url('../img/front-page-bg2.svg'); 
   background-size: contain;
   // @include background-cover;
   .overlay {
