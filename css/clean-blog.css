@@ -172,8 +172,8 @@ header.masthead {
   margin-bottom: 50px;
   background-attachment: scroll;
   position: relative;
-  background: url("../img/front-page-bg.svg") right center no-repeat, url("../img/front-page-bg2.svg") left center no-repeat;
-  background-size: 30%;
+  background-image: url("../img/front-page-bg2.svg") right center no-repeat;
+  background-size: contain;
 }
 
 header.masthead .overlay {
