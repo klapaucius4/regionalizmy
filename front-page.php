@@ -9,7 +9,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
       </div>
       <div class="col-md-6">
-        <img src="<?= get_template_directory_uri(); ?>/front-desc.svg" alt="" />
+        <img src="<?= get_template_directory_uri(); ?>/img/front-desc.svg" alt="" />
       </div>
     </div>
   </div>
