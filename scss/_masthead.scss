@@ -53,6 +53,7 @@ header.masthead {
       line-height: 1.1;
       display: block;
       margin: 10px 0 0;
+      color: $themeColor3;
       @include sans-serif-font;
     }
     @media only screen and (min-width: 768px) {
