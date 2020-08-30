@@ -175,7 +175,7 @@ header.masthead {
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url("../img/front-page-bg2.svg");
-  background-size: 30%;
+  background-size: contain;
 }
 
 header.masthead .overlay {
