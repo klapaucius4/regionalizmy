@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section>
+<section class="section-space">
   <div class="container">
     <div class="row">
       <div class="col-md-7">
@@ -28,7 +28,7 @@
   </section>
 
 
-  <section>
+  <section class="section-space">
     <!-- Main Content -->
     <div class="container">
       <div class="row">
