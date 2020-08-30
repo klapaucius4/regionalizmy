@@ -10,7 +10,6 @@ header.masthead {
   background-position: center bottom;
   background-image: url('../img/front-page-bg2.svg'); 
   background-size: 30%;
-  color: $themeColor2;
   // @include background-cover;
   .overlay {
     position: absolute;
@@ -35,7 +34,8 @@ header.masthead {
   .post-heading,
   .site-heading {
     padding: 200px 0 150px;
-    color: white;
+    color: $themeColor2;
+    text-shadow: 1px 1px 1px $themeColor3;
     @media only screen and (min-width: 768px) {
       padding: 200px 0;
     }
