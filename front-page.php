@@ -4,10 +4,10 @@
   <?php while(have_posts()): the_post(); ?>
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-7">
         <?php the_content(); ?>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <img src="<?= get_template_directory_uri(); ?>/img/front-desc.svg" class="w-100" alt="<?= bloginfo('name'); ?>" />
       </div>
     </div>
