@@ -34,8 +34,6 @@ header.masthead {
   .post-heading,
   .site-heading {
     padding: 200px 0 150px;
-    color: $themeColor2;
-    text-shadow: 1px 1px 1px $themeColor3;
     @media only screen and (min-width: 768px) {
       padding: 200px 0;
     }
@@ -46,6 +44,8 @@ header.masthead {
     h1 {
       font-size: 50px;
       margin-top: 0;
+      color: $themeColor2;
+      text-shadow: 1px 1px 1px $themeColor3;
     }
     .subheading {
       font-size: 24px;
@@ -53,7 +53,6 @@ header.masthead {
       line-height: 1.1;
       display: block;
       margin: 10px 0 0;
-      color: 
       @include sans-serif-font;
     }
     @media only screen and (min-width: 768px) {
