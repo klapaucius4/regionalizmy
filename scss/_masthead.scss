@@ -42,7 +42,7 @@ header.masthead {
   .site-heading {
     text-align: center;
     h1 {
-      font-size: 36px;
+      font-size: 46px;
       margin-top: 0;
       color: $themeColor1;
       text-shadow: 1px 1px 1px $themeColor3;
@@ -58,9 +58,9 @@ header.masthead {
       @include sans-serif-font;
     }
     @media only screen and (min-width: 768px) {
-      h1 {
-        font-size: 80px;
-      }
+      // h1 {
+      //   font-size: 80px;
+      // }
     }
   }
   .post-heading {
