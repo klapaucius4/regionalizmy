@@ -1,18 +1,18 @@
 <?php get_header(); ?>
 
   <!-- Main Content -->
+  <?php while(have_posts()): the_post(); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+        <?php the_content(); ?>
       </div>
       <div class="col-md-6">
-        <img src="<?= get_template_directory_uri(); ?>/img/front-desc.svg" alt="" />
+        <img src="<?= get_template_directory_uri(); ?>/img/front-desc.svg" class="w-100" alt="<?= bloginfo('name'); ?>" />
       </div>
     </div>
   </div>
+  <?php endwhile; wp_reset_postdata(); ?>
 
   <hr>
 
