@@ -54,6 +54,7 @@ header.masthead {
       display: block;
       margin: 10px 0 0;
       color: $themeColor3;
+      font-weight: bold;
       @include sans-serif-font;
     }
     @media only screen and (min-width: 768px) {

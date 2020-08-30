@@ -233,6 +233,7 @@ header.masthead .site-heading .subheading {
   display: block;
   margin: 10px 0 0;
   color: #4b4b5b;
+  font-weight: bold;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
