@@ -173,7 +173,7 @@ header.masthead {
   background-attachment: scroll;
   position: relative;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: center center;
   background-image: url("../img/front-page-bg2.svg");
   background-size: 30%;
 }
