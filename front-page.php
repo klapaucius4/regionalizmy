@@ -62,10 +62,11 @@
               </p>
             </div>
             <hr>
-          <?php endwhile; ?>
+          <?php endwhile; wp_reset_postdata(); ?>
           <!-- Pager -->
           <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+            <!-- <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a> -->
+            <?php bootstrap_pagination($myQuery) ?>
           </div>
         </div>
       <?php
