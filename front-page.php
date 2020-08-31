@@ -53,18 +53,20 @@
       ?>
         <div class="col-lg-8 col-md-10 mx-auto">
           <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
-            <div class="post-preview">
-              <a href="<?= get_the_permalink(); ?>">
-                <h2 class="post-title">
-                  <?= get_the_title(); ?>
-                </h2>
-                <h3 class="post-subtitle"><?= get_field('krotki_opis'); ?></h3>
-              </a>
-              <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
-              <p>
+            <div class="post-preview row">
+              <div class="col-md-6">
+                <a href="<?= get_the_permalink(); ?>">
+                  <h2 class="post-title">
+                    <?= get_the_title(); ?>
+                  </h2>
+                  <h3 class="post-subtitle"><?= get_field('krotki_opis'); ?></h3>
+                </a>
+                <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
+              </div>
+              <div class="col-md-6">
                 <button class="btn btn-success"><?= __('Znam'); ?></button>
                 <button class="btn btn-danger"><?= __('Nie znam'); ?></button>
-              </p>
+              </div>
             </div>
             <hr>
           <?php endwhile; wp_reset_postdata(); ?>
