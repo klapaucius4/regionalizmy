@@ -22,6 +22,7 @@
       <div class="row">
         <div class="col-md-12 mb-5 text-center">
           <h4>Skąd jesteś?</h4>
+          <p>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</p>
         </div>
         <div class="col-md-12">
           <div id="rgm-map" style="width: 100%; height: 66vh;"></div>
