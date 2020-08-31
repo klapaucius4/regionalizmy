@@ -20,8 +20,8 @@
   <section class="section-space">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 mb-5 text-center">
-          <h4>Skąd jesteś?</h4>
+        <div class="col-md-12 mb-4 text-center">
+          <h4 class="mb-2">Skąd jesteś?</h4>
           <p><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
         </div>
         <div class="col-md-12">
