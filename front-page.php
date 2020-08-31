@@ -56,9 +56,7 @@
             <div class="row post-preview">
               <div class="col-md-8">
                 <a href="<?= get_the_permalink(); ?>">
-                  <h2 class="post-title">
-                    <?= get_the_title(); ?>
-                  </h2>
+                  <h2 class="post-title"><?= get_the_title(); ?></h2>
                   <h3 class="post-subtitle"><?= get_field('krotki_opis'); ?></h3>
                 </a>
                 <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
