@@ -62,8 +62,8 @@
               </a>
               <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
               <p>
-                <button class="btn btn-success">Znam</button>
-                <button class="btn btn-danger">Nie znam</button>
+                <button class="btn btn-success"><?= __('Znam'); ?></button>
+                <button class="btn btn-danger"><?= __('Nie znam'); ?></button>
               </p>
             </div>
             <hr>
