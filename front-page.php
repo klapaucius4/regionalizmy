@@ -36,11 +36,17 @@
     <!-- Main Content -->
     <div class="container">
       <div class="row">
+        <div class="col-md-12 mb-5 text-center">
+          <h4>Czy wiesz co to znaczy?</h4>
+          <p class="m-0"><small>Czy spotkałeś się z następującymi słowami / frazami w miejscu Twojego zamieszkania?</small></p>
+        </div>
       <?php
       $args = array(
         'post_type' => 'regionalizmy_phrase',
-        'posts_per_page' => get_option( 'posts_per_page' ),
-        'paged' => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
+        'posts_per_page' => 10,
+        // 'posts_per_page' => get_option( 'posts_per_page' ),
+        // 'paged' => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
+        'orderby' => 'rand',
       );
       $myQuery = new WP_Query($args);
       if($myQuery->have_posts()):
@@ -52,9 +58,7 @@
                 <h2 class="post-title">
                   <?= get_the_title(); ?>
                 </h2>
-                <h3 class="post-subtitle">
-                  Problems look mighty small from 150 miles up
-                </h3>
+                <h3 class="post-subtitle"><?= get_field('krotki_opis'); ?></h3>
               </a>
               <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
               <p>
@@ -64,11 +68,9 @@
             </div>
             <hr>
           <?php endwhile; wp_reset_postdata(); ?>
-          <!-- Pager -->
-          <div class="clearfix">
+          <div class="clearfix"></div>
             <!-- <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a> -->
-            <?php bootstrap_pagination($myQuery) ?>
-          </div>
+            <?php //bootstrap_pagination($myQuery) ?>
         </div>
       <?php
       endif;
