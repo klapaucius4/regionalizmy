@@ -20,7 +20,7 @@
   <section class="section-space">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 mb-5 text-center">
           <h4>Skąd jesteś?</h4>
         </div>
         <div class="col-md-12">
