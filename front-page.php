@@ -53,8 +53,8 @@
       ?>
         <div class="col-md-12 mx-auto">
           <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
-            <div class="post-preview row">
-              <div class="col-md-6">
+            <div class="row post-preview">
+              <div class="col-md-8">
                 <a href="<?= get_the_permalink(); ?>">
                   <h2 class="post-title">
                     <?= get_the_title(); ?>
@@ -63,7 +63,7 @@
                 </a>
                 <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4 text-right">
                 <button class="btn btn-success"><?= __('Znam'); ?></button>
                 <button class="btn btn-danger"><?= __('Nie znam'); ?></button>
               </div>
