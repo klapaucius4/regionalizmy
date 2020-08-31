@@ -38,7 +38,7 @@
       <div class="row">
         <div class="col-md-12 mb-5 text-center">
           <h4><?= __('Czy wiesz, co to znaczy?'); ?></h4>
-          <p class="m-0 small"><?= __('Czy spotkałeś się z następującymi słowami / frazami w miejscu Twojego zamieszkania?'); ?></p>
+          <p class="m-0 small"><?= __('Czy spotkałeś się z następującymi słowami i frazami w miejscu Twojego zamieszkania i znasz ich znaczenie?'); ?></p>
         </div>
       <?php
       $args = array(
