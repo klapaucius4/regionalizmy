@@ -58,8 +58,8 @@
               </a>
               <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
               <p>
-                <button class="btn btn-success" onclick="toggleOn()">Znam</button>
-                <button class="btn btn-danger" onclick="toggleOff()">Nie znam</button>
+                <button class="btn btn-success">Znam</button>
+                <button class="btn btn-danger">Nie znam</button>
               </p>
             </div>
             <hr>
