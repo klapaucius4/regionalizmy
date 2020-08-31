@@ -80,3 +80,8 @@ img::-moz-selection {
   color: $white;
   background: transparent;
 }
+
+.small, small {
+  font-size: 60%;
+  opacity: 0.7;
+}
