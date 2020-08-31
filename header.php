@@ -7,7 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="michalkowalik.pl">
 
-    <title><?php wp_title(); ?> - <?php bloginfo( 'name' ); ?></title>
+    <title><?php
+    /*
+    * Print the <title> tag based on what is being viewed.
+    */
+    global $page, $paged;
+    
+    wp_title( '|', true, 'right' );
+    
+    // Add the blog name.
+    bloginfo( 'name' );
+    
+    // Add the blog description for the home/front page.
+    $site_description = get_bloginfo( 'description', 'display' );
+    if ( $site_description && ( is_home() || is_front_page() ) )
+    echo " | $site_description";
+    
+    // Add a page number if necessary:
+    if ( $paged >= 2 || $page >= 2 )
+    echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
+    
+    ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= get_template_directory_uri(); ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
