@@ -51,7 +51,7 @@
       $myQuery = new WP_Query($args);
       if($myQuery->have_posts()):
       ?>
-        <div class="col-md-12 mx-auto">
+        <div class="col-lg-8 col-md-10 mx-auto">
           <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
             <div class="row post-preview">
               <div class="col-md-8">
