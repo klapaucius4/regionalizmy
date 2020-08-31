@@ -21,6 +21,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
+          <h4>Skąd jesteś?</h4>
+        </div>
+        <div class="col-md-12">
           <div id="rgm-map" style="width: 100%; height: 66vh;"></div>
         </div>
       </div>
