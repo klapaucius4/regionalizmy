@@ -39,7 +39,8 @@
       <?php
       $args = array(
         'post_type' => 'regionalizmy_phrase',
-        'posts_per_page' => -1
+        'posts_per_page' => get_option( 'posts_per_page' ),
+        'paged' => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
       );
       $myQuery = new WP_Query($args);
       if($myQuery->have_posts()):
