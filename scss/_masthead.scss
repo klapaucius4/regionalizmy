@@ -46,6 +46,7 @@ header.masthead {
       margin-top: 0;
       color: $themeColor1;
       text-shadow: 1px 1px 1px $themeColor3;
+      user-select: none;
     }
     .subheading {
       font-size: 24px;
