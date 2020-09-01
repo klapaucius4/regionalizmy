@@ -10,7 +10,5 @@
     </div>
 </section>
 
-<hr>
-
 <?php
 get_footer();
