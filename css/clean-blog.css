@@ -454,7 +454,7 @@ footer .copyright {
 }
 
 .accordion-section .panel-default .panel-title a.collapsed:after {
-  content: "\2767";
+  content: "\276F";
 }
 
 .accordion-section .panel-default .panel-body {
