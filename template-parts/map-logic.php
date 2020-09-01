@@ -53,6 +53,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
     this.setStyle({
       'fillColor': '#ff0000'
     });
+    this.bindTooltip("my tooltip");
   });
   polygon.on('mouseout', function () {
     this.setStyle({
