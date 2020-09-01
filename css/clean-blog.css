@@ -447,7 +447,6 @@ footer .copyright {
 .accordion-section .panel-default .panel-title a:after {
   font-style: normal;
   font-size: 3rem;
-  content: "\2767";
   color: #1f7de2;
   float: right;
   margin-top: -12px;
@@ -455,7 +454,7 @@ footer .copyright {
 }
 
 .accordion-section .panel-default .panel-title a.collapsed:after {
-  content: "\f107";
+  content: "\2767";
 }
 
 .accordion-section .panel-default .panel-body {
