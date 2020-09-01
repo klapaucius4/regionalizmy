@@ -20,13 +20,7 @@ get_header();
               </div>
               <div id="collapse<?= $i; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?= $i; ?>">
               <div class="panel-body px-3 mb-4">
-                <p>With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line. Our users fell in love with:</p>
-                <ul>
-                <li>Light speed deployment on the most secure and stable cloud infrastructure available on the market.</li>
-                <li>Scalability – pay for what you need today and add-on options as you grow.</li>
-                <li>All of the bells and whistles of other enterprise CMS options but without the design limitations - this CMS simply lets you realize your creative visions.</li>
-                <li>Amazing support backed by a team of Solodev pros – here when you need them.</li>
-                </ul>
+                <p class="m-0">With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line. Our users fell in love with:</p>
               </div>
               </div>
             </div>
