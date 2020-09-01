@@ -45,7 +45,18 @@ while($myQuery->have_posts()): $myQuery->the_post();
   }
 ?>
   var counties = [<?= $coordinates; ?>];
-  L.polygon(counties).addTo(map);
+  var polygon = L.polygon(counties);
+  polygon.on('mouseover', function () {
+    this.setStyle({
+      'fillColor': '#0000ff'
+    });
+  });
+  polygon.on('mouseout', function () {
+    this.setStyle({
+      'fillColor': '#ff0000'
+    });
+  });
+  polygon.addTo(map);
 <?php endwhile; wp_reset_postdata(); ?>
 
 var counties = [<?= null; ?>];
