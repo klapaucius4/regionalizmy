@@ -32,7 +32,7 @@ get_header();
             </div>
           <?php endfor; ?>
             
-            <div class="panel panel-default">
+            <!-- <div class="panel panel-default">
               <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
               <h3 class="panel-title">
                 <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
@@ -75,7 +75,7 @@ get_header();
                 <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
               </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
