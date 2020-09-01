@@ -49,7 +49,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
   polygon.setStyle({
     'fillColor': '#0000ff'
   });
-  this.bindTooltip("<?= get_the_title(); ?>");
+  polygon.bindTooltip("<?= get_the_title(); ?>");
   polygon.on('mouseover', function () {
     this.setStyle({
       'fillColor': '#ff0000'
