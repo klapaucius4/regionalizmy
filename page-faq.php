@@ -36,7 +36,5 @@ get_header();
     </div>
 </section>
 
-<hr>
-
 <?php
 get_footer();
