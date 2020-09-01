@@ -3,6 +3,10 @@
 if ( ! function_exists( 'regionalizmy_setup' ) ) :
 
     function regionalizmy_setup() {
+
+        register_nav_menus( array(
+            'menu-1' => __( 'Menu główne', 'regionalizmy' ),
+        ) );
     
         /*
         load_theme_textdomain( 'regionalizmy', get_template_directory() . '/languages' );
@@ -13,9 +17,7 @@ if ( ! function_exists( 'regionalizmy_setup' ) ) :
     
         add_theme_support( 'post-thumbnails' );
     
-        register_nav_menus( array(
-            'menu-1' => esc_html__( 'Menu główne', 'regionalizmy' ),
-        ) );
+        
     
     
         add_theme_support( 'html5', array(
