@@ -12,6 +12,7 @@ get_header();
           <?php
           $faqList = get_field('lista_faq');
           if($faqList):
+            $i = 0;
             foreach($faqList as $el): ?>
               <div class="panel panel-default">
                 <div class="panel-heading p-3 mb-3" role="tab" id="heading<?= $i; ?>">
@@ -25,7 +26,9 @@ get_header();
                 </div>
                 </div>
               </div>
-            <?php endforeach;
+            <?php
+              $i++;
+            endforeach;
           endif; ?>
           </div>
         </div>
