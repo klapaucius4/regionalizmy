@@ -25,7 +25,7 @@
           <p class="m-0"><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
         </div>
         <div class="col-md-12">
-          <div id="rgm-map" style="width: 100%; height: 66vh;"></div>
+          <div id="rgm-map"></div>
         </div>
       </div>
     </div>

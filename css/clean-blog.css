@@ -458,3 +458,8 @@ footer .copyright {
 .accordion-section .panel-default .panel-body {
   font-size: 1.2rem;
 }
+
+#rgm-map {
+  width: 100%;
+  height: 66vh;
+}
