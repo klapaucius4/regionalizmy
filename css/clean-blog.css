@@ -237,6 +237,7 @@ header.masthead .site-heading h1 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-weight: 700;
 }
 
 header.masthead .page-heading .subheading,
