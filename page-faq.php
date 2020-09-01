@@ -8,15 +8,17 @@ get_header();
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+          <?php for($i=0; $i<=20; $i++): ?>
             <div class="panel panel-default">
-              <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+              <div class="panel-heading p-3 mb-3" role="tab" id="heading<?= $i; ?>">
               <h3 class="panel-title">
-                <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse<?= $i; ?>" aria-expanded="true" aria-controls="collapse<?= $i; ?>">
                 What are the benefits of Solodev CMS?
                 </a>
               </h3>
               </div>
-              <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+              <div id="collapse<?= $i; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?= $i; ?>">
               <div class="panel-body px-3 mb-4">
                 <p>With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line. Our users fell in love with:</p>
                 <ul>
@@ -28,6 +30,7 @@ get_header();
               </div>
               </div>
             </div>
+          <?php endfor; ?>
             
             <div class="panel panel-default">
               <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
