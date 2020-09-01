@@ -46,6 +46,9 @@ while($myQuery->have_posts()): $myQuery->the_post();
 ?>
   var counties = [<?= $coordinates; ?>];
   var polygon = L.polygon(counties);
+  polygon..setStyle({
+    'fillColor': '#ff0000'
+  });
   polygon.on('mouseover', function () {
     this.setStyle({
       'fillColor': '#0000ff'
