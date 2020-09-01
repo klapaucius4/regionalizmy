@@ -11,7 +11,7 @@ get_header();
 
           <?php for($i=0; $i<=20; $i++): ?>
             <div class="panel panel-default">
-              <div class="panel-heading p-3 mb-3" role="tab" id="heading<?= $i; ?>">
+              <div class="panel-heading p-3" role="tab" id="heading<?= $i; ?>">
               <h3 class="panel-title">
                 <a class="arrow collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse<?= $i; ?>" aria-expanded="true" aria-controls="collapse<?= $i; ?>">
                 What are the benefits of Solodev CMS?
