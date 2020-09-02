@@ -1,5 +1,32 @@
 <?php
 
+
+if ( ! function_exists( 'regionalizmy_setup_options' ) ) :
+    function regionalizmy_setup_options () {
+        global $wpdb;
+        $create_table_query = "
+        CREATE TABLE IF NOT EXISTS `wp_votes` (
+            `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+            `phrase_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+            `county_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+            `user_id` bigint(20) unsigned DEFAULT NULL,
+            `value` tinyint(3) unsigned NOT NULL DEFAULT '0',
+            `last_update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            `ip_address` varchar(255) DEFAULT NULL,
+            PRIMARY KEY (`id`),
+            KEY `post_id` (`phrase_id`),
+            KEY `user_id` (`user_id`),
+            KEY `county_id` (`county_id`)
+          ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin2;
+        ";
+        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+        dbDelta( $create_table_query );
+    }
+endif;
+add_action('after_switch_theme', 'regionalizmy_setup_options');
+
+
+
 if ( ! function_exists( 'regionalizmy_setup' ) ) :
 
     function regionalizmy_setup() {
