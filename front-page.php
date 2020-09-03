@@ -3,13 +3,11 @@
 <section class="section-space">
   <div class="container">
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-md-12">
         <?php while(have_posts()): the_post(); ?>
           <?php the_content(); ?>
         <?php endwhile; wp_reset_postdata(); ?>
-      </div>
-      <div class="col-md-5">
-        <img src="<?= get_template_directory_uri(); ?>/img/front-desc.svg" class="w-100" alt="<?= bloginfo('name'); ?>" />
+        <img src="<?= get_template_directory_uri(); ?>/img/front-desc.svg" class="w-25 rounded float-right" alt="<?= bloginfo('name'); ?>" />
       </div>
     </div>
   </div>
