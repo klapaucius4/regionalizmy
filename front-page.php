@@ -23,11 +23,16 @@
           <p class="m-0"><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
           <div class="row justify-content-md-center">
             <div class="col-md-6">
-              <form class="my-5">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="email">
+              <form>
+                <div class="form-row align-items-center">
+                  <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput">Name</label>
+                    <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                  </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
               </form>
             </div>
           </div>
