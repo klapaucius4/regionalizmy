@@ -17,6 +17,7 @@
     transform: rotate(90deg);
 }
 .accordion-section .panel-default .panel-title a.arrow:after {
+    color: $themeColor1;
     content: "\276F";
 }
 .accordion-section .panel-default .panel-body {

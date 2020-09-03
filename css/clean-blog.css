@@ -452,6 +452,7 @@ footer .copyright {
 }
 
 .accordion-section .panel-default .panel-title a.arrow:after {
+  color: #D4213D;
   content: "\276F";
 }
 
