@@ -416,6 +416,11 @@ footer .copyright {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.btn__tight {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
 .btn-primary {
   background-color: #0085A1;
   border-color: #0085A1;
