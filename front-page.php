@@ -22,9 +22,8 @@
           <h4>Skąd jesteś?</h4>
           <p class="m-0"><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
           <div class="md-form">
-            <input type="search" id="form-autocomplete" class="form-control mdb-autocomplete">
-            <button class="mdb-autocomplete-clear">Taaaaaa</button>
-            <label for="form-autocomplete" class="active">What is your favorite US state?</label>
+            <input type="search" id="form-autocomplete" class="form-control mdb-autocomplete" placeholder="dsdsdd" >
+            <button class="mdb-autocomplete-clear" type="submit">Taaaaaa</button>
           </div>
         </div>
         <div class="col-md-12">
