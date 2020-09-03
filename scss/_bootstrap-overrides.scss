@@ -7,6 +7,10 @@
   text-transform: uppercase;
   border-radius: 0;
   @include sans-serif-font;
+  &__tight{
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
 }
 
 .btn-primary {
