@@ -21,8 +21,8 @@
         <div class="col-md-12 mb-5 text-center">
           <h4>Skąd jesteś?</h4>
           <p class="m-0"><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
-          <!-- <div class="row justify-content-md-center"> -->
-            <!-- <div class="col-md-6"> -->
+          <div class="row justify-content-md-center">
+            <div class="col-md-6">
               <form autocomplete="off" class="find-county-form">
                 <div class="form-row align-items-center">
                   <div class="col-8">
@@ -33,8 +33,8 @@
                   </div> -->
                 </div>
               </form>
-            <!-- </div> -->
-          <!-- </div> -->
+            </div>
+          </div>
         </div>
         <div class="col-md-12">
           <div id="rgm-map"></div>
