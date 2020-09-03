@@ -27,7 +27,7 @@
                 <div class="form-row align-items-center">
                   <div class="col-8">
                     <label class="sr-only" for="inlineFormInput">Name</label>
-                    <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+                    <input type="text" class="form-control" id="inlineFormInput" placeholder="Jane Doe">
                   </div>
                   <div class="col-4">
                     <button type="submit" class="btn btn-primary btn__tight">Submit</button>
