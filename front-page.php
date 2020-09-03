@@ -24,10 +24,10 @@
           <div class="row justify-content-md-center">
             <div class="col-md-6">
               <form autocomplete="off" class="find-county-form">
-                <div class="form-row align-items-center">
-                  <div class="col-8">
+                <div class="form-group align-items-center">
+                  <!-- <div class="col-8"> -->
                     <input type="text" class="form-control" id="findCountyInput" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
-                  </div>
+                  <!-- </div> -->
                   <!-- <div class="col-4">
                     <button type="submit" class="btn btn-primary btn__tight"><?php // echo __(''); ?></button>
                   </div> -->
