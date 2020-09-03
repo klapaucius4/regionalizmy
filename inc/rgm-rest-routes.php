@@ -58,9 +58,14 @@ class RGM_REST_Routes extends WP_REST_Controller {
     //   'methods'  => WP_REST_Server::READABLE,
     //   'callback' => array( $this, 'get_public_item_schema' ),
     // ) );
-    register_rest_route( $namespace, '/' . $base . '/get-counties', array(
+    register_rest_route( $namespace, '/' . $base . '/get-counties/(?P<id>\d+)/(?P<number>[a-zA-Z0-9-]+)', array(
       'methods'  => WP_REST_Server::READABLE,
       'callback' => array( $this, 'getCounties' ),
+      'args' => array(
+          // 'force' => array(
+          //   'default' => '',
+          // ),
+        )
     ) );
   }
 
@@ -68,10 +73,12 @@ class RGM_REST_Routes extends WP_REST_Controller {
     $data = array();
 
     $args = array(
-      'post_type' => 'regionalizmy_phrase',
+      'post_type' => 'regionalizmy_county',
       'post_status' => 'publish',
       
     );
+
+    var_dump($request); exit;
 
     $myQuery = new WP_Query($args);
 
