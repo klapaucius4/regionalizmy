@@ -1,6 +1,6 @@
 <?php get_header(); ?>
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+  <header class="masthead" style="background-image: url('<?= get_template_directory_uri(); ?>/img/post-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
