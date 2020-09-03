@@ -76,7 +76,7 @@ class RGM_REST_Routes extends WP_REST_Controller {
     $myQuery = new WP_Query($args);
 
     if($myQuery->have_posts()){
-      while($myQuery->have_posts){
+      while($myQuery->have_posts()){
         $myQuery->the_post();
         $data[] = array(
           'id' => get_the_ID(),
