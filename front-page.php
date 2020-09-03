@@ -26,12 +26,11 @@
               <form autocomplete="off" class="find-county-form">
                 <div class="form-row align-items-center">
                   <div class="col-8">
-                    <label class="sr-only" for="inlineFormInput">Name</label>
-                    <input type="text" class="form-control" id="findCountyInput" placeholder="Jane Doe">
+                    <input type="text" class="form-control" id="findCountyInput" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
                   </div>
-                  <div class="col-4">
-                    <button type="submit" class="btn btn-primary btn__tight">Submit</button>
-                  </div>
+                  <!-- <div class="col-4">
+                    <button type="submit" class="btn btn-primary btn__tight"><?= __(''); ?></button>
+                  </div> -->
                 </div>
               </form>
 
