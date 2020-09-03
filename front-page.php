@@ -30,7 +30,7 @@
                     <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
                   </div>
                   <div class="col-4">
-                    <button type="submit" class="btn btn-primary btb__tight">Submit</button>
+                    <button type="submit" class="btn btn-primary btn__tight">Submit</button>
                   </div>
                 </div>
               </form>
