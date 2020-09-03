@@ -75,10 +75,10 @@ class RGM_REST_Routes extends WP_REST_Controller {
     $args = array(
       'post_type' => 'regionalizmy_county',
       'post_status' => 'publish',
-      
+      'posts_per_page' => -1
     );
 
-    var_dump($request); exit;
+    // var_dump($request); exit;
 
     $myQuery = new WP_Query($args);
 
