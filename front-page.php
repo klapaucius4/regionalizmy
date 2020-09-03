@@ -51,19 +51,7 @@
         <!-- <div class="col-lg-8 col-md-10 mx-auto"> -->
         <div class="col-md-12">
           <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
-            <div class="row post-preview">
-              <div class="col-md-8">
-                <a href="<?= get_the_permalink(); ?>">
-                  <h2 class="post-title"><?= get_the_title(); ?></h2>
-                  <h3 class="post-subtitle"><?= get_field('krotki_opis'); ?></h3>
-                </a>
-                <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
-              </div>
-              <div class="col-md-4 d-flex justify-content-end align-items-center">
-                <button class="btn btn-success mr-1"><?= __('Znam'); ?></button>
-                <button class="btn btn-danger"><?= __('Nie znam'); ?></button>
-              </div>
-            </div>
+            <?php get_template_part('template-parts/loop-phrase', ''); ?>
             <hr>
           <?php endwhile; wp_reset_postdata(); ?>
           <div class="clearfix"></div>
