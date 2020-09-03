@@ -22,15 +22,10 @@
           <h4>Skąd jesteś?</h4>
           <p class="m-0"><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
           <div class="row justify-content-md-center">
-            <div class="col-md-6">
+            <div class="col-lg-4 col-md-6 col-sm-10 col-12">
               <form autocomplete="off" class="find-county-form">
-                <div class="form-group align-items-center">
-                  <!-- <div class="col-8"> -->
-                    <input type="text" class="form-control" id="findCountyInput" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
-                  <!-- </div> -->
-                  <!-- <div class="col-4">
-                    <button type="submit" class="btn btn-primary btn__tight"><?php // echo __(''); ?></button>
-                  </div> -->
+                <div class="form-group">
+                  <input type="text" class="form-control" id="findCountyInput" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
                 </div>
               </form>
             </div>
