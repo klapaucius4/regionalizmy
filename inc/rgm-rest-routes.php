@@ -58,7 +58,7 @@ class RGM_REST_Routes extends WP_REST_Controller {
     //   'methods'  => WP_REST_Server::READABLE,
     //   'callback' => array( $this, 'get_public_item_schema' ),
     // ) );
-    register_rest_route( $namespace, '/' . $base . '/get-counties/(?P<id>\d+)/(?P<number>[a-zA-Z0-9-]+)', array(
+    register_rest_route( $namespace, '/' . $base . '/get-counties', array(
       'methods'  => WP_REST_Server::READABLE,
       'callback' => array( $this, 'getCounties' ),
       'args' => array(
