@@ -21,9 +21,16 @@
         <div class="col-md-12 mb-5 text-center">
           <h4>Skąd jesteś?</h4>
           <p class="m-0"><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
-          <div class="col-md-6">
-            <input type="search" id="form-autocomplete" class="form-control mdb-autocomplete" placeholder="dsdsdd">
-            <button class="btn btn-primary" type="submit">Wybierz</button>
+          <div class="row justify-content-md-center">
+            <div class="col-md-6">
+              <form>
+                <div class="form-group">
+                  <label for="email">Email address:</label>
+                  <input type="text" class="form-control" id="email">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+            </div>
           </div>
         </div>
         <div class="col-md-12">
