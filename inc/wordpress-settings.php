@@ -110,3 +110,13 @@ function my_acf_json_save_point( $path ) {
     return $path;
     
 }
+
+
+
+add_action( 'rest_api_init', function () {
+    /**
+     * RGM_REST_Routes
+     */
+    require get_template_directory() . '/inc/rgm-rest-routes.php';
+    $rgmRestRoutes = new RGM_REST_Routes();
+});
