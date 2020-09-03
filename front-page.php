@@ -23,7 +23,7 @@
           <p class="m-0"><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
           <div class="row justify-content-md-center">
             <div class="col-md-6">
-              <form>
+              <form class="my-5">
                 <div class="form-group">
                   <input type="text" class="form-control" id="email">
                 </div>
