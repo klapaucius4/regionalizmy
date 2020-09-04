@@ -59,7 +59,9 @@
         });
       },
       complete : function(respnse){
-        console.log(availableTags);
+        $( findCountyInput ).autocomplete({
+          source: availableTags
+        });
       }
     });
 
