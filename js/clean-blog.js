@@ -38,4 +38,9 @@
       });
   }
 
+
+  $( "#findCountyInput" ).autocomplete({
+    source: availableTags
+  });
+
 })(jQuery); // End of use strict

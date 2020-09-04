@@ -23,7 +23,7 @@
           <p class="m-0"><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
           <div class="row justify-content-md-center">
             <div class="col-lg-4 col-md-8 col-sm-10 col-12">
-              <form autocomplete="off" class="find-county-form">
+              <form autocomplete="off">
                 <div class="form-group m-0">
                   <input type="text" class="form-control" id="findCountyInput" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
                 </div>
