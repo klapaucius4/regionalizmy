@@ -38,7 +38,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Leaflet -->
-    <!-- <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.css" /> -->
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.css" />
 
     <!-- jquery-autocomplete -->
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/vendor/jquery-autocomplete/jquery.autocomplete.css" />
