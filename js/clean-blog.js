@@ -42,7 +42,7 @@
   //   'dddd'
   // ];
   $( "#findCountyInput" ).on('keypress', function(){
-    var availableTags = [];
+    var availableTags = ['test', 'alfred'];
     $.ajax({
 			url : "/wp-json/rgm/route/get-counties",
 			method: "GET",
@@ -52,7 +52,7 @@
 			success : function(response) {
 				response.forEach(function(item, index) {
           // console.log(item);
-          
+
 					availableTags.push(item.name);
 				});
 			}
