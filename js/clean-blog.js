@@ -51,7 +51,7 @@
 			},
 			success : function(response) {
 				response.forEach(function(item, index) {
-					availableTags.push(item.name);
+					availableTags.push('trolejbus');
 				});
 			}
     });
