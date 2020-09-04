@@ -51,12 +51,12 @@
 			},
 			success : function(response) {
 				response.forEach(function(item, index) {
-          console.log(item.name);
-
 					availableTags.push(item.name);
 				});
 			}
     });
+
+    console.log(availableTags);
     
     $( this ).autocomplete({
       source: availableTags
