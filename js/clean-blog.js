@@ -51,7 +51,6 @@
 			},
 			success : function(response) {
 				response.forEach(function(item, index) {
-					// console.log(item.title.rendered);
 					availableTags.push(item.title);
 				});
 			}
