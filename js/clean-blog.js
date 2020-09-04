@@ -42,7 +42,7 @@
   //   'dddd'
   // ];
   $( "#findCountyInput" ).on('keypress', function(){
-    var availableTags = ['test', 'alfred'];
+    
     $.ajax({
 			url : "/wp-json/rgm/route/get-counties",
 			method: "GET",
@@ -50,17 +50,15 @@
 				search: $(this).val()
 			},
 			success : function(response) {
+        var availableTags = [];
 				response.forEach(function(item, index) {
-          console.log(item);
-					// availableTags.push('trolejbus');
-				});
+          // console.log(item);
+					availableTags.push(item.name);
+        });
+        $( this ).autocomplete({
+          source: availableTags
+        });
 			}
-    });
-
-    console.log(availableTags);
-    
-    $( this ).autocomplete({
-      source: availableTags
     });
   });
   
