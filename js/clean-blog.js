@@ -52,6 +52,7 @@
 			success : function(response) {
 				response.forEach(function(item, index) {
           // console.log(item);
+          
 					availableTags.push(item.name);
 				});
 			}
