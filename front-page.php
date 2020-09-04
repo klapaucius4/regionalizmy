@@ -88,7 +88,7 @@
         fetch('/wp-json/rgm/route/get-counties')
         .then(response => response.json())
         .then(function(){
-          console.log('lorem ipsum dolor');
+          console.log(response);
         });
         
         
