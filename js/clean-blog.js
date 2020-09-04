@@ -55,9 +55,10 @@
           // console.log(item);
 					availableTags.push(item.name);
         });
-        $( this ).autocomplete({
-          source: availableTags
-        });
+        console.log(availableTags);
+        // $( this ).autocomplete({
+        //   source: availableTags
+        // });
 			}
     });
   });
