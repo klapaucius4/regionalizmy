@@ -59,7 +59,7 @@
         });
       },
       complete : function(respnse){
-        console.log(findCountyInput);
+        console.log(availableTags);
       }
     });
 
