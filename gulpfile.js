@@ -71,13 +71,14 @@ function modules() {
   ])
   .pipe(gulp.dest('./vendor/leaflet'));
 
-  // jquery-ui
-  var jqueryUi = gulp.src([
-    './node_modules/jquery-ui/*',
+  // jquery-ui-dist
+  var jqueryUiDist = gulp.src([
+    './node_modules/jquery-ui-dist/jquery-ui.min.js',
+    './node_modules/jquery-ui-dist/jquery-ui.min.css',
   ])
   .pipe(gulp.dest('./vendor/jquery-ui'));
 
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUi);
+  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUiDist);
 }
 
 // CSS task
