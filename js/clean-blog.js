@@ -54,6 +54,7 @@
 				response.forEach(function(item, index) {
 					availableTags.push(item.name);
         });
+        console.log(availableTags);
         $( "#findCountyInput" ).autocomplete({
           source: availableTags
         });
