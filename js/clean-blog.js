@@ -38,11 +38,28 @@
       });
   }
 
-  var availableTags = [
-    'dddd'
-  ];
-  $( "#findCountyInput" ).autocomplete({
-    source: availableTags
+  // var availableTags = [
+  //   'dddd'
+  // ];
+  $( "#findCountyInput" ).on('keypress', function(){
+    var availableTags = [];
+    $.ajax({
+			url : "/wp-json/rgm/route/get-counties",
+			method: "GET",
+			data: {
+				search: $(this).val()
+			},
+			success : function(response) {
+				response.forEach(function(item, index) {
+					// console.log(item.title.rendered);
+					availableTags.push(item.title);
+				});
+			}
+		});
+    $( this ).autocomplete({
+      source: availableTags
+    });
   });
+  
 
 })(jQuery); // End of use strict
