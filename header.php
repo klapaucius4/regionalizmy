@@ -40,6 +40,9 @@
     <!-- Leaflet -->
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.css" />
 
+    <!-- jquery-autocomplete -->
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/vendor/jquery-autocomplete/jquery.autocomplete.css" />
+
     <!-- Custom styles for this template -->
     <link href="<?= get_template_directory_uri(); ?>/css/clean-blog.min.css" rel="stylesheet">
 
