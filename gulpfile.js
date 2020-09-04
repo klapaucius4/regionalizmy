@@ -71,19 +71,13 @@ function modules() {
   ])
   .pipe(gulp.dest('./vendor/leaflet'));
 
-  // jquery-autocomplete
-  var jqueryAutocomplete = gulp.src([
-    './node_modules/jquery-autocomplete/*',
+  // jquery-ui
+  var jqueryUi = gulp.src([
+    './node_modules/jquery-ui/*',
   ])
   .pipe(gulp.dest('./vendor/jquery-autocomplete'));
 
-  // jquery-ui
-  // var jqueryUi = gulp.src([
-  //   './node_modules/jquery-ui/*',
-  // ])
-  // .pipe(gulp.dest('./vendor/jquery-autocomplete'));
-
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryAutocomplete);
+  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUi);
 }
 
 // CSS task
