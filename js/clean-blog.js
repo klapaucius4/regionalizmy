@@ -58,11 +58,12 @@
         });
 			}
     });
+    console.log(availableTags);
 
     $( this ).autocomplete({
       source: availableTags
     });
-    
+
   });
   
 
