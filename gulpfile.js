@@ -75,7 +75,7 @@ function modules() {
   var jqueryUi = gulp.src([
     './node_modules/jquery-ui/*',
   ])
-  .pipe(gulp.dest('./vendor/jquery-autocomplete'));
+  .pipe(gulp.dest('./vendor/jquery-ui'));
 
   return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUi);
 }
