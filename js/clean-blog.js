@@ -62,8 +62,8 @@
     "Scala",
     "Scheme"
   ];
-  // $( "#findCountyInput" ).autocomplete({
-  //   source: availableTags
-  // });
+  $( "#findCountyInput" ).autocomplete({
+    source: availableTags
+  });
 
 })(jQuery); // End of use strict
