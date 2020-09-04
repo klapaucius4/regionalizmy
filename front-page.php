@@ -87,7 +87,9 @@
 
         fetch('/wp-json/rgm/route/get-counties')
         .then(response => response.json())
-        .then(data => console.log(data));
+        .then(function(){
+          console.log('lorem ipsum dolor');
+        });
         
         
         /*the autocomplete function takes two arguments,
