@@ -90,8 +90,8 @@
         .then(function(response){
           response.forEach(function(item, index) {
               // console.log('index ' + index + ': ' + item);
-              // arr.push(item.)
-              console.log(item);
+              arr.push(item.name)
+              // console.log(item);
           });
         });
         
