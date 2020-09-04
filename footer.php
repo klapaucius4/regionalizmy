@@ -44,7 +44,7 @@
 <!-- <script src="<?= get_template_directory_uri(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
 <!-- jquery.autocomplete -->
-<script src="<?= get_template_directory_uri(); ?>/vendor/jquery-autocomplete/jquery.autocomplete.js"></script>
+<!-- <script src="<?= get_template_directory_uri(); ?>/vendor/jquery-autocomplete/jquery.autocomplete.js"></script> -->
 
 <?php get_template_part('template-parts/map', 'logic'); ?>
 
