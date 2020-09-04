@@ -87,7 +87,7 @@
 
         fetch('/wp-json/rgm/route/get-counties')
         .then(response => response.json())
-        .then(function(){
+        .then(function(response){
           console.log(response);
         });
         
