@@ -37,6 +37,8 @@
   </div>
 </footer>
 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 <!-- Bootstrap core JavaScript -->
 <script src="<?= get_template_directory_uri(); ?>/vendor/jquery/jquery.min.js"></script>
 <script src="<?= get_template_directory_uri(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
