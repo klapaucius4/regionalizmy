@@ -42,9 +42,7 @@
   //   'dddd'
   // ];
   $( "#findCountyInput" ).on('keypress', function(){
-
-    var availableTags = [];
-
+    // let theThis = this;
     $.ajax({
 			url : "/wp-json/rgm/route/get-counties",
 			method: "GET",
@@ -52,17 +50,16 @@
 				search: $(this).val()
 			},
 			success : function(response) {
+        var availableTags = [];
 				response.forEach(function(item, index) {
-          // console.log(item);
 					availableTags.push(item.name);
+        });
+        $( "#findCountyInput" ).autocomplete({
+          source: availableTags
         });
 			}
     });
-    console.log(availableTags);
-
-    $( this ).autocomplete({
-      source: availableTags
-    });
+    
 
   });
   
