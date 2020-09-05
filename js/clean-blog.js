@@ -50,6 +50,7 @@
   $( ".findCountyInput" ).on('input', function(){
     var findCountyInput = this;
     var phrase, counties;
+    phrase = $(findCountyInput).val();
     $.ajax({
 			url : "/wp-json/rgm/route/get-counties/" + phrase,
 			method: "GET",
@@ -57,7 +58,7 @@
 				search: $(this).val()
       },
       beforeSend : function(response){
-        phrase = $(findCountyInput).val();
+        phrase = phrase;
         counties = [];
       },
 			success : function(response) {
