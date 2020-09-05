@@ -58,18 +58,14 @@ class RGM_REST_Routes extends WP_REST_Controller {
     //   'methods'  => WP_REST_Server::READABLE,
     //   'callback' => array( $this, 'get_public_item_schema' ),
     // ) );
-    register_rest_route( $namespace, '/' . $base . '/get-counties', array(
-      'methods'  => WP_REST_Server::READABLE,
-      'callback' => array( $this, 'getCounties' ),
-      'args' => array(
-          // 'force' => array(
-          //   'default' => '',
-          // ),
-        )
-    ) );
+    register_rest_route( $namespace, '/' . $base . '/get-counties/market=(?P<search>[a-zA-Z0-9-]+)', array(
+        'methods'  => WP_REST_Server::READABLE,
+        'callback' => array( $this, 'getCounties' ),
+      ));
   }
 
   public function getCounties($request){
+    var_dump($request); exit;
     $data = array();
 
     $args = array(
