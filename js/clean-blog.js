@@ -59,10 +59,11 @@
   });
 
   function getCounties(phrase){
-    if(!phrase){
-      phrase = null;
-    }
     var availableTags = [];
+    if(!phrase){
+      // phrase = null;
+      return availableTags;
+    }
     $.ajax({
 			url : "/wp-json/rgm/route/get-counties/" + phrase,
 			method: "GET",
