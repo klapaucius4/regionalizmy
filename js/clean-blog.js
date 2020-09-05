@@ -40,14 +40,18 @@
 
   //// counties begin
   $( "#findCountyInput" ).autocomplete({
-    source: []
+    source: [],
+    selectFirst: true, //here
+    minLength: 0
   });
 
   $( "#findCountyInput" ).on('input', function(){
     var findCountyInput = this;
     var counties = getCounties($(findCountyInput).val());
     $( findCountyInput ).autocomplete({
-      source: counties
+      source: counties,
+      selectFirst: true, //here
+      minLength: 0
     });
   });
 
