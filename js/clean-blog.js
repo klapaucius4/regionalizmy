@@ -48,20 +48,8 @@
   $( "#findCountyInput" ).on('input', function(){
     var findCountyInput = this;
     var phrase = $(findCountyInput).val();
-    var counties = getCounties(phrase);
-    $( findCountyInput ).autocomplete({
-      source: counties,
-      selectFirst: true, //here
-      minLength: 0
-    });
-  });
 
-  function getCounties(phrase){
-    var availableTags = [];
-    if(!phrase){
-      // phrase = null;
-      return availableTags;
-    }
+    var counties = [];
     $.ajax({
 			url : "/wp-json/rgm/route/get-counties/" + phrase,
 			method: "GET",
@@ -70,15 +58,19 @@
 			},
 			success : function(response) {
 				response.forEach(function(item, index) {
-					availableTags.push(item.name);
+					counties.push(item.name);
         });
       },
       complete : function(respnse){
-        return availableTags;
+        $( findCountyInput ).autocomplete({
+          source: counties,
+          selectFirst: true,
+          minLength: 0
+        });
       }
     });
-    return availableTags;
-  }
+    
+  });
   //// counties end
 
 })(jQuery); // End of use strict
