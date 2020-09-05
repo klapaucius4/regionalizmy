@@ -40,6 +40,7 @@
 
   //// counties begin
   $( ".findCountyInput" ).each(function(){
+    console.log('test');
     $(this).autocomplete({
       source: [],
       selectFirst: true, //here
