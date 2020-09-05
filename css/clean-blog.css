@@ -469,14 +469,3 @@ footer .copyright {
   width: 100%;
   height: 66vh;
 }
-
-.ui-autocomplete {
-  max-height: 100px;
-  overflow-y: auto;
-  /* prevent horizontal scrollbar */
-  overflow-x: hidden;
-}
-
-* html .ui-autocomplete {
-  height: 100px;
-}
