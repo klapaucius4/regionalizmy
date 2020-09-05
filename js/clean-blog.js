@@ -47,12 +47,15 @@
 
   $( "#findCountyInput" ).on('input', function(){
     var findCountyInput = this;
-    var counties = getCounties($(findCountyInput).val());
-    $( findCountyInput ).autocomplete({
-      source: counties,
-      selectFirst: true, //here
-      minLength: 0
-    });
+    var phrase = $(findCountyInput).val();
+    if(phrase){
+      var counties = getCounties(phrase);
+      $( findCountyInput ).autocomplete({
+        source: counties,
+        selectFirst: true, //here
+        minLength: 0
+      });
+    }
   });
 
   function getCounties(phrase){
