@@ -42,7 +42,7 @@
   $( ".findCountyInput" ).each(function(){
     $(this).autocomplete({
       source: [],
-      selectFirst: true, //here
+      selectFirst: true,
       minLength: 0
     });
   });
