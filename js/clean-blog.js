@@ -51,7 +51,10 @@
     });
   });
 
-  function getCounties(phrase = null){
+  function getCounties(phrase){
+    if(!phrase){
+      phrase = "";
+    }
     var availableTags = [];
     $.ajax({
 			url : "/wp-json/rgm/route/get-counties/" + phrase,
