@@ -470,6 +470,13 @@ footer .copyright {
   height: 66vh;
 }
 
-.ui-menu {
-  z-index: 401;
+.ui-autocomplete {
+  max-height: 100px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
+
+* html .ui-autocomplete {
+  height: 100px;
 }
