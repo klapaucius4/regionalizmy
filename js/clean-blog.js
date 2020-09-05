@@ -39,12 +39,14 @@
   }
 
   //// counties begin
-  $( ".findCountyInput" ).autocomplete({
-    source: [],
-    selectFirst: true, //here
-    minLength: 0
+  $( ".findCountyInput" ).each(function(){
+    $(this).autocomplete({
+      source: [],
+      selectFirst: true, //here
+      minLength: 0
+    });
   });
-  
+
   $( ".findCountyInput" ).on('input', function(){
     var findCountyInput = this;
     var phrase, counties;
