@@ -47,15 +47,17 @@
 
   $( "#findCountyInput" ).on('input', function(){
     var findCountyInput = this;
-    var phrase = $(findCountyInput).val();
-
-    var counties = [];
+   
     $.ajax({
 			url : "/wp-json/rgm/route/get-counties/" + phrase,
 			method: "GET",
 			data: {
 				search: $(this).val()
-			},
+      },
+      beforeSend : function(response){
+        var phrase = $(findCountyInput).val();
+        var counties = [];
+      },
 			success : function(response) {
 				response.forEach(function(item, index) {
 					counties.push("powiat"+item.name);
