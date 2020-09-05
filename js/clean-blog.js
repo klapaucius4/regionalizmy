@@ -53,7 +53,7 @@
 
   function getCounties(phrase){
     if(!phrase){
-      phrase = "";
+      phrase = null;
     }
     var availableTags = [];
     $.ajax({
