@@ -60,7 +60,7 @@
       },
 			success : function(response) {
 				response.forEach(function(item, index) {
-					counties.push("powiat"+item.name);
+					counties.push("powiat "+item.name);
         });
       },
       complete : function(respnse){
