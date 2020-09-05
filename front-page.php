@@ -20,7 +20,7 @@
       <div class="row">
         <div class="col-md-12 mb-4 text-center">
           <h4>Skąd jesteś?</h4>
-          <p class="m-0"><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
+          <p class="mt-0 mb-3"><small>Zaznacz na poniższej mapie powiat z którego pochodzisz lub w którym mieszkasz.</small></p>
           <div class="row justify-content-md-center">
             <div class="col-lg-4 col-md-8 col-sm-10 col-12">
               <form autocomplete="off" class="ui-widget">
