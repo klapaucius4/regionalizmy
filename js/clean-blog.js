@@ -74,6 +74,5 @@
     return availableTags;
   }
   //// counties end
-  
 
 })(jQuery); // End of use strict
