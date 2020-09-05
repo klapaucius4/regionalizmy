@@ -72,7 +72,7 @@ class RGM_REST_Routes extends WP_REST_Controller {
       'post_status' => 'publish',
       'posts_per_page' => 8,
       'orderby' => 'relevance',
-      'order' => 'DESC'
+      // 'order' => 'DESC'
     );
 
     if(isset($request['search'])){
