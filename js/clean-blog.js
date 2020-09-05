@@ -47,11 +47,7 @@
 
   $( "#findCountyInput" ).on('input', function(){
     var findCountyInput = this;
-    var phrase = $(findCountyInput).val();
-    if(phrase){
-      phrase = "";
-    }
-    var counties = getCounties(phrase);
+    var counties = getCounties($(findCountyInput).val());
     $( findCountyInput ).autocomplete({
       source: counties,
       selectFirst: true, //here
