@@ -41,14 +41,11 @@
   // var availableTags = [
   //   'dddd'
   // ];
-  $( "#findCountyInput" ).on('input', function(){
+  $( "#findCountyInput" ).on('load input', function(){
 
     var findCountyInput = this;
 
     var availableTags = [];
-    $( findCountyInput ).autocomplete({
-      source: availableTags,
-    });
     $.ajax({
 			url : "/wp-json/rgm/route/get-counties/" + $(findCountyInput).val(),
 			method: "GET",
