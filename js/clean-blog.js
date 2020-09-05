@@ -60,7 +60,9 @@
       }
     }).done(function(){
       $( findCountyInput ).autocomplete({
-        source: availableTags
+        source: availableTags,
+        selectFirst: true, //here
+        minLength: 1
       });
     });
 
