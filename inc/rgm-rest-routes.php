@@ -86,7 +86,8 @@ class RGM_REST_Routes extends WP_REST_Controller {
         $myQuery->the_post();
         $data[] = array(
           'id' => get_the_ID(),
-          'name' => get_the_title()
+          'name' => get_the_title(),
+          'city' => get_field('miasto_na_prawach_powiatu')?true:false
         );
       }
       wp_reset_postdata();
