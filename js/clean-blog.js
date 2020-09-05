@@ -46,6 +46,9 @@
     var findCountyInput = this;
 
     var availableTags = [];
+    $( findCountyInput ).autocomplete({
+      source: availableTags,
+    });
     $.ajax({
 			url : "/wp-json/rgm/route/get-counties/" + $(findCountyInput).val(),
 			method: "GET",
@@ -61,8 +64,6 @@
     }).done(function(){
       $( findCountyInput ).autocomplete({
         source: availableTags,
-        selectFirst: true, //here
-        minLength: 0
       });
     });
 
