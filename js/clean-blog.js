@@ -60,7 +60,11 @@
       },
 			success : function(response) {
 				  response.forEach(function(item, index) {
-					counties.push("powiat "+item.name);
+          var countyType = 'powiat';
+          if(item.city){
+            var countyType = 'miasto powiatowe';
+          }
+					counties.push(countyType+' '+item.name);
         });
       },
       complete : function(respnse){
