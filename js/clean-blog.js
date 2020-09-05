@@ -47,7 +47,7 @@
 
     var availableTags = [];
     $.ajax({
-			url : "/wp-json/rgm/route/get-counties/".findCountyInput.val(),
+			url : "/wp-json/rgm/route/get-counties/" + $(findCountyInput).val(),
 			method: "GET",
 			data: {
 				search: $(this).val()
