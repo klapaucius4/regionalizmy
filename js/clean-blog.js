@@ -62,7 +62,7 @@
       $( findCountyInput ).autocomplete({
         source: availableTags,
         selectFirst: true, //here
-        minLength: 1
+        minLength: 0
       });
     });
 
