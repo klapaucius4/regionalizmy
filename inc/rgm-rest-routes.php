@@ -65,7 +65,7 @@ class RGM_REST_Routes extends WP_REST_Controller {
   }
 
   public function getCounties($request){
-    var_dump($request); exit;
+    var_dump($request['search']); exit;
     $data = array();
 
     $args = array(
