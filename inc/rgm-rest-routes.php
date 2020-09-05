@@ -70,9 +70,9 @@ class RGM_REST_Routes extends WP_REST_Controller {
     $args = array(
       'post_type' => 'regionalizmy_county',
       'post_status' => 'publish',
-      'posts_per_page' => 6,
+      'posts_per_page' => 8,
       'orderby' => 'relevance',
-      // 'order' => 'ASC'
+      'order' => 'DESC'
     );
 
     if(isset($request['search'])){
