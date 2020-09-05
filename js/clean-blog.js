@@ -41,7 +41,7 @@
   // var availableTags = [
   //   'dddd'
   // ];
-  $( "#findCountyInput" ).on('keyup', function(){
+  $( "#findCountyInput" ).on('input', function(){
 
     var findCountyInput = this;
 
