@@ -71,8 +71,8 @@ class RGM_REST_Routes extends WP_REST_Controller {
       'post_type' => 'regionalizmy_county',
       'post_status' => 'publish',
       'posts_per_page' => 8,
-      'orderby' => 'relevance',
-      // 'order' => 'DESC'
+      'orderby' => 'title',
+      'order' => 'ASC'
     );
 
     if(isset($request['search'])){
