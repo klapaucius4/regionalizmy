@@ -41,7 +41,7 @@
   // var availableTags = [
   //   'dddd'
   // ];
-  $( "#findCountyInput" ).on('load input', function(){
+  $( "#findCountyInput" ).on('input', function(){
 
     var findCountyInput = this;
 
@@ -57,11 +57,12 @@
 				response.forEach(function(item, index) {
 					availableTags.push(item.name);
         });
+      },
+      complete : function(respnse){
+        $( findCountyInput ).autocomplete({
+          source: availableTags
+        });
       }
-    }).done(function(){
-      $( findCountyInput ).autocomplete({
-        source: availableTags,
-      });
     });
 
   });
