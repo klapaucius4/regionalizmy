@@ -57,12 +57,11 @@
 				response.forEach(function(item, index) {
 					availableTags.push(item.name);
         });
-      },
-      ajaxComplete : function(respnse){
-        $( findCountyInput ).autocomplete({
-          source: availableTags
-        });
       }
+    }).done(function(){
+      $( findCountyInput ).autocomplete({
+        source: availableTags
+      });
     });
 
   });
