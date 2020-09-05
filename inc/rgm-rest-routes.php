@@ -73,8 +73,6 @@ class RGM_REST_Routes extends WP_REST_Controller {
       'posts_per_page' => -1
     );
 
-    // var_dump($request); exit;
-
     $myQuery = new WP_Query($args);
 
     if($myQuery->have_posts()){
