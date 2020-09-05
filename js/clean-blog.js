@@ -58,7 +58,7 @@
 					availableTags.push(item.name);
         });
       },
-      complete : function(respnse){
+      ajaxComplete : function(respnse){
         $( findCountyInput ).autocomplete({
           source: availableTags
         });
