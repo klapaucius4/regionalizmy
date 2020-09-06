@@ -86,8 +86,7 @@
   $(".findCountyInput").autocomplete({
       source: function (request, response) {
           $.ajax({
-              url: "/wp-json/rgm/route/get-counties/",
-              data: { query: request.term },
+              url: "/wp-json/rgm/route/get-counties/"+request.term,
               success: function (data) {
                   var transformed = $.map(data, function (el) {
                       return {
