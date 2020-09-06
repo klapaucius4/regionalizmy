@@ -58,7 +58,7 @@
           });
       },
       select: function (event, ui) {
-        console.log(ui);
+        $.cookie('rgmUserCountyId', ui.item.id, { expires: 7 });
       },
       autoFill: true,
   });
