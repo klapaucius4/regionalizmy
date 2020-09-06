@@ -25,7 +25,7 @@
             <div class="col-lg-4 col-md-8 col-sm-10 col-12">
               <form autocomplete="off" class="ui-widget">
                 <div class="form-group mb-0">
-                  <input type="text" class="form-control findCountyInput" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
+                  <input type="text" class="form-control findCountyInput is-invalid" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
                 </div>
               </form>
             </div>
