@@ -39,6 +39,7 @@
   }
 
   //// counties begin
+  /*
   $( ".findCountyInput" ).each(function(){
     $(this).autocomplete({
       source: [],
@@ -79,6 +80,31 @@
       }
     });
   });
+  */
   //// counties end
+
+  $(".findCountyInput").autocomplete({
+      source: function (request, response) {
+          $.ajax({
+              url: "/wp-json/rgm/route/get-counties/",
+              data: { query: request.term },
+              success: function (data) {
+                  var transformed = $.map(data, function (el) {
+                      return {
+                          label: el.name,
+                          id: el.id
+                      };
+                  });
+                  response(transformed);
+              },
+              error: function () {
+                  response([]);
+              }
+          });
+      }
+  });
+
+
+
 
 })(jQuery); // End of use strict
