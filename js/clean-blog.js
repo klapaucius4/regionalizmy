@@ -37,52 +37,8 @@
         this.previousTop = currentTop;
       });
   }
-
+  
   //// counties begin
-  /*
-  $( ".findCountyInput" ).each(function(){
-    $(this).autocomplete({
-      source: [],
-      selectFirst: true,
-      minLength: 0
-    });
-  });
-
-  $( ".findCountyInput" ).on('input', function(){
-    var findCountyInput = this;
-    var phrase, counties;
-    phrase = $(findCountyInput).val();
-    $.ajax({
-			url : "/wp-json/rgm/route/get-counties/" + phrase,
-			method: "GET",
-			data: {
-				search: $(this).val()
-      },
-      beforeSend : function(response){
-        phrase = phrase;
-        counties = [];
-      },
-			success : function(response) {
-				  response.forEach(function(item, index) {
-          var countyType = 'powiat';
-          if(item.city){
-            var countyType = 'miasto powiatowe';
-          }
-					counties.push(countyType+' '+item.name);
-        });
-      },
-      complete : function(respnse){
-        $( findCountyInput ).autocomplete({
-          source: counties,
-          selectFirst: true,
-          minLength: 0
-        });
-      }
-    });
-  });
-  */
-  //// counties end
-
   $(".findCountyInput").autocomplete({
       source: function (request, response) {
           $.ajax({
@@ -100,9 +56,13 @@
                   response([]);
               }
           });
-      }
+      },
+      select: function (event, ui) {
+        console.log(ui);
+      },
+      autoFill: true,
   });
-
+  //// counties end
 
 
 
