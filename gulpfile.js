@@ -78,7 +78,13 @@ function modules() {
   ])
   .pipe(gulp.dest('./vendor/jquery-ui'));
 
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUiDist);
+  // jquery.cookie
+  var jqueryCookie = gulp.src([
+    './node_modules/jquery.cookie/jquery.cookie.js',
+  ])
+  .pipe(gulp.dest('./vendor/jquery.cookie'));
+
+  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUiDist, jqueryCookie);
 }
 
 // CSS task
