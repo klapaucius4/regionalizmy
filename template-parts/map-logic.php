@@ -95,7 +95,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
       'geometry': {
         'type': '<?= (count(json_decode($coordinates))<=1)?'Polygon':'MultiPolygon'; ?>',
         'coordinates': '<?= $coordinates; ?>'
-        'coordinates': [Array.from(<?= $coordinates; ?>)]
+        'coordinates': [<?= $coordinates; ?>]
       }
     });
 <?php
