@@ -91,6 +91,6 @@ function rgmCoordinatesConverter($coordinates){
 
       $newCoordinates = json_encode($array1);
     }
-
+    $newCoordinates = str_replace('"', "", trim($newCoordinates));
     return $newCoordinates;
   }
