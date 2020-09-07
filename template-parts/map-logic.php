@@ -86,7 +86,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
       'id': <?= get_the_ID(); ?>,
       'properties': {
         'name': '<?= get_the_title(); ?>',
-        'density': 77
+        'density': <?= rand(1, 100); ?>
       },
       'geometry': {
         'type': 'MultiPolygon',
