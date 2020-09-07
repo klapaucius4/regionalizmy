@@ -106,7 +106,7 @@ function js_array($array)
 }
 
 
-var statesData = js_array(<?= json_encode($counties); ?>);
+var statesData = js_array('<?= json_encode($counties); ?>');
 
 
 var map = L.map('rgm-map').setView([37.8, -96], 4);
