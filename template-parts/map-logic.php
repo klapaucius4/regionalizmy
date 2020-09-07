@@ -35,8 +35,6 @@ while($myQuery->have_posts()): $myQuery->the_post();
 
   $coordinates = rgmCoordinatesConverter($coordinates);
 
-  
-
   $coordinates = str_replace('"', "", trim($coordinates));
 ?>
     statesData.features.push(
