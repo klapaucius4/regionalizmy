@@ -34,12 +34,15 @@ while($myQuery->have_posts()): $myQuery->the_post();
   }
 
   $newCoordinates = array();
-  foreach($coordinates as $k1 => $a){
-    if(isset($a[$k1]) && is_array($a[$k1])){
-      foreach($a[$k1] as $k2 => $b){
-        if(isset($b[$k2]) && is_array($b[$k2])){
-          foreach($b[$k2] as $k3 => $c){
-            $newCoordinates[$k1][$k2][$k3] = $c;
+  $coordinates = json_decode($coordinates);
+  if($coordinates){
+    foreach($coordinates as $k1 => $a){
+      if(isset($a[$k1]) && is_array($a[$k1])){
+        foreach($a[$k1] as $k2 => $b){
+          if(isset($b[$k2]) && is_array($b[$k2])){
+            foreach($b[$k2] as $k3 => $c){
+              $newCoordinates[$k1][$k2][$k3] = $c;
+            }
           }
         }
       }
