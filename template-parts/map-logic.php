@@ -39,19 +39,14 @@ while($myQuery->have_posts()): $myQuery->the_post();
     foreach($v0 as $v1){
       if(is_array($v1)){
         foreach($v1 as $v2){
-          var_dump('v2: '.$v2);
           if(is_array($v2)){
-            foreach($v2 as $v3){
-              var_dump('v3: '.$v3);
-              if(is_array($v3)){
-                foreach($v3 as $v4){
-                  var_dump('v4: '.$v4);
-                }
-              }
-            }
+            $array3 = array_reverse($v2);
+            print_r($array3);
           }
         }
       }
+
+      // $newCoordinates[] = 
     }
   }
 ?>
