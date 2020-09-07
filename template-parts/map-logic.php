@@ -38,6 +38,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
   if($v0){
     foreach($v0 as $v1){
       foreach($v1 as $v2){
+        var_dump($v2); exit;
         foreach($v2 as $v3){
           var_dump($v3); exit;
         }
