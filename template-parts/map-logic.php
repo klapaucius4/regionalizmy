@@ -53,7 +53,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
     }
 
 
-    $newCoordinates = $array1;
+    $newCoordinates = json_encode($array1);
   }
 
   // print_r($newCoordinates); exit;
