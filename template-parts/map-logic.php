@@ -88,10 +88,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
       'type': 'Feature',
       // 'id': <?= get_the_ID(); ?>,
       'id': '<?= $counter++; ?>',
-      'properties': {
-        'name': '<?= get_the_title(); ?>',
-        'density': <?= rand(1, 100); ?>
-      },
+      'properties': {'name': '<?= get_the_title(); ?>', 'density': <?= intval(rand(1, 100)); ?>},
       'geometry': {
         'type': '<?= (count(json_decode($coordinates))<=1)?'Polygon':'MultiPolygon'; ?>',
         'coordinates': [<?= $coordinates; ?>]
