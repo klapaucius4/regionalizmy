@@ -36,19 +36,27 @@ while($myQuery->have_posts()): $myQuery->the_post();
   $newCoordinates = array();
   $v0 = json_decode($coordinates);
   if($v0){
+    $array1 = array();
     foreach($v0 as $v1){
       if(is_array($v1)){
+        $array2 = array();
         foreach($v1 as $v2){
           if(is_array($v2)){
             $array3 = array_reverse($v2);
-            print_r($array3);
+            // print_r($array3);
           }
+          $array2[] = $array3;
         }
+        $array1[] = $array2;
       }
 
       // $newCoordinates[] = 
+
+      $newCoordinates = $array1;
     }
   }
+
+  print_r($newCoordinates); exit;
 ?>
     statesData.features.push({
       'type': 'Feature',
