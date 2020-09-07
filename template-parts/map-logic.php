@@ -33,28 +33,28 @@ while($myQuery->have_posts()): $myQuery->the_post();
     continue;
   }
 
-  $newCoordinates = array();
-  $v0 = json_decode($coordinates);
-  if($v0){
-    $array1 = array();
-    foreach($v0 as $v1){
-                  if(is_array($v1)){
-                    $array2 = array_reverse($v1);
-                    // foreach($v1 as $v2){
-                    //   print_r($v2); exit;
-                    //               // if(is_array($v2)){
-                    //                 $array3 = array_reverse($v2);
+  // $newCoordinates = array();
+  // $v0 = json_decode($coordinates);
+  // if($v0){
+  //   $array1 = array();
+  //   foreach($v0 as $v1){
+  //                 if(is_array($v1)){
+  //                   $array2 = array_reverse($v1);
+  //                   // foreach($v1 as $v2){
+  //                   //   print_r($v2); exit;
+  //                   //               // if(is_array($v2)){
+  //                   //                 $array3 = array_reverse($v2);
                                     
-                    //               // }
-                    //   $array2[] = $array3;
-                    // }
-                  }
-      $array1[] = $array2;
-    }
+  //                   //               // }
+  //                   //   $array2[] = $array3;
+  //                   // }
+  //                 }
+  //     $array1[] = $array2;
+  //   }
 
 
-    $newCoordinates = json_encode($array1);
-  }
+  //   $newCoordinates = json_encode($array1);
+  // }
 
   // print_r($newCoordinates); exit;
 ?>
@@ -64,8 +64,8 @@ while($myQuery->have_posts()): $myQuery->the_post();
       'id': '<?= $counter++; ?>',
       'properties': {'name': '<?= get_the_title(); ?>', 'density': <?= intval(rand(1, 100)); ?>},
       'geometry': {
-        'type': '<?= (count(json_decode($newCoordinates))<=1)?'Polygon':'MultiPolygon'; ?>',
-        'coordinates': [<?= str_replace('"', "", $newCoordinates); ?>]
+        'type': '<?= (count(json_decode($coordinates))<=1)?'Polygon':'MultiPolygon'; ?>',
+        'coordinates': [<?= $coordinates; ?>]
       }
     });
 <?php
