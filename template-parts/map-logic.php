@@ -33,43 +33,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
     continue;
   }
 
-  $newCoordinates = array();
-  $v0 = json_decode($coordinates);
-  if($v0){
-    $array1 = array();
-    foreach($v0 as $v1){
-                  if(is_array($v1)){
-                    if(is_array($v1[0])){
-                      $array3 = array();
-                      foreach($v1 as $a){
-                        // if(!is_array($a)){
-                        //   var_dump($a); exit;
-                        // }
-                        $array3[] = array_reverse($a);
-                      }
-                      $array2 = $array3;
-                      // var_dump($array2); exit;
-                    }else{
-                      $array2 = array_reverse($v1);
-                    }
-                    
-                    // foreach($v1 as $v2){
-                    //   print_r($v2); exit;
-                    //               // if(is_array($v2)){
-                    //                 $array3 = array_reverse($v2);
-                                    
-                    //               // }
-                    //   $array2[] = $array3;
-                    // }
-                  }
-      $array1[] = $array2;
-    }
-
-
-    $newCoordinates = json_encode($array1);
-  }
-
-  $coordinates = $newCoordinates;
+  $coordinates = rgmCoordinatesConverter($coordinates);
 
   
 
