@@ -84,7 +84,6 @@ while($myQuery->have_posts()): $myQuery->the_post();
     continue;
   }
 ?>
-    var coordinates = <?= $coordinates; ?>;
     statesData.features.push({
       'type': 'Feature',
       // 'id': <?= get_the_ID(); ?>,
@@ -92,7 +91,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
       'properties': {'name': '<?= get_the_title(); ?>', 'density': <?= intval(rand(1, 100)); ?>},
       'geometry': {
         'type': '<?= (count(json_decode($coordinates))<=1)?'Polygon':'MultiPolygon'; ?>',
-        'coordinates': [coordinates.map(Number)]
+        'coordinates': [<?= $coordinates; ?>]
       }
     });
 <?php
