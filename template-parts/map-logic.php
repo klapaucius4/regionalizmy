@@ -97,6 +97,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
 endwhile; wp_reset_postdata();
 ?>
 
+console.log(statesData);
 
 var map = L.map('rgm-map').setView([51.759445, 19.457216], 7);
 
