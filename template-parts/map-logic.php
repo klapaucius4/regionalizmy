@@ -37,9 +37,13 @@ while($myQuery->have_posts()): $myQuery->the_post();
   $v0 = json_decode($coordinates);
   if($v0){
     foreach($v0 as $v1){
-      foreach($v1 as $v2){
-        foreach($v2 as $v3){
-          var_dump($v3); exit;
+      if($v1){
+        foreach($v1 as $v2){
+          if($v2){
+            foreach($v2 as $v3){
+              var_dump($v3); exit;
+            }
+          }
         }
       }
     }
