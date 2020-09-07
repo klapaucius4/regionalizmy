@@ -93,7 +93,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
         'density': <?= rand(1, 100); ?>
       },
       'geometry': {
-        'type': '<?= (count(json_decode($coordinates))==1)?'Polygon':'MultiPolygon'; ?>',
+        'type': '<?= (count(json_decode($coordinates))<=1)?'Polygon':'MultiPolygon'; ?>',
         'coordinates': '<?= $coordinates; ?>'
         'coordinates': [Array.from(<?= $coordinates; ?>)]
       }
