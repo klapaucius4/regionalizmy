@@ -94,8 +94,19 @@ while($myQuery->have_posts()): $myQuery->the_post();
 endwhile; wp_reset_postdata();
 ?>
 
+function js_str($s)
+{
+    return '"' . addcslashes($s, "\0..\37\"\\") . '"';
+}
 
-var statesData = '<?= json_encode($counties); ?>';
+function js_array($array)
+{
+    $temp = array_map('js_str', $array);
+    return '[' . implode(',', $temp) . ']';
+}
+
+
+var statesData = js_array(<?= json_encode($counties); ?>);
 
 
 var map = L.map('rgm-map').setView([37.8, -96], 4);
