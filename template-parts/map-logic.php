@@ -43,6 +43,11 @@ while($myQuery->have_posts()): $myQuery->the_post();
           if(is_array($v2)){
             foreach($v2 as $v3){
               var_dump('v3: '.$v3);
+              if(is_array($v3)){
+                foreach($v3 as $v4){
+                  var_dump('v4: '.$v4);
+                }
+              }
             }
           }
         }
