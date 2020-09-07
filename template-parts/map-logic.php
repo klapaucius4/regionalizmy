@@ -34,32 +34,14 @@ while($myQuery->have_posts()): $myQuery->the_post();
   }
 
   $newCoordinates = array();
-  $coordinates = json_decode($coordinates);
-  if($coordinates){
-    foreach($coordinates as $k1=>$v1){
-              var_dump ('test4');
-              if(is_array($v1)){
-                foreach($v1 as $k2=>$v2){
-                            var_dump ('test3');
-                            if(is_array($v2)){
-
-                              foreach($v2 as $k3=>$v3){
-                                        var_dump ('test2');
-                                        if(is_array($v3)){
-                                          foreach($v3 as $k4=>$v4){
-                                            var_dump ('test1');
-                                          }
-                                        }else{
-                                          $newCoordinates[$k1][$k2] = $v2;
-                                        }
-                              }
-                            }else{
-                              $newCoordinates[$k1][$k2] = $v2;
-                            }
-                }
-              }else{
-                $newCoordinates[$k1] = $v1;
-              }
+  $v1 = json_decode($coordinates);
+  if($v0){
+    foreach($v0 as $v1){
+      foreach($v1 as $v2){
+        foreach($v2 as $v3){
+          var_dump($v3);
+        }
+      }
     }
   }
 ?>
