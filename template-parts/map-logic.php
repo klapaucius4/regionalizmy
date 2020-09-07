@@ -56,7 +56,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
     $newCoordinates = json_encode($array1);
   }
 
-  print_r($newCoordinates); exit;
+  // print_r($newCoordinates); exit;
 ?>
     statesData.features.push({
       'type': 'Feature',
