@@ -57,6 +57,7 @@ var statesData = {"type":"FeatureCollection","features":[
 {"type":"Feature","id":"72","properties":{"name":"Puerto Rico","density":1082 },"geometry":{"type":"Polygon","coordinates":[[[-66.448338,17.984326],[-66.771478,18.006234],[-66.924832,17.929556],[-66.985078,17.973372],[-67.209633,17.956941],[-67.154863,18.19245],[-67.269879,18.362235],[-67.094617,18.515589],[-66.957694,18.488204],[-66.409999,18.488204],[-65.840398,18.433435],[-65.632274,18.367712],[-65.626797,18.203403],[-65.730859,18.186973],[-65.834921,18.017187],[-66.234737,17.929556],[-66.448338,17.984326]]]}}
 ]};
 
+var statesData = {"type":"FeatureCollection","features":[]};
 
 <?php
 $counties = array(
@@ -79,34 +80,22 @@ while($myQuery->have_posts()): $myQuery->the_post();
   if(!$coordinates){
     continue;
   }
-
-  $counties['features'][] = array(
-    'type' => 'Feature',
-    'id' => get_the_ID(),
-    'properties' => array(
-      'name' => get_the_title(),
-      'geometry' => array(
-        'type' => 'Polygon',
-        'coordinates' => json_decode($coordinates)
-      )
-    )
-  );
+?>
+    statesData.features.push({
+      'type': 'Feature',
+      'id': <?= get_the_ID(); ?>,
+      'properties': {
+        'name': '<?= get_the_title(); ?>',
+        'density': 77
+      },
+      'geometry': {
+        'type': 'Polygon',
+        'coordinates': '<?= $coordinates; ?>'
+      }
+    });
+<?php
 endwhile; wp_reset_postdata();
 ?>
-
-function js_str($s)
-{
-    return '"' . addcslashes($s, "\0..\37\"\\") . '"';
-}
-
-function js_array($array)
-{
-    $temp = array_map('js_str', $array);
-    return '[' . implode(',', $temp) . ']';
-}
-
-
-var statesData = js_array('<?= json_encode($counties); ?>');
 
 
 var map = L.map('rgm-map').setView([37.8, -96], 4);
