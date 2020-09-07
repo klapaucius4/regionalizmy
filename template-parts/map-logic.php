@@ -56,7 +56,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
     $newCoordinates = $array1;
   }
 
-  print_r($newCoordinates); exit;
+  // print_r($newCoordinates); exit;
 ?>
     statesData.features.push({
       'type': 'Feature',
@@ -65,7 +65,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
       'properties': {'name': '<?= get_the_title(); ?>', 'density': <?= intval(rand(1, 100)); ?>},
       'geometry': {
         'type': '<?= (count(json_decode($coordinates))<=1)?'Polygon':'MultiPolygon'; ?>',
-        'coordinates': [<?= $coordinates; ?>]
+        'coordinates': [<?= $newCoordinates; ?>]
       }
     });
 <?php
