@@ -91,15 +91,12 @@ while($myQuery->have_posts()): $myQuery->the_post();
       )
     )
   );
-
-  var_dump($counties); exit;
-
 endwhile; wp_reset_postdata();
 
 ?>
 
 
-
+var statesData = json_encode($counties);
 
 
 var map = L.map('rgm-map').setView([37.8, -96], 4);
