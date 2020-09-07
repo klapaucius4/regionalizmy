@@ -41,10 +41,10 @@ while($myQuery->have_posts()): $myQuery->the_post();
                   if(is_array($v1)){
                     if(is_array($v1[0])){
                       $array3 = array();
-                      foreach($array2 as $a){
-                        if(!is_array($a)){
-                          var_dump($a); exit;
-                        }
+                      foreach($v1 as $a){
+                        // if(!is_array($a)){
+                        //   var_dump($a); exit;
+                        // }
                         $array3[] = array_reverse($a);
                       }
                       $array2 = $array3;
