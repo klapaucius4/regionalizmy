@@ -93,10 +93,11 @@ while($myQuery->have_posts()): $myQuery->the_post();
   );
 endwhile; wp_reset_postdata();
 
+var_dump(json_encode($counties)); exit;
 ?>
 
 
-var statesData = json_encode($counties);
+var statesData = ;
 
 
 var map = L.map('rgm-map').setView([37.8, -96], 4);
