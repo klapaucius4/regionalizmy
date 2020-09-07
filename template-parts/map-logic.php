@@ -37,7 +37,6 @@ $args = array(
     )
 );
 $myQuery = new WP_Query($args);
-
 while($myQuery->have_posts()): $myQuery->the_post();
   $coordinates = get_field('koordynaty');
   if(!$coordinates){
