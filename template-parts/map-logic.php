@@ -77,6 +77,7 @@ $args = array(
     )
 );
 $myQuery = new WP_Query($args);
+$counter = 1;
 while($myQuery->have_posts()): $myQuery->the_post();
   $coordinates = get_field('koordynaty');
   if(!$coordinates){
@@ -85,7 +86,8 @@ while($myQuery->have_posts()): $myQuery->the_post();
 ?>
     statesData.features.push({
       'type': 'Feature',
-      'id': <?= get_the_ID(); ?>,
+      // 'id': <?= get_the_ID(); ?>,
+      'id': '<?= $counter++; ?>',
       'properties': {
         'name': '<?= get_the_title(); ?>',
         'density': <?= rand(1, 100); ?>
