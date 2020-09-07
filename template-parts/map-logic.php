@@ -72,15 +72,13 @@ while($myQuery->have_posts()): $myQuery->the_post();
 
   $coordinates = str_replace('"', "", trim($coordinates));
 ?>
-    statesData.features.push({
-      'type': 'Feature',
-      // 'id': <?= get_the_ID(); ?>,
+    statesData.features.push(
+      {'type': 'Feature',
       'id': '<?= $counter++; ?>',
       'properties': {'name': '<?= get_the_title(); ?>', 'density': <?= intval(rand(1, 100)); ?>},
       'geometry': {
         'type': '<?= (substr($coordinates, 0, 3) == '[[[')?'MultiPolygon':'Polygon'; ?>',
-        'coordinates': [<?= $coordinates; ?>]
-      }
+        'coordinates': [<?= $coordinates; ?>]}
     });
 <?php
 endwhile; wp_reset_postdata();
