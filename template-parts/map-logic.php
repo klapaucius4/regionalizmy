@@ -47,17 +47,17 @@ while($myQuery->have_posts()): $myQuery->the_post();
   var counties = [<?= $coordinates; ?>];
   var polygon = L.polygon(counties);
   polygon.setStyle({
-    'fillColor': '#0000ff'
+    'fillColor': '#e9e8e7'
   });
   polygon.bindTooltip("<?= get_the_title(); ?>");
   polygon.on('mouseover', function () {
     this.setStyle({
-      'fillColor': '#ff0000'
+      'fillColor': '#d4213d'
     });
   });
   polygon.on('mouseout', function () {
     this.setStyle({
-      'fillColor': '#0000ff'
+      'fillColor': '#e9e8e7'
     });
   });
   polygon.addTo(map);
