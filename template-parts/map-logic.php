@@ -17,7 +17,7 @@ $counties = array(
 );
 $args = array(
   'post_type' => 'regionalizmy_county',
-  'posts_per_page' => 20,
+  'posts_per_page' => -1,
   'meta_query' => array(
       array(
         'key' => 'koordynaty',
