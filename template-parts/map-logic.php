@@ -126,13 +126,13 @@ info.addTo(map);
 
 // get color depending on population density value
 function getColor(d) {
-  return d > 1000 ? '#800026' :
-      d > 500  ? '#BD0026' :
-      d > 200  ? '#E31A1C' :
-      d > 100  ? '#FC4E2A' :
-      d > 50   ? '#FD8D3C' :
-      d > 20   ? '#FEB24C' :
-      d > 10   ? '#FED976' :
+  return d > 100 ? '#800026' :
+      d > 90  ? '#BD0026' :
+      d > 75  ? '#E31A1C' :
+      d > 60  ? '#FC4E2A' :
+      d > 45   ? '#FD8D3C' :
+      d > 30   ? '#FEB24C' :
+      d > 15   ? '#FED976' :
             '#FFEDA0';
 }
 
