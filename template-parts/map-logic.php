@@ -58,6 +58,45 @@ var statesData = {"type":"FeatureCollection","features":[
 ]};
 
 
+<?php
+$counties = array(
+  'type' => 'FeatureCollection',
+  'features' => array()
+);
+$args = array(
+  'post_type' => 'regionalizmy_county',
+  'posts_per_page' => -1,
+  'meta_query' => array(
+      array(
+        'key' => 'koordynaty',
+        'compare' => 'EXISTS'
+      )
+    )
+);
+$myQuery = new WP_Query($args);
+while($myQuery->have_posts()): $myQuery->the_post();
+  $coordinates = get_field('koordynaty');
+  if(!$coordinates){
+    continue;
+  }
+
+  $counties['features'][] = array(
+    'type' => 'Feature',
+    'id' => get_the_ID(),
+    'properties' => array(
+      'name' => get_the_title(),
+      'geometry' => array(
+        'type' => 'Polygon',
+        'coordinates' => json_decode($coordinates)
+      )
+    )
+  );
+
+  var_dump($counties); exit;
+
+endwhile; wp_reset_postdata();
+
+?>
 
 
 
