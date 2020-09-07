@@ -38,17 +38,17 @@ while($myQuery->have_posts()): $myQuery->the_post();
   if($v0){
     $array1 = array();
     foreach($v0 as $v1){
-      if(is_array($v1)){
-        $array2 = array();
-        foreach($v1 as $v2){
-          if(is_array($v2)){
-            $array3 = array_reverse($v2);
-            print_r($array3); exit;
-          }
-          $array2[] = $array3;
-        }
-        
-      }
+                  if(is_array($v1)){
+                    $array2 = array();
+                    foreach($v1 as $v2){
+                      print_r($v2); exit;
+                                  // if(is_array($v2)){
+                                    $array3 = array_reverse($v2);
+                                    
+                                  // }
+                      $array2[] = $array3;
+                    }
+                  }
       $array1[] = $array2;
     }
 
