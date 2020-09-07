@@ -89,8 +89,8 @@ while($myQuery->have_posts()): $myQuery->the_post();
         'density': 77
       },
       'geometry': {
-        'type': 'Polygon',
-        'coordinates': ''
+        'type': 'MultiPolygon',
+        'coordinates': '<?= $coordinates; ?>'
       }
     });
 <?php
