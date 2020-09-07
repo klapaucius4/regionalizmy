@@ -57,6 +57,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
   // }
 
   // print_r($newCoordinates); exit;
+  var_dump(substr(trim($coordinates), 0, 4)); exit;
 ?>
     statesData.features.push({
       'type': 'Feature',
