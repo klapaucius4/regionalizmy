@@ -8,7 +8,7 @@ var statesData = {"type":"FeatureCollection","features":[
 
 console.log(statesData);
 
-var statesDataa = {"type":"FeatureCollection","features":[]};
+var statesData = {"type":"FeatureCollection","features":[]};
 
 <?php
 $counties = array(
@@ -33,7 +33,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
     continue;
   }
 ?>
-    statesDataa.features.push({
+    statesData.features.push({
       'type': 'Feature',
       // 'id': <?= get_the_ID(); ?>,
       'id': '<?= $counter++; ?>',
