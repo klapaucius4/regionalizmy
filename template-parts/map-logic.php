@@ -90,7 +90,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
       },
       'geometry': {
         'type': 'Polygon',
-        'coordinates': '<?= $coordinates; ?>'
+        'coordinates': ''
       }
     });
 <?php
