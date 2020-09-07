@@ -47,13 +47,13 @@ while($myQuery->have_posts()): $myQuery->the_post();
           }
           $array2[] = $array3;
         }
-        $array1[] = $array2;
+        
       }
-
-      // $newCoordinates[] = 
-
-      $newCoordinates = $array1;
+      $array1[] = $array2;
     }
+
+
+    $newCoordinates = $array1;
   }
 
   print_r($newCoordinates); exit;
