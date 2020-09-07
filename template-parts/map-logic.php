@@ -39,8 +39,8 @@ while($myQuery->have_posts()): $myQuery->the_post();
     foreach($v0 as $v1){
       if(is_array($v1)){
         foreach($v1 as $v2){
-          var_dump($v2);
-          if(is_array('v2: '.$v2)){
+          var_dump('v2: '.$v2);
+          if(is_array($v2)){
             foreach($v2 as $v3){
               var_dump('v3: '.$v3);
             }
