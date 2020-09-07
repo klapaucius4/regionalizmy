@@ -64,7 +64,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
       'id': '<?= $counter++; ?>',
       'properties': {'name': '<?= get_the_title(); ?>', 'density': <?= intval(rand(1, 100)); ?>},
       'geometry': {
-        'type': '<?=  (substr($coordinates, 0, 3) == ']]]]')?'MultiPolygon':'Polygon'; ?>',
+        'type': '<?=  (substr($coordinates, 0, 3) == '[[[[')?'MultiPolygon':'Polygon'; ?>',
         'coordinates': [<?= $coordinates; ?>]
       }
     });
