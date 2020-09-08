@@ -96,8 +96,8 @@ function style(feature) {
     opacity: 1,
     color: 'white',
     dashArray: '3',
-    fillOpacity: 0.7,
-    fillColor: getColor(feature.properties.density)
+    fillOpacity: 0.7
+    // fillColor: getColor(feature.properties.density)
   };
 }
 
