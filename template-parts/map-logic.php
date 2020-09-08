@@ -173,6 +173,6 @@ legend.onAdd = function (map) {
 legend.addTo(map);
 
 
-loader.hide();
+// loader.hide();
 
 </script>
