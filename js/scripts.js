@@ -44,7 +44,7 @@
   if(cookie){
     cookie = JSON.parse(cookie);
     console.log(cookie.name);
-    // $(this).val(cookie.name);
+    $('.findCountyInput').val(cookie.name);
   }
   
   //// counties begin
