@@ -50,8 +50,6 @@ while($myQuery->have_posts()): $myQuery->the_post();
 endwhile; wp_reset_postdata();
 ?>
 
-// console.log(statesData);
-
 
 var map = L.map('rgm-map', {minZoom: 7}).setView([51.759445, 19.457216], 6);
 
@@ -133,6 +131,7 @@ function resetHighlight(e) {
 
 function zoomToFeature(e) {
   map.fitBounds(e.target.getBounds());
+  // console.log(e);
 }
 
 function onEachFeature(feature, layer) {
