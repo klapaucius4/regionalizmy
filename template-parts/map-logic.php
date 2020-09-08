@@ -27,8 +27,10 @@ while($myQuery->have_posts()): $myQuery->the_post();
     continue;
   }
   $title = 'powiat '.get_the_title();
+  $subTitle = '';
   if(get_field('miasto_na_prawach_powiatu')){
-    $title = get_the_title().' (miasto na prawach powiatu)';
+    $title = get_the_title();
+    $subTitle = '(miasto na prawach powiatu)';
   }
 
   $coordinates = rgmCoordinatesConverter($coordinates);
@@ -37,7 +39,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
     {
       'type': 'Feature',
       'id': '<?= $counter++; ?>',
-      'properties': {'name': '<?= $title; ?>', 'density': <?= intval(rand(1, 100)); ?>},
+      'properties': {'name': '<?= $title; ?>', 'density': <?= intval(rand(1, 100)); ?>, 'subtitle': '<?= $subTitle; ?>'},
       'geometry': {
         'type': '<?= (substr($coordinates, 0, 3) == '[[[')?'MultiPolygon':'Polygon'; ?>',
         'coordinates': [<?= $coordinates; ?>]
@@ -74,7 +76,7 @@ info.onAdd = function (map) {
 };
 
 info.update = function (props) {
-  this._div.innerHTML = '<h4>Lorem ipsum dolor</h4>' +  (props ?
+  this._div.innerHTML = '<h4>Lorem ipsum dolor</h4>' + '<span>' + props.subtitle + '</span>' + (props ?
     '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
     : 'Hover over a state');
 };
