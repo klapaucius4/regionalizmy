@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!-- Leaflet -->
 <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
 <script type="text/javascript">

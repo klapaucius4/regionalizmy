@@ -45,8 +45,12 @@
               url: "/wp-json/rgm/route/get-counties/"+request.term,
               success: function (data) {
                   var transformed = $.map(data, function (el) {
+                      var countyName = 'powiat ' + el.name;
+                      if(el.city){
+                        countyName = el.name + ' (miast na prawach powiatu)';
+                      }
                       return {
-                          label: el.name,
+                          label: countyName,
                           id: el.id
                       };
                   });
