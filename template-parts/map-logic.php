@@ -154,12 +154,13 @@ function resetHighlight(e) {
 
 
 function setCurrentCounty(e) {
+  var layer = e.target;
   var newCookie = {
     'id': e.target.feature.id,
     'name': e.target.feature.name
   };
   $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
-  e.target.setStyle({ fillColor: 'red' });
+  layer.setStyle({ fillColor: 'red' });
 }
 function zoomToFeature(e) {
   map.fitBounds(e.target.getBounds());
