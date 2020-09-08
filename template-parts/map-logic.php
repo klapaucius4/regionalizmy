@@ -171,15 +171,13 @@ function initStyle(feature) {
 function onEachFeature(feature, layer) {
   if(feature.id == cookie.id){
     // returnData.fillColor = 'red';
-    layer.setStyle({ color: 'red' });
-  }else{
-    layer.on({
-      mouseover: highlightFeature,
-      mouseout: resetHighlight,
-      click: setCurrentCounty
-    });
+    layer.setStyle({ fillColor: 'red' });
   }
-  
+  layer.on({
+    mouseover: highlightFeature,
+    mouseout: resetHighlight,
+    click: setCurrentCounty
+  });
 }
 
 
