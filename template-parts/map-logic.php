@@ -94,7 +94,7 @@ function style(feature) {
   return {
     weight: 2,
     opacity: 1,
-    color: 'white',
+    color: 'gray',
     dashArray: '3',
     fillOpacity: 0.7
     // fillColor: getColor(feature.properties.density)
