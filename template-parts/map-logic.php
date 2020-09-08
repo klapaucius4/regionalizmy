@@ -164,10 +164,6 @@ function initStyle(feature) {
     fillOpacity: 0.7
     // fillColor: getColor(feature.properties.density)
   };
-  if(feature.id == cookie.id){
-    returnData.fillColor = 'red';
-  }
-
   return returnData;
 }
 
@@ -178,6 +174,7 @@ function onEachFeature(feature, layer) {
     mouseout: resetHighlight,
     click: setCurrentCounty
   });
+  console.log(layer);
 }
 
 
