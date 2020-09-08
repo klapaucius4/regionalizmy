@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * - set_conty
+ * - 
+ */
+$mapType = 'set_conty';
 ?>
 
 <!-- Leaflet -->
@@ -108,6 +112,8 @@ function style(feature) {
     // fillColor: getColor(feature.properties.density)
   };
 }
+
+console.log($.cookie('rgmUserCounty'));
 
 function highlightFeature(e) {
   var layer = e.target;
