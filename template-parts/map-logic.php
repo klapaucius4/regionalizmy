@@ -121,7 +121,7 @@ geojson = L.geoJson(statesData, {
 
 /// actions begin
 function resetHighlight(e) {
-  e.target.resetStyle(e.target);
+  geojson.resetStyle(e.target);
   info.update();
 }
 function setCurrentCounty(e) {
@@ -129,11 +129,11 @@ function setCurrentCounty(e) {
     'id': e.target.feature.id,
     'name': e.target.feature.name
   };
-  $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
-  e.target.setStyle({ fillColor: 'red' });
-}
-function zoomToFeature(e) {
-  map.fitBounds(e.target.getBounds());
+  if($.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 })){
+    geojson.resetStyle(e.target);
+    e.target.setStyle({ fillColor: 'red' });
+  };
+  
 }
 function highlightFeature(e) {
   var layer = e.target;
