@@ -123,7 +123,7 @@ geojson = L.geoJson(statesData, {
 function resetHighlight(e) {
   // geojson.resetStyle(e.target)
   e.target.resetStyle();
-  info.update();
+  // info.update();
 }
 function setCurrentCounty(e) {
   var newCookie = {
@@ -133,7 +133,7 @@ function setCurrentCounty(e) {
   if($.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 })){
     geojson.resetStyle();
     e.target.setStyle({ fillColor: 'red' });
-  };
+  };,
   
 }
 function highlightFeature(e) {
