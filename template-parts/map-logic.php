@@ -1,9 +1,10 @@
 <?php
 /**
- * - set_conty
- * - 
+ * - set_default_county
+ * - set_current_county
+ * - single_phrase
  */
-$mapType = 'set_conty';
+$mapType = 'set_default_county';
 ?>
 
 <!-- Leaflet -->
@@ -150,16 +151,26 @@ function resetHighlight(e) {
   info.update();
 }
 
+
+
+function setCurrentCounty(e) {
+  // map.fitBounds(e.target.getBounds());
+  console.log(e.target);
+}
 function zoomToFeature(e) {
   map.fitBounds(e.target.getBounds());
   // console.log(e);
 }
 
+
+
+
+
 function onEachFeature(feature, layer) {
   layer.on({
     mouseover: highlightFeature,
     mouseout: resetHighlight,
-    click: zoomToFeature
+    click: setCurrentCounty
   });
 }
 
