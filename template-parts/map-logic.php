@@ -76,7 +76,7 @@ info.onAdd = function (map) {
 };
 
 info.update = function (props) {
-  this._div.innerHTML = '<h4>Lorem ipsum dolor</h4>' + '<span>' + props.subtitle + '</span>' + (props ?
+  this._div.innerHTML = '<h4>Lorem ipsum dolor</h4>'+ (props ? '<span>' + props.subtitle + '</span>' + 
     '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
     : 'Hover over a state');
 };
