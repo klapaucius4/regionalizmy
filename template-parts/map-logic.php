@@ -111,22 +111,31 @@ function getColor(d) {
             '#FFEDA0';
 }
 
-function style(feature) {
-  var returnData = {
-    weight: 2,
-    opacity: 1,
-    color: 'green',
-    dashArray: '3',
-    fillOpacity: 0.7
-    // fillColor: getColor(feature.properties.density)
-  };
+var geojson;
 
-  if(feature.id == cookie.id){
-    returnData.fillColor = 'red';
-  }
-  return returnData;
+geojson = L.geoJson(statesData, {
+  style: style,
+  onEachFeature: onEachFeature
+}).addTo(map);
+
+
+/// actions begin
+function resetHighlight(e) {
+  
 }
-
+function setCurrentCounty(e) {
+  var newCookie = {
+    'id': e.target.feature.id,
+    'name': e.target.feature.name
+  };
+  $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
+  geojson.resetStyle(e.target);
+  info.update();
+  e.target.setStyle({ fillColor: 'red' });
+}
+function zoomToFeature(e) {
+  map.fitBounds(e.target.getBounds());
+}
 function highlightFeature(e) {
   var layer = e.target;
 
@@ -143,29 +152,23 @@ function highlightFeature(e) {
 
   info.update(layer.feature.properties);
 }
+/// actions end
 
-var geojson;
-
-function resetHighlight(e) {
-  geojson.resetStyle(e.target);
-  info.update();
-}
-
-function setCurrentCounty(e) {
-  var newCookie = {
-    'id': e.target.feature.id,
-    'name': e.target.feature.name
+function style(feature) {
+  var returnData = {
+    weight: 2,
+    opacity: 1,
+    color: 'green',
+    dashArray: '3',
+    fillOpacity: 0.7
+    // fillColor: getColor(feature.properties.density)
   };
-  $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
-  e.target.setStyle({ fillColor: 'red' });
+
+  if(feature.id == cookie.id){
+    returnData.fillColor = 'red';
+  }
+  return returnData;
 }
-function zoomToFeature(e) {
-  map.fitBounds(e.target.getBounds());
-  // console.log(e);
-}
-
-
-
 
 
 function onEachFeature(feature, layer) {
@@ -176,10 +179,7 @@ function onEachFeature(feature, layer) {
   });
 }
 
-geojson = L.geoJson(statesData, {
-  style: style,
-  onEachFeature: onEachFeature
-}).addTo(map);
+
 
 map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
