@@ -1,5 +1,6 @@
 <!-- Leaflet -->
 <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/rgmMaps.min.js"></script>
 <script type="text/javascript">
 
 var statesData = {"type":"FeatureCollection","features":[]};

@@ -67,7 +67,3 @@
 
 
 })(jQuery); // End of use strict
-
-
-
-import ('rgmMap.js');
