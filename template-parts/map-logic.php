@@ -133,7 +133,7 @@ function setCurrentCounty(e) {
   if($.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 })){
     geojson.resetStyle();
     e.target.setStyle({ fillColor: 'red' });
-  };,
+  };
   
 }
 function highlightFeature(e) {
