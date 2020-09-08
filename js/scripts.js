@@ -62,7 +62,11 @@
           });
       },
       select: function (event, ui) {
-        $.cookie('rgmUserCounty', [ui.item.id, ui.item.label], { expires: 7 });
+        var newCookie = [
+          {'id': ui.item.id},
+          {'name': ui.item.label}
+        ];
+        $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
       },
       autoFill: true,
   });

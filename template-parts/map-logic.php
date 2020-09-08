@@ -112,8 +112,8 @@ function style(feature) {
     // fillColor: getColor(feature.properties.density)
   };
 }
-
-console.log($.cookie('rgmUserCounty'));
+var cookie = JSON.parse($.cookie('rgmUserCounty'));
+console.log(cookie);
 
 function highlightFeature(e) {
   var layer = e.target;
