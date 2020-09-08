@@ -159,7 +159,8 @@ function setCurrentCounty(e) {
     'name': e.target.feature.name
   };
   $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
-  console.log(e);
+  e.target.setStyle({ fillColor: 'red' });
+  // console.log(e);
 }
 function zoomToFeature(e) {
   map.fitBounds(e.target.getBounds());
