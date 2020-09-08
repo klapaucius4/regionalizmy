@@ -164,9 +164,9 @@ function initStyle(feature) {
     // fillColor: getColor(feature.properties.density)
   };
 
-  // if(feature.id == cookie.id){
-  //   returnData.fillColor = 'red';
-  // }
+  if(feature.id == cookie.id){
+    returnData.fillColor = 'red';
+  }
   return returnData;
 }
 
