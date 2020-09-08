@@ -47,7 +47,7 @@
 <?php get_template_part('template-parts/map', 'logic'); ?>
 
 <!-- Custom scripts for this template -->
-<script src="<?= get_template_directory_uri(); ?>/js/clean-blog.min.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/js/scripts.min.js"></script>
 
 <?php wp_footer(); ?>
 
