@@ -114,7 +114,7 @@ function style(feature) {
 }
 var cookie = $.cookie('rgmUserCounty');
 if(cookie){
-  console.log($.parseJSON(cookie));
+  console.log(cookie);
 }
 
 function highlightFeature(e) {
