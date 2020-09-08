@@ -37,6 +37,12 @@
         this.previousTop = currentTop;
       });
   }
+
+
+
+  $(".findCountyInput").load(function(){
+    
+  });
   
   //// counties begin
   $(".findCountyInput").autocomplete({
