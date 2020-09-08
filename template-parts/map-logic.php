@@ -119,8 +119,8 @@ function style(feature) {
     fillOpacity: 0.7
     // fillColor: getColor(feature.properties.density)
   };
-  console.log(cookie.id);
-  console.log(feature.properties.id);
+  // console.log(cookie.id);
+  console.log(feature.properties);
   if(feature.properties.id == cookie.id){
     returnData.fillColor = 'red';
   }
