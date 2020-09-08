@@ -173,6 +173,6 @@ legend.onAdd = function (map) {
   return div;
 };
 
-legend.addTo(map);
+// legend.addTo(map);
 
 </script>
