@@ -50,6 +50,8 @@ endwhile; wp_reset_postdata();
 
 var map = L.map('rgm-map', {minZoom: 7}).setView([51.759445, 19.457216], 7);
 
+var loader = L.control.loader().addTo(map);
+
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
   maxZoom: 18,
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -170,6 +172,7 @@ legend.onAdd = function (map) {
 
 legend.addTo(map);
 
-var loader = L.control.loader().addTo(map);
+
+loader.hide();
 
 </script>
