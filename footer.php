@@ -46,6 +46,9 @@
 
 <?php get_template_part('template-parts/map', 'logic'); ?>
 
+<!-- Leaflet -->
+<script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
+
 <!-- Custom scripts for this template -->
 <script src="<?= get_template_directory_uri(); ?>/js/scripts.min.js"></script>
 
