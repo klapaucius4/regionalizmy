@@ -127,6 +127,7 @@ function resetHighlight(e) {
   info.update();
 }
 function setCurrentCounty(e) {
+  console.log(e.target.feature);
   var newCookie = {
     'id': e.target.feature.id,
     'name': e.target.feature.name
