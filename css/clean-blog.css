@@ -5,7 +5,7 @@
  */
 
 body {
-  font-size: 20px;
+  font-size: 18px;
   color: #212529;
   font-family: 'Lora', 'Times New Roman', serif;
 }
@@ -41,6 +41,11 @@ a:focus, a:hover {
 blockquote {
   font-style: italic;
   color: #868e96;
+}
+
+.section-space {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-heading {
@@ -85,6 +90,11 @@ img::selection {
 img::-moz-selection {
   color: #fff;
   background: transparent;
+}
+
+.small, small {
+  font-size: 75%;
+  opacity: 0.7;
 }
 
 #mainNav {
@@ -170,11 +180,12 @@ img::-moz-selection {
 
 header.masthead {
   margin-bottom: 50px;
-  background: no-repeat center center;
-  background-color: #868e96;
   background-attachment: scroll;
   position: relative;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../img/front-page-bg2.svg");
+  background-size: contain;
 }
 
 header.masthead .overlay {
@@ -183,15 +194,24 @@ header.masthead .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #212529;
-  opacity: 0.5;
+}
+
+header.masthead .overlay.bg1 {
+  background-color: #4b4b5b;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+header.masthead .overlay.bg2 {
+  background-image: url("../img/folk-bg.jpg");
+  background-repeat: repeat;
+  z-index: -2;
 }
 
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
   padding: 200px 0 150px;
-  color: white;
 }
 
 @media only screen and (min-width: 768px) {
@@ -209,8 +229,15 @@ header.masthead .site-heading {
 
 header.masthead .page-heading h1,
 header.masthead .site-heading h1 {
-  font-size: 50px;
+  font-size: 46px;
   margin-top: 0;
+  color: #D4213D;
+  text-shadow: 1px 1px 1px #4b4b5b;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 700;
 }
 
 header.masthead .page-heading .subheading,
@@ -220,14 +247,9 @@ header.masthead .site-heading .subheading {
   line-height: 1.1;
   display: block;
   margin: 10px 0 0;
+  color: #4b4b5b;
+  font-weight: bold;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-@media only screen and (min-width: 768px) {
-  header.masthead .page-heading h1,
-  header.masthead .site-heading h1 {
-    font-size: 80px;
-  }
 }
 
 header.masthead .post-heading h1 {
@@ -394,18 +416,98 @@ footer .copyright {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.btn__tight {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
 .btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1;
+  background-color: #D4213D;
+  border-color: #D4213D;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
-  background-color: #00657b !important;
-  border-color: #00657b !important;
+  background-color: #b31c33 !important;
+  border-color: #b31c33 !important;
 }
 
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+}
+
+.accordion-section .panel-default > .panel-heading {
+  border: 0;
+  background: #f4f4f4;
+  padding: 0;
+}
+
+.accordion-section .panel-default .panel-title a {
+  display: block;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.accordion-section .panel-default .panel-title a:after {
+  font-style: normal;
+  color: #1f7de2;
+  float: right;
+  transform: rotate(90deg);
+}
+
+.accordion-section .panel-default .panel-title a.arrow:after {
+  color: #D4213D;
+  content: "\276F";
+}
+
+.accordion-section .panel-default .panel-body {
+  font-size: 1.2rem;
+}
+
+#rgm-map {
+  width: 100%;
+  height: 66vh;
+}
+
+#rgm-map .info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+#rgm-map .info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+#rgm-map .legend {
+  text-align: left;
+  line-height: 18px;
+  color: #555;
+}
+
+#rgm-map .legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.ui-menu {
+  z-index: 401;
+}
+
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+* html .ui-autocomplete {
+  height: 200px;
 }

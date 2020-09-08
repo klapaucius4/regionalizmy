@@ -2,25 +2,38 @@
 header.masthead {
   // TIP: Background images are set within the HTML using inline CSS!
   margin-bottom: 50px;
-  background: no-repeat center center;
-  background-color: $gray-600;
+  // background: no-repeat right center;
+  
   background-attachment: scroll;
   position: relative;
-  @include background-cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../img/front-page-bg2.svg'); 
+  background-size: contain;
+  // @include background-cover;
   .overlay {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: $gray-900;
-    opacity: 0.5;
+    
+    
+    &.bg1{
+      background-color: $themeColor3;
+      z-index: -1;
+      opacity: 0.9;
+    }
+    &.bg2{
+      background-image: url('../img/folk-bg.jpg');
+      background-repeat: repeat;
+      z-index: -2;
+    }
   }
   .page-heading,
   .post-heading,
   .site-heading {
     padding: 200px 0 150px;
-    color: white;
     @media only screen and (min-width: 768px) {
       padding: 200px 0;
     }
@@ -29,8 +42,12 @@ header.masthead {
   .site-heading {
     text-align: center;
     h1 {
-      font-size: 50px;
+      font-size: 46px;
       margin-top: 0;
+      color: $themeColor1;
+      text-shadow: 1px 1px 1px $themeColor3;
+      user-select: none;
+      font-weight: 700;
     }
     .subheading {
       font-size: 24px;
@@ -38,12 +55,14 @@ header.masthead {
       line-height: 1.1;
       display: block;
       margin: 10px 0 0;
+      color: $themeColor3;
+      font-weight: bold;
       @include sans-serif-font;
     }
     @media only screen and (min-width: 768px) {
-      h1 {
-        font-size: 80px;
-      }
+      // h1 {
+      //   font-size: 80px;
+      // }
     }
   }
   .post-heading {

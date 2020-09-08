@@ -1,8 +1,39 @@
 <?php
 
+
+if ( ! function_exists( 'regionalizmy_setup_options' ) ) :
+    function regionalizmy_setup_options () {
+        global $wpdb;
+        $create_table_query = "
+        CREATE TABLE IF NOT EXISTS `wp_votes` (
+            `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+            `phrase_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+            `county_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+            `user_id` bigint(20) unsigned DEFAULT NULL,
+            `value` tinyint(3) unsigned NOT NULL DEFAULT '0',
+            `last_update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            `ip_address` varchar(255) DEFAULT NULL,
+            PRIMARY KEY (`id`),
+            KEY `post_id` (`phrase_id`),
+            KEY `user_id` (`user_id`),
+            KEY `county_id` (`county_id`)
+          ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin2;
+        ";
+        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+        dbDelta( $create_table_query );
+    }
+endif;
+add_action('after_switch_theme', 'regionalizmy_setup_options');
+
+
+
 if ( ! function_exists( 'regionalizmy_setup' ) ) :
 
     function regionalizmy_setup() {
+
+        register_nav_menus( array(
+            'menu-1' => __( 'Menu główne', 'regionalizmy' ),
+        ) );
     
         /*
         load_theme_textdomain( 'regionalizmy', get_template_directory() . '/languages' );
@@ -13,9 +44,7 @@ if ( ! function_exists( 'regionalizmy_setup' ) ) :
     
         add_theme_support( 'post-thumbnails' );
     
-        register_nav_menus( array(
-            'menu-1' => esc_html__( 'Menu główne', 'regionalizmy' ),
-        ) );
+        
     
     
         add_theme_support( 'html5', array(
@@ -54,7 +83,7 @@ function my_login_logo_one() {
     ?>
     <style type="text/css"> 
     body.login div#login h1 a {
-        background-image: url('<?= get_template_directory_uri(); ?>/img/logo.png');
+        background-image: url('<?= get_template_directory_uri(); ?>/img/logo.svg');
         width: 320px;
         height: 36px;
         background-size: contain;
@@ -81,3 +110,14 @@ function my_acf_json_save_point( $path ) {
     return $path;
     
 }
+
+
+
+add_action( 'rest_api_init', function () {
+    /**
+     * RGM_REST_Routes
+     */
+    require get_template_directory() . '/inc/rgm-rest-routes.php';
+    $rgmRestRoutes = new RGM_REST_Routes();
+    $rgmRestRoutes->register_routes();
+});

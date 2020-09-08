@@ -37,5 +37,33 @@
         this.previousTop = currentTop;
       });
   }
+  
+  //// counties begin
+  $(".findCountyInput").autocomplete({
+      source: function (request, response) {
+          $.ajax({
+              url: "/wp-json/rgm/route/get-counties/"+request.term,
+              success: function (data) {
+                  var transformed = $.map(data, function (el) {
+                      return {
+                          label: el.name,
+                          id: el.id
+                      };
+                  });
+                  response(transformed);
+              },
+              error: function () {
+                  response([]);
+              }
+          });
+      },
+      select: function (event, ui) {
+        $.cookie('rgmUserCountyId', ui.item.id, { expires: 7 });
+      },
+      autoFill: true,
+  });
+  //// counties end
+
+
 
 })(jQuery); // End of use strict

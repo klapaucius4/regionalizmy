@@ -7,17 +7,21 @@
   text-transform: uppercase;
   border-radius: 0;
   @include sans-serif-font;
+  &__tight{
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
 }
 
 .btn-primary {
-  background-color: $primary;
-  border-color: $primary;
+  background-color: $themeColor1;
+  border-color: $themeColor1;
   &:hover,
   &:focus,
   &:active {
     color: $white;
-    background-color: darken($primary, 7.5) !important;
-    border-color: darken($primary, 7.5) !important;
+    background-color: darken($themeColor1, 7.5) !important;
+    border-color: darken($themeColor1, 7.5) !important;
   }
 }
 

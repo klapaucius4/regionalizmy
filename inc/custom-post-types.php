@@ -8,7 +8,7 @@ register_post_type('regionalizmy_phrase', array(
         'public' => true,
         // 'has_archive' => __('oferta', 'regionalizmy'),
         // 'rewrite' => array('slug' => __('oferta', 'regionalizmy'), 'with_front' => true),
-        'supports' => array( 'title', 'editor' ),
+        'supports' => array( 'title' ),
         'menu_icon' => 'dashicons-editor-ol',
     )
 );

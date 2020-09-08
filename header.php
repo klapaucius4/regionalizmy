@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html <?php language_attributes(); ?>>
 
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="michalkowalik.pl">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title><?php
+    /*
+    * Print the <title> tag based on what is being viewed.
+    */
+    global $page, $paged;
+    
+    wp_title( '|', true, 'right' );
+    
+    // Add the blog name.
+    bloginfo( 'name' );
+    
+    // Add the blog description for the home/front page.
+    $site_description = get_bloginfo( 'description', 'display' );
+    if ( $site_description && ( is_home() || is_front_page() ) )
+    echo " | $site_description";
+    
+    // Add a page number if necessary:
+    if ( $paged >= 2 || $page >= 2 )
+    echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
+    
+    ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= get_template_directory_uri(); ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +40,9 @@
     <!-- Leaflet -->
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.css" />
 
+    <!-- jquery-autocomplete -->
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/vendor/jquery-ui/jquery-ui.min.css" />
+
     <!-- Custom styles for this template -->
     <link href="<?= get_template_directory_uri(); ?>/css/clean-blog.min.css" rel="stylesheet">
 
@@ -32,39 +54,46 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand p-0" href="<?= home_url(); ?>"><img style="width: 300px;" src="<?= get_template_directory_uri(); ?>/img/logo.png" alt="Logo" /></a>
+      <a class="navbar-brand p-0" href="<?= home_url(); ?>"><img style="width: 300px;" src="<?= get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" /></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
+        <?= __('Menu'); ?>
         <i class="fas fa-bars"></i>
       </button>
+      <?php
+      if(has_nav_menu('menu-1')):
+          wp_nav_menu( array(
+              'theme_location'    => 'menu-1',
+              'depth'             => 2,
+              'container'         => 'div',
+              'container_class'   => 'collapse navbar-collapse',
+              'container_id'      => 'navbarResponsive',
+              'menu_class'        => 'nav navbar-nav ml-auto',
+              'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+              'walker'            => new WP_Bootstrap_Navwalker(),
+          ) );
+      else:
+      ?>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="<?= home_url(); ?>">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Frazy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Mapa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Kontakt</a>
+            <a class="nav-link" href="<?= home_url(); ?>"><?= __('Home'); ?></a>
           </li>
         </ul>
       </div>
+      <?php endif; ?>
     </div>
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('<?= get_template_directory_uri(); ?>/img/front-page-bg.jpg')">
-    <div class="overlay"></div>
+  <header class="masthead">
+    <div class="overlay bg1"></div>
+    <div class="overlay bg2"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Regionalizmy</h1>
-            <span class="subheading">Internetowy Słownik Regionalizmów Polskich</span>
+            <h1>Internetowy Słownik Regionalizmów Polskich</h1>
+            <!-- <h2 class="subheading">Internetowy Słownik Regionalizmów Polskich</h2> -->
           </div>
         </div>
       </div>

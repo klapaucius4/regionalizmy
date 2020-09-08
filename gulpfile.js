@@ -70,7 +70,21 @@ function modules() {
     // '!./node_modules/leaflet/dist/core.js'
   ])
   .pipe(gulp.dest('./vendor/leaflet'));
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery);
+
+  // jquery-ui-dist
+  var jqueryUiDist = gulp.src([
+    './node_modules/jquery-ui-dist/jquery-ui.min.js',
+    './node_modules/jquery-ui-dist/jquery-ui.min.css',
+  ])
+  .pipe(gulp.dest('./vendor/jquery-ui'));
+
+  // jquery.cookie
+  var jqueryCookie = gulp.src([
+    './node_modules/jquery.cookie/jquery.cookie.js',
+  ])
+  .pipe(gulp.dest('./vendor/jquery.cookie'));
+
+  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUiDist, jqueryCookie);
 }
 
 // CSS task
