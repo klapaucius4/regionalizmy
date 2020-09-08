@@ -4,22 +4,9 @@
  * - set_current_county
  * - single_phrase
  */
-$mapType = 'set_default_county';
 ?>
-
-
 <script type="text/javascript">
-
-// var cookie = $.cookie('rgmUserCounty');
-// if(cookie){
-//   cookie = JSON.parse(cookie);
-// }else{
-//   cookie = false;
-// }
-
-
 var statesData = {"type":"FeatureCollection","features":[]};
-
 <?php
 $args = array(
   'post_type' => 'regionalizmy_county',
@@ -44,7 +31,6 @@ while($myQuery->have_posts()): $myQuery->the_post();
     $title = get_the_title();
     $subTitle = '(miasto na prawach powiatu)';
   }
-
   $coordinates = rgmCoordinatesConverter($coordinates);
 ?>
     statesData.features.push(
@@ -57,11 +43,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
         'coordinates': [<?= $coordinates; ?>]
         }
     });
-
 <?php
 endwhile; wp_reset_postdata();
 ?>
-
-// legend.addTo(map);
-
 </script>
