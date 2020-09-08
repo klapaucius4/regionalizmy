@@ -47,7 +47,7 @@ endwhile; wp_reset_postdata();
 // console.log(statesData);
 
 
-var map = L.map('rgm-map', {minZoom: 7}).setView([51.759445, 19.457216], 6.5);
+var map = L.map('rgm-map', {minZoom: 7}).setView([51.759445, 19.457216], 6.2);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
   maxZoom: 18,
