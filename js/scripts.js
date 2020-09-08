@@ -47,7 +47,7 @@
                   var transformed = $.map(data, function (el) {
                       var countyName = 'powiat ' + el.name;
                       if(el.city){
-                        countyName = el.name + ' (miast na prawach powiatu)';
+                        countyName = el.name + ' (miasto na prawach powiatu)';
                       }
                       return {
                           label: countyName,
