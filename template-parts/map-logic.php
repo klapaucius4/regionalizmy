@@ -154,8 +154,11 @@ function resetHighlight(e) {
 
 
 function setCurrentCounty(e) {
-  // map.fitBounds(e.target.getBounds());
-  console.log(e.target);
+  var newCookie = {
+    'id': e.target.feature.id,
+    'name': e.target.feature.name
+  };
+  $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
 }
 function zoomToFeature(e) {
   map.fitBounds(e.target.getBounds());
