@@ -113,6 +113,7 @@ function style(feature) {
   };
 }
 var cookie = $.cookie('rgmUserCounty');
+console.log(typeof cookie);
 if(typeof cookie === 'object'){
   console.log(JSON.parse(cookie));
 }
