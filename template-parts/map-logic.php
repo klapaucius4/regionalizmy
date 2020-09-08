@@ -10,6 +10,14 @@ $mapType = 'set_conty';
 <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
 <script type="text/javascript">
 
+var cookie = $.cookie('rgmUserCounty');
+if(cookie){
+  cookie = JSON.parse(cookie);
+}else{
+  cookie = false;
+}
+
+
 var statesData = {"type":"FeatureCollection","features":[]};
 
 <?php
@@ -103,19 +111,18 @@ function getColor(d) {
 }
 
 function style(feature) {
-  return {
+  var returnData = {
     weight: 2,
     opacity: 1,
-    // color: 'green',
+    color: 'green',
     dashArray: '3',
     fillOpacity: 0.7
     // fillColor: getColor(feature.properties.density)
   };
-}
-var cookie = $.cookie('rgmUserCounty');
-console.log(cookie);
-if(cookie){
-  console.log(JSON.parse(cookie));
+  if(cookie && feature.properties.id == cookie.id){
+    returnData.push([fillColor: 'red']);
+  }
+  return returnData;
 }
 
 function highlightFeature(e) {
