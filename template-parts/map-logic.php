@@ -120,6 +120,7 @@ function style(feature) {
     // fillColor: getColor(feature.properties.density)
   };
   console.log(cookie.id);
+  console.log(feature.properties.id);
   if(feature.properties.id == cookie.id){
     returnData.fillColor = 'red';
   }
