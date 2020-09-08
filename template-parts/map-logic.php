@@ -114,7 +114,7 @@ function getColor(d) {
 var geojson;
 
 geojson = L.geoJson(statesData, {
-  style: style,
+  style: initStyle,
   onEachFeature: onEachFeature
 }).addTo(map);
 
@@ -153,7 +153,7 @@ function highlightFeature(e) {
 }
 /// actions end
 
-function style(feature) {
+function initStyle(feature) {
   var returnData = {
     weight: 2,
     opacity: 1,
@@ -163,9 +163,9 @@ function style(feature) {
     // fillColor: getColor(feature.properties.density)
   };
 
-  if(feature.id == cookie.id){
-    returnData.fillColor = 'red';
-  }
+  // if(feature.id == cookie.id){
+  //   returnData.fillColor = 'red';
+  // }
   return returnData;
 }
 
