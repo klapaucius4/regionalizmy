@@ -44,6 +44,7 @@
     var cookie = $.cookie('rgmUserCounty');
     if(cookie){
       cookie = JSON.parse(cookie);
+      console.log(cookie);
       $(this).val(cookie.name);
     }
   });
