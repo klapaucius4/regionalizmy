@@ -124,7 +124,7 @@ function resetHighlight(e) {
   // geojson.resetStyle(e.target)
   // e.target.feature.resetStyle();
   // info.update();
-  // console.log(e.target);
+  console.log(e);
 }
 function setCurrentCounty(e) {
   var newCookie = {
