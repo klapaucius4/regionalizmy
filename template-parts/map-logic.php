@@ -120,7 +120,7 @@ function style(feature) {
     // fillColor: getColor(feature.properties.density)
   };
   // if(cookie && feature.properties.id == cookie.id){
-    returnData.push({fillColor: 'red'});
+    returnData.fillColor = 'red';
   // }
   return returnData;
 }
