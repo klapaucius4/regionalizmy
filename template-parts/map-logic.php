@@ -17,7 +17,6 @@ if(cookie){
 }else{
   cookie = false;
 }
-console.log(cookie);
 
 
 var statesData = {"type":"FeatureCollection","features":[]};
@@ -127,10 +126,9 @@ function resetHighlight(e) {
   info.update();
 }
 function setCurrentCounty(e) {
-  console.log(e.target.feature);
   var newCookie = {
     'id': e.target.feature.id,
-    'name': e.target.feature.name
+    'name': e.target.feature.properties.name
   };
   if($.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 })){
     geojson.resetStyle();
