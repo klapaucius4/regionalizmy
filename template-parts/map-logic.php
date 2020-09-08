@@ -119,9 +119,9 @@ function style(feature) {
     fillOpacity: 0.7
     // fillColor: getColor(feature.properties.density)
   };
-  // if(cookie && feature.properties.id == cookie.id){
+  if(cookie && feature.properties.id == cookie.id){
     returnData.fillColor = 'red';
-  // }
+  }
   return returnData;
 }
 
