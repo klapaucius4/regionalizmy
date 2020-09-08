@@ -41,7 +41,11 @@
 
 
   $(".findCountyInput").load(function(){
-    
+    var cookie = $.cookie('rgmUserCounty');
+    if(cookie){
+      cookie = JSON.parse(cookie);
+      $(this).val(cookie.name);
+    }
   });
   
   //// counties begin
