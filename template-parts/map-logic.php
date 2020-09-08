@@ -127,16 +127,6 @@ function style(feature) {
   return returnData;
 }
 
-function setCurrentCounty(e) {
-  var newCookie = {
-    'id': e.target.feature.id,
-    'name': e.target.feature.name
-  };
-  $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
-  e.target.setStyle({ fillColor: 'red' });
-}
-
-
 function highlightFeature(e) {
   var layer = e.target;
 
@@ -161,7 +151,14 @@ function resetHighlight(e) {
   info.update();
 }
 
-
+function setCurrentCounty(e) {
+  var newCookie = {
+    'id': e.target.feature.id,
+    'name': e.target.feature.name
+  };
+  $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
+  e.target.setStyle({ fillColor: 'red' });
+}
 function zoomToFeature(e) {
   map.fitBounds(e.target.getBounds());
   // console.log(e);
