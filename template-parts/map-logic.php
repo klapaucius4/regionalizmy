@@ -26,6 +26,10 @@ while($myQuery->have_posts()): $myQuery->the_post();
   if(!$coordinates){
     continue;
   }
+  $title = 'powiat '.get_the_title();
+  if(get_field('miasto_na_prawach_powiatu')){
+    $title = get_the_title().' (miasto na prawach powiatu)';
+  }
 
   $coordinates = rgmCoordinatesConverter($coordinates);
 ?>
@@ -33,7 +37,7 @@ while($myQuery->have_posts()): $myQuery->the_post();
     {
       'type': 'Feature',
       'id': '<?= $counter++; ?>',
-      'properties': {'name': '<?= get_the_title(); ?>', 'density': <?= intval(rand(1, 100)); ?>},
+      'properties': {'name': '<?= $title; ?>', 'density': <?= intval(rand(1, 100)); ?>},
       'geometry': {
         'type': '<?= (substr($coordinates, 0, 3) == '[[[')?'MultiPolygon':'Polygon'; ?>',
         'coordinates': [<?= $coordinates; ?>]
