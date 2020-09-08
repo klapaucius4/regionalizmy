@@ -1,6 +1,23 @@
+<?php
+/**
+ * - set_default_county
+ * - set_current_county
+ * - single_phrase
+ */
+$mapType = 'set_default_county';
+?>
+
 <!-- Leaflet -->
 <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
 <script type="text/javascript">
+
+var cookie = $.cookie('rgmUserCounty');
+if(cookie){
+  cookie = JSON.parse(cookie);
+}else{
+  cookie = false;
+}
+
 
 var statesData = {"type":"FeatureCollection","features":[]};
 
@@ -26,14 +43,20 @@ while($myQuery->have_posts()): $myQuery->the_post();
   if(!$coordinates){
     continue;
   }
+  $title = 'powiat '.get_the_title();
+  $subTitle = '';
+  if(get_field('miasto_na_prawach_powiatu')){
+    $title = get_the_title();
+    $subTitle = '(miasto na prawach powiatu)';
+  }
 
   $coordinates = rgmCoordinatesConverter($coordinates);
 ?>
     statesData.features.push(
     {
       'type': 'Feature',
-      'id': '<?= $counter++; ?>',
-      'properties': {'name': '<?= get_the_title(); ?>', 'density': <?= intval(rand(1, 100)); ?>},
+      'id': '<?= get_the_ID(); ?>',
+      'properties': {'name': '<?= $title; ?>', 'density': <?= intval(rand(1, 100)); ?>, 'subtitle': '<?= $subTitle; ?>'},
       'geometry': {
         'type': '<?= (substr($coordinates, 0, 3) == '[[[')?'MultiPolygon':'Polygon'; ?>',
         'coordinates': [<?= $coordinates; ?>]
@@ -44,10 +67,8 @@ while($myQuery->have_posts()): $myQuery->the_post();
 endwhile; wp_reset_postdata();
 ?>
 
-// console.log(statesData);
 
-
-var map = L.map('rgm-map').setView([51.759445, 19.457216], 7);
+var map = L.map('rgm-map', {minZoom: 7}).setView([51.759445, 19.457216], 6);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
   maxZoom: 18,
@@ -70,8 +91,8 @@ info.onAdd = function (map) {
 };
 
 info.update = function (props) {
-  this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-    '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+  this._div.innerHTML = '<h4>Lorem ipsum dolor</h4>' + (props ?
+    '<b>' + props.name + '</b><br />' + '<span>' + props.subtitle + '</span>' + '<br /><br />' + props.density + ' people / mi<sup>2</sup>'
     : 'Hover over a state');
 };
 
@@ -90,17 +111,32 @@ function getColor(d) {
             '#FFEDA0';
 }
 
-function style(feature) {
-  return {
-    weight: 2,
-    opacity: 1,
-    color: 'white',
-    dashArray: '3',
-    fillOpacity: 0.7,
-    fillColor: getColor(feature.properties.density)
-  };
-}
+var geojson;
 
+geojson = L.geoJson(statesData, {
+  style: initStyle,
+  onEachFeature: onEachFeature
+}).addTo(map);
+
+
+/// actions begin
+function resetHighlight(e) {
+  // geojson.resetStyle(e.target)
+  geojson.setStyle(initStyle(e.target.feature));
+  info.update();
+}
+function setCurrentCounty(e) {
+  var newCookie = {
+    'id': e.target.feature.id,
+    'name': e.target.feature.properties.name
+  };
+  if($.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 })){
+    geojson.resetStyle();
+    e.target.setStyle({ fillColor: 'red' });
+    $('.findCountyInput').val(e.target.feature.properties.name);
+  };
+  
+}
 function highlightFeature(e) {
   var layer = e.target;
 
@@ -117,30 +153,34 @@ function highlightFeature(e) {
 
   info.update(layer.feature.properties);
 }
+/// actions end
 
-var geojson;
-
-function resetHighlight(e) {
-  geojson.resetStyle(e.target);
-  info.update();
+function initStyle(feature) {
+  var returnData = {
+    weight: 2,
+    opacity: 1,
+    color: 'green',
+    dashArray: '3',
+    fillOpacity: 0.7
+    // fillColor: getColor(feature.properties.density)
+  };
+  return returnData;
 }
 
-function zoomToFeature(e) {
-  map.fitBounds(e.target.getBounds());
-}
 
 function onEachFeature(feature, layer) {
+  if(feature.id == cookie.id){
+    // returnData.fillColor = 'red';
+    layer.setStyle({ fillColor: 'red' });
+  }
   layer.on({
     mouseover: highlightFeature,
     mouseout: resetHighlight,
-    click: zoomToFeature
+    click: setCurrentCounty
   });
 }
 
-geojson = L.geoJson(statesData, {
-  style: style,
-  onEachFeature: onEachFeature
-}).addTo(map);
+
 
 map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
@@ -167,6 +207,6 @@ legend.onAdd = function (map) {
   return div;
 };
 
-legend.addTo(map);
+// legend.addTo(map);
 
 </script>

@@ -28,7 +28,7 @@ a {
   @include transition-all;
   &:focus,
   &:hover {
-    color: $primary;
+    color: $themeColor1;
   }
 }
 
@@ -61,13 +61,13 @@ blockquote {
 
 ::-moz-selection {
   color: $white;
-  background: $primary;
+  background: $themeColor1;
   text-shadow: none;
 }
 
 ::selection {
   color: $white;
-  background: $primary;
+  background: $themeColor1;
   text-shadow: none;
 }
 

@@ -37,6 +37,14 @@
         this.previousTop = currentTop;
       });
   }
+
+
+
+  var cookie = $.cookie('rgmUserCounty');
+  if(cookie){
+    cookie = JSON.parse(cookie);
+    $('.findCountyInput').val(cookie.name);
+  }
   
   //// counties begin
   $(".findCountyInput").autocomplete({
@@ -45,8 +53,12 @@
               url: "/wp-json/rgm/route/get-counties/"+request.term,
               success: function (data) {
                   var transformed = $.map(data, function (el) {
+                      var countyName = 'powiat ' + el.name;
+                      if(el.city){
+                        countyName = el.name + ' (miasto na prawach powiatu)';
+                      }
                       return {
-                          label: el.name,
+                          label: countyName,
                           id: el.id
                       };
                   });
@@ -58,7 +70,11 @@
           });
       },
       select: function (event, ui) {
-        $.cookie('rgmUserCountyId', ui.item.id, { expires: 7 });
+        var newCookie = {
+          'id': ui.item.id,
+          'name': ui.item.label
+        };
+        $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
       },
       autoFill: true,
   });

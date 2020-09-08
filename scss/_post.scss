@@ -5,7 +5,7 @@
     &:focus,
     &:hover {
       text-decoration: none;
-      color: $primary;
+      color: $themeColor1;
     }
     > .post-title {
       font-size: 30px;
@@ -28,7 +28,7 @@
       &:focus,
       &:hover {
         text-decoration: underline;
-        color: $primary;
+        color: $themeColor1;
       }
     }
   }
