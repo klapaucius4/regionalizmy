@@ -121,8 +121,8 @@ geojson = L.geoJson(statesData, {
 
 /// actions begin
 function resetHighlight(e) {
-  geojson.resetStyle(e.target);
-  info.update();
+  // geojson.resetStyle(e.target);
+  // info.update();
 }
 function setCurrentCounty(e) {
   var newCookie = {
