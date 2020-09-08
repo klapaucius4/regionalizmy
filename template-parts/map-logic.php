@@ -160,7 +160,6 @@ function setCurrentCounty(e) {
   };
   $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
   e.target.setStyle({ fillColor: 'red' });
-  // console.log(e);
 }
 function zoomToFeature(e) {
   map.fitBounds(e.target.getBounds());
