@@ -169,4 +169,6 @@ legend.onAdd = function (map) {
 
 legend.addTo(map);
 
+var loader = L.control.loader().addTo(map);
+
 </script>
