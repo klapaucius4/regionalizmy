@@ -39,13 +39,13 @@
             d > 15   ? '#FED976' :
                 '#FFEDA0';
     }
-
-    var geojson;
-
-    geojson = L.geoJson(countiesData, {
-        style: initStyle,
-        onEachFeature: onEachFeature
-    }).addTo(map);
+    if(typeof countiesData !== 'undefined'){
+        var geojson;
+        geojson = L.geoJson(countiesData, {
+            style: initStyle,
+            onEachFeature: onEachFeature
+        }).addTo(map);
+    }
 
 
     /// actions begin
