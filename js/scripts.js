@@ -89,12 +89,12 @@
 
 
 
-
-
+if($( '.rgm-map' ).length){
+  /**
+   * Map begin
+   */
   var map = L.map('rgm-map', {minZoom: 7, maxZoom: 10}).setView([51.759445, 19.457216], 6);
-
   // map.scrollWheelZoom.disable();
-
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -104,7 +104,6 @@
     tileSize: 512,
     zoomOffset: -1
   }).addTo(map);
-
 
   // control that shows state info on hover
   var info = L.control();
@@ -123,7 +122,6 @@
 
   info.addTo(map);
 
-
   // get color depending on population density value
   function getColor(d) {
     return d > 100 ? '#800026' :
@@ -135,14 +133,12 @@
         d > 15   ? '#FED976' :
               '#FFEDA0';
   }
-
   var geojson;
 
   geojson = L.geoJson(countiesData, {
     style: initStyle,
     onEachFeature: onEachFeature
   }).addTo(map);
-
 
   /// actions begin
   function resetHighlight(e) {
@@ -192,7 +188,6 @@
     return returnData;
   }
 
-
   function onEachFeature(feature, layer) {
     if(feature.id == cookie.id){
       // returnData.fillColor = 'red';
@@ -205,10 +200,7 @@
     });
   }
 
-
-
   map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
-
 
   var legend = L.control({position: 'bottomright'});
 
@@ -231,6 +223,11 @@
     div.innerHTML = labels.join('<br>');
     return div;
   };
+
+  /**
+   * Map end
+   */
+}
 
 
 
