@@ -43,7 +43,8 @@
     <!-- jquery-autocomplete -->
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/vendor/jquery-ui/jquery-ui.min.css" />
 
-    
+    <!-- leaflet-gesture-handling -->
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/vendor/leaflet-gesture-handling/leaflet-gesture-handling.min.css" />
 
     <!-- Custom styles for this template -->
     <link href="<?= get_template_directory_uri(); ?>/css/styles.min.css" rel="stylesheet">
