@@ -51,6 +51,8 @@
   <?php endif; ?>
   <!-- Leaflet -->
   <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
+  <!-- leaflet-gesture-handling -->
+  <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet-gesture-handling/leaflet-gesture-handling.min.js"></script>
   <!-- RGM Map -->
   <script src="<?= get_template_directory_uri(); ?>/js/rgmMap.min.js"></script>
 <?php endif; ?>
