@@ -47,5 +47,5 @@ while($myQuery->have_posts()): $myQuery->the_post();
 endwhile; wp_reset_postdata();
 ?>
 <script type="text/javascript">
-<?php echo $javaScriptString; ?>
+<?php echo minify_js($javaScriptString); ?>
 </script>
