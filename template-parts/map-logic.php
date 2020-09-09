@@ -4,10 +4,9 @@
  * - set_current_county
  * - single_phrase
  */
-?>
-<script type="text/javascript">
-var statesData = {"type":"FeatureCollection","features":[]};
-<?php
+
+$javaScriptString = "";
+$javaScriptString .= "var countiesData = {'type':'FeatureCollection','features':[]};";
 $args = array(
   'post_type' => 'regionalizmy_county',
   'posts_per_page' => -1,
@@ -32,18 +31,21 @@ while($myQuery->have_posts()): $myQuery->the_post();
     $subTitle = '(miasto na prawach powiatu)';
   }
   $coordinates = rgmCoordinatesConverter($coordinates);
-?>
-    statesData.features.push(
+
+  $javaScriptString .= "
+    countiesData.features.push(
     {
       'type': 'Feature',
       'id': '<?= get_the_ID(); ?>',
-      'properties': {'name': '<?= $title; ?>', 'density': <?= intval(rand(1, 100)); ?>, 'subtitle': '<?= $subTitle; ?>'},
+      'properties': {'name': '" . $title . "', 'density': <?= intval(rand(1, 100)); ?>, 'subtitle': '" . $subTitle . "'},
       'geometry': {
-        'type': '<?= (substr($coordinates, 0, 3) == '[[[')?'MultiPolygon':'Polygon'; ?>',
-        'coordinates': [<?= $coordinates; ?>]
+        'type': '" . (substr($coordinates, 0, 3) == '[[[')?'MultiPolygon':'Polygon' ."',
+        'coordinates': [".$coordinates."]
         }
-    });
-<?php
+    });";
+
 endwhile; wp_reset_postdata();
 ?>
+<script type="text/javascript">
+<?php echo $javaScriptString; ?>
 </script>
