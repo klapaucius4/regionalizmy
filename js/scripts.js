@@ -81,12 +81,10 @@
   //// counties end
 
 
-
-
-
-
-
-
+  $(".vote-buttons btn").on('click', function(){
+    var phraseId = $(this).data('phraseId');
+    console.log(phraseId);
+  });
 
 
 
