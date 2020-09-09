@@ -82,8 +82,10 @@
 
   $("body").on('click', '.vote-buttons button', function(e){
     // alert('test');
-    var phraseId = $(this).data('phraseid');
+    var phraseId = $(this).data('phrase-id');
+    var voteValue = $(this).data('vote-value');
     console.log(phraseId);
+    console.log(voteValue);
   });
 
 })(jQuery); // End of use strict
