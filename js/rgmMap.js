@@ -101,7 +101,6 @@ function initStyle(feature) {
 
 
 function onEachFeature(feature, layer) {
-    // console.log(typeof cookie);
     if(typeof cookie !== 'undefined' && feature.id == cookie.id){
         // returnData.fillColor = 'red';
         layer.setStyle({ fillColor: 'red' });
