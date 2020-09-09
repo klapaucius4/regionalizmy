@@ -89,7 +89,7 @@
 
 
 
-if($( '.rgm-map' ).length){
+if($('.rgm-map').length){
   /**
    * Map begin
    */
