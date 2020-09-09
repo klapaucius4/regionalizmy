@@ -46,13 +46,13 @@
 
 <?php if(is_front_page()): ?>
   <?php if(file_exists(get_template_directory().'/js/countiesData.min.js')): ?>
-    <!-- Counties Data -->
-    <script src="<?= get_template_directory_uri(); ?>/js/countiesData.min.js"></script>
-    <!-- Leaflet -->
-    <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
-    <!-- RGM Map -->
-    <script src="<?= get_template_directory_uri(); ?>/js/rgmMap.min.js"></script>
+  <!-- Counties Data -->
+  <script src="<?= get_template_directory_uri(); ?>/js/countiesData.min.js"></script>
   <?php endif; ?>
+  <!-- Leaflet -->
+  <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
+  <!-- RGM Map -->
+  <script src="<?= get_template_directory_uri(); ?>/js/rgmMap.min.js"></script>
 <?php endif; ?>
 
 <!-- Custom scripts for this template -->
