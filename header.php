@@ -43,6 +43,8 @@
     <!-- jquery-autocomplete -->
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/vendor/jquery-ui/jquery-ui.min.css" />
 
+    
+
     <!-- Custom styles for this template -->
     <link href="<?= get_template_directory_uri(); ?>/css/styles.min.css" rel="stylesheet">
 

@@ -88,7 +88,7 @@ function modules() {
 
   // leaflet-gesture-handling
   var leafletGestureHandling = gulp.src([
-    './node_modules/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.js',
+    './node_modules/leaflet-gesture-handling/dist/*',
   ])
   .pipe(gulp.dest('./vendor/leaflet-gesture-handling'));
 
