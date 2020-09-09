@@ -45,7 +45,6 @@ while($myQuery->have_posts()): $myQuery->the_post();
     });";
 
 endwhile; wp_reset_postdata();
-?>
-<script type="text/javascript">
-<?php $javaScriptString = minify_js($javaScriptString); ?>
-</script>
+
+$javaScriptString = minify_js($javaScriptString);
+file_put_contents( (get_template_directory().'/js/countiesData.min.js'), $javaScriptString );
