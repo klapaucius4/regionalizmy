@@ -176,3 +176,27 @@ function generateCountiesDataJs(){
 }
 
 
+
+
+function myprefix_custom_cron_schedule( $schedules ) {
+    $schedules['every_six_hours'] = array(
+        'interval' => 900, // Every 15 minutes
+        'display'  => __( 'Every 15 minutes' ),
+    );
+    return $schedules;
+}
+add_filter( 'cron_schedules', 'myprefix_custom_cron_schedule' );
+
+//Schedule an action if it's not already scheduled
+if ( ! wp_next_scheduled( 'myprefix_cron_hook' ) ) {
+    wp_schedule_event( time(), 'every_six_hours', 'myprefix_cron_hook' );
+}
+
+///Hook into that action that'll fire every six hours
+ add_action( 'myprefix_cron_hook', 'myprefix_cron_function' );
+
+//create your function, that runs on cron
+function myprefix_cron_function() {
+    //your function...
+    generateCountiesDataJs();
+}
