@@ -70,7 +70,7 @@
         var layer = e.target;
 
         layer.setStyle({
-            weight: 3,
+            // weight: 5,
             color: '#666',
             dashArray: '',
             fillOpacity: 0.7
