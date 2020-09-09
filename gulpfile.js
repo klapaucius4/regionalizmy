@@ -120,7 +120,7 @@ function js() {
       '!./js/*.min.js',
       '!./js/contact_me.js',
       '!./js/jqBootstrapValidation.js',
-      // '!./js/rgmMaps.js'
+      '!./js/countiesData.min.js'
     ])
     .pipe(uglify())
     .pipe(header(banner, {

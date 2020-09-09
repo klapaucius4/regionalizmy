@@ -43,6 +43,11 @@
 <script src="<?= get_template_directory_uri(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= get_template_directory_uri(); ?>/vendor/jquery.cookie/jquery.cookie.js"></script>
 
+
+<?php if(file_exists(get_template_directory().'/js/countiesData.min.js')): ?>
+<!-- Counties Data -->
+<script src="<?= get_template_directory_uri(); ?>/js/countiesData.min.js"></script>
+<?php endif; ?>
 <!-- Leaflet -->
 <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
 
