@@ -28,7 +28,7 @@ info.update = function (props) {
 info.addTo(map);
 
 /// scroll disabled
-map.scrollWheelZoom.disable();
+// map.scrollWheelZoom.disable();
 
 
 // get color depending on population density value
