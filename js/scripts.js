@@ -118,7 +118,7 @@
 
   info.update = function (props) {
     this._div.innerHTML = '<h4>Lorem ipsum dolor</h4>' + (props ?
-      '<b>' + props.name + '</b><br />' + '<span>' + props.subtitle + '</span>' + '<br /><br />' + props.density + ' people / mi<sup>2</sup>'
+      '<b>' + props.name + '</b><br />' + '<span>' + props.subtitle + '</span>'
       : 'Zaznacz na mapie powiat w którym mieszkasz lub z którego pochodzisz');
   };
 
