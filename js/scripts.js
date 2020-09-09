@@ -66,6 +66,7 @@
           'id': ui.item.id,
           'name': ui.item.label
         };
+        console.log(newCookie);
         $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
       },
       autoFill: true,
