@@ -86,7 +86,13 @@ function modules() {
   ])
   .pipe(gulp.dest('./vendor/jquery.cookie'));
 
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUiDist, jqueryCookie);
+  // leaflet-gesture-handling
+  var leafletGestureHandling = gulp.src([
+    './node_modules/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.js',
+  ])
+  .pipe(gulp.dest('./vendor/leaflet-gesture-handling'));
+
+  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUiDist, jqueryCookie, leafletGestureHandling);
 }
 
 // CSS task
