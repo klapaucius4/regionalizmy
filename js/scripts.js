@@ -208,6 +208,9 @@
 
 
 
+  map.scrollWheelZoom.disable();
+
+
   map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
 
