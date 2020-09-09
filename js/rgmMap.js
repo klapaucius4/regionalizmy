@@ -27,6 +27,9 @@
 
     info.addTo(map);
 
+    /// scroll disabled
+    map.scrollWheelZoom.disable();
+
 
     // get color depending on population density value
     function getColor(d) {
