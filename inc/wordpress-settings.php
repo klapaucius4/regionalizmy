@@ -164,18 +164,6 @@ function generateCountiesDataJs(){
     }
     $coordinates = rgmCoordinatesConverter($coordinates);
 
-    // $javaScriptString .= "
-    //     countiesData.features.push(
-    //     {
-    //     'type': 'Feature',
-    //     'id': '" . get_the_ID() . "',
-    //     'properties': {'name': '" . $title . "', 'density': " . intval(rand(1, 100)) . ", 'subtitle': '" . $subTitle . "'},
-    //     'geometry': {
-    //         'type': '" . ((substr($coordinates, 0, 3) == '[[[')?'MultiPolygon':'Polygon') ."',
-    //         'coordinates': [".$coordinates."]
-    //         }
-    //     });
-    // ";
 
     $javaScriptString .= "
         countiesData.features.push(
