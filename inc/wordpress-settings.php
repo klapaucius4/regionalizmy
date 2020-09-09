@@ -121,3 +121,103 @@ add_action( 'rest_api_init', function () {
     $rgmRestRoutes = new RGM_REST_Routes();
     $rgmRestRoutes->register_routes();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function generateCountiesDataJs(){
+    $javaScriptString = "";
+    $javaScriptString .= "var countiesData = {'type':'FeatureCollection','features':[]};";
+    $args = array(
+    'post_type' => 'regionalizmy_county',
+    'posts_per_page' => -1,
+    'meta_query' => array(
+        array(
+            'key' => 'koordynaty',
+            'compare' => 'EXISTS'
+            )
+        )
+    );
+    $myQuery = new WP_Query($args);
+    $counter = 1;
+    while($myQuery->have_posts()): $myQuery->the_post();
+    $coordinates = get_field('koordynaty');
+    if(!$coordinates){
+        continue;
+    }
+    $title = 'powiat '.get_the_title();
+    $subTitle = '';
+    if(get_field('miasto_na_prawach_powiatu')){
+        $title = get_the_title();
+        $subTitle = '(miasto na prawach powiatu)';
+    }
+    $coordinates = rgmCoordinatesConverter($coordinates);
+
+    // $javaScriptString .= "
+    //     countiesData.features.push(
+    //     {
+    //     'type': 'Feature',
+    //     'id': '" . get_the_ID() . "',
+    //     'properties': {'name': '" . $title . "', 'density': " . intval(rand(1, 100)) . ", 'subtitle': '" . $subTitle . "'},
+    //     'geometry': {
+    //         'type': '" . ((substr($coordinates, 0, 3) == '[[[')?'MultiPolygon':'Polygon') ."',
+    //         'coordinates': [".$coordinates."]
+    //         }
+    //     });
+    // ";
+
+    $javaScriptString .= "
+        countiesData.features.push(
+        {
+        'type': 'Feature',
+        'id': '" . get_the_ID() . "',
+        'properties': {'name': '" . $title . "', 'subtitle': '" . $subTitle . "'},
+        'geometry': {
+            'type': '" . ((substr($coordinates, 0, 3) == '[[[')?'MultiPolygon':'Polygon') ."',
+            'coordinates': [".$coordinates."]
+            }
+        });
+    ";
+
+    endwhile; wp_reset_postdata();
+
+    $javaScriptString = minify_js($javaScriptString);
+    file_put_contents( (get_template_directory().'/js/countiesData.min.js'), $javaScriptString );
+}
+
+
+
+
+function myprefix_custom_cron_schedule( $schedules ) {
+    $schedules['every_six_hours'] = array(
+        'interval' => 900, // Every 15 minutes
+        'display'  => __( 'Every 15 minutes' ),
+    );
+    return $schedules;
+}
+add_filter( 'cron_schedules', 'myprefix_custom_cron_schedule' );
+
+//Schedule an action if it's not already scheduled
+if ( ! wp_next_scheduled( 'myprefix_cron_hook' ) ) {
+    wp_schedule_event( time(), 'every_six_hours', 'myprefix_cron_hook' );
+}
+
+///Hook into that action that'll fire every six hours
+ add_action( 'myprefix_cron_hook', 'myprefix_cron_function' );
+
+//create your function, that runs on cron
+function myprefix_cron_function() {
+    //your function...
+    generateCountiesDataJs();
+}
