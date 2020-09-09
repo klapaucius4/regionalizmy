@@ -174,3 +174,5 @@ function generateCountiesDataJs(){
     $javaScriptString = minify_js($javaScriptString);
     file_put_contents( (get_template_directory().'/js/countiesData.min.js'), $javaScriptString );
 }
+
+
