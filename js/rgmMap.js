@@ -70,10 +70,10 @@
         var layer = e.target;
 
         layer.setStyle({
-        weight: 5,
-        color: '#666',
-        dashArray: '',
-        fillOpacity: 0.7
+            weight: 3,
+            color: '#666',
+            dashArray: '',
+            fillOpacity: 0.7
         });
 
         if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
@@ -103,9 +103,9 @@
         layer.setStyle({ fillColor: 'red' });
         }
         layer.on({
-        mouseover: highlightFeature,
-        mouseout: resetHighlight,
-        click: setCurrentCounty
+            mouseover: highlightFeature,
+            mouseout: resetHighlight,
+            click: setCurrentCounty
         });
     }
 
