@@ -81,7 +81,7 @@
   //// counties end
 
 
-  $(".vote-buttons btn").on('click', function(e){
+  $("body").on('click', '.vote-buttons btn', function(e){
     alert('test');
     // var phraseId = $(this).data('phraseId');
     // console.log(phraseId);
