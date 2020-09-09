@@ -37,14 +37,6 @@
         this.previousTop = currentTop;
       });
   }
-
-
-
-  var cookie = $.cookie('rgmUserCounty');
-  if(cookie){
-    cookie = JSON.parse(cookie);
-    $('.findCountyInput').val(cookie.name);
-  }
   
   //// counties begin
   $(".findCountyInput").autocomplete({
