@@ -98,7 +98,7 @@
 
 
     function onEachFeature(feature, layer) {
-        if(cookie && feature.id == cookie.id){
+        if(typeof cookie !== 'undefined' && feature.id == cookie.id){
         // returnData.fillColor = 'red';
         layer.setStyle({ fillColor: 'red' });
         }
