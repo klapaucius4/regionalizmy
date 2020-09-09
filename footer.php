@@ -50,7 +50,7 @@
   <script src="<?= get_template_directory_uri(); ?>/js/countiesData.min.js"></script>
   <?php endif; ?>
   <!-- Leaflet -->
-  <!-- <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script> -->
+  <script src="<?= get_template_directory_uri(); ?>/vendor/leaflet/leaflet.js"></script>
   <!-- RGM Map -->
   <script src="<?= get_template_directory_uri(); ?>/js/rgmMap.min.js"></script>
 <?php endif; ?>
