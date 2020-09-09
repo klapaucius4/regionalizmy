@@ -139,7 +139,7 @@
 
   var geojson;
 
-  geojson = L.geoJson(statesData, {
+  geojson = L.geoJson(countiesData, {
     style: initStyle,
     onEachFeature: onEachFeature
   }).addTo(map);
