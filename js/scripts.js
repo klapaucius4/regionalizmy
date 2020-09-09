@@ -82,11 +82,10 @@
 
 
   $(".vote-buttons btn").on('click', function(e){
-    var phraseId = $(this).data('phraseId');
-    console.log(phraseId);
+    alert('test');
+    // var phraseId = $(this).data('phraseId');
+    // console.log(phraseId);
   });
-
-
 
 
 
