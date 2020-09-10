@@ -12,7 +12,7 @@
                 <button class="btn btn-success mr-1" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="1" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"><?= __('Znam'); ?></button>
                 <button class="btn btn-danger" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="0"><?= __('Nie znam'); ?></button>
             </div>
-            <div class="col-12">
+            <div class="col-12 text-right">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="1" checked>
                     <label class="form-check-label" for="inlineCheckbox1"><?= __('Słyszałem to w ') ?></label>
