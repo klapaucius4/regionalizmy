@@ -103,7 +103,8 @@ class RGM_REST_Routes extends WP_REST_Controller {
     return new WP_REST_Response( $data, 200 );
   }
 
-  public function addVote(){
+  public function addVote($request){
+    var_dump($request);
     $data = array();
     $data['status'] = 'trololo';
     return new WP_REST_Response( $data, 200 );
