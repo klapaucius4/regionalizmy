@@ -82,8 +82,11 @@
 
   $("body").on('click', '.vote-buttons button', function(e){
     // alert('test');
+    e.preventDefault();
     var phraseId = $(this).data('phrase-id');
+    var countyId = -1;
     var voteValue = $(this).data('vote-value');
+    var userId = 0;
     console.log(phraseId);
     console.log(voteValue);
   });
