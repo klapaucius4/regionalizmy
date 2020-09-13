@@ -15,7 +15,7 @@
             <div class="col-12 text-right">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="1" checked>
-                    <label class="form-check-label" for="inlineCheckbox1"><?= __('Słyszałem to w ') ?></label>
+                    <?php /*<label class="form-check-label" for="inlineCheckbox1"><?= __('Słyszałem to w ') ?></label>*/ ?>
                 </div>
             </div>
         </div>
