@@ -63,7 +63,7 @@ class RGM_REST_Routes extends WP_REST_Controller {
         'callback' => array( $this, 'getCounties' ),
       )
     );
-    register_rest_route( $namespace, '/' . $base . '/add-vote', array(
+    register_rest_route( $namespace, '/' . $base . '/add-vote/(?P<phrase_id>[\d]+)/(?P<county_id>[\d]+)/(?P<value>[\d]+)/(?P<user_id>[\d]+)', array(
         'methods'  => WP_REST_Server::READABLE,
         'callback' => array( $this, 'addVote' ),
       )
