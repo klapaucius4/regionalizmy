@@ -61,7 +61,13 @@ class RGM_REST_Routes extends WP_REST_Controller {
     register_rest_route( $namespace, '/' . $base . '/get-counties(?:/(?P<search>\S+))?', array(
         'methods'  => WP_REST_Server::READABLE,
         'callback' => array( $this, 'getCounties' ),
-      ));
+      )
+    );
+    register_rest_route( $namespace, '/' . $base . '/add-vote', array(
+        'methods'  => WP_REST_Server::READABLE,
+        'callback' => array( $this, 'addVote' ),
+      )
+    );
   }
 
   public function getCounties($request){
@@ -94,6 +100,12 @@ class RGM_REST_Routes extends WP_REST_Controller {
       wp_reset_postdata();
     }
 
+    return new WP_REST_Response( $data, 200 );
+  }
+
+  public function addVote(){
+    $data = array();
+    $data['status'] = 'trololo';
     return new WP_REST_Response( $data, 200 );
   }
  
