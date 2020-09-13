@@ -87,8 +87,8 @@
     var countyId = -1;
     var voteValue = $(this).data('vote-value');
     var userId = 0;
-    console.log(phraseId);
-    console.log(voteValue);
+    // console.log(phraseId);
+    // console.log(voteValue);
   });
 
 })(jQuery); // End of use strict
