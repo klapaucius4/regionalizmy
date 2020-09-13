@@ -9,8 +9,8 @@
     <div class="vote-buttons col-md-4 align-items-center">
         <!-- <div class="row"> -->
             <div class="d-flex justify-content-end">
-                <button class="btn btn-success mr-1" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="1" data-toggle="modal" data-target="#voteModalCenter"><?= __('Znam'); ?></button>
-                <button class="btn btn-danger" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="0" data-toggle="modal" data-target="#voteModalCenter"><?= __('Nie znam'); ?></button>
+                <button class="btn btn-success mr-1" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="1" data-toggle="modal" data-target="#voteModalCenter" title="<?= get_the_title(); ?>" data-content="Lorem ipsum"><?= __('Znam'); ?></button>
+                <!-- <button class="btn btn-danger" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="0" data-toggle="modal" data-target="#voteModalCenter" title="<?= get_the_title(); ?>" data-content="Lorem ipsum"><?= __('Nie znam'); ?></button> -->
             </div>
             <?php /*
             <div class="col-12 text-right">
