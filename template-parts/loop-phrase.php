@@ -10,7 +10,7 @@
         <!-- <div class="row"> -->
             <div class="d-flex justify-content-end">
                 <button class="btn btn-success mr-1" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="1" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"><?= __('Znam'); ?></button>
-                <button class="btn btn-danger" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="0" data-toggle="modal" data-target="#exampleModalCenter"><?= __('Nie znam'); ?></button>
+                <button class="btn btn-danger" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="0" data-toggle="modal" data-target="#voteModalCenter"><?= __('Nie znam'); ?></button>
             </div>
             <?php /*
             <div class="col-12 text-right">
