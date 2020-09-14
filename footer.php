@@ -50,8 +50,8 @@
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group">
             <div class="row">
-              <legend class="col-form-label col-sm-3 pt-0"><?= __('Znam z:') ?></legend>
-              <div class="col-sm-9">
+              <legend class="col-form-label col-sm-2 pt-0"><?= __('Znam z:') ?></legend>
+              <div class="col-sm-10">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1" checked>
                   <?php
@@ -61,7 +61,7 @@
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2">
-                  <label class="form-check-label" for="gridRadios2"><?= __('Innym regionie Polski'); ?></label>
+                  <label class="form-check-label" for="gridRadios2"><?= __('Innego regionu Polski'); ?></label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="0">
