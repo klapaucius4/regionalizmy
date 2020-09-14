@@ -37,7 +37,7 @@
   </div>
 </footer>
 
-<?php var_dump($_COOKIE); exit; ?>
+<?php var_dump($_COOKIE); ?>
 
 <div id="voteModalPopup" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
