@@ -75,13 +75,12 @@
             </div>
           </fieldset>
           <fieldset class="form-group">
-
-          <?php for($i=1; $i<=10; $i++): ?>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio<?= $i; ?>" value="option<?= $i; ?>">
-              <label class="form-check-label" for="inlineRadio<?= $i; ?>"><?= $i; ?></label>
-            </div>
-          <?php endfor; ?>
+            <?php for($i=1; $i<=10; $i++): ?>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio<?= $i; ?>" value="option<?= $i; ?>">
+                <label class="form-check-label" for="inlineRadio<?= $i; ?>"><?= $i; ?></label>
+              </div>
+            <?php endfor; ?>
           </fieldset>
         </form>
       </div>
