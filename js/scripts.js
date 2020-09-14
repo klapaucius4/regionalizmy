@@ -79,6 +79,10 @@
   });
   //// counties end
 
+  var modalPopup = $('#voteModalPopup');
+  modalPopup.find('#gridRadios2').on('select', function(){
+    alert('test');
+  });
 
   $("body").on('click', '.vote-buttons button', function(e){
     // alert('test');
@@ -89,11 +93,9 @@
     var voteValue = $(this).data('vote-value');
     var userId = 0;
 
-    var modalPopup = $('#voteModalPopup');
+    
     modalPopup.find('h5.modal-title').text(phraseName);
-    modalPopup.find('#gridRadios2').on('select', function(){
-      alert('test');
-    });
+    
 
 
     // console.log(phraseId);
