@@ -92,7 +92,7 @@
 
     var modalPopup = $('#voteModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
-    modalPopup.find('#gridRadios2').on('click', function() {
+    $('#gridRadios2').on('click', function() {
       console.log('testtttttt');
     });
 
