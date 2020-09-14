@@ -55,10 +55,9 @@
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                   <?php
-                  $rgmUserCountycookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null;
-                  var_dump($rgmUserCountycookie); exit;
+                  $rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null;
                   ?>
-                  <label class="form-check-label" for="gridRadios1">Warszawa</label>
+                  <label class="form-check-label" for="gridRadios1"><?= isset($rgmUserCountyCookie['name'])?$rgmUserCountyCookie['name']:''; ?></label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
