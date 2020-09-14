@@ -53,19 +53,19 @@
               <legend class="col-form-label col-sm-5 pt-0"><?= __('Spotkałem tę frazę w:') ?></legend>
               <div class="col-sm-7">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1" checked>
                   <?php
-                  $rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null;
+                  // $rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null;
                   ?>
-                  <label class="form-check-label" for="gridRadios1"><?= isset($rgmUserCountyCookie['name'])?$rgmUserCountyCookie['name']:''; ?></label>
+                  <label class="form-check-label" for="gridRadios1"></label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2">
                   <label class="form-check-label" for="gridRadios2"><?= __('Innym regionie Polski'); ?></label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                  <label class="form-check-label" for="gridRadios3"><?= __('W środkach masowego przekazu'); ?><small class="text-small d-block"><?= __('prasa, radio, telewizja, Internet, książka, film') ?></small></label>
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="0">
+                  <label class="form-check-label" for="gridRadios3"><?= __('W ogólnopolskich środkach masowego przekazu'); ?><small class="text-small d-block"><?= __('prasa, radio, telewizja, Internet, książka, film') ?></small></label>
                 </div>
               </div>
             </div>
