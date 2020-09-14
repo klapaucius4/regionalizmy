@@ -62,7 +62,7 @@
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                  <label class="form-check-label" for="gridRadios3"><?= __('W środkach masowego przekazu'); ?><span class="text-small"><?= __('prasa, radio, telewizja, Internet, książka, film') ?></span></label>
+                  <label class="form-check-label" for="gridRadios3"><?= __('W środkach masowego przekazu'); ?><small class="text-small d-block"><?= __('prasa, radio, telewizja, Internet, książka, film') ?></small></label>
                 </div>
               </div>
             </div>
