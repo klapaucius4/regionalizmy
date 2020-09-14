@@ -50,8 +50,8 @@
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group">
             <div class="row">
-              <legend class="col-form-label col-sm-5 pt-0"><?= __('Spotkałem tę frazę w:') ?></legend>
-              <div class="col-sm-7">
+              <legend class="col-form-label col-sm-3 pt-0"><?= __('Znam z:') ?></legend>
+              <div class="col-sm-9">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1" checked>
                   <?php

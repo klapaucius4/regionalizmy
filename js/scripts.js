@@ -91,6 +91,7 @@
 
     var modalPopup = $('#voteModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
+    
 
     // console.log(phraseId);
     // console.log(voteValue);
