@@ -50,8 +50,8 @@
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group">
             <div class="row">
-              <legend class="col-form-label col-sm-4 pt-0"><?= __('Spotkałem tą frazę w:') ?></legend>
-              <div class="col-sm-8">
+              <legend class="col-form-label col-sm-6 pt-0"><?= __('Spotkałem tą frazę w:') ?></legend>
+              <div class="col-sm-6">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                   <label class="form-check-label" for="gridRadios1">Warszawa</label>
