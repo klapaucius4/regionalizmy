@@ -100,14 +100,14 @@
       modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(){
         console.log($(this).val());
         if ($(this).val() == 1) {
-          modalPopup.find('.fieldset2').hide();
-          modalPopup.find('.fieldset3').hide();
+          modalPopup.find('.fieldset2').hide(500);
+          modalPopup.find('.fieldset3').hide(500);
         }else if($(this).val() == 2){
-          modalPopup.find('.fieldset3').hide();
-          modalPopup.find('.fieldset2').show();
+          modalPopup.find('.fieldset3').hide(500);
+          modalPopup.find('.fieldset2').show(500);
         }else if($(this).val() == 3){
-          modalPopup.find('.fieldset3').show();
-          modalPopup.find('.fieldset2').hide();
+          modalPopup.find('.fieldset3').show(500);
+          modalPopup.find('.fieldset2').hide(500);
         }
         
       });
