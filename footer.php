@@ -48,7 +48,7 @@
       </div>
       <div class="modal-body">
         <form autocomplete="off" class="ui-widget">
-          <fieldset class="form-group mb-0">
+          <fieldset class="form-group">
             <div class="row">
               <legend class="col-form-label col-sm-5 pt-0"><?= __('Spotkałem tą frazę w:') ?></legend>
               <div class="col-sm-7">
@@ -63,7 +63,7 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="form-group mb-0">
+          <fieldset class="form-group">
             <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>" disabled>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
