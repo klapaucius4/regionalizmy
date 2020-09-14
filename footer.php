@@ -67,7 +67,7 @@
             <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>" disabled>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">Ustaw jako domyślny Twój region</label>
+              <label class="form-check-label" for="inlineCheckbox1"><?= __('ustaw jako domyślny region'); ?></label>
             </div>
           </fieldset>
         </form>
