@@ -81,7 +81,7 @@
 
   
   var modalPopup = $('#voteModalPopup');
-  $('body').on(modalPopup.find('#gridRadios2'), 'checked', function(){
+  $('body').on('#gridRadios2', 'checked', function(){
     alert('test');
   });
 
