@@ -7,19 +7,7 @@
     <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p>
     </div>
     <div class="vote-buttons col-md-4 d-flex justify-content-end align-items-center">
-        <!-- <div class="row"> -->
-            <!-- <div class="d-flex justify-content-end"> -->
-                <button class="btn btn-success mr-1" data-phrase-name="<?= get_the_title(); ?>" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="1" data-toggle="modal" data-target="#voteModalPopup"><?= __('Znam'); ?></button>
-                <button class="btn btn-danger" data-phrase-name="<?= get_the_title(); ?>" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="-1" data-toggle="modal" data-target="#voteModalPopup"><?= __('Nie znam'); ?></button>
-            <!-- </div> -->
-            <?php /*
-            <div class="col-12 text-right">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="1" checked>
-                    <label class="form-check-label" for="inlineCheckbox1"><?= __('Słyszałem to w ') ?></label>
-                </div>
-            </div>
-            */ ?>
-        <!-- </div> -->
+        <button class="btn btn-success mr-1" data-phrase-name="<?= get_the_title(); ?>" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="1" data-toggle="modal" data-target="#voteModalPopup"><?= __('Znam'); ?></button>
+        <button class="btn btn-danger" data-phrase-name="<?= get_the_title(); ?>" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="-1" data-toggle="modal" data-target="#voteModalPopup"><?= __('Nie znam'); ?></button>
     </div>
 </div>
