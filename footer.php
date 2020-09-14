@@ -49,25 +49,20 @@
       <div class="modal-body">
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group">
-            <div class="row">
-              <legend class="col-form-label col-sm-2 pt-0"><?= __('Znam z:') ?></legend>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1" checked>
-                  <?php
-                  // $rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null;
-                  ?>
-                  <label class="form-check-label" for="gridRadios1"></label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2">
-                  <label class="form-check-label" for="gridRadios2"><?= __('Innego regionu Polski'); ?></label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="0">
-                  <label class="form-check-label" for="gridRadios3"><?= __('W ogólnopolskich środkach masowego przekazu'); ?><small class="text-small d-block"><?= __('prasa, radio, telewizja, Internet, książka, film') ?></small></label>
-                </div>
-              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1" checked>
+              <?php
+              // $rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null;
+              ?>
+              <label class="form-check-label" for="gridRadios1"></label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2">
+              <label class="form-check-label" for="gridRadios2"><?= __('Innego regionu Polski'); ?></label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="0">
+              <label class="form-check-label" for="gridRadios3"><?= __('W ogólnopolskich środkach masowego przekazu'); ?><small class="text-small d-block"><?= __('prasa, radio, telewizja, Internet, książka, film') ?></small></label>
             </div>
           </fieldset>
           <fieldset class="form-group">
