@@ -93,6 +93,7 @@
     modalPopup.find('h5.modal-title').text(phraseName);
 
     if(typeof cookie !== 'undefined'){
+      console.log(cookie.name);
       $('#voteModalPopup #gridRadios1').text(cookie.name);
     }
 
