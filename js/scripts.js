@@ -45,7 +45,7 @@
     $('.findCountyInput').val(cookie.name);
   }
 
-  $(".findCountyInput").autocomplete({
+  $(".findCountyInput, .findCountyInput2").autocomplete({
       source: function (request, response) {
           $.ajax({
               url: "/wp-json/rgm/route/get-counties/"+request.term,

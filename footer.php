@@ -66,7 +66,7 @@
             </div>
           </fieldset>
           <fieldset class="form-group">
-            <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
+            <input type="text" class="form-control findCountyInput2 has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
               <label class="form-check-label" for="inlineCheckbox1"><?= __('ustaw jako domyślny region'); ?></label>
