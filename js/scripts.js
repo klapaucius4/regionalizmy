@@ -99,7 +99,8 @@
 
       modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(){
         if ($(this).val() == 'gridRadios1') {
-
+          modalPopup.find('.fieldset2').hide();
+          modalPopup.find('.fieldset3').hide();
         }else if($(this).val() == 'gridRadios2'){
           modalPopup.find('.fieldset3').hide();
           modalPopup.find('.fieldset2').show();
