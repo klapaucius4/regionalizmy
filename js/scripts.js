@@ -99,13 +99,13 @@
 
       modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(){
         console.log($(this).val());
-        if ($(this).val() == 'gridRadios1') {
+        if ($(this).val() == 1) {
           modalPopup.find('.fieldset2').hide();
           modalPopup.find('.fieldset3').hide();
-        }else if($(this).val() == 'gridRadios2'){
+        }else if($(this).val() == 2){
           modalPopup.find('.fieldset3').hide();
           modalPopup.find('.fieldset2').show();
-        }else if($(this).val() == 'gridRadios3'){
+        }else if($(this).val() == 3){
           modalPopup.find('.fieldset3').show();
           modalPopup.find('.fieldset2').hide();
         }
