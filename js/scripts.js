@@ -1,5 +1,3 @@
-const { exit } = require("browser-sync");
-
 (function($) {
   "use strict"; // Start of use strict
 
@@ -91,14 +89,8 @@ const { exit } = require("browser-sync");
     var voteValue = $(this).data('vote-value');
     var userId = 0;
 
-
     var modalPopup = $('#voteModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
-    console.log(modalPopup.find('#gridRadios2'));
-    modalPopup.find('#gridRadios2').on('click', function() {
-      console.log('testtttttt');
-    });
-
 
     // console.log(phraseId);
     // console.log(voteValue);
