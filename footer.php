@@ -63,7 +63,7 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="form-group mb-0 d-none">
+          <fieldset class="form-group mb-0">
             <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>" disabled>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
