@@ -13,7 +13,7 @@ register_post_type('regionalizmy_phrase', array(
     )
 );
 
-register_post_type('regionalizmy_mass_media', array(
+register_post_type('regionalizmy_mass', array(
         'labels' => array(
             'name'          => __('Środki', 'regionalizmy'),
             'singular_name' => __('Środek', 'regionalizmy'),
