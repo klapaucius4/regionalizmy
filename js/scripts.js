@@ -79,8 +79,9 @@
   });
   //// counties end
 
+  
   var modalPopup = $('#voteModalPopup');
-  modalPopup.find('#gridRadios2').on('checked', function(){
+  $('body').on(modalPopup.find('#gridRadios2'), 'checked', function(){
     alert('test');
   });
 
@@ -93,7 +94,6 @@
     var voteValue = $(this).data('vote-value');
     var userId = 0;
 
-    
     modalPopup.find('h5.modal-title').text(phraseName);
     
 
