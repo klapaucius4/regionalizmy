@@ -48,7 +48,7 @@
         </div>
       <?php
       $args = array(
-        'post_type' => 'regionalizmy_phrase',
+        'post_type' => 'rgm_phrase',
         'posts_per_page' => 10,
         // 'posts_per_page' => get_option( 'posts_per_page' ),
         // 'paged' => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,

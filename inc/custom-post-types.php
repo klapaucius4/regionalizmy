@@ -1,6 +1,6 @@
 <?php
 
-register_post_type('regionalizmy_phrase', array(
+register_post_type('rgm_phrase', array(
         'labels' => array(
             'name'          => __('Frazy', 'regionalizmy'),
             'singular_name' => __('Fraza', 'regionalizmy'),
@@ -13,7 +13,7 @@ register_post_type('regionalizmy_phrase', array(
     )
 );
 
-register_post_type('regionalizmy_media', array(
+register_post_type('rgm_media', array(
         'labels' => array(
             'name'          => __('Środki przekazu', 'regionalizmy'),
             'singular_name' => __('Środek przekazu', 'regionalizmy'),
@@ -26,7 +26,7 @@ register_post_type('regionalizmy_media', array(
     )
 );
 
-register_post_type('regionalizmy_county', array(
+register_post_type('rgm_county', array(
         'labels' => array(
             'name'          => __('Powiaty', 'regionalizmy'),
             'singular_name' => __('Powiat', 'regionalizmy'),
@@ -34,10 +34,10 @@ register_post_type('regionalizmy_county', array(
         'public' => true,
         'supports' => array( 'title' ),
         'menu_icon' => 'dashicons-admin-site',
-        'taxonomies' => array('regionalizmy_province', 'regionalizmy_city'),
+        'taxonomies' => array('rgm_province', 'rgm_city'),
     )
 );
-register_taxonomy('regionalizmy_province', array('regionalizmy_county'), array(
+register_taxonomy('rgm_province', array('rgm_county'), array(
     'labels' => array(
         'name' => __('Województwa', 'regionalizmy'),
         'singular_name' => __('Województwo', 'regionalizmy'),
@@ -58,7 +58,7 @@ register_taxonomy('regionalizmy_province', array('regionalizmy_county'), array(
     'rewrite' => array( 'slug' => 'type' ),
     )
 );
-register_taxonomy('regionalizmy_city', array('regionalizmy_county'), array(
+register_taxonomy('rgm_city', array('rgm_county'), array(
     'labels' => array(
         'name' => __('Miasta', 'regionalizmy'),
         'singular_name' => __('Miasto', 'regionalizmy'),
@@ -75,9 +75,9 @@ register_taxonomy('regionalizmy_city', array('regionalizmy_county'), array(
 
 
 
-// Add the custom columns to the regionalizmy_county post type:
-add_filter( 'manage_regionalizmy_county_posts_columns', 'set_custom_edit_regionalizmy_county_columns' );
-function set_custom_edit_regionalizmy_county_columns($columns) {
+// Add the custom columns to the rgm_county post type:
+add_filter( 'manage_rgm_county_posts_columns', 'set_custom_edit_rgm_county_columns' );
+function set_custom_edit_rgm_county_columns($columns) {
     // unset( $columns['author'] );
 
     $columns['county_town'] = __( 'Miasto powiatowe', 'your_text_domain' );
@@ -85,9 +85,9 @@ function set_custom_edit_regionalizmy_county_columns($columns) {
     return $columns;
 }
 
-// Add the data to the custom columns for the regionalizmy_county post type:
-add_action( 'manage_regionalizmy_county_posts_custom_column' , 'custom_regionalizmy_county_column', 10, 2 );
-function custom_regionalizmy_county_column( $column, $post_id ) {
+// Add the data to the custom columns for the rgm_county post type:
+add_action( 'manage_rgm_county_posts_custom_column' , 'custom_rgm_county_column', 10, 2 );
+function custom_rgm_county_column( $column, $post_id ) {
     switch ( $column ) {
 
         case 'county_town' :

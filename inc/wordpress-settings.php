@@ -1,8 +1,8 @@
 <?php
 
 
-if ( ! function_exists( 'regionalizmy_setup_options' ) ) :
-    function regionalizmy_setup_options () {
+if ( ! function_exists( 'rgm_setup_options' ) ) :
+    function rgm_setup_options () {
         global $wpdb;
         $create_table_query = "
         CREATE TABLE IF NOT EXISTS `wp_votes` (
@@ -23,13 +23,13 @@ if ( ! function_exists( 'regionalizmy_setup_options' ) ) :
         dbDelta( $create_table_query );
     }
 endif;
-add_action('after_switch_theme', 'regionalizmy_setup_options');
+add_action('after_switch_theme', 'rgm_setup_options');
 
 
 
-if ( ! function_exists( 'regionalizmy_setup' ) ) :
+if ( ! function_exists( 'rgm_setup' ) ) :
 
-    function regionalizmy_setup() {
+    function rgm_setup() {
 
         register_nav_menus( array(
             'menu-1' => __( 'Menu główne', 'regionalizmy' ),
@@ -66,7 +66,7 @@ if ( ! function_exists( 'regionalizmy_setup' ) ) :
 
     }
 endif;
-add_action( 'after_setup_theme', 'regionalizmy_setup' );
+add_action( 'after_setup_theme', 'rgm_setup' );
 
 
 
@@ -140,7 +140,7 @@ function generateCountiesDataJs(){
     $javaScriptString = "";
     $javaScriptString .= "var countiesData = {'type':'FeatureCollection','features':[]};";
     $args = array(
-    'post_type' => 'regionalizmy_county',
+    'post_type' => 'rgm_county',
     'posts_per_page' => -1,
     'meta_query' => array(
         array(
