@@ -24,8 +24,6 @@ register_post_type('regionalizmy_mass_media', array(
     )
 );
 
-
-
 register_post_type('regionalizmy_county', array(
         'labels' => array(
             'name'          => __('Powiaty', 'regionalizmy'),
