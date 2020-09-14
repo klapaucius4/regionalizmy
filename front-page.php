@@ -74,7 +74,7 @@
     </div>
   </section>
 
-  <section class="page-section bg-primary text-white mb-0" id="about">
+  <section class="page-section bg-primary text-white mb-0 py-5">
       <div class="container">
           <!-- About Section Heading-->
           <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
