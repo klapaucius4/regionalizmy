@@ -87,6 +87,11 @@
     var countyId = -1;
     var voteValue = $(this).data('vote-value');
     var userId = 0;
+
+    var modalPopup = $('#voteModalPopup');
+    modalPopup.find('h5.modal-title').text('test');
+
+
     // console.log(phraseId);
     // console.log(voteValue);
   });
