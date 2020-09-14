@@ -84,12 +84,13 @@
     // alert('test');
     e.preventDefault();
     var phraseId = $(this).data('phrase-id');
+    var phraseName = $(this).data('phrase-name');
     var countyId = -1;
     var voteValue = $(this).data('vote-value');
     var userId = 0;
 
     var modalPopup = $('#voteModalPopup');
-    modalPopup.find('h5.modal-title').text('test');
+    modalPopup.find('h5.modal-title').text(phraseName);
 
 
     // console.log(phraseId);
