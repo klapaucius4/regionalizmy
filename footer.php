@@ -62,11 +62,11 @@
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="0">
-              <label class="form-check-label" for="gridRadios3"><?= __('Znam z ogólnopolskich środków masowego przekazu'); ?><small class="text-small d-block"><?= __('prasa, radio, telewizja, Internet, książka, film') ?></small></label>
+              <label class="form-check-label" for="gridRadios3"><?= __('Znam z ogólnopolskich środków masowego przekazu'); ?><small class="text-small d-block"><?= __('(prasa, radio, telewizja, Internet, książka, film)') ?></small></label>
             </div>
           </fieldset>
           <fieldset class="form-group">
-            <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>" disabled>
+            <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
               <label class="form-check-label" for="inlineCheckbox1"><?= __('ustaw jako domyślny region'); ?></label>
