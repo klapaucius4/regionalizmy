@@ -61,7 +61,7 @@
               <label class="form-check-label" for="gridRadios2"><?= __('Znam z innego regionu Polski'); ?></label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="0">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="3">
               <label class="form-check-label" for="gridRadios3"><?= __('Znam z ogólnopolskich środków masowego przekazu'); ?><small class="text-small d-block"><?= __('(prasa, radio, telewizja, Internet, książka, film)') ?></small></label>
             </div>
           </fieldset>
