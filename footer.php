@@ -48,7 +48,7 @@
       </div>
       <div class="modal-body">
         <form autocomplete="off" class="ui-widget">
-          <fieldset class="form-group">
+          <fieldset class="form-group mb-0">
             <div class="row">
               <legend class="col-form-label col-sm-5 pt-0"><?= __('Spotkałem tą frazę w:') ?></legend>
               <div class="col-sm-7">
