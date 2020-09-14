@@ -80,7 +80,7 @@
   //// counties end
 
   var modalPopup = $('#voteModalPopup');
-  modalPopup.find('#gridRadios2').on('select', function(){
+  modalPopup.find('#gridRadios2').on('checked', function(){
     alert('test');
   });
 
