@@ -37,6 +37,8 @@
   </div>
 </footer>
 
+<?php var_dump($_COOKIE); exit; ?>
+
 <div id="voteModalPopup" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -50,7 +52,7 @@
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group">
             <div class="row">
-              <legend class="col-form-label col-sm-5 pt-0"><?= __('Spotkałem tą frazę w:') ?></legend>
+              <legend class="col-form-label col-sm-5 pt-0"><?= __('Spotkałem tę frazę w:') ?></legend>
               <div class="col-sm-7">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
