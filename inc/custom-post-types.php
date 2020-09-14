@@ -13,12 +13,14 @@ register_post_type('regionalizmy_phrase', array(
     )
 );
 
-register_post_type('regionalizmy_massmedia', array(
+register_post_type('regionalizmy_mass_media', array(
         'labels' => array(
-            'name'          => __('Środek przekazu', 'regionalizmy'),
-            'singular_name' => __('Środki przekazu', 'regionalizmy'),
+            'name'          => __('Środki przekazu', 'regionalizmy'),
+            'singular_name' => __('Środek przekazu', 'regionalizmy'),
         ),
         'public' => true,
+        // 'has_archive' => __('oferta', 'regionalizmy'),
+        // 'rewrite' => array('slug' => __('oferta', 'regionalizmy'), 'with_front' => true),
         'supports' => array( 'title' ),
         'menu_icon' => 'dashicons-editor-ol',
     )
