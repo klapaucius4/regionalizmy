@@ -41,7 +41,7 @@
 
   //// counties begin
   var cookie = $.cookie('rgmUserCounty') ? JSON.parse($.cookie('rgmUserCounty')) : null;
-  if(cookie){
+  if(typeof cookie !== 'undefined'){
     $('.findCountyInput').val(cookie.name);
   }
 
@@ -92,10 +92,7 @@
     var modalPopup = $('#voteModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
 
-
-    console.log(cookie);
     if(typeof cookie !== 'undefined'){
-      console.log(cookie);
       $('#voteModalPopup #gridRadios1').text(cookie.name);
     }
 
