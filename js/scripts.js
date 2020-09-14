@@ -98,7 +98,16 @@
       modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + cookie.name + '</b>');
 
       modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(){
-        modalPopup.find('.fieldset2').show();
+        if ($(this).val() == 'gridRadios1') {
+
+        }else if($(this).val() == 'gridRadios2'){
+          modalPopup.find('.fieldset3').hide();
+          modalPopup.find('.fieldset2').show();
+        }else if($(this).val() == 'gridRadios3'){
+          modalPopup.find('.fieldset3').show();
+          modalPopup.find('.fieldset2').hide();
+        }
+        
       });
     }
 
