@@ -48,7 +48,7 @@
       </div>
       <div class="modal-body">
         <form autocomplete="off" class="ui-widget">
-          <fieldset class="form-group">
+          <fieldset class="form-group fieldset1">
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1" checked>
               <?php
@@ -65,14 +65,14 @@
               <label class="form-check-label" for="gridRadios3"><?= __('Znam z ogólnopolskich środków masowego przekazu'); ?><small class="text-small d-block"><?= __('(prasa, radio, telewizja, Internet, książka, film)') ?></small></label>
             </div>
           </fieldset>
-          <fieldset class="form-group">
+          <fieldset class="form-group fieldset2">
             <input type="text" class="form-control findCountyInput2 has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
               <label class="form-check-label" for="inlineCheckbox1"><?= __('ustaw jako domyślny region'); ?></label>
             </div>
           </fieldset>
-          <fieldset class="form-group">
+          <fieldset class="form-group fieldset3">
             <?php for($i=1; $i<=10; $i++): ?>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio<?= $i; ?>" value="option<?= $i; ?>">

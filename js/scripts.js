@@ -93,8 +93,9 @@
     modalPopup.find('h5.modal-title').text(phraseName);
 
     if(typeof cookie !== 'undefined'){
-      console.log(cookie.name);
-      $('#voteModalPopup label[for=gridRadios1]').html("Znam z: <b>" + cookie.name + '</b>');
+      // console.log(cookie.name);
+      modalPopup.find('.fieldset2, .fieldset3').hide();
+      modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + cookie.name + '</b>');
     }
 
 
