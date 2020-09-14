@@ -58,11 +58,11 @@
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2">
-              <label class="form-check-label" for="gridRadios2"><?= __('Innego regionu Polski'); ?></label>
+              <label class="form-check-label" for="gridRadios2"><?= __('Znam z innego regionu Polski'); ?></label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="0">
-              <label class="form-check-label" for="gridRadios3"><?= __('W ogólnopolskich środkach masowego przekazu'); ?><small class="text-small d-block"><?= __('prasa, radio, telewizja, Internet, książka, film') ?></small></label>
+              <label class="form-check-label" for="gridRadios3"><?= __('Znam z ogólnopolskich środków masowego przekazu'); ?><small class="text-small d-block"><?= __('prasa, radio, telewizja, Internet, książka, film') ?></small></label>
             </div>
           </fieldset>
           <fieldset class="form-group">

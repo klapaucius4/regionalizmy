@@ -91,7 +91,11 @@
 
     var modalPopup = $('#voteModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
-    
+
+    if(cookie){
+      $('#voteModalPopup gridRadios1').text(cookie.name);
+    }
+
 
     // console.log(phraseId);
     // console.log(voteValue);
