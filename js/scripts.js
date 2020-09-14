@@ -92,7 +92,9 @@
 
     var modalPopup = $('#voteModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
-    // modalPopup.find('')
+    modalPopup.find('#gridRadios2').on('click', function() {
+      console.log('testtttttt');
+    });
 
 
     // console.log(phraseId);
