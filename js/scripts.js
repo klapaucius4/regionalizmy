@@ -94,7 +94,7 @@
 
     if(typeof cookie !== 'undefined'){
       console.log(cookie.name);
-      $('#voteModalPopup label[for=gridRadios1]').text("Znam z: <b>" + cookie.name + '</b>');
+      $('#voteModalPopup label[for=gridRadios1]').html("Znam z: <b>" + cookie.name + '</b>');
     }
 
 
