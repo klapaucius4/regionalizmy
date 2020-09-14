@@ -50,8 +50,8 @@
         <p>Modal body text goes here.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary"><?= __('Potwierdź'); ?></button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= __('Zamknij'); ?></button>
+        <button type="button" class="btn btn-success"><?= __('Potwierdź'); ?></button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal"><?= __('Zamknij'); ?></button>
       </div>
     </div>
   </div>
