@@ -98,6 +98,7 @@
       modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + cookie.name + '</b>');
 
       modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(){
+        console.log($(this).val());
         if ($(this).val() == 'gridRadios1') {
           modalPopup.find('.fieldset2').hide();
           modalPopup.find('.fieldset3').hide();
