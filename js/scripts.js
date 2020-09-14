@@ -97,8 +97,8 @@
       modalPopup.find('.fieldset2, .fieldset3').hide();
       modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + cookie.name + '</b>');
 
-      modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(){
-        console.log($(this).val());
+      modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(ee){
+        ee.preventDefault();
         if ($(this).val() == 1) {
           modalPopup.find('.fieldset2').hide(500);
           modalPopup.find('.fieldset3').hide(500);
