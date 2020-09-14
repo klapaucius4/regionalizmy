@@ -31,7 +31,7 @@
             </a>
           </li>
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Regionalizmy.pl 2020</p>
+        <p class="copyright text-muted">Copyright &copy; <a href="<?= home_url(); ?>">Regionalizmy.pl</a> 2019 - <?= date('Y'); ?></p>
       </div>
     </div>
   </div>
