@@ -58,7 +58,11 @@
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                  <label class="form-check-label" for="gridRadios2"><?= __('Innym regionie'); ?></label>
+                  <label class="form-check-label" for="gridRadios2"><?= __('Innym regionie Polski'); ?></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <label class="form-check-label" for="gridRadios2"><?= __('W innych środkach pzekazu (internet, książka, TV, itd.)'); ?></label>
                 </div>
               </div>
             </div>
