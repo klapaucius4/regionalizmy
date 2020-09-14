@@ -60,11 +60,11 @@
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
                   <label class="form-check-label" for="gridRadios2"><?= __('Innym regionie'); ?></label>
                 </div>
-                <div class="form-group mb-0">
-                  <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>" disabled>
-                </div>
               </div>
             </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>" disabled>
           </fieldset>
         </form>
       </div>
