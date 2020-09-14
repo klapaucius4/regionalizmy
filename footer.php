@@ -63,7 +63,7 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="form-group invisible">
+          <fieldset class="form-group d-none">
             <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>" disabled>
           </fieldset>
         </form>
