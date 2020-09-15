@@ -82,8 +82,9 @@
           <div class="row">
               <div class="col-md-6">
                 <p class="lead">
-                  
+                  <?= __('Dodaj regionalizm którego używasz lub z którym się spotkałeś/aś.'); ?>
                 </p>
+                <a href="#" class="btn btn-secondary">Dodaj regionalizm</a>
               </div>
               <div class="col-md-6">
                 <img src="<?= get_template_directory_uri(); ?>/img/sign-up.svg" class="w-100" alt="" />
