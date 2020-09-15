@@ -86,8 +86,8 @@
                 </p>
                 <p>Możesz to zrobić bez rejestracji, jednak zachęcamy Cię do założenia konta. Będąc zalogowanym, każdy dodany przez Ciebie wpis będzie oznaczony jako wpis dodany przez Ciebie. W przyszłości przewidujemy rozbudowany system rankingu użytkowników, statystyk itd.</p>
                 <a href="#" class="btn btn-secondary">Dodaj regionalizm</a>
-                <a href="#" class="btn btn-secondary">Zaloguj się</a>
-                <a href="#" class="btn btn-secondary">Zarejestruj się</a>
+                <a href="#" class="btn btn-primary">Zaloguj się</a>
+                <a href="#" class="btn btn-info">Zarejestruj się</a>
               </div>
               <div class="col-md-5">
                 <img src="<?= get_template_directory_uri(); ?>/img/sign-up.svg" class="w-100" alt="" />
