@@ -77,7 +77,7 @@
   <section class="page-section bg-primary section-space">
       <div class="container">
           <!-- About Section Heading-->
-          <p class="small"><?= __('Nie możesz znaleźć jakiegoś regionalizmu?'); ?></p>
+          <p class="small text-center"><?= __('Nie możesz znaleźć jakiegoś regionalizmu?'); ?></p>
           <h2 class="page-section-heading text-center text-uppercase"><?= __('Dodaj nowy regionalizm!') ?></h2>
           <div class="row">
               <div class="col-md-6 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
