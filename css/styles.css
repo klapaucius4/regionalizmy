@@ -42,6 +42,11 @@ blockquote {
   padding-bottom: 100px;
 }
 
+.bg-primary {
+  background-image: url("../bg-primary.jpg");
+  background-repeat: repeat;
+}
+
 .section-heading {
   font-size: 36px;
   font-weight: 700;
