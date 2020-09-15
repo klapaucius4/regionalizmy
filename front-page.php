@@ -84,8 +84,8 @@
                 <p class="lead">
                   <?= __('Dodaj swój regionalizm, którego używasz lub z którym się spotkałeś/aś.'); ?>
                 </p>
-                <p>Możesz to zrobić bez rejestracji, jednak zachęcamy Cię do założenia konta. Będąc zalogowanym, każdy dodany przez Ciebie wpis będzie oznaczony jako wpis dodany przez Ciebie. W przyszłości przewidujemy rozbudowany system rankingu użytkowników, statystyk itd.</p>
                 <p><a href="#" class="btn btn-info">Dodaj regionalizm</a></p>
+                <p>Możesz to zrobić bez rejestracji, jednak zachęcamy Cię do założenia konta. Będąc zalogowanym, każdy dodany przez Ciebie wpis będzie oznaczony jako wpis dodany przez Ciebie. W przyszłości przewidujemy rozbudowany system rankingu użytkowników, statystyk itd.</p>
                 <p>
                   <a href="#" class="btn btn-primary">Zaloguj się</a>
                   <a href="#" class="btn btn-secondary">Zarejestruj się</a>
