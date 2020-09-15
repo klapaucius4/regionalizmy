@@ -78,7 +78,7 @@
       <div class="container">
           <!-- About Section Heading-->
           <p class="small text-center mb-0"><?= __('Nie możesz znaleźć jakiegoś regionalizmu?'); ?></p>
-          <h2 class="page-section-heading text-center text-uppercase"><?= __('Dodaj nowy regionalizm!') ?></h2>
+          <h2 class="page-section-heading text-center text-uppercase mb-5"><?= __('Dodaj nowy regionalizm!') ?></h2>
           <div class="row">
               <div class="col-md-7">
                 <p class="lead">
