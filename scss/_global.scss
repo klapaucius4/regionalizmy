@@ -41,26 +41,6 @@ blockquote {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-.bg-primary {
-  background-color: transparent !important;
-  position: relative;
-  // z-index: -2;
-  &::after, &::before{
-    content: "";
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-  }
-  &::before {
-    z-index: -2;
-    background-image: url('../img/bg-primary.jpg');
-    background-repeat: repeat;
-  }
-  &::after {
-    z-index: -1;
-    background-color: #fff;
-    opacity: 0.9;
-  }
-}
 
 .section-heading {
   font-size: 36px;
@@ -104,4 +84,8 @@ img::-moz-selection {
 .small, small {
   font-size: 75%;
   opacity: 0.7;
+}
+
+.btn-secondary {
+
 }

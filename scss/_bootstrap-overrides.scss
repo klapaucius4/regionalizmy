@@ -25,7 +25,41 @@
   }
 }
 
+.btn-secondary {
+  background-color: $themeColor3;
+  border-color: $themeColor3;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: darken($themeColor3, 7.5) !important;
+    border-color: darken($themeColor3, 7.5) !important;
+  }
+}
+
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+}
+
+
+.bg-primary {
+  background-color: transparent !important;
+  position: relative;
+  // z-index: -2;
+  &::after, &::before{
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+  &::before {
+    z-index: -2;
+    background-image: url('../img/bg-primary.jpg');
+    background-repeat: repeat;
+  }
+  &::after {
+    z-index: -1;
+    background-color: #fff;
+    opacity: 0.9;
+  }
 }
