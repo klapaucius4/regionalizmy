@@ -86,7 +86,7 @@
                 </p>
               </div>
               <div class="col-md-6">
-                <img src="<?= get_template_directory_uri(); ?>/img/add-new.svg" class="w-100" alt="" />
+                <img src="<?= get_template_directory_uri(); ?>/img/sign-up.svg" class="w-100" alt="" />
               </div>
           </div>
       </div>
