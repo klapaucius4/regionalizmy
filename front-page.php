@@ -80,8 +80,14 @@
           <p class="small text-center mb-0"><?= __('Nie możesz znaleźć jakiegoś regionalizmu?'); ?></p>
           <h2 class="page-section-heading text-center text-uppercase"><?= __('Dodaj nowy regionalizm!') ?></h2>
           <div class="row">
-              <div class="col-md-6 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-              <div class="col-md-6 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+              <div class="col-md-6">
+                <p class="lead">
+                  
+                </p>
+              </div>
+              <div class="col-md-6">
+                <img src="<?= get_template_directory_uri(); ?>/img/sign up.svg" class="w-100" alt="" />
+              </div>
           </div>
       </div>
   </section>
