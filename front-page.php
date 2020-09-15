@@ -80,13 +80,14 @@
           <p class="small text-center mb-0"><?= __('Nie możesz znaleźć jakiegoś regionalizmu?'); ?></p>
           <h2 class="page-section-heading text-center text-uppercase"><?= __('Dodaj nowy regionalizm!') ?></h2>
           <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-7">
                 <p class="lead">
-                  <?= __('Dodaj regionalizm którego używasz lub z którym się spotkałeś/aś.'); ?>
+                  <?= __('Dodaj swój regionalizm, którego używasz lub z którym się spotkałeś/aś.'); ?>
                 </p>
+                <p>Możesz to zrobić bez rejestracji, jednak zachęcamy Cię do założenia konta. Będąc zalogowanym, każdy dodany przez Ciebie wpis będzie oznaczony jako wpis dodany przez Ciebie. W przyszłości przewidujemy rozbudowany system rankingu użytkowników, statystyk itd.</p>
                 <a href="#" class="btn btn-secondary">Dodaj regionalizm</a>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <img src="<?= get_template_directory_uri(); ?>/img/sign-up.svg" class="w-100" alt="" />
               </div>
           </div>
