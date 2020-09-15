@@ -50,15 +50,15 @@ blockquote {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
   }
-  &::after {
-    z-index: -1;
-    background-color: #fff;
-    opacity: 0.9;
-  }
   &::before {
     z-index: -2;
     background-image: url('../img/bg-primary.jpg');
     background-repeat: repeat;
+  }
+  &::after {
+    z-index: -1;
+    background-color: #fff;
+    opacity: 0.9;
   }
 }
 

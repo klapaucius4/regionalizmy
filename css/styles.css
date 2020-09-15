@@ -56,16 +56,16 @@ blockquote {
   left: 0;
 }
 
-.bg-primary::after {
-  z-index: -1;
-  background-color: #fff;
-  opacity: 0.9;
-}
-
 .bg-primary::before {
   z-index: -2;
   background-image: url("../img/bg-primary.jpg");
   background-repeat: repeat;
+}
+
+.bg-primary::after {
+  z-index: -1;
+  background-color: #fff;
+  opacity: 0.9;
 }
 
 .section-heading {
