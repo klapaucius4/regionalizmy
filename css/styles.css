@@ -43,7 +43,7 @@ blockquote {
 }
 
 .bg-primary {
-  background: none;
+  background-color: transparent;
   position: relative;
 }
 
