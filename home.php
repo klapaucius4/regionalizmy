@@ -3,7 +3,8 @@
 <section class="section-space">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 mx-auto">
+      <?php if(have_posts()): ?>
+      <div class="col-md-8">
         <?php while(have_posts()): the_post(); ?>
         <div class="post-preview">
           <a href="<?= get_the_permalink(); ?>">
@@ -21,6 +22,13 @@
           <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
         </div>
       </div>
+      <?php else: ?>
+        <div class="col-md-8">
+          <div class="alert alert-warning" role="alert">
+            This is a warning alert—check it out!
+          </div>
+        </div>
+      <?php endif; ?>
       <div class="col-md-4">
         <sidebar>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque voluptates illo laudantium corporis sed quae perferendis architecto nulla similique. Quidem dolore quasi incidunt molestiae inventore. Eaque necessitatibus sapiente laudantium vel.
