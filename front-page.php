@@ -90,8 +90,8 @@
                 </a></p>
                 <p>Możesz to zrobić bez rejestracji, jednak zachęcamy Cię do założenia konta. Będąc zalogowanym, każdy dodany przez Ciebie wpis będzie oznaczony jako wpis dodany przez Ciebie. W przyszłości przewidujemy rozbudowany system rankingu użytkowników, statystyk itd.</p>
                 <p>
-                  <a href="#" class="btn btn-primary">Zaloguj się</a>
-                  <a href="#" class="btn btn-secondary">Zarejestruj się</a>
+                  <a href="<?= get_permalink( get_page_by_path( 'zaloguj' ) ); ?>" class="btn btn-primary">Zaloguj się</a>
+                  <a href="<?= get_permalink( get_page_by_path( 'zarejestruj' ) ); ?>" class="btn btn-secondary">Zarejestruj się</a>
                 </p>
               </div>
               <div class="col-md-5">
