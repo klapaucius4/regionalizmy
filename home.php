@@ -16,7 +16,7 @@
 <section class="section-space">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-md-8 mx-auto">
         <?php while(have_posts()): the_post(); ?>
         <div class="post-preview">
           <a href="<?= get_the_permalink(); ?>">
@@ -33,6 +33,11 @@
         <div class="clearfix">
           <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
         </div>
+      </div>
+      <div class="col-md-4">
+        <sidebar>
+          lorem ipsum
+        </sidebar>
       </div>
     </div>
   </div>
