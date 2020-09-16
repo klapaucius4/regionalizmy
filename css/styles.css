@@ -416,6 +416,10 @@ footer .copyright {
   padding-bottom: 7px;
 }
 
+.btn:focus {
+  color: #ffffff;
+}
+
 .btn-primary {
   background-color: #D4213D;
   border-color: #D4213D;
