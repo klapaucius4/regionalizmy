@@ -76,15 +76,12 @@
 
   <section class="page-section bg-primary section-space">
       <div class="container">
-          <!-- About Section Heading-->
-          <p class="small text-center mb-0"><?= __('Nie możesz znaleźć jakiegoś regionalizmu?'); ?></p>
-          <h2 class="page-section-heading text-center text-uppercase mb-5"><?= __('Dodaj nowy regionalizm!') ?></h2>
+        <?php if($sectionAdd = get_field('sekcja_dodaj')): ?>
+          <p class="small text-center mb-0"><?= $sectionAdd['nadtytul']; ?></p>
+          <h2 class="page-section-heading text-center text-uppercase mb-5"><?= $sectionAdd['tytul']; ?></h2>
           <div class="row">
               <div class="col-md-7">
-                <p class="lead">
-                  <?= __('Dodaj swój regionalizm, którego używasz lub z którym się spotkałeś/aś.'); ?>
-                </p>
-                <p>Możesz to zrobić bez rejestracji, jednak zachęcamy Cię do założenia konta. Będąc zalogowanym, każdy dodany przez Ciebie wpis będzie oznaczony jako wpis dodany przez Ciebie. W przyszłości przewidujemy rozbudowany system rankingu użytkowników, statystyk itd.</p>
+                <?php the_content(); ?>
                 <p>
                   <a href="#" class="btn btn-info">Dodaj regionalizm</a>
                   <?php if(is_user_logged_in()): ?>
@@ -99,6 +96,7 @@
                 <img src="<?= get_template_directory_uri(); ?>/img/sign-up.svg" class="w-100" alt="" />
               </div>
           </div>
+        <?php endif; ?>
       </div>
   </section>
 
