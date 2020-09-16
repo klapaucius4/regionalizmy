@@ -81,7 +81,7 @@
           <h2 class="page-section-heading text-center text-uppercase mb-5"><?= $sectionAdd['tytul']; ?></h2>
           <div class="row">
               <div class="col-md-7">
-                <?php the_content(); ?>
+                <?= $sectionAdd['tresc']; ?>
                 <p>
                   <a href="#" class="btn btn-info">Dodaj regionalizm</a>
                   <?php if(is_user_logged_in()): ?>
