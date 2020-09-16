@@ -20,8 +20,8 @@
       <div class="row">
         <div class="col-md-12 mb-4 text-center">
           <?php if($sectionMap = get_field('sekcja_mapa')): ?>
-            <h4 class="m-0"><?= $sectionMap['title']; ?></h4>
-            <p class="mt-0 mb-3"><small><?= $sectionMap['subtitle']; ?></small></p>
+            <h4 class="m-0"><?= $sectionMap['tytul']; ?></h4>
+            <p class="mt-0 mb-3"><small><?= $sectionMap['podtytul']; ?></small></p>
             <div class="row justify-content-md-center">
               <div class="col-lg-6 col-md-8 col-sm-10 col-12">
                 <form autocomplete="off" class="ui-widget">
