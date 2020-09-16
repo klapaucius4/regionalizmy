@@ -73,7 +73,7 @@ add_action( 'after_setup_theme', 'rgm_setup' );
 function wp_admin_remove_menu_pages() {
 
     remove_menu_page( 'edit-comments.php' );          //Comments
-    remove_menu_page( 'edit.php' );                   //Posts
+    //remove_menu_page( 'edit.php' );                   //Posts
 
 }
 add_action( 'admin_init', 'wp_admin_remove_menu_pages' );

@@ -3,19 +3,6 @@
 <section class="section-space">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <?php while(have_posts()): the_post(); ?>
-          <img src="<?= get_template_directory_uri(); ?>/img/front-desc.svg" class="w-50 rounded float-right" alt="<?= bloginfo('name'); ?>" />
-          <?php the_content(); ?>
-        <?php endwhile; wp_reset_postdata(); ?>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-space">
-  <div class="container">
-    <div class="row">
       <div class="col-md-8 mx-auto">
         <?php while(have_posts()): the_post(); ?>
         <div class="post-preview">
@@ -36,7 +23,7 @@
       </div>
       <div class="col-md-4">
         <sidebar>
-          lorem ipsum
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque voluptates illo laudantium corporis sed quae perferendis architecto nulla similique. Quidem dolore quasi incidunt molestiae inventore. Eaque necessitatibus sapiente laudantium vel.
         </sidebar>
       </div>
     </div>
