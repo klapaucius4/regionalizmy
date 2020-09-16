@@ -88,7 +88,7 @@
                 <p>
                   <a href="#" class="btn btn-info">Dodaj regionalizm</a>
                   <?php if(is_user_logged_in()): ?>
-                    <a href="<?= get_permalink(get_page_by_path('konto'))?:'#'; ?>" class="btn btn-secondary"><?= __('Moje konto'); ?></a>
+                    <a href="<?= get_permalink(get_page_by_path('konto'))?:'#'; ?>" class="btn btn-primary"><?= __('Moje konto'); ?></a>
                   <?php else: ?>
                     <a href="<?= get_permalink(get_page_by_path('zaloguj'))?:'#'; ?>" class="btn btn-primary"><?= __('Zaloguj się'); ?></a>
                     <a href="<?= get_permalink(get_page_by_path('zarejestruj'))?:'#'; ?>" class="btn btn-secondary"><?= __('Zarejestruj się'); ?></a>
