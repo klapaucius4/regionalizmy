@@ -9,6 +9,7 @@ if ( ! function_exists( 'rgm_setup_options' ) ) :
             `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
             `phrase_id` bigint(20) unsigned NOT NULL DEFAULT '0',
             `county_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+            `mass_media_id` bigint(20) unsigned NOT NULL DEFAULT '0',
             `user_id` bigint(20) unsigned DEFAULT NULL,
             `value` tinyint(3) unsigned NOT NULL DEFAULT '0',
             `last_update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
