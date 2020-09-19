@@ -407,12 +407,17 @@ footer .copyright {
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 0;
+  text-decoration: none;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .btn__tight {
   padding-top: 7px;
   padding-bottom: 7px;
+}
+
+.btn:focus {
+  color: #ffffff;
 }
 
 .btn-primary {
@@ -426,9 +431,46 @@ footer .copyright {
   border-color: #b31c33 !important;
 }
 
+.btn-secondary {
+  background-color: #4b4b5b;
+  border-color: #4b4b5b;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  color: #fff;
+  background-color: #3a3a46 !important;
+  border-color: #3a3a46 !important;
+}
+
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+}
+
+.bg-primary {
+  background-color: transparent !important;
+  position: relative;
+}
+
+.bg-primary::after, .bg-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bg-primary::before {
+  z-index: -2;
+  background-image: url("../img/bg-primary.jpg");
+  background-repeat: repeat;
+}
+
+.bg-primary::after {
+  z-index: -1;
+  background-color: #fff;
+  opacity: 0.9;
 }
 
 .accordion-section .panel-default > .panel-heading {

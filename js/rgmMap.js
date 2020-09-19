@@ -1,4 +1,4 @@
-var map = L.map('rgm-map', {minZoom: 7, maxZoom: 10, gestureHandling: true}).setView([51.759445, 19.457216], 6);
+var map = L.map('rgm-map', {minZoom: 6, maxZoom: 10, gestureHandling: true}).setView([51.759445, 19.457216], 7);
 var cookie = $.cookie('rgmUserCounty') ? JSON.parse($.cookie('rgmUserCounty')) : null;
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {

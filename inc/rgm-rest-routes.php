@@ -61,14 +61,20 @@ class RGM_REST_Routes extends WP_REST_Controller {
     register_rest_route( $namespace, '/' . $base . '/get-counties(?:/(?P<search>\S+))?', array(
         'methods'  => WP_REST_Server::READABLE,
         'callback' => array( $this, 'getCounties' ),
-      ));
+      )
+    );
+    register_rest_route( $namespace, '/' . $base . '/add-vote/(?P<phrase_id>[\d]+)/(?P<county_id>[\d]+)/(?P<value>[\d]+)/(?P<user_id>[\d]+)', array(
+        'methods'  => WP_REST_Server::READABLE,
+        'callback' => array( $this, 'addVote' ),
+      )
+    );
   }
 
   public function getCounties($request){
     $data = array();
 
     $args = array(
-      'post_type' => 'regionalizmy_county',
+      'post_type' => 'rgm_county',
       'post_status' => 'publish',
       'posts_per_page' => -1,
       'orderby' => 'name',
@@ -94,6 +100,13 @@ class RGM_REST_Routes extends WP_REST_Controller {
       wp_reset_postdata();
     }
 
+    return new WP_REST_Response( $data, 200 );
+  }
+
+  public function addVote($request){
+    var_dump($request);
+    $data = array();
+    $data['status'] = 'trololo';
     return new WP_REST_Response( $data, 200 );
   }
  

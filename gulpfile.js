@@ -91,6 +91,7 @@ function modules() {
     './node_modules/leaflet-gesture-handling/dist/*',
   ])
   .pipe(gulp.dest('./vendor/leaflet-gesture-handling'));
+  
 
   return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUiDist, jqueryCookie, leafletGestureHandling);
 }

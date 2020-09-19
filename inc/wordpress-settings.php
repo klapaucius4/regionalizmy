@@ -1,14 +1,15 @@
 <?php
 
 
-if ( ! function_exists( 'regionalizmy_setup_options' ) ) :
-    function regionalizmy_setup_options () {
+if ( ! function_exists( 'rgm_setup_options' ) ) :
+    function rgm_setup_options () {
         global $wpdb;
         $create_table_query = "
         CREATE TABLE IF NOT EXISTS `wp_votes` (
             `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
             `phrase_id` bigint(20) unsigned NOT NULL DEFAULT '0',
             `county_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+            `mass_media_id` bigint(20) unsigned NOT NULL DEFAULT '0',
             `user_id` bigint(20) unsigned DEFAULT NULL,
             `value` tinyint(3) unsigned NOT NULL DEFAULT '0',
             `last_update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -16,20 +17,21 @@ if ( ! function_exists( 'regionalizmy_setup_options' ) ) :
             PRIMARY KEY (`id`),
             KEY `post_id` (`phrase_id`),
             KEY `user_id` (`user_id`),
-            KEY `county_id` (`county_id`)
+            KEY `county_id` (`county_id`),
+            KEY `mass_media_id` (`mass_media_id`)
           ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin2;
         ";
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         dbDelta( $create_table_query );
     }
 endif;
-add_action('after_switch_theme', 'regionalizmy_setup_options');
+add_action('after_switch_theme', 'rgm_setup_options');
 
 
 
-if ( ! function_exists( 'regionalizmy_setup' ) ) :
+if ( ! function_exists( 'rgm_setup' ) ) :
 
-    function regionalizmy_setup() {
+    function rgm_setup() {
 
         register_nav_menus( array(
             'menu-1' => __( 'Menu główne', 'regionalizmy' ),
@@ -66,14 +68,14 @@ if ( ! function_exists( 'regionalizmy_setup' ) ) :
 
     }
 endif;
-add_action( 'after_setup_theme', 'regionalizmy_setup' );
+add_action( 'after_setup_theme', 'rgm_setup' );
 
 
 
 function wp_admin_remove_menu_pages() {
 
     remove_menu_page( 'edit-comments.php' );          //Comments
-    remove_menu_page( 'edit.php' );                   //Posts
+    //remove_menu_page( 'edit.php' );                   //Posts
 
 }
 add_action( 'admin_init', 'wp_admin_remove_menu_pages' );
@@ -140,7 +142,7 @@ function generateCountiesDataJs(){
     $javaScriptString = "";
     $javaScriptString .= "var countiesData = {'type':'FeatureCollection','features':[]};";
     $args = array(
-    'post_type' => 'regionalizmy_county',
+    'post_type' => 'rgm_county',
     'posts_per_page' => -1,
     'meta_query' => array(
         array(
