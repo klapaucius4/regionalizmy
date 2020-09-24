@@ -72,7 +72,7 @@
       </div>
       <div class="row">
         <div class="col-md-12 text-center">
-          <a href="#" class="btn btn-primary"><?= __('Przejdź do słownika'); ?></a>
+          <a href="#" class="btn btn-secondary"><?= __('Przejdź do słownika'); ?></a>
         </div>
       </div>
     </div>
