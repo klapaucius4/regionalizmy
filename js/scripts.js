@@ -49,7 +49,7 @@ function rgmCookie(){
 
   //// counties begin
   if(rgmCookie()){
-    $('.findCountyInput').val(cookie.name);
+    $('.findCountyInput').val(rgmCookie().name);
   }
 
   $(".findCountyInput, .findCountyInput2").autocomplete({
@@ -102,7 +102,7 @@ function rgmCookie(){
     if(rgmCookie()){
       // console.log(cookie.name);
       modalPopup.find('.fieldset2, .fieldset3').hide();
-      modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + cookie.name + '</b>');
+      modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + rgmCookie().name + '</b>');
 
       modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(ee){
         ee.preventDefault();
