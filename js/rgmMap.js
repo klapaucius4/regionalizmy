@@ -59,15 +59,15 @@ function resetHighlight(e) {
     info.update();
 }
 function setCurrentCounty(e) {
-    // var newCookie = {
-    //     'id': e.target.feature.id,
-    //     'name': e.target.feature.properties.name
-    // };
-    // if($.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 })){
-    //     geojson.resetStyle();
-    //     e.target.setStyle({ fillColor: 'red' });
-    //     $('.findCountyInput').val(e.target.feature.properties.name);
-    // };
+    var newCookie = {
+        'id': e.target.feature.id,
+        'name': e.target.feature.properties.name
+    };
+    if($.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 })){
+        geojson.resetStyle();
+        e.target.setStyle({ fillColor: 'red' });
+        $('.findCountyInput').val(e.target.feature.properties.name);
+    };
     
 }
 function highlightFeature(e) {

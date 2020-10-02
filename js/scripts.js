@@ -41,7 +41,7 @@
 
   //// counties begin
   var cookie = $.cookie('rgmUserCounty') ? JSON.parse($.cookie('rgmUserCounty')) : null;
-  if(typeof cookie !== 'undefined'){
+  if(typeof cookie !== 'undefined' && cookie !== null){
     $('.findCountyInput').val(cookie.name);
   }
 
