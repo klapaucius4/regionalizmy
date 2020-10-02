@@ -106,6 +106,8 @@
 <script src="<?= get_template_directory_uri(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= get_template_directory_uri(); ?>/vendor/jquery.cookie/jquery.cookie.js"></script>
 
+<!-- Custom scripts for this template -->
+<script src="<?= get_template_directory_uri(); ?>/js/scripts.min.js"></script>
 
 <?php if(is_front_page()): ?>
   <?php if(file_exists(get_template_directory().'/js/countiesData.min.js')): ?>
@@ -120,8 +122,7 @@
   <script src="<?= get_template_directory_uri(); ?>/js/rgmMap.min.js"></script>
 <?php endif; ?>
 
-<!-- Custom scripts for this template -->
-<script src="<?= get_template_directory_uri(); ?>/js/scripts.min.js"></script>
+
 
 <?php wp_footer(); ?>
 
