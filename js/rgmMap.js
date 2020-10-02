@@ -101,7 +101,7 @@ function initStyle(feature) {
 
 
 function onEachFeature(feature, layer) {
-    if(feature.id == rgmCookie()){
+    if(feature.id == rgmCookie().id){
         layer.setStyle({ fillColor: 'red' });
     }
     layer.on({
