@@ -1,3 +1,11 @@
+function rgmCookie(){
+  var cookie = $.cookie('rgmUserCounty') ? JSON.parse($.cookie('rgmUserCounty')) : null;
+  if( cookie !== null ){
+    return cookie;
+  }
+  return false;
+}
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -40,8 +48,7 @@
 
 
   //// counties begin
-  var cookie = $.cookie('rgmUserCounty') ? JSON.parse($.cookie('rgmUserCounty')) : null;
-  if(typeof cookie !== 'undefined' && cookie !== null){
+  if(rgmCookie()){
     $('.findCountyInput').val(cookie.name);
   }
 
@@ -92,7 +99,7 @@
     var modalPopup = $('#voteModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
 
-    if(typeof cookie !== 'undefined'){
+    if(rgmCookie()){
       // console.log(cookie.name);
       modalPopup.find('.fieldset2, .fieldset3').hide();
       modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + cookie.name + '</b>');
