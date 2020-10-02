@@ -20,11 +20,11 @@ info.onAdd = function (map) {
     return this._div;
 };
 
-info.update = function (props) {
-    this._div.innerHTML = '<h4>Lorem ipsum dolor</h4>' + (props ?
-    '<b>' + props.name + '</b><br />' + '<span>' + props.subtitle + '</span>' + '<br /><br />' + props.density + ' people / mi<sup>2</sup>'
-    : 'Hover over a state');
-};
+// info.update = function (props) {
+//     this._div.innerHTML = '<h4>Lorem ipsum dolor</h4>' + (props ?
+//     '<b>' + props.name + '</b><br />' + '<span>' + props.subtitle + '</span>' + '<br /><br />' + props.density + ' people / mi<sup>2</sup>'
+//     : 'Hover over a state');
+// };
 
 info.addTo(map);
 
@@ -66,7 +66,7 @@ function setCurrentCounty(e) {
     if($.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 })){
         geojson.resetStyle();
         e.target.setStyle({ fillColor: 'red' });
-        // $('.findCountyInput').val(e.target.feature.properties.name);
+        $('.findCountyInput').val(e.target.feature.properties.name);
     };
     
 }
