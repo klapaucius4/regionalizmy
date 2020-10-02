@@ -106,6 +106,15 @@
 <script src="<?= get_template_directory_uri(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= get_template_directory_uri(); ?>/vendor/jquery.cookie/jquery.cookie.js"></script>
 
+<script>
+  function rgmCookie(){
+    var cookie = $.cookie('rgmUserCounty') ? JSON.parse($.cookie('rgmUserCounty')) : null;
+    if( cookie !== null ){
+      return cookie;
+    }
+    return false;
+  }
+</script>
 
 <?php if(is_front_page()): ?>
   <?php if(file_exists(get_template_directory().'/js/countiesData.min.js')): ?>

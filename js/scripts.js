@@ -1,10 +1,3 @@
-function rgmCookie(){
-  var cookie = $.cookie('rgmUserCounty') ? JSON.parse($.cookie('rgmUserCounty')) : null;
-  if( cookie !== null ){
-    return cookie;
-  }
-  return false;
-}
 
 (function($) {
   "use strict"; // Start of use strict
