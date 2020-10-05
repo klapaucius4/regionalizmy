@@ -49,6 +49,8 @@
     <!-- Custom styles for this template -->
     <link href="<?= get_template_directory_uri(); ?>/css/styles.min.css" rel="stylesheet">
 
+    <link rel="shortcut icon" href="<?= get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
+
     <?php wp_head(); ?>
 </head>
 
