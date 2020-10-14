@@ -50,19 +50,19 @@
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group fieldset1">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1" checked>
+              <input class="form-check-input" type="radio" name="voteModalPopupRadio" id="voteModalPopupRadio1" value="1" checked>
               <?php
               // $rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null;
               ?>
-              <label class="form-check-label" for="gridRadios1"></label>
+              <label class="form-check-label" for="voteModalPopupRadio1"></label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2">
-              <label class="form-check-label" for="gridRadios2"><?= __('Znam z innego regionu Polski'); ?></label>
+              <input class="form-check-input" type="radio" name="voteModalPopupRadio" id="voteModalPopupRadio2" value="2">
+              <label class="form-check-label" for="voteModalPopupRadio2"><?= __('Znam z innego regionu Polski'); ?></label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="3">
-              <label class="form-check-label" for="gridRadios3"><?= __('Znam z ogólnopolskich środków masowego przekazu'); ?><small class="text-small d-block"><?= __('(prasa, radio, telewizja, Internet, książka, film)') ?></small></label>
+              <input class="form-check-input" type="radio" name="voteModalPopupRadio" id="voteModalPopupRadio3" value="3">
+              <label class="form-check-label" for="voteModalPopupRadio3"><?= __('Znam z ogólnopolskich środków masowego przekazu'); ?><small class="text-small d-block"><?= __('(prasa, radio, telewizja, Internet, książka, film)') ?></small></label>
             </div>
           </fieldset>
           <fieldset class="form-group fieldset2">
@@ -73,12 +73,22 @@
             </div>
           </fieldset>
           <fieldset class="form-group fieldset3">
-            <?php for($i=1; $i<=10; $i++): ?>
+          <?php
+          $args = array(
+            'post_type' => 'rgm_mass_media',
+            'posts_per_page' => -1,
+            'post_status' => 'publish'
+          );
+          $myQuery = new WP_Query($args);
+          if($myQuery->have_posts()):
+          ?>
+            <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio<?= $i; ?>" value="option<?= $i; ?>">
-                <label class="form-check-label" for="inlineRadio<?= $i; ?>"><?= $i; ?></label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio<?= get_the_ID(); ?>" value="option<?= get_the_ID(); ?>">
+                <label class="form-check-label" for="inlineRadio<?= get_the_ID(); ?>"><?= get_the_title(); ?></label>
               </div>
-            <?php endfor; ?>
+            <?php endwhile; wp_reset_postdata(); ?>
+          <?php endif; ?>
           </fieldset>
         </form>
       </div>
@@ -96,6 +106,15 @@
 <script src="<?= get_template_directory_uri(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= get_template_directory_uri(); ?>/vendor/jquery.cookie/jquery.cookie.js"></script>
 
+<script>
+  function rgmCookie(){
+    var cookie = $.cookie('rgmUserCounty') ? JSON.parse($.cookie('rgmUserCounty')) : null;
+    if( cookie !== null ){
+      return cookie;
+    }
+    return false;
+  }
+</script>
 
 <?php if(is_front_page()): ?>
   <?php if(file_exists(get_template_directory().'/js/countiesData.min.js')): ?>

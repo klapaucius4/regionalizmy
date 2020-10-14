@@ -48,6 +48,8 @@
           <h4><?= __('Czy wiesz, co to znaczy?'); ?></h4>
           <p class="m-0 small"><?= __('Czy spotkałeś się z następującymi słowami i frazami w miejscu Twojego zamieszkania i znasz ich znaczenie?'); ?></p>
         </div>
+      </div>
+      <div class="row">
       <?php
       $args = array(
         'post_type' => 'rgm_phrase',
@@ -59,19 +61,19 @@
       $myQuery = new WP_Query($args);
       if($myQuery->have_posts()):
       ?>
-        <!-- <div class="col-lg-8 col-md-10 mx-auto"> -->
         <div class="col-md-12">
           <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
             <?php get_template_part('template-parts/loop-phrase', ''); ?>
             <hr>
           <?php endwhile; wp_reset_postdata(); ?>
           <div class="clearfix"></div>
-            <!-- <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a> -->
-            <?php //bootstrap_pagination($myQuery) ?>
         </div>
-      <?php
-      endif;
-      ?>
+      <?php endif; ?>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <a href="#" class="btn btn-secondary mt-5"><?= __('Przejdź do słownika'); ?></a>
+        </div>
       </div>
     </div>
   </section>

@@ -1,3 +1,4 @@
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -40,9 +41,8 @@
 
 
   //// counties begin
-  var cookie = $.cookie('rgmUserCounty') ? JSON.parse($.cookie('rgmUserCounty')) : null;
-  if(typeof cookie !== 'undefined'){
-    $('.findCountyInput').val(cookie.name);
+  if(rgmCookie()){
+    $('.findCountyInput').val(rgmCookie().name);
   }
 
   $(".findCountyInput, .findCountyInput2").autocomplete({
@@ -81,7 +81,7 @@
 
 
   $("body").on('click', '.vote-buttons button', function(e){
-    // alert('test');
+    alert('test');
     e.preventDefault();
     var phraseId = $(this).data('phrase-id');
     var phraseName = $(this).data('phrase-name');
@@ -92,10 +92,10 @@
     var modalPopup = $('#voteModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
 
-    if(typeof cookie !== 'undefined'){
+    if(rgmCookie()){
       // console.log(cookie.name);
       modalPopup.find('.fieldset2, .fieldset3').hide();
-      modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + cookie.name + '</b>');
+      modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + rgmCookie().name + '</b>');
 
       modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(ee){
         ee.preventDefault();
