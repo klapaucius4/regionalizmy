@@ -1,3 +1,4 @@
 node_modules
 acf-data/*.json
 js/countiesData.min.js
+deploy-log.txt
