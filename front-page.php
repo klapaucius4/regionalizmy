@@ -87,7 +87,7 @@
               <div class="col-md-7">
                 <?= $sectionAdd['tresc']; ?>
                 <p>
-                  <a href="#" class="btn btn-info">Dodaj regionalizm</a>
+                  <a href="#" class="btn btn-info"><?= __('Dodaj regionalizm'); ?></a>
                   <?php if(is_user_logged_in()): ?>
                     <a href="<?= get_permalink(get_page_by_path('konto'))?:'#'; ?>" class="btn btn-primary"><?= __('Moje konto'); ?></a>
                   <?php else: ?>
