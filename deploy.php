@@ -58,6 +58,7 @@ flush();
 // Actually run the update
 
 $commands = array(
+    'ls',
 	'echo $PWD',
 	'whoami',
 	'git pull',
