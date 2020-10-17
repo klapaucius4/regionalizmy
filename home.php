@@ -25,7 +25,7 @@
       <?php else: ?>
         <div class="col-md-8">
           <div class="alert alert-warning" role="alert">
-            This is a warning alert—check it out!!!
+            This is a warning alert—check it out!
           </div>
         </div>
       <?php endif; ?>
