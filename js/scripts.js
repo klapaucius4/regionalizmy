@@ -81,7 +81,6 @@
 
 
   $("body").on('click', '.vote-buttons button', function(e){
-    alert('test');
     e.preventDefault();
     var phraseId = $(this).data('phrase-id');
     var phraseName = $(this).data('phrase-name');
