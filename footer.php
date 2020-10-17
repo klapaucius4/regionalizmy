@@ -52,9 +52,9 @@
             <div class="form-check">
               <input class="form-check-input" type="radio" name="voteModalPopupRadio" id="voteModalPopupRadio1" value="1" checked>
               <?php
-              // $rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null;
+              $rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null;
               ?>
-              <label class="form-check-label" for="voteModalPopupRadio1"></label>
+              <label class="form-check-label" for="voteModalPopupRadio1"><?= $rgmUserCountyCookie; ?></label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="voteModalPopupRadio" id="voteModalPopupRadio2" value="2">
