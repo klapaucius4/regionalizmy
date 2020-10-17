@@ -94,9 +94,9 @@
     if(rgmCookie()){
       // console.log(cookie.name);
       modalPopup.find('.fieldset2, .fieldset3').hide();
-      modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + rgmCookie().name + '</b>');
+      modalPopup.find('label[for=voteModalPopupRadio1]').html("Znam z: <b>" + rgmCookie().name + '</b>');
 
-      modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(ee){
+      modalPopup.find('input[type=radio][name=voteModalPopupRadio]').on('change', function(ee){
         ee.preventDefault();
         if ($(this).val() == 1) {
           modalPopup.find('.fieldset2').hide(500);
