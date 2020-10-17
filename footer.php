@@ -50,12 +50,10 @@
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group fieldset1">
             <div class="form-check">
+              <?php if($rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null): ?>
               <input class="form-check-input" type="radio" name="voteModalPopupRadio" id="voteModalPopupRadio1" value="1" checked>
-              <?php
-              $rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null;
-              var_dump($rgmUserCountyCookie); exit;
-              ?>
-              <label class="form-check-label" for="voteModalPopupRadio1"><?= $rgmUserCountyCookie; ?></label>
+              <label class="form-check-label" for="voteModalPopupRadio1"><?= __('Znam z:'); ?> <?= $rgmUserCountyCookie['name']; ?></label>
+              <?php endif; ?>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="voteModalPopupRadio" id="voteModalPopupRadio2" value="2">
