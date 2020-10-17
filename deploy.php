@@ -62,10 +62,10 @@ $commands = array(
 	'whoami',
 	'git pull',
 	'git status',
-	'git submodule sync',
-	'git submodule update',
-	'git submodule status',
-    'test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"',
+	// 'git submodule sync',
+	// 'git submodule update',
+	// 'git submodule status',
+    // 'test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"',
     // 'mkdir test-folder1234'
 );
 
