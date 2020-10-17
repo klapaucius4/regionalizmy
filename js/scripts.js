@@ -95,23 +95,22 @@
       // console.log(cookie.name);
       modalPopup.find('.fieldset2, .fieldset3').hide();
       modalPopup.find('label[for=voteModalPopupRadio1]').html("Znam z: <b>" + rgmCookie().name + '</b>');
+
+      modalPopup.find('input[type=radio][name=voteModalPopupRadio]').on('change', function(ee){
+        ee.preventDefault();
+        if ($(this).val() == 1) {
+          modalPopup.find('.fieldset2').hide(500);
+          modalPopup.find('.fieldset3').hide(500);
+        }else if($(this).val() == 2){
+          modalPopup.find('.fieldset3').hide(500);
+          modalPopup.find('.fieldset2').show(500);
+        }else if($(this).val() == 3){
+          modalPopup.find('.fieldset3').show(500);
+          modalPopup.find('.fieldset2').hide(500);
+        }
+        
+      });
     }
-    
-    modalPopup.find('input[type=radio][name=voteModalPopupRadio]').on('change', function(ee){
-      ee.preventDefault();
-      if ($(this).val() == 1) {
-        modalPopup.find('.fieldset2').hide(500);
-        modalPopup.find('.fieldset3').hide(500);
-      }else if($(this).val() == 2){
-        modalPopup.find('.fieldset3').hide(500);
-        modalPopup.find('.fieldset2').show(500);
-      }else if($(this).val() == 3){
-        modalPopup.find('.fieldset3').show(500);
-        modalPopup.find('.fieldset2').hide(500);
-      }
-      
-    });
-    
 
 
     // console.log(phraseId);
