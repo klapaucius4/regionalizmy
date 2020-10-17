@@ -1,5 +1,7 @@
 <?php get_header(); ?>
   <!-- Post Content -->
+
+  <?php while(have_posts()): the_post(); ?>
   <article>
     <div class="container">
       <div class="row">
@@ -125,5 +127,6 @@
 
     </div>
   </article>
+  <?php endwhile; ?>
 <?php
 get_footer();
