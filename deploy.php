@@ -58,7 +58,6 @@ flush();
 // Actually run the update
 
 $commands = array(
-    'ls',
 	'echo $PWD',
 	'whoami',
 	'git pull',
@@ -67,7 +66,7 @@ $commands = array(
 	'git submodule update',
 	'git submodule status',
     'test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"',
-    'mkdir test-folder1234'
+    // 'mkdir test-folder1234'
 );
 
 $output = "\n";
