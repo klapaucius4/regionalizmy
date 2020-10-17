@@ -60,7 +60,8 @@ flush();
 $commands = array(
 	'echo $PWD',
 	'whoami',
-	'git pull',
+    'git pull',
+    'git branch',
 	'git status',
 	// 'git submodule sync',
 	// 'git submodule update',
