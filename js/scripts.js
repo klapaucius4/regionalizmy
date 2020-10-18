@@ -95,7 +95,7 @@
     if(!rgmCookie()){
       modalPopup2.modal('show');
     }
-    else if(rgmCookie() && $(this).hasClass('btn-success')){
+    else if($(this).hasClass('btn-success')){
 
       modalPopup.modal('show');
       // console.log(cookie.name);
