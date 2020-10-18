@@ -41,7 +41,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"></h5>
+        <h5 class="modal-title">Skąd jesteś / pochodzisz?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="<?= __('Zamknij'); ?>">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -49,7 +49,7 @@
       <div class="modal-body">
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group fieldset2">
-          <label class="form-check-label" for="saveAsDefault"><?= __('Skąd jesteś / skąd pochodzisz?'); ?></label>
+          <!-- <label class="form-check-label" for="saveAsDefault"><?= __('Skąd jesteś / skąd pochodzisz?'); ?></label> -->
             <input type="text" class="form-control findCountyInput3 has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="saveAsDefault" value="option1">
