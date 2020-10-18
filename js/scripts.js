@@ -45,7 +45,7 @@
     $('.findCountyInput').val(rgmCookie().name);
   }
 
-  $(".findCountyInput, .findCountyInput2").autocomplete({
+  $(".findCountyInput, .findCountyInput2, .findCountyInput3").autocomplete({
       source: function (request, response) {
           $.ajax({
               url: "/wp-json/rgm/route/get-counties/"+request.term,
@@ -81,7 +81,6 @@
 
 
   $("body").on('click', '.vote-buttons button', function(e){
-    alert('test');
     e.preventDefault();
     var phraseId = $(this).data('phrase-id');
     var phraseName = $(this).data('phrase-name');
@@ -90,14 +89,20 @@
     var userId = 0;
 
     var modalPopup = $('#voteModalPopup');
+    var modalPopup2 = $('#selectDistrictModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
 
-    if(rgmCookie()){
+    if(!rgmCookie()){
+      modalPopup2.modal('show');
+    }
+    else if($(this).hasClass('btn-success')){
+
+      modalPopup.modal('show');
       // console.log(cookie.name);
       modalPopup.find('.fieldset2, .fieldset3').hide();
-      modalPopup.find('label[for=gridRadios1]').html("Znam z: <b>" + rgmCookie().name + '</b>');
+      modalPopup.find('label[for=voteModalPopupRadio1]').html("Znam z: <b>" + rgmCookie().name + '</b>');
 
-      modalPopup.find('input[type=radio][name=gridRadios]').on('change', function(ee){
+      modalPopup.find('input[type=radio][name=voteModalPopupRadio]').on('change', function(ee){
         ee.preventDefault();
         if ($(this).val() == 1) {
           modalPopup.find('.fieldset2').hide(500);
