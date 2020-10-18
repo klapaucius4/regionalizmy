@@ -49,18 +49,19 @@
       <div class="modal-body">
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group fieldset2">
+          <label class="form-check-label" for="saveAsDefault"><?= __('Skąd jesteś / skąd pochodzisz?'); ?></label>
             <input type="text" class="form-control findCountyInput3 has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1"><?= __('ustaw jako domyślny region'); ?></label>
+              <input class="form-check-input" type="checkbox" id="saveAsDefault" value="option1">
+              <label class="form-check-label" for="saveAsDefault"><?= __('ustaw jako domyślny region'); ?></label>
             </div>
           </fieldset>
         </form>
       </div>
-      <div class="modal-footer">
+      <!-- <div class="modal-footer">
         <button type="button" class="btn btn-success"><?= __('Potwierdź'); ?></button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= __('Zamknij'); ?></button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
