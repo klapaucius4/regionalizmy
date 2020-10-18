@@ -49,7 +49,6 @@
       <div class="modal-body">
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group fieldset2">
-            <label class="form-check-label"><?= __('Wybierz powiat lub miasto w którym mieszkasz lub w którym mieszkałeś/aś przez większość swojego życia.'); ?></label>
             <input type="text" class="form-control findCountyInput3 has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="saveAsDefault1" value="option1">
