@@ -41,7 +41,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Skąd jesteś / pochodzisz?</h5>
+        <h5 class="modal-title"><?= __('Skąd jesteś / pochodzisz?'); ?></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="<?= __('Zamknij'); ?>">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -58,10 +58,10 @@
           </fieldset>
         </form>
       </div>
-      <!-- <div class="modal-footer">
+      <div class="modal-footer">
         <button type="button" class="btn btn-success"><?= __('Potwierdź'); ?></button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= __('Zamknij'); ?></button>
-      </div> -->
+      </div>
     </div>
   </div>
 </div>
