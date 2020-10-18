@@ -535,7 +535,7 @@ footer .copyright {
 }
 
 .ui-menu {
-  z-index: 401;
+  z-index: 1060;
 }
 
 .ui-autocomplete {
