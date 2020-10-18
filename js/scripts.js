@@ -89,9 +89,13 @@
     var userId = 0;
 
     var modalPopup = $('#voteModalPopup');
+    var modalPopup2 = $('#selectDistrictModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
 
-    if(rgmCookie() && $(this).hasClass('btn-success')){
+    if(!rgmCookie()){
+      modalPopup2.modal('show');
+    }
+    else if(rgmCookie() && $(this).hasClass('btn-success')){
 
       modalPopup.modal('show');
       // console.log(cookie.name);
