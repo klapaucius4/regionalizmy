@@ -92,6 +92,8 @@
     modalPopup.find('h5.modal-title').text(phraseName);
 
     if(rgmCookie()){
+
+      modalPopup.modal('show');
       // console.log(cookie.name);
       modalPopup.find('.fieldset2, .fieldset3').hide();
       modalPopup.find('label[for=voteModalPopupRadio1]').html("Znam z: <b>" + rgmCookie().name + '</b>');
