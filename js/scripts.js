@@ -91,7 +91,7 @@
     var modalPopup = $('#voteModalPopup');
     modalPopup.find('h5.modal-title').text(phraseName);
 
-    if(rgmCookie()){
+    if(rgmCookie() && $(this).hasClass('btn-success')){
 
       modalPopup.modal('show');
       // console.log(cookie.name);
