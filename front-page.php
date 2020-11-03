@@ -60,17 +60,8 @@
           'orderby' => 'rand',
         );
         $myQuery = new WP_Query($args);
-        if($myQuery->have_posts()):
-        ?>
-          <div class="col-md-6">
-            <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
-              <?php get_template_part('template-parts/loop-phrase', ''); ?>
-              <hr>
-            <?php endwhile; wp_reset_postdata(); ?>
-            <div class="clearfix"></div>
-          </div>
-
-          <div class="col-md-6">
+        if($myQuery->have_posts()): ?>
+          <div class="col-md-12">
             <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
               <?php get_template_part('template-parts/loop-phrase', ''); ?>
               <hr>
