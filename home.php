@@ -9,11 +9,11 @@
         <div class="post-preview">
           <a href="<?= get_the_permalink(); ?>">
             <h2 class="post-title"><?= get_the_title(); ?></h2>
-            <h3 class="post-subtitle mb-0">
+            <h3 class="post-subtitle">
               Problems look mighty small from 150 miles up
             </h3>
           </a>
-          <!-- <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= __('dnia'); ?> <?= get_the_date(); ?></p> -->
+          <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= __('dnia'); ?> <?= get_the_date(); ?></p>
         </div>
         <hr>
         <?php endwhile; ?>
