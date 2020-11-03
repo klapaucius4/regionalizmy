@@ -9,7 +9,7 @@
         <div class="post-preview">
           <a href="<?= get_the_permalink(); ?>">
             <h2 class="post-title"><?= get_the_title(); ?></h2>
-            <h3 class="post-subtitle">
+            <h3 class="post-subtitle mb-0">
               Problems look mighty small from 150 miles up
             </h3>
           </a>
