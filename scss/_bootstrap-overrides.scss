@@ -24,8 +24,8 @@
   &:focus,
   &:active {
     color: $white;
-    background-color: darken($themeColor1, 7.5) !important;
-    border-color: darken($themeColor1, 7.5) !important;
+    background-color: darken($themeColor1, 7.5);
+    border-color: darken($themeColor1, 7.5);
     box-shadow: 0 0 0 0.2rem rgba(212, 33, 61, 0.5);
 
   }
