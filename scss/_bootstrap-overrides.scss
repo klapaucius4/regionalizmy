@@ -20,13 +20,13 @@
 .btn-primary {
   background-color: $themeColor1;
   border-color: $themeColor1;
-  box-shadow: rgba(212, 33, 61, 0.5);
   &:hover,
   &:focus,
   &:active {
     color: $white;
     background-color: darken($themeColor1, 7.5) !important;
     border-color: darken($themeColor1, 7.5) !important;
+    box-shadow: rgba(212, 33, 61, 0.5);
   }
 }
 
