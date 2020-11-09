@@ -482,6 +482,10 @@ footer .copyright {
   opacity: 0.9;
 }
 
+.bg-primary.focus, .bg-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
 .accordion-section .panel-default > .panel-heading {
   border: 0;
   background: #f4f4f4;
