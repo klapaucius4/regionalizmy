@@ -20,6 +20,7 @@
 .btn-primary {
   background-color: $themeColor1;
   border-color: $themeColor1;
+  box-shadow: rgba(212, 33, 61, 0.5);
   &:hover,
   &:focus,
   &:active {
@@ -65,10 +66,5 @@
     z-index: -1;
     background-color: #fff;
     opacity: 0.9;
-  }
-  &.focus, &:focus {
-    box-shadow: rgba(212, 33, 61, 0.5);
-    // color: red;
-    
   }
 }
