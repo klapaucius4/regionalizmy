@@ -23,9 +23,9 @@
   &:hover,
   &:focus,
   &:active {
-    color: $white;
-    background-color: darken($themeColor1, 7.5);
-    border-color: darken($themeColor1, 7.5);
+    // color: $white;
+    background-color: darken($themeColor1, 7.5) !important;
+    border-color: darken($themeColor1, 7.5) !important;
     box-shadow: 0 0 0 0.2rem $themeColor1-transparent;
 
   }

@@ -435,9 +435,8 @@ footer .copyright {
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  color: #fff;
-  background-color: #b31c33;
-  border-color: #b31c33;
+  background-color: #b31c33 !important;
+  border-color: #b31c33 !important;
   box-shadow: 0 0 0 0.2rem rgba(200, 35, 51, 0.5);
 }
 
