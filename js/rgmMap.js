@@ -20,9 +20,10 @@ info.onAdd = function (map) {
 };
 
 info.update = function (props) {
-    this._div.innerHTML = '<h4>Skąd jesteś?</h4>' + (props ?
-    '<b>' + props.name + '</b><br />' + '<span>' + props.subtitle + '</span>' + '<br /><br />' + props.density + ' people / mi<sup>2</sup>'
-    : 'Zaznacz swój region');
+    // this._div.innerHTML = '<h4>Skąd jesteś?</h4>' + (props ?
+    // '<b>' + props.name + '</b><br />' + '<span>' + props.subtitle + '</span>' + '<br /><br />' + props.density + ' people / mi<sup>2</sup>'
+    // : 'Zaznacz swój region');
+    this._div.innerHTML = '<h5>' + (props ? props.name : 'Skąd jesteś?') + '</h5>';
 };
 
 info.addTo(map);
@@ -91,7 +92,7 @@ function initStyle(feature) {
     var returnData = {
     weight: 2,
     opacity: 1,
-    color: '#d5d6db',
+    color: '#218838',
     dashArray: '3',
     fillOpacity: 0.7
     // fillColor: getColor(feature.properties.density)
