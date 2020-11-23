@@ -20,9 +20,9 @@ info.onAdd = function (map) {
 };
 
 info.update = function (props) {
-    this._div.innerHTML = '<h4>Lorem ipsum dolor</h4>' + (props ?
+    this._div.innerHTML = '<h4>Skąd jesteś?</h4>' + (props ?
     '<b>' + props.name + '</b><br />' + '<span>' + props.subtitle + '</span>' + '<br /><br />' + props.density + ' people / mi<sup>2</sup>'
-    : 'Hover over a state');
+    : 'Zaznacz swój region');
 };
 
 info.addTo(map);
