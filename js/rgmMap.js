@@ -91,7 +91,7 @@ function initStyle(feature) {
     var returnData = {
     weight: 2,
     opacity: 1,
-    color: 'green',
+    color: '#d5d6db',
     dashArray: '3',
     fillOpacity: 0.7
     // fillColor: getColor(feature.properties.density)
