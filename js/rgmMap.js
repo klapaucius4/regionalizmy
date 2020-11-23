@@ -20,10 +20,10 @@ info.onAdd = function (map) {
 };
 
 info.update = function (props) {
-    // this._div.innerHTML = '<h4>Skąd jesteś?</h4>' + (props ?
+    // this._div.innerHTML = '<h5>Skąd jesteś?</h5>' + (props ?
     // '<b>' + props.name + '</b><br />' + '<span>' + props.subtitle + '</span>' + '<br /><br />' + props.density + ' people / mi<sup>2</sup>'
     // : 'Zaznacz swój region');
-    this._div.innerHTML = '<h5>' + (props ? props.name : 'Skąd jesteś?') + '</h5>';
+    this._div.innerHTML = '<h5>Skąd jesteś?</h5>' + (props ? '<b>' + props.name + '</b><br />' + '<span>' + props.subtitle + '</span>' : 'Zaznacz swój region');
 };
 
 info.addTo(map);
