@@ -1,12 +1,77 @@
-@import "variables.scss";
-@import "mixins.scss";
-@import "global.scss";
-@import "navbar.scss";
-@import "masthead.scss";
-@import "post.scss";
-@import "contact.scss";
-@import "footer.scss";
-@import "bootstrap-overrides.scss";
-@import "accordion.scss";
-@import "map.scss";
-@import "forms.scss";
+/*
+BEM methodology + 7-1 architecture
+Based by article: https://levelup.gitconnected.com/advance-your-css-with-sass-bem-7-1-architecture-13898751976
+
+Sass/
+|
+|– abstracts/   (and also called here and there "utils")
+|   |– _variables.scss    # Sass Variables
+|   |– _mixins.scss       # Sass Mixins
+|   |– _functions.scss    # Sass Functions
+|
+|– vendors/
+|   |– _icons.scss        # Font-Awesome Icons
+|
+|– base/
+|   |– _reset.scss        # Reset
+|   |– _typography.scss   # Typography rules
+|   |– _animations.scss   # Animation rules
+|   |– _utilities.scss    # Utility rules
+|
+|– layout/
+|   |– _navigation.scss   # Navigation
+|   |– _header.scss       # Header
+|   |– _footer.scss       # Footer
+|
+|– components/
+|   |– _buttons.scss      # Buttons
+|   |– _card.scss         # Card
+|   |– _form.scss         # Form
+|
+|– pages/
+|   |– _home.scss         # Home page style
+|   |– _contact.scss      # Contact page style
+|   |– _about.scss        # About page style
+|
+|– themes/
+|   |– _pink.scss         # Pink theme
+|   |– _mint.scss         # Mint theme
+|
+ – main.scss              # Main Sass input file
+
+*/
+
+
+/* abstracts */
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+/* vendors */
+@import 'vendors/bootstrap-overrides';
+
+/* base */
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/animation';
+@import 'base/utilities';
+
+/* layout */
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/section';
+
+/* components */
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/map';
+@import 'components/accordion';
+
+/* pages */
+@import 'pages/frontpage';
+@import 'pages/contact';
+@import 'pages/phrase';
+
+/* themes */
+@import 'themes/default';

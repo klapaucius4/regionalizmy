@@ -1,3 +1,122 @@
+@charset "UTF-8";
+/*
+BEM methodology + 7-1 architecture
+Based by article: https://levelup.gitconnected.com/advance-your-css-with-sass-bem-7-1-architecture-13898751976
+
+Sass/
+|
+|– abstracts/   (and also called here and there "utils")
+|   |– _variables.scss    # Sass Variables
+|   |– _mixins.scss       # Sass Mixins
+|   |– _functions.scss    # Sass Functions
+|
+|– vendors/
+|   |– _icons.scss        # Font-Awesome Icons
+|
+|– base/
+|   |– _reset.scss        # Reset
+|   |– _typography.scss   # Typography rules
+|   |– _animations.scss   # Animation rules
+|   |– _utilities.scss    # Utility rules
+|
+|– layout/
+|   |– _navigation.scss   # Navigation
+|   |– _header.scss       # Header
+|   |– _footer.scss       # Footer
+|
+|– components/
+|   |– _buttons.scss      # Buttons
+|   |– _card.scss         # Card
+|   |– _form.scss         # Form
+|
+|– pages/
+|   |– _home.scss         # Home page style
+|   |– _contact.scss      # Contact page style
+|   |– _about.scss        # About page style
+|
+|– themes/
+|   |– _pink.scss         # Pink theme
+|   |– _mint.scss         # Mint theme
+|
+ – main.scss              # Main Sass input file
+
+*/
+/* abstracts */
+/* vendors */
+.btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 15px 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
+  text-decoration: none;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn__tight {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.btn:focus {
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #D4213D;
+  border-color: #D4213D;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #b31c33 !important;
+  border-color: #b31c33 !important;
+  box-shadow: 0 0 0 0.2rem rgba(200, 35, 51, 0.5) !important;
+}
+
+.btn-secondary {
+  background-color: #4b4b5b;
+  border-color: #4b4b5b;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  color: #fff;
+  background-color: #3a3a46 !important;
+  border-color: #3a3a46 !important;
+}
+
+.btn-lg {
+  font-size: 16px;
+  padding: 25px 35px;
+}
+
+.bg-primary {
+  background-color: transparent !important;
+  position: relative;
+}
+
+.bg-primary::after, .bg-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bg-primary::before {
+  z-index: -2;
+  background-image: url("../img/bg-primary.jpg");
+  background-repeat: repeat;
+}
+
+.bg-primary::after {
+  z-index: -1;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+/* base */
 body {
   font-size: 18px;
   color: #212529;
@@ -91,6 +210,11 @@ img::-moz-selection {
   opacity: 0.7;
 }
 
+.color-primary {
+  color: #D4213D;
+}
+
+/* layout */
 #mainNav {
   position: absolute;
   border-bottom: 1px solid #e9ecef;
@@ -283,49 +407,99 @@ header.masthead .post-heading .meta a {
   }
 }
 
-.post-preview > a {
-  color: #212529;
+footer {
+  padding: 50px 0 65px;
 }
 
-.post-preview > a:focus, .post-preview > a:hover {
-  text-decoration: none;
-  color: #D4213D;
+footer .list-inline {
+  margin: 0;
+  padding: 0;
 }
 
-.post-preview > a > .post-title {
-  font-size: 30px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+footer .copyright {
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: center;
 }
 
-.post-preview > a > .post-subtitle {
-  font-weight: 300;
-  margin: 0 0 10px;
+/* components */
+.ui-menu {
+  z-index: 1050;
 }
 
-.post-preview > .post-meta {
-  font-size: 18px;
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+* html .ui-autocomplete {
+  height: 200px;
+}
+
+#rgm-map {
+  width: 100%;
+  height: 800px;
+}
+
+#rgm-map .info {
+  width: 220px;
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+#rgm-map .info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+#rgm-map .legend {
+  text-align: left;
+  line-height: 18px;
+  color: #555;
+}
+
+#rgm-map .legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.accordion-section .panel-default > .panel-heading {
+  border: 0;
+  background: #f4f4f4;
+  padding: 0;
+}
+
+.accordion-section .panel-default .panel-title a {
+  display: block;
   font-style: italic;
-  margin-top: 0;
-  color: #868e96;
+  font-size: 1.5rem;
 }
 
-.post-preview > .post-meta > a {
-  text-decoration: none;
-  color: #212529;
+.accordion-section .panel-default .panel-title a:after {
+  font-style: normal;
+  color: #1f7de2;
+  float: right;
+  transform: rotate(90deg);
 }
 
-.post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
-  text-decoration: underline;
+.accordion-section .panel-default .panel-title a.arrow:after {
   color: #D4213D;
+  content: "\276F";
 }
 
-@media only screen and (min-width: 768px) {
-  .post-preview > a > .post-title {
-    font-size: 36px;
-  }
+.accordion-section .panel-default .panel-body {
+  font-size: 1.2rem;
 }
 
+/* pages */
 .floating-label-form-group {
   font-size: 14px;
   position: relative;
@@ -385,165 +559,4 @@ form .form-group:first-child .floating-label-form-group {
   border-top: 1px solid #dee2e6;
 }
 
-footer {
-  padding: 50px 0 65px;
-}
-
-footer .list-inline {
-  margin: 0;
-  padding: 0;
-}
-
-footer .copyright {
-  font-size: 14px;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.btn {
-  font-size: 14px;
-  font-weight: 800;
-  padding: 15px 25px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-radius: 0;
-  text-decoration: none;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.btn__tight {
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-
-.btn:focus {
-  color: #ffffff;
-}
-
-.btn-primary {
-  background-color: #D4213D;
-  border-color: #D4213D;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  color: #fff;
-  background-color: #b31c33 !important;
-  border-color: #b31c33 !important;
-}
-
-.btn-secondary {
-  background-color: #4b4b5b;
-  border-color: #4b4b5b;
-}
-
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-  color: #fff;
-  background-color: #3a3a46 !important;
-  border-color: #3a3a46 !important;
-}
-
-.btn-lg {
-  font-size: 16px;
-  padding: 25px 35px;
-}
-
-.bg-primary {
-  background-color: transparent !important;
-  position: relative;
-}
-
-.bg-primary::after, .bg-primary::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.bg-primary::before {
-  z-index: -2;
-  background-image: url("../img/bg-primary.jpg");
-  background-repeat: repeat;
-}
-
-.bg-primary::after {
-  z-index: -1;
-  background-color: #fff;
-  opacity: 0.9;
-}
-
-.accordion-section .panel-default > .panel-heading {
-  border: 0;
-  background: #f4f4f4;
-  padding: 0;
-}
-
-.accordion-section .panel-default .panel-title a {
-  display: block;
-  font-style: italic;
-  font-size: 1.5rem;
-}
-
-.accordion-section .panel-default .panel-title a:after {
-  font-style: normal;
-  color: #1f7de2;
-  float: right;
-  transform: rotate(90deg);
-}
-
-.accordion-section .panel-default .panel-title a.arrow:after {
-  color: #D4213D;
-  content: "\276F";
-}
-
-.accordion-section .panel-default .panel-body {
-  font-size: 1.2rem;
-}
-
-#rgm-map {
-  width: 100%;
-  height: 800px;
-}
-
-#rgm-map .info {
-  padding: 6px 8px;
-  font: 14px/16px Arial, Helvetica, sans-serif;
-  background: white;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-}
-
-#rgm-map .info h4 {
-  margin: 0 0 5px;
-  color: #777;
-}
-
-#rgm-map .legend {
-  text-align: left;
-  line-height: 18px;
-  color: #555;
-}
-
-#rgm-map .legend i {
-  width: 18px;
-  height: 18px;
-  float: left;
-  margin-right: 8px;
-  opacity: 0.7;
-}
-
-.ui-menu {
-  z-index: 1050;
-}
-
-.ui-autocomplete {
-  max-height: 200px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-* html .ui-autocomplete {
-  height: 200px;
-}
+/* themes */
