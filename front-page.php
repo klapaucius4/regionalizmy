@@ -72,7 +72,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-            <a href="#" class="btn btn-secondary mt-5"><?= __('Przejdź do słownika'); ?></a>
+            <a href="<?= get_post_type_archive_link('rgm_phrase'); ?>" class="btn btn-secondary mt-5"><?= __('Przejdź do słownika'); ?></a>
           </div>
         </div>
       <?php endif; ?>
