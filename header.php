@@ -97,7 +97,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Internetowy Słownik Regionalizmów Polskich</h1>
+            <h1><?= get_bloginfo('name'); ?></h1>
             <!-- <h2 class="subheading">Internetowy Słownik Regionalizmów Polskich</h2> -->
           </div>
         </div>
