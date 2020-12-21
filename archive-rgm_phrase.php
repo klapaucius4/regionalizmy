@@ -3,7 +3,6 @@
 <section class="section-space">
     <!-- Main Content -->
     <div class="container">
-        <?php if($sectionSamplePhrases = get_field('sekcja_przykladowe_frazy')): ?>
         <div class="row">
             <div class="col-md-12 mb-5 text-center">
             <h4>Lorem ipsum</h4>
@@ -21,7 +20,6 @@
             </div>
         <?php endif; ?>
         </div>
-        <?php endif; ?>
     </div>
 </section>
 
