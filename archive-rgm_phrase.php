@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 mb-5 text-center">
-            <h4>Lorem ipsum</h4>
+            <h4><?= get_the_archive_title(); ?></h4>
             <p class="m-0 small">dolor.....</p>
             </div>
         </div>
