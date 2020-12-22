@@ -5,15 +5,16 @@ header.header {
     margin-bottom: 50px;
     // background: no-repeat right center;
     
-    background-attachment: scroll;
+    
     position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url('../img/front-page-bg2.svg');
-    background-size: contain;
+    
     min-height: 56px;
     &--frontpage {
-      background-image: none;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('../img/front-page-bg2.svg');
+      background-size: contain;
+      background-attachment: scroll;
     }
 
     // @include background-cover;
