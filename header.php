@@ -90,7 +90,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead">
+  <header class="header__masthead<?= is_front_page()?'--frontpage':''; ?>">
     <div class="overlay bg1"></div>
     <div class="overlay bg2"></div>
     <div class="container">
