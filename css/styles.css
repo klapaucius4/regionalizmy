@@ -309,7 +309,7 @@ img::-moz-selection {
 header.header__masthead {
   margin-bottom: 50px;
   position: relative;
-  min-height: 56px;
+  min-height: 58px;
 }
 
 header.header__masthead--frontpage {
