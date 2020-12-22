@@ -46,7 +46,7 @@ Sass/
 .btn {
   font-size: 14px;
   font-weight: 800;
-  padding: 12px 20px;
+  padding: 15px 25px;
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 0;
@@ -61,6 +61,11 @@ Sass/
 
 .btn:focus {
   color: #ffffff;
+}
+
+.btn--vote {
+  padding: 12px 20px;
+  min-width: 122px;
 }
 
 .btn-danger {
