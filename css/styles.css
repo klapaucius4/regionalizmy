@@ -63,6 +63,11 @@ Sass/
   color: #ffffff;
 }
 
+.btn-danger {
+  background-color: #D4213D;
+  border-color: #D4213D;
+}
+
 .btn-primary {
   background-color: #D4213D;
   border-color: #D4213D;
