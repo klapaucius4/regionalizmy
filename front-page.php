@@ -69,7 +69,7 @@
             <div class="clearfix"></div>
           </div>
           <div class="col-md-4">
-            <img class="w-100" src="<?= get_template_directory_uri(); ?>/img/did-you-know.svg" alt="" />
+            <img class="w-100 d-flex align-items-center" src="<?= get_template_directory_uri(); ?>/img/did-you-know.svg" alt="" />
           </div>
         <?php endif; ?>
         </div>
