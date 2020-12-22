@@ -93,6 +93,8 @@
   <header class="header__masthead<?= is_front_page()?' header__masthead--frontpage':''; ?>">
     <div class="overlay bg1"></div>
     <div class="overlay bg2"></div>
+
+    <?php if(is_front_page()): ?>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
@@ -103,4 +105,6 @@
         </div>
       </div>
     </div>
+    <?php endif; ?>
+
   </header>
