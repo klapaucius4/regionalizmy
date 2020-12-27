@@ -6,7 +6,7 @@
         <div class="input-group">
             <input type="text" class="form-control" placeholder="<?= __('Znajdź regionalizm'); ?>">
             <span class="input-group-append">
-            <button class="btn--smaller" type="button"><?= __('Szukaj'); ?></button>
+            <button class="btn--smaller btn-secondary" type="button"><?= __('Szukaj'); ?></button>
             </span>
         </div>
         </div>
