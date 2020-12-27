@@ -22,15 +22,17 @@
   &--smaller {
     padding: auto;
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
 }
 
 .btn-danger {
   background-color: $themeColor1;
   border-color: $themeColor1;
-}
-.btn-success {
-  // background-color: $themeColor3;
-  // border-color: $themeColor3;
 }
 
 .btn-primary {
