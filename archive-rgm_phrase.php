@@ -10,15 +10,22 @@
             </div>
         </div>
         <div class="row">
-        <?php if(have_posts()): ?>
-            <div class="col-md-12">
-                <?php while(have_posts()): the_post(); ?>
-                    <?php get_template_part('template-parts/loop-phrase', ''); ?>
-                    <hr>
-                <?php endwhile; wp_reset_postdata(); ?>
-                <div class="clearfix"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                <?php if(have_posts()): ?>
+                    <div class="col-md-12">
+                        <?php while(have_posts()): the_post(); ?>
+                            <?php get_template_part('template-parts/loop-phrase', ''); ?>
+                            <hr>
+                        <?php endwhile; wp_reset_postdata(); ?>
+                        <div class="clearfix"></div>
+                    </div>
+                <?php endif; ?>
+                </div>
             </div>
-        <?php endif; ?>
+            <div class="col-md-4">
+                <?php get_sidebar(); ?>
+            </div>
         </div>
     </div>
 </section>
