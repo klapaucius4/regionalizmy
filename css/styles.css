@@ -441,10 +441,6 @@ footer .copyright {
   background: #eee;
 }
 
-.sidebar__card {
-  margin-bottom: 20px;
-}
-
 /* components */
 .ui-menu {
   z-index: 1050;
