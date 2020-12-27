@@ -1,12 +1,12 @@
 <nav class="sidebar">
     <!-- Search Widget -->
     <div class="sidebar__card">
-        <h5 class="card-header">Search</h5>
+        <h5 class="card-header"><?= __('Szukaj regionalizmu'); ?></h5>
         <div class="card-body">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
+            <input type="text" class="form-control" placeholder="<?= __('Szukaj regionalizmu'); ?>">
             <span class="input-group-append">
-            <button class="btn btn-secondary" type="button">Go!</button>
+            <button class="btn btn-secondary" type="button"><?= __('Szukaj'); ?></button>
             </span>
         </div>
         </div>
