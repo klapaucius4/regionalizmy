@@ -72,10 +72,6 @@ Sass/
   padding: auto;
 }
 
-.btn:hover, .btn:focus, .btn:active {
-  box-shadow: none;
-}
-
 .btn-danger {
   background-color: #D4213D;
   border-color: #D4213D;
@@ -89,7 +85,7 @@ Sass/
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background-color: #b31c33 !important;
   border-color: #b31c33 !important;
-  box-shadow: 0 0 0 0.2rem rgba(200, 35, 51, 0.5) !important;
+  box-shadow: none;
 }
 
 .btn-secondary {
