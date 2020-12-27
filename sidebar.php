@@ -1,34 +1,13 @@
-<div class="sidebar-container">
-  <div class="sidebar-logo">
-    Project Name
-  </div>
-  <ul class="sidebar-navigation">
-    <li class="header">Navigation</li>
-    <li>
-      <a href="#">
-        <i class="fa fa-home" aria-hidden="true"></i> Homepage
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
-      </a>
-    </li>
-    <li class="header">Another Menu</li>
-    <li>
-      <a href="#">
-        <i class="fa fa-users" aria-hidden="true"></i> Friends
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-cog" aria-hidden="true"></i> Settings
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-info-circle" aria-hidden="true"></i> Information
-      </a>
-    </li>
-  </ul>
+<!-- Sidebar -->
+<div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">Start Bootstrap </div>
+    <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+    </div>
 </div>
+<!-- /#sidebar-wrapper -->
