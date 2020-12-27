@@ -438,7 +438,7 @@ footer .copyright {
 
 .sidebar {
   border-left: 1px #eee solid;
-  padding-left: 20px;
+  background: #ddd;
 }
 
 .sidebar__card {
