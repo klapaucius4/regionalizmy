@@ -447,10 +447,6 @@ footer .copyright {
   color: #fff;
 }
 
-.content-container {
-  padding-top: 20px;
-}
-
 .sidebar-logo {
   padding: 10px 15px 10px 30px;
   font-size: 20px;
@@ -514,10 +510,6 @@ footer .copyright {
 
 .sidebar-navigation .header::before {
   background-color: transparent;
-}
-
-.content-container {
-  padding-left: 220px;
 }
 
 /* components */
