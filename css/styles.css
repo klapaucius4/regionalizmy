@@ -436,6 +436,10 @@ footer .copyright {
   text-align: center;
 }
 
+.sidenav {
+  border-lefT: 1px #eee solid;
+}
+
 /* components */
 .ui-menu {
   z-index: 1050;
