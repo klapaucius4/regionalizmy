@@ -1,5 +1,5 @@
 <!-- Search Widget -->
-<div class="card my-4">
+<div class="card mb-4">
     <h5 class="card-header">Search</h5>
     <div class="card-body">
     <div class="input-group">
