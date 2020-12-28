@@ -440,9 +440,9 @@ footer .copyright {
   text-align: center;
 }
 
-.sidebar {
-  border-left: 1px #eee solid;
+.sidebar__card {
   background: #eee;
+  margin-bottom: 40px;
 }
 
 /* components */
