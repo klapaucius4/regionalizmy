@@ -15,6 +15,23 @@
   &:focus {
     color: #ffffff;
   }
+  &--vote {
+    padding: 12px 20px;
+    min-width: 122px;
+  }
+  &--smaller {
+    padding: auto;
+  }
+}
+
+.btn-danger {
+  background-color: $themeColor1;
+  border-color: $themeColor1;
+}
+
+.btn-success {
+  // background-color: $themeColor3;
+  // border-color: $themeColor3;
 }
 
 .btn-primary {
@@ -23,10 +40,10 @@
   &:hover,
   &:focus,
   &:active {
-    // color: $white;
     background-color: darken($themeColor1, 7.5) !important;
     border-color: darken($themeColor1, 7.5) !important;
-    box-shadow: 0 0 0 0.2rem $themeColor1-transparent !important;
+    // box-shadow: 0 0 0 0.2rem $themeColor1-transparent !important;
+    box-shadow: none;
 
   }
 }

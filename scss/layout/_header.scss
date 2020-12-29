@@ -1,15 +1,20 @@
 // Styling for the masthead
-header.masthead {
+header.header {
+  &__masthead{
     // TIP: Background images are set within the HTML using inline CSS!
-    margin-bottom: 50px;
-    // background: no-repeat right center;
     
-    background-attachment: scroll;
     position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url('../img/front-page-bg2.svg'); 
-    background-size: contain;
+    min-height: 58px;
+
+    &--frontpage {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('../img/front-page-bg2.svg');
+      background-size: contain;
+      background-attachment: scroll;
+      margin-bottom: 50px;
+    }
+
     // @include background-cover;
     .overlay {
       position: absolute;
@@ -99,4 +104,5 @@ header.masthead {
       }
     }
   }
+}
   

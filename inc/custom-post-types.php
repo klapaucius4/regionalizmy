@@ -7,7 +7,7 @@ register_post_type('rgm_phrase', array(
         ),
         'public' => true,
         'has_archive' => __('slownik', 'regionalizmy'),
-        // 'rewrite' => array('slug' => __('slownik', 'regionalizmy'), 'with_front' => true),
+        'rewrite' => array('slug' => __('slownik', 'regionalizmy'), 'with_front' => true),
         'supports' => array( 'title' ),
         'menu_icon' => 'dashicons-editor-ol',
     )

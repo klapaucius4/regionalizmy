@@ -90,17 +90,21 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead">
+  <header class="header__masthead<?= is_front_page()?' header__masthead--frontpage':''; ?>">
     <div class="overlay bg1"></div>
     <div class="overlay bg2"></div>
+
+    <?php if(is_front_page()): ?>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Internetowy Słownik Regionalizmów Polskich</h1>
-            <!-- <h2 class="subheading">Internetowy Słownik Regionalizmów Polskich</h2> -->
+            <h1><?= get_bloginfo('name'); ?></h1>
+            <h2 class="subheading"><?= get_bloginfo('description'); ?></h2>
           </div>
         </div>
       </div>
     </div>
+    <?php endif; ?>
+
   </header>
