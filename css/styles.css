@@ -446,6 +446,7 @@ footer .copyright {
 }
 
 .sidebar__card__header {
+  z-index: 1;
   position: relative;
   color: white;
   background-image: url(../img/folk-bg.jpg);
@@ -455,7 +456,7 @@ footer .copyright {
 .sidebar__card__header::after {
   content: "";
   background-color: #4b4b5b;
-  z-index: -1;
+  z-index: 0;
   opacity: .9;
   position: absolute;
   top: 0;
