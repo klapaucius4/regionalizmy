@@ -445,6 +445,11 @@ footer .copyright {
   margin-bottom: 40px;
 }
 
+.sidebar__card__header {
+  background: #5c5c6b;
+  color: white;
+}
+
 /* components */
 .ui-menu {
   z-index: 1050;
