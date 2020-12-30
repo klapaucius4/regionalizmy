@@ -8,7 +8,7 @@
         &__header {
             &::after {
                 content: "";
-                background-color: #4b4b5b;
+                background-color: $themeColor3;
                 z-index: -1;
                 opacity: .9;
                 position: absolute;
@@ -17,7 +17,7 @@
             @include background-folk;
             z-index: 0;
             position: relative;
-            color: $themeColor2;
+            color: $gray-100;
             background-position: right center;
             border: none;
         }
