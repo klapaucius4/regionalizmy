@@ -446,10 +446,21 @@ footer .copyright {
 }
 
 .sidebar__card__header {
-  background-color: #5c5c6b;
+  position: relative;
   color: white;
   background-image: url(../img/folk-bg.jpg);
   background-repeat: repeat;
+}
+
+.sidebar__card__header::after {
+  background-color: #4b4b5b;
+  z-index: -1;
+  opacity: .9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /* components */
