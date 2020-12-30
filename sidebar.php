@@ -14,7 +14,7 @@
 
     <!-- Categories Widget -->
     <div class="sidebar__card">
-        <h5 class="card-header">Categories</h5>
+        <h5 class="card-header sidebar__card__header">Categories</h5>
         <div class="card-body">
         <div class="row">
             <div class="col-lg-6">

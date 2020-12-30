@@ -5,5 +5,9 @@
     &__card {
         background: #eee;
         margin-bottom: 40px;
+        &__header {
+            background: #5c5c6b;
+            color: white;
+        }
     }
 }
