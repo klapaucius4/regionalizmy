@@ -446,8 +446,10 @@ footer .copyright {
 }
 
 .sidebar__card__header {
-  background: #5c5c6b;
+  background-color: #5c5c6b;
   color: white;
+  background-image: url(../img/folk-bg.jpg);
+  background-repeat: repeat;
 }
 
 /* components */
