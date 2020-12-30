@@ -1,7 +1,7 @@
 <nav class="sidebar">
     <!-- Search Widget -->
     <div class="sidebar__card">
-        <h5 class="card-header"><?= __('Znajdź regionalizm'); ?></h5>
+        <h5 class="card-header sidebar__card__header"><?= __('Znajdź regionalizm'); ?></h5>
         <div class="card-body">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="<?= __('Znajdź regionalizm'); ?>">
@@ -49,7 +49,7 @@
 
     <!-- Side Widget -->
     <div class="sidebar__card">
-        <h5 class="card-header">Side Widget</h5>
+        <h5 class="card-header sidebar__card__header">Side Widget</h5>
         <div class="card-body">
         You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
         </div>
