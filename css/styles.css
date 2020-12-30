@@ -446,11 +446,11 @@ footer .copyright {
 }
 
 .sidebar__card__header {
+  background-image: url("../img/folk-bg.jpg");
+  background-repeat: repeat;
   z-index: 0;
   position: relative;
   color: white;
-  background-image: url("../img/folk-bg.jpg");
-  background-repeat: repeat;
   background-position: right center;
   border: none;
 }
