@@ -452,7 +452,7 @@ footer .copyright {
   background-repeat: repeat;
 }
 
-.sidebar__card__header::after {
+.sidebar__card__header:after {
   background-color: #4b4b5b;
   z-index: -1;
   opacity: .9;

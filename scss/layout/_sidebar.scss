@@ -6,7 +6,7 @@
         background: #eee;
         margin-bottom: 40px;
         &__header {
-            &::after {
+            &:after {
                 background-color: #4b4b5b;
                 z-index: -1;
                 opacity: .9;
