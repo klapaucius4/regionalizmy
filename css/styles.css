@@ -544,6 +544,14 @@ footer .copyright {
   font-size: 1.2rem;
 }
 
+.pagination-container {
+  padding-top: 60px;
+}
+
+.pagination-container .pagination {
+  justify-content: center;
+}
+
 /* pages */
 .floating-label-form-group {
   font-size: 14px;
