@@ -557,6 +557,10 @@ footer .copyright {
   border-color: #D4213D;
 }
 
+.pagination-container .pagination .page-item .page-link {
+  color: #4b4b5b;
+}
+
 /* pages */
 .floating-label-form-group {
   font-size: 14px;
