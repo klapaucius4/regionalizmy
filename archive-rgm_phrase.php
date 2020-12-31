@@ -27,6 +27,11 @@
                 <?php get_sidebar(); ?>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <?php bootstrap_pagination(); ?>
+            </div>
+        </div>
     </div>
 </section>
 
