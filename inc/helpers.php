@@ -36,7 +36,7 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
 
     if ( is_array( $pages ) ) {
         //$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
-        $pagination = '<div class="pagination"><ul class="pagination">';
+        $pagination = '<div class="pagination-container"><ul class="pagination">';
 
         foreach ( $pages as $page ) {
             $pagination .= '<li class="page-item' . (strpos($page, 'current') !== false ? ' active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
