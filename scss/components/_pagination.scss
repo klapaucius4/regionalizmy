@@ -2,5 +2,13 @@
     padding-top: 60px;
     .pagination {
         justify-content: center;
+        .page-item {
+            &.active {
+                .page-link {
+                    background-color: $themeColor1;
+                    border-color: $themeColor1;
+                }
+            }
+        }
     }
 }

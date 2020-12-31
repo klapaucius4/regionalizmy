@@ -552,6 +552,11 @@ footer .copyright {
   justify-content: center;
 }
 
+.pagination-container .pagination .page-item.active .page-link {
+  background-color: #D4213D;
+  border-color: #D4213D;
+}
+
 /* pages */
 .floating-label-form-group {
   font-size: 14px;
