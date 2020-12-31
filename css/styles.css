@@ -555,10 +555,11 @@ footer .copyright {
 .pagination-container .pagination .page-item.active .page-link {
   background-color: #D4213D;
   border-color: #D4213D;
+  color: #fff;
 }
 
 .pagination-container .pagination .page-item .page-link {
-  color: #4b4b5b;
+  color: #f8f9fa;
 }
 
 /* pages */
