@@ -22,14 +22,14 @@
                     </div>
                 <?php endif; ?>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <?php bootstrap_pagination(); ?>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
                 <?php get_sidebar(); ?>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <?php bootstrap_pagination(); ?>
             </div>
         </div>
     </div>
