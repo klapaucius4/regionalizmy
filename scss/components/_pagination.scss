@@ -12,6 +12,9 @@
             }
             .page-link {
                 color: $themeColor3;
+                &:focus {
+                    box-shadow: 0 0 0 0.2rem $themeColor1-transparent;
+                }
             }
         }
     }
