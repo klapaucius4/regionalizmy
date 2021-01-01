@@ -15,7 +15,7 @@ register_post_type('rgm_phrase', array(
 
 register_taxonomy( 'rgm_phrase_letter', array('rgm_phrase'), 
     array(
-        'hierarchical'      => true, // make it hierarchical (like categories)
+        'hierarchical'      => false,
         'labels'            => array(
             'name'              => __( 'Litery', 'regionalizmy' ),
             'singular_name'     => __( 'Litera', 'regionalizmy' )
