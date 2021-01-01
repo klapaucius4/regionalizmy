@@ -13,6 +13,20 @@ register_post_type('rgm_phrase', array(
     )
 );
 
+register_taxonomy( 'rgm_phrase_letter', array('rgm_phrase'), 
+    array(
+        'hierarchical'      => true, // make it hierarchical (like categories)
+        'labels'            => array(
+            'name'              => __( 'Litery', 'regionalizmy' ),
+            'singular_name'     => __( 'Litera', 'regionalizmy' )
+        ),
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => [ 'slug' => __('litera', 'regionalizmy') ],
+    )
+);
+
 register_post_type('rgm_mass_media', array(
         'labels' => array(
             'name'          => __('Środki przekazu', 'regionalizmy'),
