@@ -27,6 +27,20 @@ register_taxonomy( 'rgm_phrase_letter', array('rgm_phrase'),
     )
 );
 
+register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase'), 
+    array(
+        'hierarchical'      => false,
+        'labels'            => array(
+            'name'              => __( 'Tagi', 'regionalizmy' ),
+            'singular_name'     => __( 'Tag', 'regionalizmy' )
+        ),
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => [ 'slug' => __('tag', 'regionalizmy') ],
+    )
+);
+
 register_post_type('rgm_mass_media', array(
         'labels' => array(
             'name'          => __('Środki przekazu', 'regionalizmy'),
