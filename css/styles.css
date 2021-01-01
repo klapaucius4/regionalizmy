@@ -559,7 +559,11 @@ footer .copyright {
 }
 
 .pagination-container .pagination .page-item .page-link {
-  color: #f8f9fa;
+  color: #4b4b5b;
+}
+
+.pagination-container .pagination .page-item .page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(200, 35, 51, 0.5);
 }
 
 /* pages */

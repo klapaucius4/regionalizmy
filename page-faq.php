@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-  <section class="accordion-section clearfix">
+  <section class="accordion-section section-space clearfix">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">

@@ -11,7 +11,10 @@
                 }
             }
             .page-link {
-                color: $gray-100;
+                color: $themeColor3;
+                &:focus {
+                    box-shadow: 0 0 0 0.2rem $themeColor1-transparent;
+                }
             }
         }
     }
