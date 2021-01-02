@@ -6,7 +6,9 @@
         <div class="row">
             <div class="col-md-12 mb-5 text-center">
             <h4><?= get_the_archive_title(); ?></h4>
-            <p class="m-0 small">dolor.....</p>
+            <?php if(is_category()): ?>
+            <p class="m-0 small"><?= get_the_archive_title(); ?></p>
+            <?php endif; ?>
             </div>
         </div>
         <div class="row">
