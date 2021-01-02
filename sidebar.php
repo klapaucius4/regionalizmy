@@ -20,6 +20,8 @@
         $letters = get_terms(array(
             'taxonomy' => 'rgm_phrase_letter',
             'hide_empty' => false,
+            'orderby' => 'name', 
+            'order' => 'ASC',
         ));
         if($letters):
         ?>
