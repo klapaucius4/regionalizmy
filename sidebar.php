@@ -27,7 +27,7 @@
         ?>
             <div class="row">
                 <?php foreach($letters as $letter): ?>
-                <div class="col-md-2">
+                <div class="col-2">
                     <a href="<?= get_term_link($letter->term_id, $letter->taxonomy); ?>"><?= $letter->name; ?></a>
                 </div>
                 <?php endforeach; ?>
@@ -38,9 +38,15 @@
 
     <!-- Side Widget -->
     <div class="sidebar__card">
-        <h5 class="card-header sidebar__card__header">Side Widget</h5>
+        <h5 class="card-header sidebar__card__header"><?= __('Tagi', 'regionalizmy'); ?></h5>
         <div class="card-body">
-        You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+            <?php
+            $args = array(
+                'taxonomy' => array( 'rgm_phrase_letter' ), 
+            ); 
+         
+            wp_tag_cloud( $args );
+            ?>
         </div>
     </div>
 </nav>
