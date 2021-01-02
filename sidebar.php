@@ -19,7 +19,7 @@
         <?php
         $letters = get_terms(array(
             'taxonomy' => 'rgm_phrase_letter',
-            'hide_empty' => true,
+            'hide_empty' => false,
         ));
         if($letters):
         ?>
