@@ -43,8 +43,7 @@
             <?php
             $args = array(
                 'taxonomy' => array( 'rgm_phrase_tag' ), 
-            ); 
-         
+            );
             wp_tag_cloud( $args );
             ?>
         </div>
