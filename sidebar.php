@@ -42,7 +42,7 @@
         <div class="card-body">
             <?php
             $args = array(
-                'taxonomy' => array( 'rgm_phrase_letter' ), 
+                'taxonomy' => array( 'rgm_phrase_tag' ), 
             ); 
          
             wp_tag_cloud( $args );
