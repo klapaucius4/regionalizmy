@@ -26,7 +26,7 @@
             <div class="row">
                 <?php foreach($letters as $letter): ?>
                 <div class="col-md-2">
-                    <a href="<?php //echo get_term_link($letter->taxonomy, $letter->term_id); ?>"><?= $letter->name; ?></a>
+                    <a href="<?= get_term_link($letter->term_id, $letter->taxonomy); ?>"><?= $letter->name; ?></a>
                 </div>
                 <?php endforeach; ?>
             </div>
