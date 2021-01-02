@@ -13,7 +13,7 @@ register_post_type('rgm_phrase', array(
     )
 );
 
-register_taxonomy( 'rgm_phrase_letter', array('rgm_phrase'), 
+register_taxonomy( 'rgm_phrase_letter', array('rgm_phrase'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
@@ -27,7 +27,7 @@ register_taxonomy( 'rgm_phrase_letter', array('rgm_phrase'),
     )
 );
 
-register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase'), 
+register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
@@ -38,6 +38,20 @@ register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase'),
         'show_admin_column' => true,
         'query_var'         => true,
         'rewrite'           => [ 'slug' => __('tag', 'regionalizmy') ],
+    )
+);
+
+register_taxonomy( 'rgm_phrase_hyperonym', array('rgm_phrase'),
+    array(
+        'hierarchical'      => false,
+        'labels'            => array(
+            'name'              => __( 'Hiperonimy', 'regionalizmy' ),
+            'singular_name'     => __( 'Hiperonim', 'regionalizmy' )
+        ),
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => [ 'slug' => __('hiperonim', 'regionalizmy') ],
     )
 );
 
