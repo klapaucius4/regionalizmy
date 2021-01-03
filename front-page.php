@@ -40,7 +40,7 @@
     </div>
   </section>
 
-  <section class="section-space">
+  <section class="section-space bg-primary">
     <div class="container-fluid">
       <?php if($sectionSearch = get_field('sekcja_szukaj')): ?>
       <div class="row">
