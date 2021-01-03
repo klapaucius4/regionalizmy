@@ -476,6 +476,10 @@ footer .copyright {
   font-weight: 600;
 }
 
+.sidebar__card--letters .card-body .col:hover {
+  background: #f8f9fa;
+}
+
 /* components */
 .ui-menu {
   z-index: 1050;
