@@ -25,13 +25,13 @@
         &--letters {
             .card-body {
                 .col {
-                    padding: 7px 15px;
+                    padding: 0;
                     a {
                         font-size: 28px;
                         font-weight: 600;
-                    }
-                    &:hover{
-                        background: $gray-100;
+                        &:hover{
+                            background: $gray-100;
+                        }
                     }
                 }
                 

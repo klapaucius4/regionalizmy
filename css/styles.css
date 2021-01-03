@@ -468,7 +468,7 @@ footer .copyright {
 }
 
 .sidebar__card--letters .card-body .col {
-  padding: 7px 15px;
+  padding: 0;
 }
 
 .sidebar__card--letters .card-body .col a {
@@ -476,7 +476,7 @@ footer .copyright {
   font-weight: 600;
 }
 
-.sidebar__card--letters .card-body .col:hover {
+.sidebar__card--letters .card-body .col a:hover {
   background: #f8f9fa;
 }
 
