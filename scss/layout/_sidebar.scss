@@ -24,10 +24,14 @@
 
         &--letters {
             .card-body {
-                a {
-                    font-size: 28px;
-                    font-weight: 600;
+                .col {
+                    
+                    a {
+                        font-size: 28px;
+                        font-weight: 600;
+                    }
                 }
+                
             }
         }
     }
