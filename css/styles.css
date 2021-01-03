@@ -481,6 +481,7 @@ footer .copyright {
 
 .sidebar__card--letters .card-body .col a:hover {
   background: #f8f9fa;
+  text-decoration: none;
 }
 
 /* components */
