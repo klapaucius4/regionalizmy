@@ -41,6 +41,20 @@
   </section>
 
   <section class="section-space">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+          <form autocomplete="off" class="ui-widget">
+            <div class="form-group mb-0">
+              <input type="text" class="form-control" placeholder="Znajdź frazę...." autocomplete="off">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space">
     <!-- Main Content -->
     <div class="container">
       <?php if($sectionSamplePhrases = get_field('sekcja_przykladowe_frazy')): ?>
@@ -79,18 +93,6 @@
           </div>
         </div>
       <?php endif; ?>
-    </div>
-  </section>
-
-  <section class="section-space">
-    <div class="container-fluid">
-      <div class="col-lg-6 col-md-8 col-sm-10 col-12">
-        <form autocomplete="off" class="ui-widget">
-          <div class="form-group mb-0">
-            <input type="text" class="form-control" placeholder="Znajdź frazę...." autocomplete="off">
-          </div>
-        </form>
-      </div>
     </div>
   </section>
 
