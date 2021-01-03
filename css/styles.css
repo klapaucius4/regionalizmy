@@ -473,7 +473,7 @@ footer .copyright {
 }
 
 .sidebar__card--letters .card-body .col a {
-  width: 100%;
+  display: block;
   font-size: 28px;
   font-weight: 600;
 }
