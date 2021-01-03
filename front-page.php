@@ -52,7 +52,7 @@
       <?php endif; ?>
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-sm-10 col-12">
-          <form autocomplete="off" class="ui-widget">
+          <form class="form-inline">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="<?= __('Znajdź regionalizm...'); ?>" autocomplete="off">
             </div>
