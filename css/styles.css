@@ -572,6 +572,11 @@ footer .copyright {
 }
 
 /* pages */
+.frontpage-search-section input[type=submit], .frontpage-search-section input[type=button] {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
 .floating-label-form-group {
   font-size: 14px;
   position: relative;
