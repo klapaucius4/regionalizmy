@@ -24,6 +24,10 @@ register_taxonomy( 'rgm_phrase_hyperonym', array('rgm_phrase'),
         'show_admin_column' => true,
         'query_var'         => true,
         'rewrite'           => [ 'slug' => __('hiperonim', 'regionalizmy') ],
+        // disable metabox in admin
+        'show_ui'                    => true,
+        'show_in_quick_edit'         => false,
+        'meta_box_cb'                => false,
     )
 );
 
@@ -38,6 +42,10 @@ register_taxonomy( 'rgm_phrase_letter', array('rgm_phrase'),
         'show_admin_column' => true,
         'query_var'         => true,
         'rewrite'           => [ 'slug' => __('litera', 'regionalizmy') ],
+        // disable metabox in admin
+        'show_ui'                    => true,
+        'show_in_quick_edit'         => false,
+        'meta_box_cb'                => false,
     )
 );
 
