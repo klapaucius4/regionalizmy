@@ -52,11 +52,11 @@
       <?php endif; ?>
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-sm-10 col-12">
-          <form action="" accept-charset="UTF-8" method="get">
+          <form action="" method="get">
             <div class="input-group">
-              <input type="text" name="search" id="search" value="test" placeholder="<?= $sectionSearch['tytul']?:'' . '...'; ?>" class="form-control">
+              <input type="text" name="phrase" value="test" placeholder="<?= $sectionSearch['tytul']?:'' . '...'; ?>" class="form-control">
               <span class="input-group-btn">
-                <input type="submit" name="commit" value="Search" class="btn btn-primary" data-disable-with="Wyszukaj regionalizm...">
+                <input type="submit" name="submit" class="btn btn-primary">
               </span>
             </div>
           </form>
