@@ -467,10 +467,6 @@ footer .copyright {
   left: 0;
 }
 
-.sidebar__card--letters .card-body .col {
-  padding: 0;
-}
-
 .sidebar__card--letters .card-body .col a {
   font-size: 28px;
   font-weight: 600;
