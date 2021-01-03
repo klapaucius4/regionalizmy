@@ -131,7 +131,7 @@ Sass/
 }
 
 .form-control:focus {
-  border-color: #D4213D;
+  border-color: rgba(200, 35, 51, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(200, 35, 51, 0.5);
 }
 

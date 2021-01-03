@@ -88,6 +88,6 @@
 }
 
 .form-control:focus {
-  border-color: $themeColor1;
+  border-color: $themeColor1-transparent;
   box-shadow: 0 0 0 0.2rem $themeColor1-transparent;
 }
