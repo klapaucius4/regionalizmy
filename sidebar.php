@@ -13,7 +13,7 @@
     </div>
 
     <!-- Categories Widget -->
-    <div class="sidebar__card">
+    <div class="sidebar__card sidebar__card--letters">
         <h5 class="card-header sidebar__card__header"><?= __('Litery', 'regionalizmy'); ?></h5>
         <div class="card-body">
         <?php

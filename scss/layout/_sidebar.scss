@@ -21,5 +21,14 @@
             background-position: right center;
             border: none;
         }
+
+        &--letters {
+            .card-body {
+                a {
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+            }
+        }
     }
 }
