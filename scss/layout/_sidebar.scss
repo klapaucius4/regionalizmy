@@ -33,7 +33,7 @@
                         font-size: 28px;
                         font-weight: 600;
                         
-                        &:hover, &:active, &.active {
+                        &:hover, &:active, &:focus, &.active {
                             // background: $gray-100;
                             background-color: $themeColor1;
                             color: $white;
