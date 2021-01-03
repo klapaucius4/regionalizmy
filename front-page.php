@@ -44,7 +44,7 @@
     <div class="container-fluid">
       <?php if($sectionSearch = get_field('sekcja_szukaj')): ?>
       <div class="row">
-        <div class="col-md-12 mb-5 text-center">
+        <div class="col-md-12 mb-4 text-center">
           <h4><?= $sectionSearch['tytul']; ?></h4>
           <p class="m-0 small"><?= $sectionSearch['podtytul']; ?></p>
         </div>
