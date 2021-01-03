@@ -41,7 +41,7 @@
   </section>
 
   <section class="section-space bg-primary frontpage-search-section">
-    <div class="container-fluid">
+    <div class="container">
       <?php if($sectionSearch = get_field('sekcja_szukaj')): ?>
       <div class="row">
         <div class="col-md-12 mb-4 text-center">
