@@ -1,7 +1,8 @@
 body {
     font-size: 18px;
     color: $gray-900;
-    @include serif-font;
+    // @include serif-font;
+    @include sans-serif-font;
     // background-color: green;
     // background: url('../img/bg-body.jpg') repeat;
   }
