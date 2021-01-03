@@ -474,6 +474,7 @@ footer .copyright {
 
 .sidebar__card--letters .card-body .col a {
   display: block;
+  padding: 7px 0;
   font-size: 28px;
   font-weight: 600;
 }
