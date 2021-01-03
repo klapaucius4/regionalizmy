@@ -130,6 +130,11 @@ Sass/
   opacity: 0.9;
 }
 
+.form-control:focus {
+  border-color: #D4213D;
+  box-shadow: 0 0 0 0.2rem rgba(200, 35, 51, 0.5);
+}
+
 /* base */
 body {
   font-size: 18px;
