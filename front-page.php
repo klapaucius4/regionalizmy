@@ -82,6 +82,18 @@
     </div>
   </section>
 
+  <section class="section-space">
+    <div class="container-fluid">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+        <form autocomplete="off" class="ui-widget">
+          <div class="form-group mb-0">
+            <input type="text" class="form-control" placeholder="Znajdź frazę...." autocomplete="off">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="page-section bg-primary section-space">
       <div class="container">
         <?php if($sectionAdd = get_field('sekcja_dodaj')): ?>
