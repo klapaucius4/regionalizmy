@@ -468,8 +468,7 @@ footer .copyright {
 }
 
 .sidebar__card--letters .card-body .col {
-  width: 56px;
-  height: 56px;
+  padding: 15px;
 }
 
 .sidebar__card--letters .card-body .col a {
