@@ -34,7 +34,9 @@
                         font-weight: 600;
                         
                         &:hover{
-                            background: $gray-100;
+                            // background: $gray-100;
+                            background-color: $themeColor1;
+                            color: $white;
                             text-decoration: none;
                         }
                     }

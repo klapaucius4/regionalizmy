@@ -480,7 +480,8 @@ footer .copyright {
 }
 
 .sidebar__card--letters .card-body .col a:hover {
-  background: #f8f9fa;
+  background-color: #D4213D;
+  color: #fff;
   text-decoration: none;
 }
 
