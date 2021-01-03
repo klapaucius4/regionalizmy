@@ -53,8 +53,11 @@
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-sm-10 col-12">
           <form autocomplete="off" class="ui-widget">
-            <div class="form-group mb-0">
+            <div class="form-group">
               <input type="text" class="form-control" placeholder="<?= __('Znajdź regionalizm...'); ?>" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" id="sendMessageButton"><?= __('Szukaj'); ?></button>
             </div>
           </form>
         </div>
