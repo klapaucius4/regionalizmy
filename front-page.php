@@ -42,11 +42,11 @@
 
   <section class="section-space">
     <div class="container-fluid">
-      <?php if($sectionSamplePhrases = get_field('sekcja_przykladowe_frazy')): ?>
+      <?php if($sectionSearch = get_field('sekcja_szukaj')): ?>
       <div class="row">
         <div class="col-md-12 mb-5 text-center">
-          <h4><?= $sectionSamplePhrases['tytul']; ?></h4>
-          <p class="m-0 small"><?= $sectionSamplePhrases['podtytul']; ?></p>
+          <h4><?= $sectionSearch['tytul']; ?></h4>
+          <p class="m-0 small"><?= $sectionSearch['podtytul']; ?></p>
         </div>
       </div>
       <?php endif; ?>
