@@ -572,8 +572,12 @@ footer .copyright {
 }
 
 /* pages */
-.frontpage-search-section input {
+.frontpage-search-section input[type=submit], .frontpage-search-section input[type=button] {
   padding: 8px 26px;
+}
+
+.frontpage-search-section input[type=text] {
+  padding: 12px 26px;
 }
 
 .floating-label-form-group {

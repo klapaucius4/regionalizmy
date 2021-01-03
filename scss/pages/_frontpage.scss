@@ -1,5 +1,8 @@
 .frontpage-search-section {
-    input {
+    input[type=submit], input[type=button] {
         padding: 8px 26px;
+    }
+    input[type=text] {
+        padding: 12px 26px;
     }
 }
