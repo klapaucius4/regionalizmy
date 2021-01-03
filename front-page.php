@@ -56,7 +56,7 @@
             <div class="input-group">
               <input type="text" name="phrase" value="test" placeholder="<?= $sectionSearch['tytul']?:'' . '...'; ?>" class="form-control">
               <span class="input-group-btn">
-                <input type="submit" name="submit" class="btn btn-primary">
+                <input type="submit" name="<?= __('Znajdź'); ?>" class="btn btn-primary">
               </span>
             </div>
           </form>
