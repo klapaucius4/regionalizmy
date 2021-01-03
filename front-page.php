@@ -54,7 +54,7 @@
         <div class="col-lg-6 col-md-8 col-sm-10 col-12">
           <form autocomplete="off" class="ui-widget">
             <div class="form-group mb-0">
-              <input type="text" class="form-control" placeholder="Znajdź frazę...." autocomplete="off">
+              <input type="text" class="form-control" placeholder="<?= __('Znajdź regionalizm...'); ?>" autocomplete="off">
             </div>
           </form>
         </div>
