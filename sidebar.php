@@ -22,7 +22,7 @@
             <div class="row">
                 <?php foreach($letters as $letter): ?>
                 <div class="col col-2">
-                    <a href="#"><?= strtoupper($letter); ?></a>
+                    <a href="#"><?= mb_strtoupper($letter, "UTF-8"); ?></a>
                 </div>
                 <?php endforeach; ?>
             </div>
