@@ -13,12 +13,12 @@ register_post_type('rgm_phrase', array(
     )
 );
 
-register_taxonomy( 'rgm_phrase_hyperonym', array('rgm_phrase'),
+register_taxonomy( 'rgm_phrase_group', array('rgm_phrase'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
-            'name'              => __( 'Hiperonimy', 'regionalizmy' ),
-            'singular_name'     => __( 'Hiperonim', 'regionalizmy' )
+            'name'              => __( 'Grupy', 'regionalizmy' ),
+            'singular_name'     => __( 'Grupa', 'regionalizmy' )
         ),
         'show_ui'           => true,
         'show_admin_column' => true,
