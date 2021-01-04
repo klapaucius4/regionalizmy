@@ -26,7 +26,7 @@ register_post_type('rgm_phrase_group', array(
     )
 );
 
-register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase'),
+register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase', 'rgm_phrase_group'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
