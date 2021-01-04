@@ -39,7 +39,6 @@ register_post_type('rgm_phrase_group', array(
     'public' => true,
     // 'has_archive' => __('slownik', 'regionalizmy'),
     'has_archive' => false,
-    // 'rewrite' => array('slug' => __('slownik', 'regionalizmy'), 'with_front' => true),
     'supports' => array( 'title' ),
     'menu_icon' => 'dashicons-groups',
 )
