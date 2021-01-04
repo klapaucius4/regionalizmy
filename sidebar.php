@@ -17,18 +17,12 @@
         <h5 class="card-header sidebar__card__header"><?= __('Litery', 'regionalizmy'); ?></h5>
         <div class="card-body">
         <?php
-        $letters = get_terms(array(
-            'taxonomy' => 'rgm_phrase_letter',
-            'hide_empty' => false,
-            'orderby' => 'name', 
-            'order' => 'ASC',
-        ));
-        if($letters):
-        ?>
+        $letters = alphabeticalListOfLetters();
+        if($letters): ?>
             <div class="row">
                 <?php foreach($letters as $letter): ?>
                 <div class="col col-2">
-                    <a href="<?= get_term_link($letter->term_id, $letter->taxonomy); ?>"><?= $letter->name; ?></a>
+                    <a href="#"><?= strtoupper($letter); ?></a>
                 </div>
                 <?php endforeach; ?>
             </div>
