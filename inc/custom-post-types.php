@@ -13,25 +13,39 @@ register_post_type('rgm_phrase', array(
     )
 );
 
-register_taxonomy( 'rgm_phrase_group', array('rgm_phrase'),
-    array(
-        'hierarchical'      => false,
-        'labels'            => array(
-            'name'              => __( 'Grupy', 'regionalizmy' ),
-            'singular_name'     => __( 'Grupa', 'regionalizmy' )
-        ),
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-        'rewrite'           => [ 'slug' => __('hiperonim', 'regionalizmy') ],
-        // disable metabox in admin
-        'show_ui'                    => true,
-        'show_in_quick_edit'         => false,
-        'meta_box_cb'                => false,
-    )
+// register_taxonomy( 'rgm_phrase_group', array('rgm_phrase'),
+//     array(
+//         'hierarchical'      => false,
+//         'labels'            => array(
+//             'name'              => __( 'Grupy', 'regionalizmy' ),
+//             'singular_name'     => __( 'Grupa', 'regionalizmy' )
+//         ),
+//         'show_ui'           => true,
+//         'show_admin_column' => true,
+//         'query_var'         => true,
+//         'rewrite'           => [ 'slug' => __('hiperonim', 'regionalizmy') ],
+//         // disable metabox in admin
+//         'show_ui'                    => true,
+//         'show_in_quick_edit'         => false,
+//         'meta_box_cb'                => false,
+//     )
+// );
+
+register_post_type('rgm_phrase_group', array(
+    'labels' => array(
+        'name'          => __('Grupy fraz', 'regionalizmy'),
+        'singular_name' => __('Grupa fraz', 'regionalizmy'),
+    ),
+    'public' => true,
+    // 'has_archive' => __('slownik', 'regionalizmy'),
+    'has_archive' => false,
+    // 'rewrite' => array('slug' => __('slownik', 'regionalizmy'), 'with_front' => true),
+    'supports' => array( 'title' ),
+    'menu_icon' => 'dashicons-groups',
+)
 );
 
-register_taxonomy( 'rgm_phrase_letter', array('rgm_phrase'),
+register_taxonomy( 'rgm_phrase_letter', array('rgm_phrase', 'rgm_phrase_group'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
