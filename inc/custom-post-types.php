@@ -26,12 +26,12 @@ register_post_type('rgm_meaning', array(
     )
 );
 
-register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase', 'rgm_meaning'),
+register_taxonomy( 'rgm_phrase_kind', array('rgm_phrase'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
-            'name'              => __( 'Tagi', 'regionalizmy' ),
-            'singular_name'     => __( 'Tag', 'regionalizmy' )
+            'name'              => __( 'Typy', 'regionalizmy' ),
+            'singular_name'     => __( 'Typ', 'regionalizmy' )
         ),
         'show_ui'           => true,
         'show_admin_column' => true,
@@ -40,12 +40,12 @@ register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase', 'rgm_meaning'),
     )
 );
 
-register_taxonomy( 'rgm_phrase_kind', array('rgm_phrase'),
+register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase', 'rgm_meaning'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
-            'name'              => __( 'Typy', 'regionalizmy' ),
-            'singular_name'     => __( 'Typ', 'regionalizmy' )
+            'name'              => __( 'Tagi', 'regionalizmy' ),
+            'singular_name'     => __( 'Tag', 'regionalizmy' )
         ),
         'show_ui'           => true,
         'show_admin_column' => true,
