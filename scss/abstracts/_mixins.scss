@@ -66,3 +66,7 @@
 @mixin sans-serif-font() {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+@mixin background-folk() {
+  background-image: url('../img/folk-bg.jpg');
+  background-repeat: repeat;
+}

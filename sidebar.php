@@ -1,7 +1,7 @@
 <nav class="sidebar">
     <!-- Search Widget -->
     <div class="sidebar__card">
-        <h5 class="card-header"><?= __('Znajdź regionalizm'); ?></h5>
+        <h5 class="card-header sidebar__card__header"><?= __('Znajdź regionalizm'); ?></h5>
         <div class="card-body">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="<?= __('Znajdź regionalizm'); ?>">
@@ -13,45 +13,33 @@
     </div>
 
     <!-- Categories Widget -->
-    <div class="sidebar__card">
-        <h5 class="card-header">Categories</h5>
+    <div class="sidebar__card sidebar__card--letters">
+        <h5 class="card-header sidebar__card__header"><?= __('Litery', 'regionalizmy'); ?></h5>
         <div class="card-body">
-        <div class="row">
-            <div class="col-lg-6">
-            <ul class="list-unstyled mb-0">
-                <li>
-                <a href="#">Web Design</a>
-                </li>
-                <li>
-                <a href="#">HTML</a>
-                </li>
-                <li>
-                <a href="#">Freebies</a>
-                </li>
-            </ul>
+        <?php
+        $letters = alphabeticalListOfLetters();
+        if($letters): ?>
+            <div class="row">
+                <?php foreach($letters as $letter): ?>
+                <div class="col col-2">
+                    <a href="#"><?= mb_strtoupper($letter, "UTF-8"); ?></a>
+                </div>
+                <?php endforeach; ?>
             </div>
-            <div class="col-lg-6">
-            <ul class="list-unstyled mb-0">
-                <li>
-                <a href="#">JavaScript</a>
-                </li>
-                <li>
-                <a href="#">CSS</a>
-                </li>
-                <li>
-                <a href="#">Tutorials</a>
-                </li>
-            </ul>
-            </div>
-        </div>
+        <?php endif; ?>
         </div>
     </div>
 
     <!-- Side Widget -->
     <div class="sidebar__card">
-        <h5 class="card-header">Side Widget</h5>
+        <h5 class="card-header sidebar__card__header"><?= __('Tagi', 'regionalizmy'); ?></h5>
         <div class="card-body">
-        You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+            <?php
+            $args = array(
+                'taxonomy' => array( 'rgm_phrase_tag' ), 
+            );
+            wp_tag_cloud( $args );
+            ?>
         </div>
     </div>
 </nav>

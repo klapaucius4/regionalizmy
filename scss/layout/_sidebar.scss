@@ -3,7 +3,47 @@
     // background: #eee;
 
     &__card {
-        background: #eee;
+        background: $themeColor2;
         margin-bottom: 40px;
+        &__header {
+            &::after {
+                content: "";
+                background-color: $themeColor3;
+                z-index: -1;
+                opacity: .9;
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+            }
+            @include background-folk;
+            z-index: 0;
+            position: relative;
+            color: $gray-100;
+            background-position: right center;
+            border: none;
+        }
+
+        &--letters {
+            .card-body {
+                .col {
+                    padding: 0;
+                    text-align: center;
+                    a {
+                        display: block;
+                        padding: 7px 0;
+                        font-size: 28px;
+                        font-weight: 600;
+                        
+                        &:hover, &:active, &:focus, &.active {
+                            // background: $gray-100;
+                            background-color: $themeColor1;
+                            color: $white;
+                            text-decoration: none;
+                            border: none;
+                        }
+                    }
+                }
+                
+            }
+        }
     }
 }

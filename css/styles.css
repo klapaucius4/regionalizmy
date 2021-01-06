@@ -130,6 +130,11 @@ Sass/
   opacity: 0.9;
 }
 
+.form-control:focus {
+  border-color: rgba(200, 35, 51, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(200, 35, 51, 0.5);
+}
+
 /* base */
 body {
   font-size: 18px;
@@ -441,8 +446,49 @@ footer .copyright {
 }
 
 .sidebar__card {
-  background: #eee;
+  background: #E9E8E7;
   margin-bottom: 40px;
+}
+
+.sidebar__card__header {
+  background-image: url("../img/folk-bg.jpg");
+  background-repeat: repeat;
+  z-index: 0;
+  position: relative;
+  color: #f8f9fa;
+  background-position: right center;
+  border: none;
+}
+
+.sidebar__card__header::after {
+  content: "";
+  background-color: #4b4b5b;
+  z-index: -1;
+  opacity: .9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sidebar__card--letters .card-body .col {
+  padding: 0;
+  text-align: center;
+}
+
+.sidebar__card--letters .card-body .col a {
+  display: block;
+  padding: 7px 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.sidebar__card--letters .card-body .col a:hover, .sidebar__card--letters .card-body .col a:active, .sidebar__card--letters .card-body .col a:focus, .sidebar__card--letters .card-body .col a.active {
+  background-color: #D4213D;
+  color: #fff;
+  text-decoration: none;
+  border: none;
 }
 
 /* components */
@@ -522,7 +568,35 @@ footer .copyright {
   font-size: 1.2rem;
 }
 
+.pagination-container {
+  padding-top: 60px;
+}
+
+.pagination-container .pagination {
+  justify-content: center;
+}
+
+.pagination-container .pagination .page-item.active .page-link {
+  background-color: #D4213D;
+  border-color: #D4213D;
+  color: #fff;
+}
+
+.pagination-container .pagination .page-item .page-link {
+  color: #4b4b5b;
+}
+
+.pagination-container .pagination .page-item .page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(200, 35, 51, 0.5);
+}
+
 /* pages */
+.frontpage-search-section input[type=submit], .frontpage-search-section input[type=button] {
+  padding-top: 7px;
+  padding-bottom: 8px;
+  border-radius: 0 5px 5px 0;
+}
+
 .floating-label-form-group {
   font-size: 14px;
   position: relative;

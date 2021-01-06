@@ -13,6 +13,33 @@ register_post_type('rgm_phrase', array(
     )
 );
 
+register_post_type('rgm_phrase_group', array(
+    'labels' => array(
+        'name'          => __('Grupy fraz', 'regionalizmy'),
+        'singular_name' => __('Grupa fraz', 'regionalizmy'),
+    ),
+    'public' => true,
+    // 'has_archive' => __('slownik', 'regionalizmy'),
+    'has_archive' => false,
+    'supports' => array( 'title' ),
+    'menu_icon' => 'dashicons-groups',
+    )
+);
+
+register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase', 'rgm_phrase_group'),
+    array(
+        'hierarchical'      => false,
+        'labels'            => array(
+            'name'              => __( 'Tagi', 'regionalizmy' ),
+            'singular_name'     => __( 'Tag', 'regionalizmy' )
+        ),
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => [ 'slug' => __('tag', 'regionalizmy') ],
+    )
+);
+
 register_post_type('rgm_mass_media', array(
         'labels' => array(
             'name'          => __('Środki przekazu', 'regionalizmy'),

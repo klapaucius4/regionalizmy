@@ -40,6 +40,31 @@
     </div>
   </section>
 
+  <section class="section-space bg-primary frontpage-search-section">
+    <div class="container">
+      <?php if($sectionSearch = get_field('sekcja_szukaj')): ?>
+      <div class="row">
+        <div class="col-md-12 mb-4 text-center">
+          <h4><?= $sectionSearch['tytul']; ?></h4>
+          <p class="m-0 small"><?= $sectionSearch['podtytul']; ?></p>
+        </div>
+      </div>
+      <?php endif; ?>
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+          <form action="" method="get">
+            <div class="input-group">
+              <input type="text" name="phrase" value="test" placeholder="<?= $sectionSearch['tytul']?:'' . '...'; ?>" class="form-control">
+              <span class="input-group-btn">
+                <input type="submit" name="search" value="<?= __('Znajdź'); ?>" class="btn btn-primary">
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section-space">
     <!-- Main Content -->
     <div class="container">

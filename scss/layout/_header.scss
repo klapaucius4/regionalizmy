@@ -30,8 +30,7 @@ header.header {
         opacity: 0.9;
       }
       &.bg2{
-        background-image: url('../img/folk-bg.jpg');
-        background-repeat: repeat;
+        @include background-folk;
         z-index: -2;
       }
     }

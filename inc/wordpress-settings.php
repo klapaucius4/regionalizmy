@@ -119,8 +119,8 @@ add_action( 'rest_api_init', function () {
     /**
      * RGM_REST_Routes
      */
-    require get_template_directory() . '/inc/rgm-rest-routes.php';
-    $rgmRestRoutes = new RGM_REST_Routes();
+    require get_template_directory() . '/inc/rgm-rest-api.php';
+    $rgmRestRoutes = new Rgm_Rest_Api();
     $rgmRestRoutes->register_routes();
 });
 

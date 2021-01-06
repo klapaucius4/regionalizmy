@@ -36,13 +36,13 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
 
     if ( is_array( $pages ) ) {
         //$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
-        $pagination = '<div class="pagination"><ul class="pagination">';
+        $pagination = '<nav class="pagination-container"><ul class="pagination">';
 
         foreach ( $pages as $page ) {
             $pagination .= '<li class="page-item' . (strpos($page, 'current') !== false ? ' active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
         }
 
-        $pagination .= '</ul></div>';
+        $pagination .= '</ul></nav>';
 
         if ( $echo ) {
             echo $pagination;
@@ -224,4 +224,8 @@ function minify_js($input) {
           '$1.$3'
       ),
   $input);
+}
+
+function alphabeticalListOfLetters(){
+  return array('a', 'b', 'c', 'ć', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'r', 's', 'ś', 't', 'u', 'w', 'y', 'z', 'ź', 'ż');
 }
