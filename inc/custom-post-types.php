@@ -30,8 +30,8 @@ register_taxonomy( 'rgm_phrase_kind', array('rgm_phrase'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
-            'name'              => __( 'Typy', 'regionalizmy' ),
-            'singular_name'     => __( 'Typ', 'regionalizmy' )
+            'name'              => __( 'Rodzaje', 'regionalizmy' ),
+            'singular_name'     => __( 'Rodzaj', 'regionalizmy' )
         ),
         'show_ui'           => true,
         'show_admin_column' => true,
