@@ -13,16 +13,16 @@ register_post_type('rgm_phrase', array(
     )
 );
 
-register_post_type('rgm_phrase_group', array(
+register_post_type('rgm_phrase_meaning', array(
     'labels' => array(
-        'name'          => __('Grupy fraz', 'regionalizmy'),
-        'singular_name' => __('Grupa fraz', 'regionalizmy'),
+        'name'          => __('Znaczenia', 'regionalizmy'),
+        'singular_name' => __('Znaczenie', 'regionalizmy'),
     ),
     'public' => true,
     // 'has_archive' => __('slownik', 'regionalizmy'),
     'has_archive' => false,
     'supports' => array( 'title' ),
-    'menu_icon' => 'dashicons-groups',
+    'menu_icon' => 'dashicons-welcome-learn-more',
     )
 );
 
