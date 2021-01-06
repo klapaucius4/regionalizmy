@@ -13,7 +13,7 @@ register_post_type('rgm_phrase', array(
     )
 );
 
-register_post_type('rgm_phrase_meaning', array(
+register_post_type('rgm_meaning', array(
     'labels' => array(
         'name'          => __('Znaczenia', 'regionalizmy'),
         'singular_name' => __('Znaczenie', 'regionalizmy'),
@@ -26,7 +26,21 @@ register_post_type('rgm_phrase_meaning', array(
     )
 );
 
-register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase', 'rgm_phrase_group'),
+register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase', 'rgm_meaning'),
+    array(
+        'hierarchical'      => false,
+        'labels'            => array(
+            'name'              => __( 'Tagi', 'regionalizmy' ),
+            'singular_name'     => __( 'Tag', 'regionalizmy' )
+        ),
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => [ 'slug' => __('tag', 'regionalizmy') ],
+    )
+);
+
+register_taxonomy( 'rgm_phrase_kind', array('rgm_phrase'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
