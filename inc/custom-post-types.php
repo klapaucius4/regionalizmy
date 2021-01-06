@@ -14,15 +14,15 @@ register_post_type('rgm_phrase', array(
 );
 
 register_post_type('rgm_meaning', array(
-    'labels' => array(
-        'name'          => __('Znaczenia', 'regionalizmy'),
-        'singular_name' => __('Znaczenie', 'regionalizmy'),
-    ),
-    'public' => true,
-    // 'has_archive' => __('slownik', 'regionalizmy'),
-    'has_archive' => false,
-    'supports' => array( 'title' ),
-    'menu_icon' => 'dashicons-welcome-learn-more',
+        'labels' => array(
+            'name'          => __('Znaczenia', 'regionalizmy'),
+            'singular_name' => __('Znaczenie', 'regionalizmy'),
+        ),
+        'public' => true,
+        // 'has_archive' => __('slownik', 'regionalizmy'),
+        'has_archive' => false,
+        'supports' => array( 'title' ),
+        'menu_icon' => 'dashicons-welcome-learn-more',
     )
 );
 
@@ -44,8 +44,8 @@ register_taxonomy( 'rgm_phrase_kind', array('rgm_phrase'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
-            'name'              => __( 'Tagi', 'regionalizmy' ),
-            'singular_name'     => __( 'Tag', 'regionalizmy' )
+            'name'              => __( 'Typy', 'regionalizmy' ),
+            'singular_name'     => __( 'Typ', 'regionalizmy' )
         ),
         'show_ui'           => true,
         'show_admin_column' => true,
