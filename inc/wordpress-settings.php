@@ -229,7 +229,7 @@ function set_custom_edit_rgm_phrase_columns($columns) {
     // unset( $columns['date'] );
 
     // $columns['rgm_phrase_meaning'] = __('Znaczenie');
-    // var_dump($columns);
+    var_dump($columns); exit;
 
     $newColumnsOrder = array(
         'title' => $columns['taxonomy-rgm_phrase_kind'],
