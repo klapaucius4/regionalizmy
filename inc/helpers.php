@@ -225,3 +225,7 @@ function minify_js($input) {
       ),
   $input);
 }
+
+function alphabeticalListOfLetters(){
+  return array('a', 'b', 'c', 'ć', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'r', 's', 'ś', 't', 'u', 'w', 'y', 'z', 'ź', 'ż');
+}
