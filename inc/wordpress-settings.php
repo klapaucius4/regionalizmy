@@ -226,9 +226,8 @@ add_action( 'manage_rgm_phrase_posts_custom_column' , 'custom_rgm_phrase_column'
  
 function set_custom_edit_rgm_phrase_columns($columns) {
     unset( $columns['author'] );
-    $columns['rgm_phrase_meaning'] = __( 'Znaczenie' );
 
-    array_unshift($columns, $columns['rgm_phrase_meaning']);
+    $columns = array_merge(array('rgm_phrase_meaning'=>__( 'Znaczenie' )), $columns);
  
     return $columns;
 }
