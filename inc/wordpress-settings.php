@@ -225,14 +225,17 @@ add_filter( 'manage_rgm_phrase_posts_columns', 'set_custom_edit_rgm_phrase_colum
 add_action( 'manage_rgm_phrase_posts_custom_column' , 'custom_rgm_phrase_column', 10, 2 );
  
 function set_custom_edit_rgm_phrase_columns($columns) {
-    unset( $columns['author'] );
-    unset( $columns['date'] );
+    // unset( $columns['author'] );
+    // unset( $columns['date'] );
 
     // $columns['rgm_phrase_meaning'] = __('Znaczenie');
-    var_dump($columns);
+    // var_dump($columns);
 
     $newColumnsOrder = array(
-
+        'title' => $columns['taxonomy-rgm_phrase_kind'],
+        'rgm_phrase_meaning' => __('Znaczenie'),
+        'taxonomy-rgm_phrase_kind' => $columns['taxonomy-rgm_phrase_kind'],
+        'taxonomy-rgm_phrase_tag' => $columns['taxonomy-rgm_phrase_tag'],
     );
 
     $columns = $newColumnsOrder;
