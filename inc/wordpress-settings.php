@@ -228,7 +228,14 @@ function set_custom_edit_rgm_phrase_columns($columns) {
     unset( $columns['author'] );
     unset( $columns['date'] );
 
-    $columns['rgm_phrase_meaning'] = __('Znaczenie');
+    // $columns['rgm_phrase_meaning'] = __('Znaczenie');
+    var_dump($columns);
+
+    $newColumnsOrder = array(
+
+    );
+
+    $columns = $newColumnsOrder;
  
     return $columns;
 }
