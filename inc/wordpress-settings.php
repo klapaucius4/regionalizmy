@@ -224,14 +224,14 @@ function myprefix_cron_function() {
 add_filter( 'manage_rgm_phrase_posts_columns', 'set_custom_edit_rgm_phrase_columns' );
 add_action( 'manage_rgm_phrase_posts_custom_column' , 'custom_rgm_phrase_column', 10, 2 );
  
-function set_custom_edit_book_columns($columns) {
+function set_custom_edit_rgm_phrase_columns($columns) {
     unset( $columns['author'] );
     $columns['rgm_phrase_meaning'] = __( 'Author', 'your_text_domain' );
  
     return $columns;
 }
  
-function custom_book_column( $column, $post_id ) {
+function custom_rgm_phrase_column( $column, $post_id ) {
     switch ( $column ) {
  
         case 'rgm_phrase_meaning' :
