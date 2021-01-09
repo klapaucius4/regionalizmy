@@ -245,6 +245,7 @@ function set_custom_edit_rgm_phrase_columns($columns) {
 }
  
 function custom_rgm_phrase_column( $column, $post_id ) {
+    var_dump($columns); exit;
     switch ( $column ) {
  
         case 'rgm_phrase_meaning' :
