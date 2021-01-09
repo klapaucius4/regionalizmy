@@ -233,7 +233,7 @@ function set_custom_edit_rgm_phrase_columns($columns) {
 
     $newColumnsOrder = array(
         'cb' => $columns['cb'],
-        'title' => $columns['taxonomy-rgm_phrase_kind'],
+        'title' => $columns['title'],
         'rgm_phrase_meaning' => __('Znaczenie'),
         'taxonomy-rgm_phrase_kind' => $columns['taxonomy-rgm_phrase_kind'],
         'taxonomy-rgm_phrase_tag' => $columns['taxonomy-rgm_phrase_tag'],
@@ -245,9 +245,7 @@ function set_custom_edit_rgm_phrase_columns($columns) {
 }
  
 function custom_rgm_phrase_column( $column, $post_id ) {
-    var_dump($column);
     switch ( $column ) {
- 
         case 'rgm_phrase_meaning' :
             echo 'siema!';
             break;
