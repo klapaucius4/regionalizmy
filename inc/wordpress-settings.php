@@ -232,6 +232,7 @@ function set_custom_edit_rgm_phrase_columns($columns) {
     var_dump($columns); exit;
 
     $newColumnsOrder = array(
+        'cb' => $columns['cb'],
         'title' => $columns['taxonomy-rgm_phrase_kind'],
         'rgm_phrase_meaning' => __('Znaczenie'),
         'taxonomy-rgm_phrase_kind' => $columns['taxonomy-rgm_phrase_kind'],
