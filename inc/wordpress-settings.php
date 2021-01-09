@@ -237,7 +237,5 @@ function custom_book_column( $column, $post_id ) {
         case 'rgm_phrase_meaning' :
             echo 'siema!';
             break;
-
-        
     }
 }
