@@ -7,7 +7,7 @@ class Rgm_Rest_Api extends WP_REST_Controller {
    */
   public function register_routes() {
     $version = '1';
-    $namespace = 'vendor/v' . $version;
+    $namespace = 'rgm/v' . $version;
     $base = 'route';
     register_rest_route( $namespace, '/' . $base, array(
       array(
@@ -252,3 +252,12 @@ class Rgm_Rest_Api extends WP_REST_Controller {
     );
   }
 }
+
+
+add_action( 'rest_api_init', function () {
+  /**
+   * RGM_REST_Routes
+   */
+  $rgmRestRoutes = new Rgm_Rest_Api();
+  $rgmRestRoutes->register_routes();
+});

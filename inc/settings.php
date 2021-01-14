@@ -114,28 +114,6 @@ function my_acf_json_save_point( $path ) {
 }
 
 
-//search settings
-function tg_include_custom_post_types_in_search_results( $query ) {
-    if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
-        $query->set( 'post_type', array( 'rgm_phrase', 'rgm_meaning' ) );
-    }
-}
-add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_search_results' );
-
-
-
-add_action( 'rest_api_init', function () {
-    /**
-     * RGM_REST_Routes
-     */
-    require get_template_directory() . '/inc/rgm-rest-api.php';
-    $rgmRestRoutes = new Rgm_Rest_Api();
-    $rgmRestRoutes->register_routes();
-});
-
-
-
-
 
 
 
