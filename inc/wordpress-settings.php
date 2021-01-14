@@ -247,7 +247,8 @@ function set_custom_edit_rgm_phrase_columns($columns) {
 function custom_rgm_phrase_column( $column, $post_id ) {
     switch ( $column ) {
         case 'rgm_phrase_meaning' :
-            echo 'siema!';
+            $meaning = get_field('znaczenie', $post_id);
+            var_dump($meaning);
             break;
     }
 }
