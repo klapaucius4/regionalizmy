@@ -247,8 +247,16 @@ function set_custom_edit_rgm_phrase_columns($columns) {
 function custom_rgm_phrase_column( $column, $post_id ) {
     switch ( $column ) {
         case 'rgm_phrase_meaning' :
-            $meaning = get_field('znaczenie', $post_id);
-            var_dump($meaning);
+            if($phraseDefinition = get_field('definicja', $post_id)){
+                echo $phraseDefinition;
+            }elseif($meaning = get_field('znaczenie', $post_id)){
+                if(isset($meaning[0])){
+                    echo '<a href="#">'.$meaning[0]->post_title.'</a> - '.$meaning[0]->post_content;
+                }
+            }else{
+                echo __('Brak');
+            }
+            
             break;
     }
 }
