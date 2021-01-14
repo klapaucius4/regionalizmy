@@ -86,6 +86,11 @@ function modules() {
   ])
   .pipe(gulp.dest('./vendor/jquery.cookie'));
 
+  var jqueryAutocomplete = gulp.src([
+    './node_modules/jquery-autocomplete/jquery.autocomplete.js',
+    './node_modules/jquery-autocomplete/jquery.autocomplete.css'
+  ])
+
   // leaflet-gesture-handling
   var leafletGestureHandling = gulp.src([
     './node_modules/leaflet-gesture-handling/dist/*',
@@ -93,7 +98,7 @@ function modules() {
   .pipe(gulp.dest('./vendor/leaflet-gesture-handling'));
   
 
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUiDist, jqueryCookie, leafletGestureHandling);
+  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, leaflet, jqueryUiDist, jqueryCookie, jqueryAutocomplete, leafletGestureHandling);
 }
 
 // CSS task
