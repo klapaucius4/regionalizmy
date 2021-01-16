@@ -3,12 +3,13 @@
 class Rgm_Rest_Api extends WP_REST_Controller {
 
   public $version = 1;
+  public $prefix = 'rgm';
  
   /**
    * Register the routes for the objects of the controller.
    */
   public function rgm_register_phrase_routes() {
-    $namespace = 'vendor/v' . $this->version;
+    $namespace = $this->prefix . '/v' . $this->version;
     $base = 'phrase';
     register_rest_route( $namespace, '/' . $base, array(
       array(
@@ -61,7 +62,7 @@ class Rgm_Rest_Api extends WP_REST_Controller {
   }
 
   public function rgm_register_search_routes() {
-    $namespace = 'vendor/v' . $this->version;
+    $namespace = $this->prefix . '/v' . $this->version;
     $base = 'search';
     register_rest_route( $namespace, '/' . $base, array(
       array(
