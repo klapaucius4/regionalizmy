@@ -45,6 +45,7 @@ class RGM_REST_Search_Route extends RGM_REST_Controller {
       $myQuery = new WP_Query($args);
       while($myQuery->have_posts()){
         $myQuery->the_post();
+        $data[] = get_the_title();
         
       }
       wp_reset_postdata();
