@@ -36,8 +36,19 @@ class RGM_REST_Search_Route extends RGM_REST_Controller {
   public function get_items( $request ) {
     $data = array();
     $params = $request->get_params();
-    var_dump($params); exit;
-    $data = array('status' => 'elegancko');
+    if(isset($params['s'])){
+      $args = array(
+        'post_type' => array('rgm_phrase', 'rgm_meaning'),
+        'posts_per_page' => 8,
+        's' => strip_tags($params['s'])
+      );
+      $myQuery = new WP_Query($args);
+      while($myQuery->have_posts()){
+        $myQuery->the_post();
+        
+      }
+      wp_reset_postdata();
+    }
     return new WP_REST_Response( $data, 200 );
   }
 
