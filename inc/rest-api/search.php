@@ -14,9 +14,7 @@ class RGM_REST_Search_Route extends RGM_REST_Controller {
         'callback'            => array( $this, 'get_items' ),
         // 'permission_callback' => array( $this, 'get_items_permissions_check' ),
         'args'                => array(
-            'context' => array(
-              'default' => 'view',
-            ),
+            's' => array(),
           ),
         )
     ) );
