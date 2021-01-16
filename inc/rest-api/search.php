@@ -33,8 +33,9 @@ class RGM_REST_Search_Route extends RGM_REST_Controller {
    * @return WP_Error|WP_REST_Response
    */
   public function get_items( $request ) {
-    var_dump($request); exit;
     $items = array(); //do a query, call another class, etc
+    $params = $request->get_params();
+    var_dump($params); exit;
     $data = array('status' => 'elegancko');
     // foreach( $items as $item ) {
     //   $itemdata = $this->prepare_item_for_response( $item, $request );
