@@ -19,7 +19,7 @@ require get_template_directory() . '/inc/helpers.php';
 /**
  * RGM Rest Api
  */
-require get_template_directory() . '/inc/rgm-rest-api.php';
+require get_template_directory() . '/inc/rest-api/rest-api-init.php';
 
 /**
  * Wordpress settings
