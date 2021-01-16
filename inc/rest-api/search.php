@@ -6,7 +6,7 @@ class Slug_Custom_Route extends RGM_REST_Controller {
    * Register the search for the objects of the controller.
    */
   public function register_routes() {
-    $namespace = 'vendor/v' . $this->version;
+    $namespace = $this->prefix . '/v' . $this->version;
     $base = 'search';
     register_rest_route( $namespace, '/' . $base, array(
       array(
