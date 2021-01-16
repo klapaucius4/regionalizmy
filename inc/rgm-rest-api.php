@@ -71,14 +71,8 @@ class Rgm_Rest_Api extends WP_REST_Controller {
         'permission_callback' => array( $this, 'get_items_permissions_check' ),
         'args'                => array(
  
-        ),
-      ),
-      array(
-        'methods'             => WP_REST_Server::CREATABLE,
-        'callback'            => array( $this, 'create_item' ),
-        'permission_callback' => array( $this, 'create_item_permissions_check' ),
-        'args'                => $this->get_endpoint_args_for_item_schema( true ),
-      ),
+          ),
+        )
     ) );
   }
  
