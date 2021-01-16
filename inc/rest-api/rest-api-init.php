@@ -8,6 +8,6 @@ add_action( 'rest_api_init', function () {
     /**
      * RGM_REST_Routes
      */
-    $rgmRestRoutes = new Rgm_Rest_Api();
-    $rgmRestRoutes->rgm_phrase_register_routes();
+    $rgmRestSearchRoute = new RGM_REST_Search_Route();
+    $rgmRestSearchRoute->register_routes();
   });

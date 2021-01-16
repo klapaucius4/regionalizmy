@@ -1,6 +1,6 @@
 <?php
 
-class Slug_Custom_Route extends RGM_REST_Controller {
+class RGM_REST_Search_Route extends RGM_REST_Controller {
 
   /**
    * Register the search for the objects of the controller.
