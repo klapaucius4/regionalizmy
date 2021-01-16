@@ -15,6 +15,9 @@ class RGM_REST_Search_Route extends RGM_REST_Controller {
         // 'permission_callback' => array( $this, 'get_items_permissions_check' ),
         'args'                => array(
             's' => array(),
+            'type' => array(
+              'default' => 'dictionary', // or 'blog' or 'all'
+            )
           ),
         )
     ) );
@@ -31,27 +34,11 @@ class RGM_REST_Search_Route extends RGM_REST_Controller {
    * @return WP_Error|WP_REST_Response
    */
   public function get_items( $request ) {
-    $items = array(); //do a query, call another class, etc
+    $data = array();
     $params = $request->get_params();
     var_dump($params); exit;
     $data = array('status' => 'elegancko');
-    // foreach( $items as $item ) {
-    //   $itemdata = $this->prepare_item_for_response( $item, $request );
-    //   $data[] = $this->prepare_response_for_collection( $itemdata );
-    // }
-
     return new WP_REST_Response( $data, 200 );
-  }
-
-  /**
-   * Prepare the item for the REST response
-   *
-   * @param mixed $item WordPress representation of the item.
-   * @param WP_REST_Request $request Request object.
-   * @return mixed
-   */
-  public function prepare_item_for_response( $item, $request ) {
-    return array();
   }
 
 }
