@@ -115,19 +115,6 @@ function my_acf_json_save_point( $path ) {
 
 
 
-add_action( 'rest_api_init', function () {
-    /**
-     * RGM_REST_Routes
-     */
-    require get_template_directory() . '/inc/rgm-rest-api.php';
-    $rgmRestRoutes = new Rgm_Rest_Api();
-    $rgmRestRoutes->register_routes();
-});
-
-
-
-
-
 
 
 
@@ -210,4 +197,56 @@ if ( ! wp_next_scheduled( 'myprefix_cron_hook' ) ) {
 function myprefix_cron_function() {
     //your function...
     generateCountiesDataJs();
+}
+
+
+
+
+
+
+
+
+// add custom column to wp-admin rgm_phrase posts list
+
+add_filter( 'manage_rgm_phrase_posts_columns', 'set_custom_edit_rgm_phrase_columns' );
+add_action( 'manage_rgm_phrase_posts_custom_column' , 'custom_rgm_phrase_column', 10, 2 );
+ 
+function set_custom_edit_rgm_phrase_columns($columns) {
+    // unset( $columns['author'] );
+    // unset( $columns['date'] );
+
+    // $columns['rgm_phrase_meaning'] = __('Znaczenie');
+    // var_dump($columns); exit;
+
+    $newColumnsOrder = array(
+        'cb' => $columns['cb'],
+        'title' => $columns['title'],
+        'rgm_phrase_meaning' => __('Znaczenie'),
+        'taxonomy-rgm_phrase_kind' => $columns['taxonomy-rgm_phrase_kind'],
+        'taxonomy-rgm_phrase_tag' => $columns['taxonomy-rgm_phrase_tag'],
+    );
+
+    $columns = $newColumnsOrder;
+ 
+    return $columns;
+}
+ 
+function custom_rgm_phrase_column( $column, $post_id ) {
+    switch ( $column ) {
+        case 'rgm_phrase_meaning' :
+            if($phraseDefinition = get_field('definicja', $post_id)){
+                echo $phraseDefinition;
+            }elseif($meaning = get_field('znaczenie', $post_id)){
+                if(isset($meaning[0])){
+                    echo '<a href="#">'.$meaning[0]->post_title.'</a>';
+                    if($definition = get_field('definicja', $meaning[0]->ID)){
+                        echo ' - ' . $definition;
+                    }
+                }
+            }else{
+                echo __('Brak');
+            }
+            
+            break;
+    }
 }

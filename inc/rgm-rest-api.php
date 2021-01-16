@@ -1,14 +1,16 @@
 <?php
- 
+
 class Rgm_Rest_Api extends WP_REST_Controller {
+
+  public $version = 1;
+  public $prefix = 'rgm';
  
   /**
    * Register the routes for the objects of the controller.
    */
-  public function register_routes() {
-    $version = '1';
-    $namespace = 'vendor/v' . $version;
-    $base = 'route';
+  public function rgm_register_phrase_routes() {
+    $namespace = $this->prefix . '/v' . $this->version;
+    $base = 'phrase';
     register_rest_route( $namespace, '/' . $base, array(
       array(
         'methods'             => WP_REST_Server::READABLE,
@@ -56,6 +58,27 @@ class Rgm_Rest_Api extends WP_REST_Controller {
     register_rest_route( $namespace, '/' . $base . '/schema', array(
       'methods'  => WP_REST_Server::READABLE,
       'callback' => array( $this, 'get_public_item_schema' ),
+    ) );
+  }
+
+  public function rgm_register_search_routes() {
+    $namespace = $this->prefix . '/v' . $this->version;
+    $base = 'search';
+    register_rest_route( $namespace, '/' . $base, array(
+      array(
+        'methods'             => WP_REST_Server::READABLE,
+        'callback'            => array( $this, 'get_items' ),
+        'permission_callback' => array( $this, 'get_items_permissions_check' ),
+        'args'                => array(
+ 
+        ),
+      ),
+      array(
+        'methods'             => WP_REST_Server::CREATABLE,
+        'callback'            => array( $this, 'create_item' ),
+        'permission_callback' => array( $this, 'create_item_permissions_check' ),
+        'args'                => $this->get_endpoint_args_for_item_schema( true ),
+      ),
     ) );
   }
  
@@ -252,3 +275,13 @@ class Rgm_Rest_Api extends WP_REST_Controller {
     );
   }
 }
+
+
+add_action( 'rest_api_init', function () {
+  /**
+   * RGM_REST_Routes
+   */
+  $rgmRestRoutes = new Rgm_Rest_Api();
+  $rgmRestRoutes->rgm_register_phrase_routes();
+  $rgmRestRoutes->rgm_register_search_routes();
+});
