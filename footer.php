@@ -41,18 +41,18 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"><?= __('Skąd jesteś / pochodzisz?'); ?></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="<?= __('Zamknij'); ?>">
+        <h5 class="modal-title"><?= __('Skąd jesteś / pochodzisz?', 'rgm'); ?></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="<?= __('Zamknij', 'rgm'); ?>">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group fieldset2">
-            <input type="text" class="form-control findCountyInput3 has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
+            <input type="text" class="form-control findCountyInput3 has-warning" placeholder="<?= __('Powiat / miasto powiatowe', 'rgm'); ?>">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="saveAsDefault1" value="option1">
-              <label class="form-check-label small" for="saveAsDefault1"><?= __('ustaw jako domyślny region'); ?></label>
+              <label class="form-check-label small" for="saveAsDefault1"><?= __('ustaw jako domyślny region', 'rgm'); ?></label>
             </div>
           </fieldset>
         </form>
@@ -66,7 +66,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="<?= __('Zamknij'); ?>">
+        <button type="button" class="close" data-dismiss="modal" aria-label="<?= __('Zamknij', 'rgm'); ?>">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -84,14 +84,14 @@
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="voteModalPopupRadio" id="voteModalPopupRadio3" value="3">
-              <label class="form-check-label" for="voteModalPopupRadio3"><?= __('Znam z ogólnopolskich środków masowego przekazu'); ?><small class="text-small d-block"><?= __('(prasa, radio, telewizja, Internet, książka, film)') ?></small></label>
+              <label class="form-check-label" for="voteModalPopupRadio3"><?= __('Znam z ogólnopolskich środków masowego przekazu', 'rgm'); ?><small class="text-small d-block"><?= __('(prasa, radio, telewizja, Internet, książka, film)', 'rgm'); ?></small></label>
             </div>
           </fieldset>
           <fieldset class="form-group fieldset2">
-            <input type="text" class="form-control findCountyInput2 has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
+            <input type="text" class="form-control findCountyInput2 has-warning" placeholder="<?= __('Powiat / miasto powiatowe', 'rgm'); ?>">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="saveAsDefault2" value="option1">
-              <label class="form-check-label small" for="saveAsDefault2"><?= __('ustaw jako domyślny region'); ?></label>
+              <label class="form-check-label small" for="saveAsDefault2"><?= __('ustaw jako domyślny region', 'rgm'); ?></label>
             </div>
           </fieldset>
           <fieldset class="form-group fieldset3">
@@ -115,8 +115,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success"><?= __('Potwierdź'); ?></button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= __('Zamknij'); ?></button>
+        <button type="button" class="btn btn-success"><?= __('Potwierdź', 'rgm'); ?></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= __('Zamknij', 'rgm'); ?></button>
       </div>
     </div>
   </div>

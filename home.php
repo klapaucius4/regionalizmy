@@ -13,7 +13,7 @@
               Problems look mighty small from 150 miles up
             </h3>
           </a>
-          <p class="post-meta"><?= __('Dodane przez'); ?> <a href="#"><?= get_the_author(); ?></a> <?= __('dnia'); ?> <?= get_the_date(); ?></p>
+          <p class="post-meta"><?= __('Dodane przez', 'rgm'); ?> <a href="#"><?= get_the_author(); ?></a> <?= __('dnia', 'rgm'); ?> <?= get_the_date(); ?></p>
         </div>
         <hr>
         <?php endwhile; ?>

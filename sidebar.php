@@ -1,12 +1,12 @@
 <nav class="sidebar">
     <!-- Search Widget -->
     <div class="sidebar__card">
-        <h5 class="card-header sidebar__card__header"><?= __('Znajdź regionalizm'); ?></h5>
+        <h5 class="card-header sidebar__card__header"><?= __('Znajdź regionalizm', 'rgm'); ?></h5>
         <div class="card-body">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="<?= __('Znajdź regionalizm'); ?>">
+            <input type="text" class="form-control" placeholder="<?= __('Znajdź regionalizm', 'rgm'); ?>">
             <span class="input-group-append">
-            <button class="btn--smaller btn-secondary" type="button"><?= __('Szukaj'); ?></button>
+            <button class="btn--smaller btn-secondary" type="button"><?= __('Szukaj', 'rgm'); ?></button>
             </span>
         </div>
         </div>
@@ -14,7 +14,7 @@
 
     <!-- Categories Widget -->
     <div class="sidebar__card sidebar__card--letters">
-        <h5 class="card-header sidebar__card__header"><?= __('Litery', 'regionalizmy'); ?></h5>
+        <h5 class="card-header sidebar__card__header"><?= __('Litery', 'rgm'); ?></h5>
         <div class="card-body">
         <?php
         $letters = alphabeticalListOfLetters();
@@ -32,7 +32,7 @@
 
     <!-- Side Widget -->
     <div class="sidebar__card">
-        <h5 class="card-header sidebar__card__header"><?= __('Tagi', 'regionalizmy'); ?></h5>
+        <h5 class="card-header sidebar__card__header"><?= __('Tagi', 'rgm'); ?></h5>
         <div class="card-body">
             <?php
             $args = array(

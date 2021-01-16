@@ -61,7 +61,7 @@
     <div class="container">
       <a class="navbar-brand p-0" href="<?= home_url(); ?>"><img style="width: 300px;" src="<?= get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" /></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <?= __('Menu'); ?>
+        <?= __('Menu', 'rgm'); ?>
         <i class="fas fa-bars"></i>
       </button>
       <?php
@@ -81,7 +81,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="<?= home_url(); ?>"><?= __('Home'); ?></a>
+            <a class="nav-link" href="<?= home_url(); ?>"><?= __('Home', 'rgm'); ?></a>
           </li>
         </ul>
       </div>

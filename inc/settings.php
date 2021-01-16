@@ -34,7 +34,7 @@ if ( ! function_exists( 'rgm_setup' ) ) :
     function rgm_setup() {
 
         register_nav_menus( array(
-            'menu-1' => __( 'Menu główne', 'regionalizmy' ),
+            'menu-1' => __( 'Menu główne', 'rgm' ),
         ) );
     
         /*
@@ -179,7 +179,7 @@ function generateCountiesDataJs(){
 function myprefix_custom_cron_schedule( $schedules ) {
     $schedules['every_six_hours'] = array(
         'interval' => 900, // Every 15 minutes
-        'display'  => __( 'Every 15 minutes' ),
+        'display'  => __( 'Every 15 minutes', 'rgm' ),
     );
     return $schedules;
 }
@@ -215,13 +215,13 @@ function set_custom_edit_rgm_phrase_columns($columns) {
     // unset( $columns['author'] );
     // unset( $columns['date'] );
 
-    // $columns['rgm_phrase_meaning'] = __('Znaczenie');
+    // $columns['rgm_phrase_meaning'] = __('Znaczenie', 'rgm');
     // var_dump($columns); exit;
 
     $newColumnsOrder = array(
         'cb' => $columns['cb'],
         'title' => $columns['title'],
-        'rgm_phrase_meaning' => __('Znaczenie'),
+        'rgm_phrase_meaning' => __('Znaczenie', 'rgm'),
         'taxonomy-rgm_phrase_kind' => $columns['taxonomy-rgm_phrase_kind'],
         'taxonomy-rgm_phrase_tag' => $columns['taxonomy-rgm_phrase_tag'],
     );
@@ -244,7 +244,7 @@ function custom_rgm_phrase_column( $column, $post_id ) {
                     }
                 }
             }else{
-                echo __('Brak');
+                echo __('Brak', 'rgm');
             }
             
             break;
