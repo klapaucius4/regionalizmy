@@ -271,7 +271,14 @@ function custom_rgm_meaning_column( $column, $post_id ) {
         case 'rgm_meaning_phrases' :
             $args = array(
                 'post_type' => 'rgm_phrase',
-                'posts_per_page' => -1
+                'posts_per_page' => -1,
+                'post_status' => 'publish',
+                'meta_query' => array(
+                    array(
+                      'key' => 'znaczenie',
+                      'value' => array( get_the_ID() ), // array of hospitals IDs from 1st query
+                      'compare' => 'IN',
+                    ),
             );
             $myQuery = new WP_Query($args);
             if($myQuery->have_posts()){
