@@ -250,17 +250,17 @@ function custom_rgm_phrase_column( $column, $post_id ) {
 add_filter( 'manage_rgm_meaning_posts_columns', 'set_custom_edit_rgm_meaning_columns' );
 function set_custom_edit_rgm_meaning_columns($columns) {
 
-    // $newColumnsOrder = array(
-    //     'cb' => $columns['cb'],
-    //     'title' => $columns['title'],
-    //     'rgm_meaning_meaning' => __('Znaczenie', 'rgm'),
-    //     'taxonomy-rgm_meaning_kind' => $columns['taxonomy-rgm_meaning_kind'],
-    //     'taxonomy-rgm_meaning_tag' => $columns['taxonomy-rgm_meaning_tag'],
-    // );
+    $newColumnsOrder = array(
+        'cb' => $columns['cb'],
+        'title' => $columns['title'],
+        'rgm_meaning_phrases' => __('Frazy', 'rgm'),
+        'taxonomy-rgm_meaning_kind' => $columns['taxonomy-rgm_meaning_kind'],
+        'taxonomy-rgm_meaning_tag' => $columns['taxonomy-rgm_meaning_tag'],
+    );
 
-    // $columns = $newColumnsOrder;
+    $columns = $newColumnsOrder;
 
-    $columns['rgm_meaning_phrases'] = __('Frazy', 'rgm');
+    // $columns['rgm_meaning_phrases'] = __('Frazy', 'rgm');
  
     return $columns;
 }
