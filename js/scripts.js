@@ -47,8 +47,9 @@
 
   $(".findCountyInput, .findCountyInput2, .findCountyInput3").autocomplete({
       source: function (request, response) {
+        console.log(request);
         $.ajax({
-          url: "/wp-json/rgm/v1/county/"+request.term,
+          url: "/wp-json/rgm/v1/county/",
           success: function (data) {
             var transformed = $.map(data, function (el) {
                 var countyName = 'powiat ' + el.name;

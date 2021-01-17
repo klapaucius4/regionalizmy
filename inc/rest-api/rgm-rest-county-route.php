@@ -45,9 +45,9 @@ class RGM_REST_County_Route extends RGM_REST_Controller {
             while($myQuery->have_posts()){
                 $myQuery->the_post();
                 $data[] = array(
-                'id' => get_the_ID(),
-                'name' => get_the_title(),
-                'city' => get_field('miasto_na_prawach_powiatu')?true:false
+                    'id' => get_the_ID(),
+                    'name' => get_the_title(),
+                    'city' => get_field('miasto_na_prawach_powiatu')?true:false
                 );
             }
             wp_reset_postdata();
