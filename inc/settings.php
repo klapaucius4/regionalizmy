@@ -246,3 +246,49 @@ function custom_rgm_phrase_column( $column, $post_id ) {
 // add custom column to wp-admin rgm_phrase posts list end
 
 
+// add custom column to wp-admin rgm_meaning posts list start
+add_filter( 'manage_rgm_meaning_posts_columns', 'set_custom_edit_rgm_meaning_columns' );
+function set_custom_edit_rgm_meaning_columns($columns) {
+
+    $newColumnsOrder = array(
+        'cb' => $columns['cb'],
+        'title' => $columns['title'],
+        'rgm_meaning_phrases' => __('Frazy', 'rgm'),
+        // 'taxonomy-rgm_meaning_kind' => $columns['taxonomy-rgm_meaning_kind'],
+        'taxonomy-rgm_meaning_tag' => $columns['taxonomy-rgm_meaning_tag'],
+    );
+
+    $columns = $newColumnsOrder;
+
+    // $columns['rgm_meaning_phrases'] = __('Frazy', 'rgm');
+ 
+    return $columns;
+}
+
+add_action( 'manage_rgm_meaning_posts_custom_column' , 'custom_rgm_meaning_column', 10, 2 );
+function custom_rgm_meaning_column( $column, $post_id ) {
+    switch ( $column ) {
+        case 'rgm_meaning_phrases' :
+            $args = array(
+                'post_type' => 'rgm_phrase',
+                'posts_per_page' => -1
+            );
+            $myQuery = new WP_Query($args);
+            if($myQuery->have_posts()){
+                $firstLoop = true;
+                while($myQuery->have_posts()){
+                    $myQuery->the_post();
+                    if(!$firstLoop){
+                        echo ", ";
+                        $firstLoop = false;
+                    }
+                    echo '<a href="'.get_the_permalink().'">' . get_the_title() . '</a>';
+                }
+                wp_reset_postdata();
+            }else{
+                echo __('Brak', 'rgm');
+            }
+            break;
+    }
+}
+// add custom column to wp-admin rgm_meaning posts list end
