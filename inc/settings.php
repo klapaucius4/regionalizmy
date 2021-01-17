@@ -280,8 +280,8 @@ function custom_rgm_meaning_column( $column, $post_id ) {
                     $myQuery->the_post();
                     if(!$firstLoop){
                         echo ", ";
-                        $firstLoop = false;
                     }
+                    $firstLoop = false;
                     echo '<a href="'.get_the_permalink().'">' . get_the_title() . '</a>';
                 }
                 wp_reset_postdata();
