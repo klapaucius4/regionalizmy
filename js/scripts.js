@@ -50,6 +50,8 @@
         console.log(request);
         $.ajax({
           url: "/wp-json/rgm/v1/county/",
+          data: { 'search': request.term },
+          type: "GET",
           success: function (data) {
             var transformed = $.map(data, function (el) {
                 var countyName = 'powiat ' + el.name;
