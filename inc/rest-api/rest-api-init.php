@@ -11,6 +11,6 @@ add_action( 'rest_api_init', function () {
     $rgmRestSearchRoute = new RGM_REST_Search_Route();
     $rgmRestSearchRoute->register_routes();
 
-    $rgmRestCountyRoute = new RGM_REST_Search_Route();
+    $rgmRestCountyRoute = new RGM_REST_County_Route();
     $rgmRestCountyRoute->register_routes();
   });
