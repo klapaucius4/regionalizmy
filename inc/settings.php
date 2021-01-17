@@ -275,9 +275,9 @@ function custom_rgm_meaning_column( $column, $post_id ) {
                 'post_status' => 'publish',
                 'meta_query' => array(
                     array(
-                      'key' => 'znaczenie',
-                      'value' => array( get_the_ID() ), // array of hospitals IDs from 1st query
-                      'compare' => 'IN',
+                        'key' => 'znaczenie',
+                        'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+                        'compare' => 'LIKE'
                     )
                 )
             );
