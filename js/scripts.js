@@ -47,7 +47,6 @@
 
   $(".findCountyInput, .findCountyInput2, .findCountyInput3").autocomplete({
       source: function (request, response) {
-        console.log(request);
         $.ajax({
           url: "/wp-json/rgm/v1/county/",
           data: { 'search': request.term },
