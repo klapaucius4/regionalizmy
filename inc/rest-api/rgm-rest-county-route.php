@@ -25,35 +25,35 @@ class RGM_REST_County_Route extends RGM_REST_Controller {
             'callback' => array( $this, 'get_public_item_schema' ),
         ));
     }
-    
+
     public function get_items( $request ) {
         $data = array();
 
         $args = array(
-        'post_type' => 'rgm_county',
-        'post_status' => 'publish',
-        'posts_per_page' => -1,
-        'orderby' => 'name',
-        'order' => 'ASC'
+            'post_type' => 'rgm_county',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+            'orderby' => 'name',
+            'order' => 'ASC'
         );
 
         if(isset($request['search'])){
-        $args['s'] = $request['search'];
-        $args['orderby'] = 'relevance';
+            $args['s'] = $request['search'];
+            $args['orderby'] = 'relevance';
         }
 
         $myQuery = new WP_Query($args);
 
         if($myQuery->have_posts()){
-        while($myQuery->have_posts()){
-            $myQuery->the_post();
-            $data[] = array(
-            'id' => get_the_ID(),
-            'name' => get_the_title(),
-            'city' => get_field('miasto_na_prawach_powiatu')?true:false
-            );
-        }
-        wp_reset_postdata();
+            while($myQuery->have_posts()){
+                $myQuery->the_post();
+                $data[] = array(
+                'id' => get_the_ID(),
+                'name' => get_the_title(),
+                'city' => get_field('miasto_na_prawach_powiatu')?true:false
+                );
+            }
+            wp_reset_postdata();
         }
 
         return new WP_REST_Response( $data, 200 );
