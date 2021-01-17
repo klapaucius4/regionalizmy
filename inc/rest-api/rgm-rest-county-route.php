@@ -13,10 +13,7 @@ class RGM_REST_County_Route extends RGM_REST_Controller {
               'methods'             => WP_REST_Server::READABLE,
               'callback'            => array( $this, 'get_items' ),
               'args'                => array(
-                  's' => array(),
-                  'type' => array(
-                    'default' => 'dictionary', // or 'blog' or 'all'
-                  )
+                  'search' => array(),
                 ),
               )
         ));
