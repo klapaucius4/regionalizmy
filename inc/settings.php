@@ -206,17 +206,9 @@ function myprefix_cron_function() {
 
 
 
-// add custom column to wp-admin rgm_phrase posts list
-
+// add custom column to wp-admin rgm_phrase posts list start
 add_filter( 'manage_rgm_phrase_posts_columns', 'set_custom_edit_rgm_phrase_columns' );
-add_action( 'manage_rgm_phrase_posts_custom_column' , 'custom_rgm_phrase_column', 10, 2 );
- 
 function set_custom_edit_rgm_phrase_columns($columns) {
-    // unset( $columns['author'] );
-    // unset( $columns['date'] );
-
-    // $columns['rgm_phrase_meaning'] = __('Znaczenie', 'rgm');
-    // var_dump($columns); exit;
 
     $newColumnsOrder = array(
         'cb' => $columns['cb'],
@@ -230,7 +222,8 @@ function set_custom_edit_rgm_phrase_columns($columns) {
  
     return $columns;
 }
- 
+
+add_action( 'manage_rgm_phrase_posts_custom_column' , 'custom_rgm_phrase_column', 10, 2 );
 function custom_rgm_phrase_column( $column, $post_id ) {
     switch ( $column ) {
         case 'rgm_phrase_meaning' :
@@ -250,3 +243,34 @@ function custom_rgm_phrase_column( $column, $post_id ) {
             break;
     }
 }
+// add custom column to wp-admin rgm_phrase posts list end
+
+
+// add custom column to wp-admin rgm_meaning posts list start
+add_filter( 'manage_rgm_meaning_posts_columns', 'set_custom_edit_rgm_meaning_columns' );
+function set_custom_edit_rgm_meaning_columns($columns) {
+
+    // $newColumnsOrder = array(
+    //     'cb' => $columns['cb'],
+    //     'title' => $columns['title'],
+    //     'rgm_meaning_meaning' => __('Znaczenie', 'rgm'),
+    //     'taxonomy-rgm_meaning_kind' => $columns['taxonomy-rgm_meaning_kind'],
+    //     'taxonomy-rgm_meaning_tag' => $columns['taxonomy-rgm_meaning_tag'],
+    // );
+
+    // $columns = $newColumnsOrder;
+
+    $columns['rgm_meaning_phrases'] = __('Frazy', 'rgm');
+ 
+    return $columns;
+}
+
+add_action( 'manage_rgm_meaning_posts_custom_column' , 'custom_rgm_meaning_column', 10, 2 );
+function custom_rgm_meaning_column( $column, $post_id ) {
+    switch ( $column ) {
+        case 'rgm_meaning_phrases' :
+            echo 'test';
+            break;
+    }
+}
+// add custom column to wp-admin rgm_meaning posts list end
