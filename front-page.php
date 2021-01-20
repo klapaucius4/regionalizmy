@@ -54,7 +54,7 @@
         <div class="col-lg-6 col-md-8 col-sm-10 col-12">
           <form action="" method="get">
             <div class="input-group">
-              <input type="text" name="phrase" value="test" placeholder="<?= $sectionSearch['tytul']?:'' . '...'; ?>" class="form-control frontpage-search-section__input-search-dictionary">
+              <input type="text" name="phrase" placeholder="<?= $sectionSearch['tytul']?:'' . '...'; ?>" class="form-control frontpage-search-section__input-search-dictionary">
               <span class="input-group-btn">
                 <input type="submit" name="search" value="<?= __('Znajdź', 'rgm'); ?>" class="btn btn-primary">
               </span>
