@@ -46,40 +46,81 @@
   }
 
   $(".findCountyInput, .findCountyInput2, .findCountyInput3").autocomplete({
-      source: function (request, response) {
-        $.ajax({
-          url: "/wp-json/rgm/v1/county/",
-          data: { 'search': request.term },
-          type: "GET",
-          success: function (data) {
-            var transformed = $.map(data, function (el) {
-                var countyName = 'powiat ' + el.name;
-                if(el.city){
-                  countyName = el.name + ' (miasto na prawach powiatu)';
-                }
-                return {
-                    label: countyName,
-                    id: el.id
-                };
-            });
-            response(transformed);
-          },
-          error: function () {
-            response([]);
-          }
-        });
-      },
-      select: function (event, ui) {
-        var newCookie = {
-          'id': ui.item.id,
-          'name': ui.item.label
-        };
-        $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
-        location.reload();
-      },
-      autoFill: true,
+    source: function (request, response) {
+      $.ajax({
+        url: "/wp-json/rgm/v1/county/",
+        data: { 'search': request.term },
+        type: "GET",
+        success: function (data) {
+          var transformed = $.map(data, function (el) {
+              var countyName = 'powiat ' + el.name;
+              if(el.city){
+                countyName = el.name + ' (miasto na prawach powiatu)';
+              }
+              return {
+                  label: countyName,
+                  id: el.id
+              };
+          });
+          response(transformed);
+        },
+        error: function () {
+          response([]);
+        }
+      });
+    },
+    select: function (event, ui) {
+      var newCookie = {
+        'id': ui.item.id,
+        'name': ui.item.label
+      };
+      $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
+      location.reload();
+    },
+    autoFill: true,
   });
   //// counties end
+
+  //// dictionary search begin
+  $(".frontpage-search-section__input-search-dictionary").autocomplete({
+    source: function (request, response) {
+      $.ajax({
+        url: "/wp-json/rgm/v1/search/",
+        data: {
+          's': request.term,
+          'type': 'dictionary'
+        },
+        type: "GET",
+        success: function (data) {
+          console.log('test');
+          // var transformed = $.map(data, function (el) {
+          //     var countyName = 'powiat ' + el.name;
+          //     if(el.city){
+          //       countyName = el.name + ' (miasto na prawach powiatu)';
+          //     }
+          //     return {
+          //         label: countyName,
+          //         id: el.id
+          //     };
+          // });
+          // response(transformed);
+        },
+        error: function () {
+          response([]);
+        }
+      });
+    },
+    select: function (event, ui) {
+      var newCookie = {
+        'id': ui.item.id,
+        'name': ui.item.label
+      };
+      $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
+      location.reload();
+    },
+    autoFill: true,
+  });
+  //// dictionary search end
 
 
   $("body").on('click', '.vote-buttons button', function(e){

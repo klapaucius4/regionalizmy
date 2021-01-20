@@ -36,6 +36,9 @@ class RGM_REST_Search_Route extends RGM_REST_Controller {
         'posts_per_page' => 8,
         's' => strip_tags($params['s'])
       );
+      if(isset($params['type']) && $params['type'] == 'blog'){
+        $args['post_type'] = 'post';
+      }
       $myQuery = new WP_Query($args);
       while($myQuery->have_posts()){
         $myQuery->the_post();
