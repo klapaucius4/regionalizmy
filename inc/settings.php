@@ -290,7 +290,7 @@ function custom_rgm_meaning_column( $column, $post_id ) {
                         echo ", ";
                     }
                     $firstLoop = false;
-                    echo '<a href="'.get_the_permalink().'">' . get_the_title() . '</a>';
+                    echo '<a href="'.get_edit_post_link(get_the_ID()).'">' . get_the_title() . '</a>';
                 }
                 wp_reset_postdata();
             }else{
