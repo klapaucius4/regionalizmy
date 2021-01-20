@@ -92,18 +92,31 @@
         },
         type: "GET",
         success: function (data) {
-          console.log('test');
-          // var transformed = $.map(data, function (el) {
-          //     var countyName = 'powiat ' + el.name;
-          //     if(el.city){
-          //       countyName = el.name + ' (miasto na prawach powiatu)';
-          //     }
-          //     return {
-          //         label: countyName,
-          //         id: el.id
-          //     };
-          // });
-          // response(transformed);
+          var transformed = [
+            "ActionScript",
+            "AppleScript",
+            "Asp",
+            "BASIC",
+            "C",
+            "C++",
+            "Clojure",
+            "COBOL",
+            "ColdFusion",
+            "Erlang",
+            "Fortran",
+            "Groovy",
+            "Haskell",
+            "Java",
+            "JavaScript",
+            "Lisp",
+            "Perl",
+            "PHP",
+            "Python",
+            "Ruby",
+            "Scala",
+            "Scheme"
+          ];
+          response(transformed);
         },
         error: function () {
           response([]);
