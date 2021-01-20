@@ -143,7 +143,7 @@ class RGM_REST_Routes extends WP_REST_Controller {
     if ( 1 == 1 ) {
       return new WP_REST_Response( $data, 200 );
     } else {
-      return new WP_Error( 'code', __( 'message', 'text-domain' ) );
+      return new WP_Error( 'code', __( 'message', 'rgm' ) );
     }
   }
  
@@ -163,7 +163,7 @@ class RGM_REST_Routes extends WP_REST_Controller {
       }
     }
  
-    return new WP_Error( 'cant-create', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
+    return new WP_Error( 'cant-create', __( 'message', 'rgm' ), array( 'status' => 500 ) );
   }
  
   /**
@@ -182,7 +182,7 @@ class RGM_REST_Routes extends WP_REST_Controller {
       }
     }
  
-    return new WP_Error( 'cant-update', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
+    return new WP_Error( 'cant-update', __( 'message', 'rgm' ), array( 'status' => 500 ) );
   }
  
   /**
@@ -201,7 +201,7 @@ class RGM_REST_Routes extends WP_REST_Controller {
       }
     }
  
-    return new WP_Error( 'cant-delete', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
+    return new WP_Error( 'cant-delete', __( 'message', 'rgm' ), array( 'status' => 500 ) );
   }
  
   /**

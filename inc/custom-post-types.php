@@ -2,12 +2,12 @@
 
 register_post_type('rgm_phrase', array(
         'labels' => array(
-            'name'          => __('Frazy', 'regionalizmy'),
-            'singular_name' => __('Fraza', 'regionalizmy'),
+            'name'          => __('Frazy', 'rgm'),
+            'singular_name' => __('Fraza', 'rgm'),
         ),
         'public' => true,
-        'has_archive' => __('slownik', 'regionalizmy'),
-        'rewrite' => array('slug' => __('slownik', 'regionalizmy'), 'with_front' => true),
+        'has_archive' => __('slownik', 'rgm'),
+        'rewrite' => array('slug' => __('slownik', 'rgm'), 'with_front' => true),
         'supports' => array( 'title' ),
         'menu_icon' => 'dashicons-editor-ol',
     )
@@ -15,12 +15,12 @@ register_post_type('rgm_phrase', array(
 
 register_post_type('rgm_meaning', array(
         'labels' => array(
-            'name'          => __('Znaczenia', 'regionalizmy'),
-            'singular_name' => __('Znaczenie', 'regionalizmy'),
+            'name'          => __('Znaczenia', 'rgm'),
+            'singular_name' => __('Znaczenie', 'rgm'),
         ),
         'public' => true,
-        // 'has_archive' => __('slownik', 'regionalizmy'),
-        'has_archive' => false,
+        'has_archive' => __('znaczenia', 'rgm'),
+        'rewrite' => array('slug' => __('znaczenia', 'rgm'), 'with_front' => true),
         'supports' => array( 'title' ),
         'menu_icon' => 'dashicons-welcome-learn-more',
     )
@@ -30,13 +30,13 @@ register_taxonomy( 'rgm_phrase_kind', array('rgm_phrase'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
-            'name'              => __( 'Rodzaje', 'regionalizmy' ),
-            'singular_name'     => __( 'Rodzaj', 'regionalizmy' )
+            'name'              => __( 'Rodzaje', 'rgm' ),
+            'singular_name'     => __( 'Rodzaj', 'rgm' )
         ),
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => [ 'slug' => __('tag', 'regionalizmy') ],
+        'rewrite'           => [ 'slug' => __('tag', 'rgm') ],
     )
 );
 
@@ -44,20 +44,20 @@ register_taxonomy( 'rgm_phrase_tag', array('rgm_phrase', 'rgm_meaning'),
     array(
         'hierarchical'      => false,
         'labels'            => array(
-            'name'              => __( 'Tagi', 'regionalizmy' ),
-            'singular_name'     => __( 'Tag', 'regionalizmy' )
+            'name'              => __( 'Tagi', 'rgm' ),
+            'singular_name'     => __( 'Tag', 'rgm' )
         ),
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => [ 'slug' => __('tag', 'regionalizmy') ],
+        'rewrite'           => [ 'slug' => __('tag', 'rgm') ],
     )
 );
 
 register_post_type('rgm_mass_media', array(
         'labels' => array(
-            'name'          => __('Środki przekazu', 'regionalizmy'),
-            'singular_name' => __('Środek przekazu', 'regionalizmy'),
+            'name'          => __('Środki przekazu', 'rgm'),
+            'singular_name' => __('Środek przekazu', 'rgm'),
         ),
         'public' => true,
         'supports' => array( 'title' ),
@@ -67,8 +67,8 @@ register_post_type('rgm_mass_media', array(
 
 register_post_type('rgm_county', array(
         'labels' => array(
-            'name'          => __('Powiaty', 'regionalizmy'),
-            'singular_name' => __('Powiat', 'regionalizmy'),
+            'name'          => __('Powiaty', 'rgm'),
+            'singular_name' => __('Powiat', 'rgm'),
         ),
         'public' => true,
         'supports' => array( 'title' ),
@@ -78,17 +78,17 @@ register_post_type('rgm_county', array(
 );
 register_taxonomy('rgm_province', array('rgm_county'), array(
     'labels' => array(
-        'name' => __('Województwa', 'regionalizmy'),
-        'singular_name' => __('Województwo', 'regionalizmy'),
-        'search_items' =>  __( 'Szukaj województwa' ),
-        'all_items' => __( 'Wszystkie województwa' ),
-    //     'parent_item' => __( 'Parent Type' ),
-    //     'parent_item_colon' => __( 'Parent Type:' ),
-    //     'edit_item' => __( 'Edit Type' ), 
-    //     'update_item' => __( 'Update Type' ),
-    //     'add_new_item' => __( 'Add New Type' ),
-    //     'new_item_name' => __( 'New Type Name' ),
-    //     'menu_name' => __( 'Types' ),
+        'name' => __('Województwa', 'rgm'),
+        'singular_name' => __('Województwo', 'rgm'),
+        'search_items' =>  __( 'Szukaj województwa', 'rgm' ),
+        'all_items' => __( 'Wszystkie województwa', 'rgm' ),
+    //     'parent_item' => __( 'Parent Type', 'rgm' ),
+    //     'parent_item_colon' => __( 'Parent Type:', 'rgm' ),
+    //     'edit_item' => __( 'Edit Type', 'rgm' ), 
+    //     'update_item' => __( 'Update Type', 'rgm' ),
+    //     'add_new_item' => __( 'Add New Type', 'rgm' ),
+    //     'new_item_name' => __( 'New Type Name', 'rgm' ),
+    //     'menu_name' => __( 'Types', 'rgm' ),
     ),
     'hierarchical' => true,
     'show_ui' => true,
@@ -99,10 +99,10 @@ register_taxonomy('rgm_province', array('rgm_county'), array(
 );
 register_taxonomy('rgm_city', array('rgm_county'), array(
     'labels' => array(
-        'name' => __('Miasta', 'regionalizmy'),
-        'singular_name' => __('Miasto', 'regionalizmy'),
-        'search_items' =>  __( 'Szukaj miasta' ),
-        'all_items' => __( 'Wszystkie miasta' ),
+        'name' => __(' Miasta', 'rgm' ),
+        'singular_name' => __( 'Miasto', 'rgm' ),
+        'search_items' =>  __( 'Szukaj miasta', 'rgm' ),
+        'all_items' => __( 'Wszystkie miasta', 'rgm' ),
     ),
     'hierarchical' => true,
     'show_ui' => true,
@@ -119,7 +119,7 @@ add_filter( 'manage_rgm_county_posts_columns', 'set_custom_edit_rgm_county_colum
 function set_custom_edit_rgm_county_columns($columns) {
     // unset( $columns['author'] );
 
-    $columns['county_town'] = __( 'Miasto powiatowe', 'your_text_domain' );
+    $columns['county_town'] = __( 'Miasto powiatowe', 'rgm' );
 
     return $columns;
 }

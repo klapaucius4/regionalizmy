@@ -26,7 +26,7 @@
               <div class="col-lg-6 col-md-8 col-sm-10 col-12">
                 <form autocomplete="off" class="ui-widget">
                   <div class="form-group mb-0">
-                    <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe'); ?>">
+                    <input type="text" class="form-control findCountyInput has-warning" placeholder="<?= __('Powiat / miasto powiatowe', 'rgm'); ?>">
                   </div>
                 </form>
               </div>
@@ -56,7 +56,7 @@
             <div class="input-group">
               <input type="text" name="phrase" value="test" placeholder="<?= $sectionSearch['tytul']?:'' . '...'; ?>" class="form-control">
               <span class="input-group-btn">
-                <input type="submit" name="search" value="<?= __('Znajdź'); ?>" class="btn btn-primary">
+                <input type="submit" name="search" value="<?= __('Znajdź', 'rgm'); ?>" class="btn btn-primary">
               </span>
             </div>
           </form>
@@ -100,7 +100,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-            <a href="<?= get_post_type_archive_link('rgm_phrase'); ?>" class="btn btn-secondary mt-5"><?= __('Przejdź do słownika'); ?></a>
+            <a href="<?= get_post_type_archive_link('rgm_phrase'); ?>" class="btn btn-secondary mt-5"><?= __('Przejdź do słownika', 'rgm'); ?></a>
           </div>
         </div>
       <?php endif; ?>
@@ -118,10 +118,10 @@
                 <p>
                   <a href="#" class="btn btn-info"><?= __('Dodaj regionalizm'); ?></a>
                   <?php if(is_user_logged_in()): ?>
-                    <a href="<?= get_permalink(get_page_by_path('konto'))?:'#'; ?>" class="btn btn-primary"><?= __('Moje konto'); ?></a>
+                    <a href="<?= get_permalink(get_page_by_path('konto'))?:'#'; ?>" class="btn btn-primary"><?= __('Moje konto', 'rgm'); ?></a>
                   <?php else: ?>
-                    <a href="<?= get_permalink(get_page_by_path('zaloguj'))?:'#'; ?>" class="btn btn-primary"><?= __('Zaloguj się'); ?></a>
-                    <a href="<?= get_permalink(get_page_by_path('zarejestruj'))?:'#'; ?>" class="btn btn-secondary"><?= __('Zarejestruj się'); ?></a>
+                    <a href="<?= get_permalink(get_page_by_path('zaloguj'))?:'#'; ?>" class="btn btn-primary"><?= __('Zaloguj się', 'rgm'); ?></a>
+                    <a href="<?= get_permalink(get_page_by_path('zarejestruj'))?:'#'; ?>" class="btn btn-secondary"><?= __('Zarejestruj się', 'rgm'); ?></a>
                   <?php endif; ?>
                 </p>
               </div>

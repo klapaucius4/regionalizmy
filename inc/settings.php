@@ -34,7 +34,7 @@ if ( ! function_exists( 'rgm_setup' ) ) :
     function rgm_setup() {
 
         register_nav_menus( array(
-            'menu-1' => __( 'Menu główne', 'regionalizmy' ),
+            'menu-1' => __( 'Menu główne', 'rgm' ),
         ) );
     
         /*
@@ -179,7 +179,7 @@ function generateCountiesDataJs(){
 function myprefix_custom_cron_schedule( $schedules ) {
     $schedules['every_six_hours'] = array(
         'interval' => 900, // Every 15 minutes
-        'display'  => __( 'Every 15 minutes' ),
+        'display'  => __( 'Every 15 minutes', 'rgm' ),
     );
     return $schedules;
 }
@@ -206,22 +206,14 @@ function myprefix_cron_function() {
 
 
 
-// add custom column to wp-admin rgm_phrase posts list
-
+// add custom column to wp-admin rgm_phrase posts list start
 add_filter( 'manage_rgm_phrase_posts_columns', 'set_custom_edit_rgm_phrase_columns' );
-add_action( 'manage_rgm_phrase_posts_custom_column' , 'custom_rgm_phrase_column', 10, 2 );
- 
 function set_custom_edit_rgm_phrase_columns($columns) {
-    // unset( $columns['author'] );
-    // unset( $columns['date'] );
-
-    // $columns['rgm_phrase_meaning'] = __('Znaczenie');
-    // var_dump($columns); exit;
 
     $newColumnsOrder = array(
         'cb' => $columns['cb'],
         'title' => $columns['title'],
-        'rgm_phrase_meaning' => __('Znaczenie'),
+        'rgm_phrase_meaning' => __('Znaczenie', 'rgm'),
         'taxonomy-rgm_phrase_kind' => $columns['taxonomy-rgm_phrase_kind'],
         'taxonomy-rgm_phrase_tag' => $columns['taxonomy-rgm_phrase_tag'],
     );
@@ -230,7 +222,8 @@ function set_custom_edit_rgm_phrase_columns($columns) {
  
     return $columns;
 }
- 
+
+add_action( 'manage_rgm_phrase_posts_custom_column' , 'custom_rgm_phrase_column', 10, 2 );
 function custom_rgm_phrase_column( $column, $post_id ) {
     switch ( $column ) {
         case 'rgm_phrase_meaning' :
@@ -244,9 +237,66 @@ function custom_rgm_phrase_column( $column, $post_id ) {
                     }
                 }
             }else{
-                echo __('Brak');
+                echo __('Brak', 'rgm');
             }
             
             break;
     }
 }
+// add custom column to wp-admin rgm_phrase posts list end
+
+
+// add custom column to wp-admin rgm_meaning posts list start
+add_filter( 'manage_rgm_meaning_posts_columns', 'set_custom_edit_rgm_meaning_columns' );
+function set_custom_edit_rgm_meaning_columns($columns) {
+
+    $newColumnsOrder = array(
+        'cb' => $columns['cb'],
+        'title' => $columns['title'],
+        'rgm_meaning_phrases' => __('Frazy', 'rgm'),
+        // 'taxonomy-rgm_meaning_kind' => $columns['taxonomy-rgm_meaning_kind'],
+        'taxonomy-rgm_meaning_tag' => $columns['taxonomy-rgm_meaning_tag'],
+    );
+
+    $columns = $newColumnsOrder;
+
+    // $columns['rgm_meaning_phrases'] = __('Frazy', 'rgm');
+ 
+    return $columns;
+}
+
+add_action( 'manage_rgm_meaning_posts_custom_column' , 'custom_rgm_meaning_column', 10, 2 );
+function custom_rgm_meaning_column( $column, $post_id ) {
+    switch ( $column ) {
+        case 'rgm_meaning_phrases' :
+            $args = array(
+                'post_type' => 'rgm_phrase',
+                'posts_per_page' => -1,
+                'post_status' => 'publish',
+                'meta_query' => array(
+                    array(
+                        'key' => 'znaczenie',
+                        'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+                        'compare' => 'LIKE'
+                    )
+                )
+            );
+            $myQuery = new WP_Query($args);
+            if($myQuery->have_posts()){
+                $firstLoop = true;
+                while($myQuery->have_posts()){
+                    $myQuery->the_post();
+                    if(!$firstLoop){
+                        echo ", ";
+                    }
+                    $firstLoop = false;
+                    echo '<a href="'.get_the_permalink().'">' . get_the_title() . '</a>';
+                }
+                wp_reset_postdata();
+            }else{
+                echo __('Brak', 'rgm');
+            }
+            break;
+    }
+}
+// add custom column to wp-admin rgm_meaning posts list end
