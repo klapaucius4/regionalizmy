@@ -231,7 +231,7 @@ function custom_rgm_phrase_column( $column, $post_id ) {
                 echo $phraseDefinition;
             }elseif($meaning = get_field('znaczenie', $post_id)){
                 if(isset($meaning[0])){
-                    echo '<a href="#">'.$meaning[0]->post_title.'</a>';
+                    echo '<a href="'.get_edit_post_link($meaning[0]->ID).'">'.$meaning[0]->post_title.'</a>';
                     if($definition = get_field('definicja', $meaning[0]->ID)){
                         echo ' - ' . $definition;
                     }
