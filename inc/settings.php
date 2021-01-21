@@ -214,6 +214,7 @@ function set_custom_edit_rgm_phrase_columns($columns) {
         'cb' => $columns['cb'],
         'title' => $columns['title'],
         'rgm_phrase_meaning' => __('Znaczenie', 'rgm'),
+        'rgm_phrase_nationwide' => __('Wersja ogólnopolska', 'rgm'),
         'taxonomy-rgm_phrase_kind' => $columns['taxonomy-rgm_phrase_kind'],
         'taxonomy-rgm_phrase_tag' => $columns['taxonomy-rgm_phrase_tag'],
     );
@@ -240,6 +241,9 @@ function custom_rgm_phrase_column( $column, $post_id ) {
                 echo __('Brak', 'rgm');
             }
             
+            break;
+        case 'rgm_phrase_nationwide':
+            echo get_field('wersja_ogolnopolska', $post_id) ? '&#10004;' : '';
             break;
     }
 }
