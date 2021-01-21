@@ -243,7 +243,7 @@ function custom_rgm_phrase_column( $column, $post_id ) {
             
             break;
         case 'rgm_phrase_nationwide':
-            echo get_field('wersja_ogolnopolska', $post_id) ? '&#10004;' : '';
+            echo get_field('wersja_ogolnopolska', $post_id) ? '&#10004;' : '&#10006;';
             break;
     }
 }
