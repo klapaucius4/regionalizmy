@@ -244,7 +244,7 @@ function custom_rgm_phrase_column( $column, $post_id ) {
             break;
         case 'rgm_phrase_nationwide':
             // echo 'dupa';
-            echo get_field('wersja_ogolnopolska', $post_id) ? '&#10004;' : '&#10006;';
+            echo get_field('forma_ogolnopolska', $post_id) ? '&#10004;' : '&#10006;';
             break;
     }
 }
