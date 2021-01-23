@@ -6,9 +6,7 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
 
     public function register_routes() {
 
-        $namespace = $this->prefix . '/v' . $this->version;
-
-        register_rest_route( $namespace, '/' . $base, array(
+        register_rest_route( $this->namespace, '/' . $base, array(
             array(
               'methods'             => WP_REST_Server::CREATABLE,
               'callback'            => array( $this, 'create_item' ),
