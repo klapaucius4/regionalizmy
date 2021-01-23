@@ -3,11 +3,11 @@
 class RGM_REST_Controller extends WP_REST_Controller {
     public $version = '1';
     public $prefix = 'rgm';
-    
+
     public $base;
     public $namespace;
 
-    public function __construct(){
+    function __construct(){
         $this->namespace = $this->prefix . '/v' . $this->version;
     }
 

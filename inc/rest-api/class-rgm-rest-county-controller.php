@@ -2,7 +2,10 @@
 
 class RGM_REST_County_Controller extends RGM_REST_Controller {
 
-    public $base = 'county';
+    function __construct(){
+        parent::__construct();
+        $this->base = 'county';
+    }
 
     public function register_routes() {
 
