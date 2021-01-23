@@ -19,7 +19,7 @@ class RGM_REST_County_Controller extends RGM_REST_Controller {
                 ),
               )
         ));
-        register_rest_route( $namespace, '/' . $base . '/schema', array(
+        register_rest_route( $namespace, '/' . $this->base . '/schema', array(
             'methods'  => WP_REST_Server::READABLE,
             'callback' => array( $this, 'get_public_item_schema' ),
         ));

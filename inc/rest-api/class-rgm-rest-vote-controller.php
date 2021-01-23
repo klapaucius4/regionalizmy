@@ -9,7 +9,7 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
 
     public function register_routes() {
 
-        register_rest_route( $this->namespace, '/' . $base, array(
+        register_rest_route( $this->namespace, '/' . $this->base, array(
             array(
               'methods'             => WP_REST_Server::CREATABLE,
               'callback'            => array( $this, 'create_item' ),
@@ -17,7 +17,7 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
               'args'                => $this->get_endpoint_args_for_item_schema( true ),
             ),
         ));
-        register_rest_route( $namespace, '/' . $base . '/schema', array(
+        register_rest_route( $namespace, '/' . $this->base . '/schema', array(
             'methods'  => WP_REST_Server::READABLE,
             'callback' => array( $this, 'get_public_item_schema' ),
         ));
