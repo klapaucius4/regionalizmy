@@ -1,6 +1,6 @@
 <?php
 
-class RGM_REST_Search_Route extends RGM_REST_Controller {
+class RGM_REST_Search_Controller extends RGM_REST_Controller {
 
   public $base = 'search';
 
