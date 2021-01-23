@@ -15,7 +15,7 @@ if ( ! function_exists( 'rgm_setup_options' ) ) :
             `last_update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
             `ip_address` varchar(255) DEFAULT NULL,
             PRIMARY KEY (`id`),
-            KEY `post_id` (`phrase_id`),
+            KEY `phrase_id` (`phrase_id`),
             KEY `user_id` (`user_id`),
             KEY `county_id` (`county_id`),
             KEY `mass_media_id` (`mass_media_id`)
