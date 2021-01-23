@@ -32,7 +32,6 @@ class RGM_REST_Search_Controller extends RGM_REST_Controller {
     $params = $request->get_params();
     if(isset($params['s'])){
       $args = array(
-        // 'post_type' => array('rgm_phrase', 'rgm_meaning'),
         'post_type' => array('rgm_phrase'),
         'posts_per_page' => 8,
         's' => strip_tags($params['s'])
