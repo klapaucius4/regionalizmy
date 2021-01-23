@@ -8,15 +8,13 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
 
         $namespace = $this->prefix . '/v' . $this->version;
 
-        register_rest_route( $namespace, '/' . $this->base, array(
+        register_rest_route( $namespace, '/' . $base, array(
             array(
-              'methods'             => WP_REST_Server::READABLE,
-              'callback'            => array( $this, 'get_items' ),
-              'permission_callback' => array( $this, 'get_items_permissions_check' ),
-              'args'                => array(
-                  'search' => array(),
-                ),
-              )
+              'methods'             => WP_REST_Server::CREATABLE,
+              'callback'            => array( $this, 'create_item' ),
+              'permission_callback' => array( $this, 'create_item_permissions_check' ),
+              'args'                => $this->get_endpoint_args_for_item_schema( true ),
+            ),
         ));
         register_rest_route( $namespace, '/' . $base . '/schema', array(
             'methods'  => WP_REST_Server::READABLE,
@@ -24,37 +22,19 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
         ));
     }
 
-    public function get_items( $request ) {
-        $data = array();
 
-        $args = array(
-            'post_type' => 'rgm_county',
-            'post_status' => 'publish',
-            'posts_per_page' => -1,
-            'orderby' => 'name',
-            'order' => 'ASC'
-        );
-
-        if(isset($request['search'])){
-            $args['s'] = $request['search'];
-            $args['orderby'] = 'relevance';
+    public function create_item( $request ) {
+        var_dump('tttt'); exit;
+        $item = $this->prepare_item_for_database( $request );
+     
+        if ( function_exists( 'slug_some_function_to_create_item' ) ) {
+          $data = slug_some_function_to_create_item( $item );
+          if ( is_array( $data ) ) {
+            return new WP_REST_Response( $data, 200 );
+          }
         }
-
-        $myQuery = new WP_Query($args);
-
-        if($myQuery->have_posts()){
-            while($myQuery->have_posts()){
-                $myQuery->the_post();
-                $data[] = array(
-                    'id' => get_the_ID(),
-                    'name' => get_the_title(),
-                    'city' => get_field('miasto_na_prawach_powiatu')?true:false
-                );
-            }
-            wp_reset_postdata();
-        }
-
-        return new WP_REST_Response( $data, 200 );
+     
+        return new WP_Error( 'cant-create', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
     }
   
   }
