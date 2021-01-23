@@ -51,4 +51,8 @@ class RGM_REST_Search_Controller extends RGM_REST_Controller {
     return new WP_REST_Response( $data, 200 );
   }
 
+  public function get_items_permissions_check( $request ) {
+    return true;
+  }
+
 }
