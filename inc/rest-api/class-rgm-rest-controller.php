@@ -1,13 +1,16 @@
 <?php
 
 class RGM_REST_Controller extends WP_REST_Controller {
-    public $version = '1';
-    public $prefix = 'rgm';
+
+    public $version;
+    public $prefix;
 
     public $base;
     public $namespace;
 
     function __construct(){
+        $this->version = '1';
+        $this->prefix = 'rgm';
         $this->namespace = $this->prefix . '/v' . $this->version;
     }
 
