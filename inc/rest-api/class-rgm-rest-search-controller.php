@@ -12,7 +12,7 @@ class RGM_REST_Search_Controller extends RGM_REST_Controller {
       array(
         'methods'             => WP_REST_Server::READABLE,
         'callback'            => array( $this, 'get_items' ),
-        // 'permission_callback' => array( $this, 'get_items_permissions_check' ),
+        'permission_callback' => array( $this, 'get_items_permissions_check' ),
         'args'                => array(
             's' => array(),
             'type' => array(

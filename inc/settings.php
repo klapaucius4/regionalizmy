@@ -19,7 +19,7 @@ if ( ! function_exists( 'rgm_setup_options' ) ) :
             KEY `user_id` (`user_id`),
             KEY `county_id` (`county_id`),
             KEY `mass_media_id` (`mass_media_id`)
-          ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin2;
+          ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
         ";
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         dbDelta( $create_table_query );
