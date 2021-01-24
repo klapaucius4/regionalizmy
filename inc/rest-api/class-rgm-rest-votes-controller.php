@@ -29,8 +29,10 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
         $item = $this->prepare_item_for_database( $request );
         if ( !empty($item) ) {
           $voteRgmDatabase = new RGM_Database('wp_votes');
-          var_dump($voteRgmDatabase->insert($item)); exit;
-          if($voteId = $voteRgmDatabase->insert($item)){
+          
+          $voteId = $voteRgmDatabase->insert($item);
+
+          if($voteId){
             return new WP_REST_Response( array('vote_id' => $voteId), 200 );
           }
           // $data = slug_some_function_to_create_item( $item );
