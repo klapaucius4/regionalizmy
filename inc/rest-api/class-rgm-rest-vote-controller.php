@@ -33,7 +33,6 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
             return new WP_REST_Response( $data, 200 );
           }
         }
-     
         return new WP_Error( 'cant-create', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
     }
 
@@ -51,11 +50,11 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
         isset($params['value'])
       ){
         $returnData = array(
-          'message' => 'Ok'
-        );
-      }else{
-        $returnData = array(
-          'message' => 'no required fields'
+          'phrase' => intval(strip_tags($params['phrase'])),
+          'county' => intval(strip_tags($params['county'])),
+          'mass_media' => intval(strip_tags($params['mass_media'])),
+          'user' => intval(strip_tags($params['user'])),
+          'value' => intval(strip_tags($params['value']))
         );
       }
 
