@@ -15,11 +15,11 @@ if ( ! function_exists( 'rgm_setup_options' ) ) :
             `last_update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
             `ip_address` varchar(255) DEFAULT NULL,
             PRIMARY KEY (`id`),
-            KEY `post_id` (`phrase_id`),
+            KEY `phrase_id` (`phrase_id`),
             KEY `user_id` (`user_id`),
             KEY `county_id` (`county_id`),
             KEY `mass_media_id` (`mass_media_id`)
-          ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin2;
+          ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
         ";
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         dbDelta( $create_table_query );
@@ -214,6 +214,7 @@ function set_custom_edit_rgm_phrase_columns($columns) {
         'cb' => $columns['cb'],
         'title' => $columns['title'],
         'rgm_phrase_meaning' => __('Znaczenie', 'rgm'),
+        'rgm_phrase_nationwide' => __('Forma ogólnopolska', 'rgm'),
         'taxonomy-rgm_phrase_kind' => $columns['taxonomy-rgm_phrase_kind'],
         'taxonomy-rgm_phrase_tag' => $columns['taxonomy-rgm_phrase_tag'],
     );
@@ -240,6 +241,9 @@ function custom_rgm_phrase_column( $column, $post_id ) {
                 echo __('Brak', 'rgm');
             }
             
+            break;
+        case 'rgm_phrase_nationwide':
+            echo '<p class="text-center">' . (get_field('forma_ogolnopolska', $post_id) ? '&#10004;' : '&#10006;') . '</p>';
             break;
     }
 }
@@ -290,7 +294,7 @@ function custom_rgm_meaning_column( $column, $post_id ) {
                         echo ", ";
                     }
                     $firstLoop = false;
-                    echo '<a href="'.get_the_permalink().'">' . get_the_title() . '</a>';
+                    echo '<a href="'.get_edit_post_link(get_the_ID()).'">' . get_the_title() . '</a>';
                 }
                 wp_reset_postdata();
             }else{

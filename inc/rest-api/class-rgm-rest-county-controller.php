@@ -1,23 +1,26 @@
 <?php
 
-class RGM_REST_County_Route extends RGM_REST_Controller {
+class RGM_REST_County_Controller extends RGM_REST_Controller {
 
-    public $base = 'county';
+    function __construct(){
+        parent::__construct();
+        $this->base = 'county';
+    }
 
     public function register_routes() {
 
-        $namespace = $this->prefix . '/v' . $this->version;
-
-        register_rest_route( $namespace, '/' . $this->base, array(
+        register_rest_route( $this->namespace, '/' . $this->base, array(
             array(
               'methods'             => WP_REST_Server::READABLE,
               'callback'            => array( $this, 'get_items' ),
+              'permission_callback' => array( $this, 'get_items_permissions_check' ),
               'args'                => array(
                   'search' => array(),
                 ),
               )
         ));
-        register_rest_route( $namespace, '/' . $base . '/schema', array(
+        
+        register_rest_route( $namespace, '/' . $this->base . '/schema', array(
             'methods'  => WP_REST_Server::READABLE,
             'callback' => array( $this, 'get_public_item_schema' ),
         ));
