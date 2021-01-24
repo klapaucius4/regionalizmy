@@ -97,7 +97,7 @@
                   id: el.id
               };
           });
-          response(data);
+          response(transformed);
         },
         error: function () {
           response([]);
