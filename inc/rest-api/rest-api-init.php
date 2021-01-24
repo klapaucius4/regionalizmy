@@ -2,8 +2,8 @@
 require get_template_directory() . '/inc/rest-api/class-rgm-rest-controller.php';
 
 require get_template_directory() . '/inc/rest-api/class-rgm-rest-search-controller.php';
-require get_template_directory() . '/inc/rest-api/class-rgm-rest-county-controller.php';
-require get_template_directory() . '/inc/rest-api/class-rgm-rest-vote-controller.php';
+require get_template_directory() . '/inc/rest-api/class-rgm-rest-counties-controller.php';
+require get_template_directory() . '/inc/rest-api/class-rgm-rest-votes-controller.php';
 
 add_action( 'rest_api_init', function () {
     /**
