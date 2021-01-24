@@ -40,7 +40,7 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
     ///
 
     protected function prepare_item_for_database( $request ) {
-      $returnData = array('status' => 0);
+      $returnData = array();
       
       $params = $request->get_params();
       if(
