@@ -85,10 +85,9 @@
   $(".frontpage-search-section__input-search-dictionary").autocomplete({
     source: function (request, response) {
       $.ajax({
-        url: "/wp-json/rgm/v1/search/",
+        url: "/wp-json/rgm/v1/phrases/",
         data: {
-          's': request.term,
-          'type': 'dictionary'
+          'search': request.term,
         },
         type: "GET",
         success: function (data) {
