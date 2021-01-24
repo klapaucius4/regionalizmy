@@ -46,14 +46,14 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
       if(
         isset($params['phrase']) && 
         isset($params['county']) && 
-        isset($params['mass_media']) && 
+        isset($params['massmedia']) && 
         isset($params['user']) && 
         isset($params['value'])
       ){
         $returnData = array(
           'phrase' => intval(strip_tags($params['phrase'])),
           'county' => intval(strip_tags($params['county'])),
-          'mass_media' => intval(strip_tags($params['mass_media'])),
+          'massmedia' => intval(strip_tags($params['massmedia'])),
           'user' => intval(strip_tags($params['user'])),
           'value' => intval(strip_tags($params['value']))
         );
