@@ -9,13 +9,27 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
 
     public function register_routes() {
 
+        // register_rest_route( $this->namespace, '/' . $this->base, array(
+        //     array(
+        //       'methods'             => WP_REST_Server::CREATABLE,
+        //       'callback'            => array( $this, 'create_item' ),
+        //       'permission_callback' => array( $this, 'create_item_permissions_check' ),
+        //       'args'                => $this->get_endpoint_args_for_item_schema( true ),
+        //     ),
+        // ));
+
         register_rest_route( $this->namespace, '/' . $this->base, array(
-            array(
-              'methods'             => WP_REST_Server::CREATABLE,
-              'callback'            => array( $this, 'create_item' ),
-              // 'permission_callback' => array( $this, 'create_item_permissions_check' ),
-              // 'args'                => $this->get_endpoint_args_for_item_schema( true ),
-            ),
+          array(
+            'methods'             => WP_REST_Server::READABLE,
+            'callback'            => array( $this, 'get_items' ),
+            'permission_callback' => array( $this, 'get_items_permissions_check' ),
+            'args'                => array(
+                's' => array(),
+                'type' => array(
+                  'default' => 'dictionary', // or 'blog' or 'all'
+                )
+              ),
+            )
         ));
         
         register_rest_route( $namespace, '/' . $this->base . '/schema', array(
@@ -25,8 +39,13 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
     }
 
 
+    public function get_items( $request ) {
+      var_dump('test 2222'); exit;
+    }
+
+
     public function create_item( $request ) {
-        // var_dump('tttt'); exit;
+        var_dump('tttt'); exit;
         $item = $this->prepare_item_for_database( $request );
      
         if ( function_exists( 'slug_some_function_to_create_item' ) ) {
