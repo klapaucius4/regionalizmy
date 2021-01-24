@@ -49,7 +49,7 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
     }
 
 
-    public function create_item_permissions_check(){
+    public function create_item_permissions_check( $request ){
       return true;
     }
   
