@@ -51,12 +51,10 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
         isset($params['value'])
       ){
         $returnData = array(
-          'status' => 1,
           'message' => 'Ok'
         );
       }else{
         $returnData = array(
-          'status' => 0,
           'message' => 'no required fields'
         );
       }
