@@ -91,6 +91,7 @@
         },
         type: "GET",
         success: function (data) {
+          data = ['Trolejbus', 'Flaczki'];
           response(data);
         },
         error: function () {
