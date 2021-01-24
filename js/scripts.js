@@ -91,7 +91,6 @@
         },
         type: "GET",
         success: function (data) {
-          console.log(data);
           var transformed = $.map(data, function (el) {
               return {
                   label: el.name,
@@ -155,10 +154,7 @@
         
       });
     }
-
-
-    // console.log(phraseId);
-    // console.log(voteValue);
+    
   });
 
 })(jQuery); // End of use strict
