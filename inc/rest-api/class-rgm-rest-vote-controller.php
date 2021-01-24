@@ -26,9 +26,8 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
 
 
     public function create_item( $request ) {
-        // var_dump('tttt'); exit;
         $item = $this->prepare_item_for_database( $request );
-     
+        var_dump($item); exit;
         if ( function_exists( 'slug_some_function_to_create_item' ) ) {
           $data = slug_some_function_to_create_item( $item );
           if ( is_array( $data ) ) {
@@ -41,10 +40,10 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
 
     ///
 
-    protected function prepare_item_for_database( $request ) {
-      var_dump($request);
-      return array();
-    }
+    // protected function prepare_item_for_database( $request ) {
+    //   var_dump($request);
+    //   return array();
+    // }
 
 
     public function create_item_permissions_check( $request ){
