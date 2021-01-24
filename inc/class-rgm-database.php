@@ -40,7 +40,7 @@ class RGM_Database
         $wpdb->show_errors();
         $wpdb->insert($this->tableName, $data);
 
-        var_dump($wpdb->last_query); exit;
+        // var_dump($wpdb->last_query); exit;
 
         return $wpdb->insert_id;
     }
