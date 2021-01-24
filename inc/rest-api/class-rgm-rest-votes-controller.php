@@ -1,10 +1,10 @@
 <?php
 
-class RGM_REST_Vote_Controller extends RGM_REST_Controller {
+class RGM_REST_Votes_Controller extends RGM_REST_Controller {
 
     function __construct(){
         parent::__construct();
-        $this->base = 'vote';
+        $this->base = 'votes';
     }
 
     public function register_routes() {
@@ -34,15 +34,32 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
             return new WP_REST_Response( $data, 200 );
           }
         }
-     
         return new WP_Error( 'cant-create', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
     }
 
     ///
 
     protected function prepare_item_for_database( $request ) {
-      var_dump($request); exit;
-      return array();
+      $returnData = array();
+      
+      $params = $request->get_params();
+      if(
+        isset($params['phrase']) && 
+        isset($params['county']) && 
+        isset($params['massmedia']) && 
+        isset($params['user']) && 
+        isset($params['value'])
+      ){
+        $returnData = array(
+          'phrase' => intval(strip_tags($params['phrase'])),
+          'county' => intval(strip_tags($params['county'])),
+          'massmedia' => intval(strip_tags($params['massmedia'])),
+          'user' => intval(strip_tags($params['user'])),
+          'value' => intval(strip_tags($params['value']))
+        );
+      }
+
+      return $returnData;
     }
 
 
