@@ -27,12 +27,14 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
 
     public function create_item( $request ) {
         $item = $this->prepare_item_for_database( $request );
-        var_dump($item); exit;
-        if ( function_exists( 'slug_some_function_to_create_item' ) ) {
-          $data = slug_some_function_to_create_item( $item );
-          if ( is_array( $data ) ) {
-            return new WP_REST_Response( $data, 200 );
-          }
+        if ( !empty($item) ) {
+          $post = wp_insert_post(array(
+            
+          ));
+          // $data = slug_some_function_to_create_item( $item );
+          // if ( is_array( $data ) ) {
+          //   return new WP_REST_Response( $data, 200 );
+          // }
         }
         return new WP_Error( 'cant-create', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
     }
