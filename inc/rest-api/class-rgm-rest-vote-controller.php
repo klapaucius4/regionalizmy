@@ -40,7 +40,7 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
     ///
 
     protected function prepare_item_for_database( $request ) {
-      var_dump($request); exit;
+      var_dump($request->get_body()); exit;
       return array();
     }
 
