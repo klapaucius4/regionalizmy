@@ -39,8 +39,6 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
         return new WP_Error( 'cant-create', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
     }
 
-
-
     ///
 
     protected function prepare_item_for_database( $request ) {
