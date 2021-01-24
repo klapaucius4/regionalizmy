@@ -61,7 +61,8 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
           'county_id' => intval(strip_tags($params['county_id'])),
           'mass_media_id' => intval(strip_tags($params['mass_media_id'])),
           'user_id' => intval(strip_tags($params['user_id'])),
-          'value' => intval(strip_tags($params['value']))
+          'value' => intval(strip_tags($params['value'])),
+          'ip_address' => getUserIpAddr()
         );
       }
 
