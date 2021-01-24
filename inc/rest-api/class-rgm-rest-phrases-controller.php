@@ -1,6 +1,6 @@
 <?php
 
-class RGM_REST_Phraases_Controller extends RGM_REST_Controller {
+class RGM_REST_Phrases_Controller extends RGM_REST_Controller {
 
     function __construct(){
         parent::__construct();
