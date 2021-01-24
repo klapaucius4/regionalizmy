@@ -13,8 +13,8 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
             array(
               'methods'             => WP_REST_Server::CREATABLE,
               'callback'            => array( $this, 'create_item' ),
-              'permission_callback' => array( $this, 'create_item_permissions_check' ),
-              'args'                => $this->get_endpoint_args_for_item_schema( true ),
+              // 'permission_callback' => array( $this, 'create_item_permissions_check' ),
+              // 'args'                => $this->get_endpoint_args_for_item_schema( true ),
             ),
         ));
         
