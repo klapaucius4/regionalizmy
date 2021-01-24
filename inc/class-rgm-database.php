@@ -1,8 +1,8 @@
 <?php
 /**
- * Abstract class which has helper functions to get data from the database
+ * Class which has helper functions to get data from the database
  */
-abstract class RGM_Database
+class RGM_Database
 {
     /**
      * The current table name
