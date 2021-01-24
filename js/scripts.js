@@ -59,7 +59,7 @@
               }
               return {
                   label: countyName,
-                  value: el.id
+                  id: el.id
               };
           });
           response(transformed);
@@ -94,7 +94,7 @@
           var transformed = $.map(data, function (el) {
               return {
                   label: el.name,
-                  value: el.id
+                  id: el.id
               };
           });
           response(data);
