@@ -59,7 +59,7 @@
               }
               return {
                   label: countyName,
-                  id: el.id
+                  value: el.id
               };
           });
           response(transformed);
@@ -91,7 +91,12 @@
         },
         type: "GET",
         success: function (data) {
-          data = ['Trolejbus', 'Flaczki'];
+          var transformed = $.map(data, function (el) {
+              return {
+                  label: el.name,
+                  value: el.id
+              };
+          });
           response(data);
         },
         error: function () {
