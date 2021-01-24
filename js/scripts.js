@@ -91,6 +91,7 @@
         },
         type: "GET",
         success: function (data) {
+          console.log(data);
           var transformed = $.map(data, function (el) {
               return {
                   label: el.name,
