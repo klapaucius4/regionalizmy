@@ -26,7 +26,7 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
 
 
     public function create_item( $request ) {
-        var_dump('tttt'); exit;
+        // var_dump('tttt'); exit;
         $item = $this->prepare_item_for_database( $request );
      
         if ( function_exists( 'slug_some_function_to_create_item' ) ) {
