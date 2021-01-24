@@ -4,7 +4,7 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
 
     function __construct(){
         parent::__construct();
-        $this->base = 'vote';
+        $this->base = 'votes';
     }
 
     public function register_routes() {
