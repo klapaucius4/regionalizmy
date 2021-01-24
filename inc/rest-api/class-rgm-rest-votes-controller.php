@@ -29,7 +29,6 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
         $item = $this->prepare_item_for_database( $request );
         if ( !empty($item) ) {
           $voteRgmDatabase = new RGM_Database('wp_votes');
-          var_dump($voteRgmDatabase->insert($item)); exit;
           if($voteId = $voteRgmDatabase->insert($item)){
             return new WP_REST_Response( array('vote_id' => $voteId), 200 );
           }
@@ -48,17 +47,17 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
       
       $params = $request->get_params();
       if(
-        isset($params['phrase']) && 
-        isset($params['county']) && 
-        isset($params['massmedia']) && 
-        isset($params['user']) && 
+        isset($params['phrase_id']) && 
+        isset($params['county_id']) && 
+        isset($params['mass_media']) && 
+        isset($params['user_id']) && 
         isset($params['value'])
       ){
         $returnData = array(
-          'phrase' => intval(strip_tags($params['phrase'])),
-          'county' => intval(strip_tags($params['county'])),
-          'massmedia' => intval(strip_tags($params['massmedia'])),
-          'user' => intval(strip_tags($params['user'])),
+          'phrase_id' => intval(strip_tags($params['phrase'])),
+          'county_id' => intval(strip_tags($params['county'])),
+          'mass_media' => intval(strip_tags($params['massmedia'])),
+          'user_id' => intval(strip_tags($params['user'])),
           'value' => intval(strip_tags($params['value']))
         );
       }
