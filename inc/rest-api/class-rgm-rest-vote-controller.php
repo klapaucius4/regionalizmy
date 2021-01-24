@@ -40,8 +40,28 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
     ///
 
     protected function prepare_item_for_database( $request ) {
-      var_dump($request->get_params()); exit;
-      return array();
+      $returnData = array('status' => 0);
+      
+      $params = $request->get_params();
+      if(
+        isset($params['phrase']) && 
+        isset($params['county']) && 
+        isset($params['mass_media']) && 
+        isset($params['user']) && 
+        isset($params['value'])
+      ){
+        $returnData = array(
+          'status' => 1,
+          'message' => 'Ok'
+        );
+      }else{
+        $returnData = array(
+          'status' => 0,
+          'message' => 'no required fields'
+        );
+      }
+
+      return $returnData;
     }
 
 
