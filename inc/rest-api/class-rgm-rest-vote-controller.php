@@ -13,7 +13,7 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
             array(
               'methods'             => WP_REST_Server::CREATABLE,
               'callback'            => array( $this, 'create_item' ),
-              // 'permission_callback' => array( $this, 'create_item_permissions_check' ),
+              'permission_callback' => array( $this, 'create_item_permissions_check' ),
               'args'                => $this->get_endpoint_args_for_item_schema( true ),
             ),
         ));
@@ -26,7 +26,7 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
 
 
     public function create_item( $request ) {
-        var_dump('tttt'); exit;
+        // var_dump('tttt'); exit;
         $item = $this->prepare_item_for_database( $request );
      
         if ( function_exists( 'slug_some_function_to_create_item' ) ) {
@@ -37,6 +37,16 @@ class RGM_REST_Vote_Controller extends RGM_REST_Controller {
         }
      
         return new WP_Error( 'cant-create', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
+    }
+
+    protected function prepare_item_for_database( $request ) {
+      var_dump($request);
+      return array();
+    }
+
+
+    private function create_item_permissions_check(){
+      return true;
     }
   
   }
