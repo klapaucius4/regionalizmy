@@ -33,10 +33,10 @@
             }
             
         ?>
-            <p class="post-meta"><i class="fas fa-book-open mr-2"></i><?= $meaning[0]->post_title; ?></p>
+            <p class="post-meta"><i class="fas fa-book-open mr-2" title="Znaczenie"></i><?= $meaning[0]->post_title; ?></p>
         <?php endif; ?>
         <?php if($synonyms): ?>
-            <p class="post-meta"><i class="fas fa-project-diagram mr-2"></i><?= $synonyms; ?></p>
+            <p class="post-meta"><i class="fas fa-project-diagram mr-2" title="Synonimy"></i><?= $synonyms; ?></p>
         <?php endif; ?>
         <!-- <p class="post-meta"><?= __('Dodane przez', 'rgm'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p> -->
     </div>
