@@ -28,7 +28,7 @@
                     if(!empty($synonyms)){
                         $synonyms .= ', ';
                     }
-                    $synonyms .= '<a href="#">' . get_the_title() . '</a>';
+                    $synonyms .= '<a href="'.get_the_permalink().'">' . get_the_title() . '</a>';
                 }
             }
             
