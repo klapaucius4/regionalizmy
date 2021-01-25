@@ -4,10 +4,36 @@
             <h2 class="post-title m-0"><?= get_the_title(); ?></h2>
             <!-- <h3 class="post-subtitle"><?= get_field('krotki_opis'); ?></h3> -->
         </a>
-        <?php $meaning = get_field('znaczenie');
-            if(isset($meaning[0])): ?>
+        <?php
+        $meaning = get_field('znaczenie');
+        $synonyms = null;
+        if(isset($meaning[0])): 
+            $args = array(
+                'post_type' => 'rgm_phrase',
+                'posts_per_page' => -1,
+                'post_status' => 'publish',
+                'meta_query' => array(
+                    array(
+                        'key' => 'znaczenie', // name of custom field
+                        'value' => '"' . $meaning[0]->ID . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+                        'compare' => 'LIKE'
+                    )
+                )
+            );
+            $rgmQuery = new WP_Query($args);
+            if($rgmQuery->have_posts()){
+                $synonyms = '';
+                while($rgmQuery->have_posts()){
+                    $rgmQuery->the_post();
+                    $synonyms .= get_the_title();
+                }
+            }
+            
+        ?>
             <p class="post-meta"><i class="fas fa-book-open mr-2"></i><?= $meaning[0]->post_title; ?></p>
-            <p class="post-meta"><i class="fas fa-project-diagram mr-2"></i><?= $meaning[0]->post_title; ?></p>
+        <?php endif; ?>
+        <?php if($synonyms): ?>
+            <p class="post-meta"><i class="fas fa-project-diagram mr-2"></i><?= $synonyms; ?></p>
         <?php endif; ?>
         <!-- <p class="post-meta"><?= __('Dodane przez', 'rgm'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p> -->
     </div>
