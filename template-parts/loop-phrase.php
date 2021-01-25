@@ -6,7 +6,7 @@
         </a>
         <?php $meaning = get_field('znaczenie');
             if(isset($meaning[0])): ?>
-            <p class="post-meta"><?= $meaning[0]->post_title; ?></p>
+            <p class="post-meta"><i class="fas fa-project-diagram mr-3"></i><?= $meaning[0]->post_title; ?></p>
         <?php endif; ?>
         <!-- <p class="post-meta"><?= __('Dodane przez', 'rgm'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p> -->
     </div>
