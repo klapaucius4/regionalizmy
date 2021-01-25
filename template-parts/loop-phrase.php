@@ -1,5 +1,5 @@
-<div class="row post-preview mb-3">
-    <div class="col-md-8">
+<div class="row mb-3">
+    <div class="col-md-8 post-preview">
         <a href="<?= get_the_permalink(); ?>">
             <h2 class="post-title m-0"><?= get_the_title(); ?></h2>
             <!-- <h3 class="post-subtitle"><?= get_field('krotki_opis'); ?></h3> -->
