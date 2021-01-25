@@ -25,7 +25,10 @@
                 $synonyms = '';
                 while($rgmQuery->have_posts()){
                     $rgmQuery->the_post();
-                    $synonyms .= get_the_title();
+                    if(!empty($synonyms)){
+                        $synonyms .= ', ';
+                    }
+                    $synonyms .= '<a href="#">' . get_the_title() . '</a>';
                 }
             }
             
