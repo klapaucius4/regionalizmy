@@ -70,8 +70,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form autocomplete="off" class="ui-widget">
-        <div class="modal-body">
+      <div class="modal-body">
+        <form autocomplete="off" class="ui-widget">
           <fieldset class="form-group fieldset1">
             <div class="form-check">
               <?php //$rgmUserCountyCookie = isset($_COOKIE['rgmUserCounty'])?json_decode(stripslashes($_COOKIE['rgmUserCounty']), true):null; ?>
@@ -112,12 +112,12 @@
             <?php endwhile; wp_reset_postdata(); ?>
           <?php endif; ?>
           </fieldset>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success"><?= __('Potwierdź', 'rgm'); ?></button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= __('Zamknij', 'rgm'); ?></button>
-        </div>
-      </form>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success"><?= __('Potwierdź', 'rgm'); ?></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= __('Zamknij', 'rgm'); ?></button>
+      </div>
     </div>
   </div>
 </div>
