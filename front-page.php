@@ -92,7 +92,7 @@
           <div class="col-md-8">
             <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
               <?php
-              $showPostMeta = false;
+              $hidePostMeta = true;
               include( locate_template('./template-parts/loop-phrase.php') );
               ?>
               <hr>
