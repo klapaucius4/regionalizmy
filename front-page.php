@@ -93,7 +93,8 @@
             <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
               <?php
               $showPostMeta = false;
-              get_template_part('template-parts/loop-phrase', ''); ?>
+              include( locate_template('template-parts/loop-phrase') );
+              ?>
               <hr>
             <?php endwhile; wp_reset_postdata(); ?>
             <div class="clearfix"></div>
