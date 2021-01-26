@@ -105,7 +105,7 @@
         </div>
       </div>
     </div>
-    <?php elseif(is_category()): ?>
+    <?php elseif(is_archive()): ?>
 
     <div class="container">
       <div class="row">
