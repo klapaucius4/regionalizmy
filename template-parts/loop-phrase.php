@@ -1,3 +1,4 @@
+<?php $showPostMeta = true; ?>
 <div class="row mb-3">
     <div class="col-md-8 post-preview">
         <a href="<?= get_the_permalink(); ?>">
@@ -5,6 +6,8 @@
             <!-- <h3 class="post-subtitle"><?= get_field('krotki_opis'); ?></h3> -->
         </a>
         <?php
+        if($showPostMeta):
+
         $meaning = get_field('znaczenie');
         $synonyms = null;
         if(isset($meaning[0])): 
@@ -37,7 +40,8 @@
         <?php if($synonyms): ?>
             <p class="post-meta"><i class="fas fa-project-diagram mr-2" title="<?= __('Synonimy'); ?>"></i><?= $synonyms; ?></p>
         <?php endif; ?>
-        <!-- <p class="post-meta"><?= __('Dodane przez', 'rgm'); ?> <a href="#"><?= get_the_author(); ?></a> <?= get_the_date(); ?></p> -->
+        
+        <?php endif; ?>
     </div>
     <div class="vote-buttons col-md-4 d-flex justify-content-end align-items-center">
         <button class="btn btn--vote btn-success mr-1" data-phrase-name="<?= get_the_title(); ?>" data-phrase-id="<?= get_the_ID(); ?>" data-vote-value="1"><?= __('Znam', 'rgm'); ?></button>
