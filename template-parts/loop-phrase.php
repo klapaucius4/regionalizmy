@@ -5,7 +5,7 @@
             <!-- <h3 class="post-subtitle"><?= get_field('krotki_opis'); ?></h3> -->
         </a>
         <?php
-        if($hidePostMeta):
+        if(!$hidePostMeta):
 
         $meaning = get_field('znaczenie');
         $synonyms = null;
