@@ -9,7 +9,7 @@
 
         $meaning = get_field('znaczenie');
         $synonyms = null;
-        if(isset($meaning[0])): 
+        if(isset($meaning[0])):
             $args = array(
                 'post_type' => 'rgm_phrase',
                 'posts_per_page' => -1,
