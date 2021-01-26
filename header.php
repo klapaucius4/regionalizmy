@@ -123,7 +123,10 @@
           <!-- Breadcrumbs -->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item ml-4"><a href="#">Home</a></li>
+              <?php
+                $frontpageID = get_option( 'page_on_front' );
+              ?>
+              <li class="breadcrumb-item ml-4"><a href="<?= get_the_permalink($frontpageID); ?>"><?= get_the_title($frontpageID); ?></a></li>
               <li class="breadcrumb-item"><a href="#">Library</a></li>
               <li class="breadcrumb-item active" aria-current="page">Data</li>
             </ol>
