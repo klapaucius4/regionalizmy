@@ -91,7 +91,9 @@
           </div>
           <div class="col-md-8">
             <?php while($myQuery->have_posts()): $myQuery->the_post(); ?>
-              <?php get_template_part('template-parts/loop-phrase', ''); ?>
+              <?php
+              $showPostMeta = false;
+              get_template_part('template-parts/loop-phrase', ''); ?>
               <hr>
             <?php endwhile; wp_reset_postdata(); ?>
             <div class="clearfix"></div>
