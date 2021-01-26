@@ -113,14 +113,23 @@
   <section class="section-space">
     <!-- Main Content -->
     <div class="container">
-      <!-- Breadcrumbs -->
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item ml-4"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Library</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Data</li>
-        </ol>
-      </nav>
+      <div class="row">
+        <div class="col-md-12">
+          <h1><?= get_the_archive_title(); ?></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Breadcrumbs -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item ml-4"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
     </div>
   </section>
   <?php endif; ?>
