@@ -6,39 +6,39 @@
         </a>
         <?php
         if(!$hidePostMeta):
-
-        $meaning = get_field('znaczenie');
-        $synonyms = null;
-        if(isset($meaning[0])):
-            $args = array(
-                'post_type' => 'rgm_phrase',
-                'posts_per_page' => -1,
-                'post_status' => 'publish',
-                'meta_query' => array(
-                    array(
-                        'key' => 'znaczenie', // name of custom field
-                        'value' => '"' . $meaning[0]->ID . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
-                        'compare' => 'LIKE'
+            
+            $meaning = get_field('znaczenie');
+            $synonyms = null;
+            if(isset($meaning[0])):
+                $args = array(
+                    'post_type' => 'rgm_phrase',
+                    'posts_per_page' => -1,
+                    'post_status' => 'publish',
+                    'meta_query' => array(
+                        array(
+                            'key' => 'znaczenie', // name of custom field
+                            'value' => '"' . $meaning[0]->ID . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+                            'compare' => 'LIKE'
+                        )
                     )
-                )
-            );
-            $rgmQuery = new WP_Query($args);
-            if($rgmQuery->have_posts()){
-                $synonyms = '';
-                while($rgmQuery->have_posts()){
-                    $rgmQuery->the_post();
-                    if(!empty($synonyms)){
-                        $synonyms .= ', ';
+                );
+                $rgmQuery = new WP_Query($args);
+                if($rgmQuery->have_posts()){
+                    $synonyms = '';
+                    while($rgmQuery->have_posts()){
+                        $rgmQuery->the_post();
+                        if(!empty($synonyms)){
+                            $synonyms .= ', ';
+                        }
+                        $synonyms .= '<a href="'.get_the_permalink().'">' . get_the_title() . '</a>';
                     }
-                    $synonyms .= '<a href="'.get_the_permalink().'">' . get_the_title() . '</a>';
                 }
-            }
-        ?>
-            <p class="post-meta"><i class="fas fa-book-open mr-2" title="<?= __('Znaczenie'); ?>"></i><?= $meaning[0]->post_title; ?></p>
-        <?php endif; ?>
-        <?php if($synonyms): ?>
-            <p class="post-meta"><i class="fas fa-project-diagram mr-2" title="<?= __('Synonimy'); ?>"></i><?= $synonyms; ?></p>
-        <?php endif; ?>
+            ?>
+                <p class="post-meta"><i class="fas fa-book-open mr-2" title="<?= __('Znaczenie'); ?>"></i><?= $meaning[0]->post_title; ?></p>
+            <?php endif; ?>
+            <?php if($synonyms): ?>
+                <p class="post-meta"><i class="fas fa-project-diagram mr-2" title="<?= __('Synonimy'); ?>"></i><?= $synonyms; ?></p>
+            <?php endif; ?>
         
         <?php endif; ?>
     </div>
