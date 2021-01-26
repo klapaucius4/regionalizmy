@@ -12,6 +12,11 @@ require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 require get_template_directory() . '/inc/custom-post-types.php';
 
 /**
+ * RGM Database
+ */
+require get_template_directory() . '/inc/class-rgm-database.php';
+
+/**
  * Helpers additions.
  */
 require get_template_directory() . '/inc/helpers.php';

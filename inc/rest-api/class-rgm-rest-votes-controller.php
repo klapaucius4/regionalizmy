@@ -27,12 +27,16 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
 
     public function create_item( $request ) {
         $item = $this->prepare_item_for_database( $request );
-        var_dump($item); exit;
-        if ( function_exists( 'slug_some_function_to_create_item' ) ) {
-          $data = slug_some_function_to_create_item( $item );
-          if ( is_array( $data ) ) {
-            return new WP_REST_Response( $data, 200 );
+        if ( !empty($item) ) {
+          $voteRgmDatabase = new RGM_Database('wp_rgm_votes');
+
+          if($voteId = $voteRgmDatabase->insert($item)){
+            return new WP_REST_Response( array('vote_id' => $voteId), 200 );
           }
+          // $data = slug_some_function_to_create_item( $item );
+          // if ( is_array( $data ) ) {
+          //   return new WP_REST_Response( $data, 200 );
+          // }
         }
         return new WP_Error( 'cant-create', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
     }
@@ -44,18 +48,19 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
       
       $params = $request->get_params();
       if(
-        isset($params['phrase']) && 
-        isset($params['county']) && 
-        isset($params['massmedia']) && 
-        isset($params['user']) && 
+        isset($params['phrase_id']) && 
+        isset($params['county_id']) && 
+        isset($params['mass_media_id']) && 
+        isset($params['user_id']) && 
         isset($params['value'])
       ){
         $returnData = array(
-          'phrase' => intval(strip_tags($params['phrase'])),
-          'county' => intval(strip_tags($params['county'])),
-          'massmedia' => intval(strip_tags($params['massmedia'])),
-          'user' => intval(strip_tags($params['user'])),
-          'value' => intval(strip_tags($params['value']))
+          'phrase_id' => intval(strip_tags($params['phrase_id'])),
+          'county_id' => intval(strip_tags($params['county_id'])),
+          'mass_media_id' => intval(strip_tags($params['mass_media_id'])),
+          'user_id' => intval(strip_tags($params['user_id'])),
+          'value' => intval(strip_tags($params['value'])),
+          'ip_address' => getUserIpAddr()
         );
       }
 

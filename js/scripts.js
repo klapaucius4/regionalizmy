@@ -48,7 +48,7 @@
   $(".findCountyInput, .findCountyInput2, .findCountyInput3").autocomplete({
     source: function (request, response) {
       $.ajax({
-        url: "/wp-json/rgm/v1/county/",
+        url: "/wp-json/rgm/v1/counties/",
         data: { 'search': request.term },
         type: "GET",
         success: function (data) {
@@ -85,14 +85,19 @@
   $(".frontpage-search-section__input-search-dictionary").autocomplete({
     source: function (request, response) {
       $.ajax({
-        url: "/wp-json/rgm/v1/search/",
+        url: "/wp-json/rgm/v1/phrases/",
         data: {
-          's': request.term,
-          'type': 'dictionary'
+          'search': request.term,
         },
         type: "GET",
         success: function (data) {
-          response(data);
+          var transformed = $.map(data, function (el) {
+              return {
+                  label: el.name,
+                  id: el.id
+              };
+          });
+          response(transformed);
         },
         error: function () {
           response([]);
@@ -149,10 +154,7 @@
         
       });
     }
-
-
-    // console.log(phraseId);
-    // console.log(voteValue);
+    
   });
 
 })(jQuery); // End of use strict

@@ -5,7 +5,7 @@ if ( ! function_exists( 'rgm_setup_options' ) ) :
     function rgm_setup_options () {
         global $wpdb;
         $create_table_query = "
-        CREATE TABLE IF NOT EXISTS `wp_votes` (
+        CREATE TABLE IF NOT EXISTS `wp_rgm_votes` (
             `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
             `phrase_id` bigint(20) unsigned NOT NULL DEFAULT '0',
             `county_id` bigint(20) unsigned NOT NULL DEFAULT '0',
