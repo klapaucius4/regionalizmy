@@ -105,19 +105,6 @@
         </div>
       </div>
     </div>
-    <?php elseif(is_archive()): ?>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1><?= get_the_archive_title(); ?></h1>
-            <h2 class="subheading"><?= get_the_archive_title(); ?></h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <?php endif; ?>
 
   </header>
