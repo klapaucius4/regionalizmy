@@ -110,7 +110,7 @@
   </header>
 
   <?php if(is_archive() || is_page()): ?>
-  <section class="section-space">
+  <section class="section-space pb-0">
     <!-- Main Content -->
     <div class="container">
       <div class="row">
