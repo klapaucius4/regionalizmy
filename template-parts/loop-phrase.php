@@ -31,7 +31,6 @@
                     $synonyms .= '<a href="'.get_the_permalink().'">' . get_the_title() . '</a>';
                 }
             }
-            
         ?>
             <p class="post-meta"><i class="fas fa-book-open mr-2" title="<?= __('Znaczenie'); ?>"></i><?= $meaning[0]->post_title; ?></p>
         <?php endif; ?>
