@@ -271,5 +271,5 @@ function get_breadcrumb_structure(){
       false
     );
   }
-
+  return $breadrumbStructure;
 }
