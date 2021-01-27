@@ -125,7 +125,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <?php foreach($breadcrumbStructure as $crumb): ?>
-                <li class="breadcrumb__item breadcrumb-item">
+                <li class="breadcrumb__item breadcrumb-item<?= !$crumb[1] ? ' breadcrumb__item--active active' : ''; ?>">
                   <?php if($crumb[1]): ?><a href="<?= $crumb[1]; ?>"><?php endif; ?>
                     <?= $crumb[0]; ?>
                   <?php if($crumb[1]): ?></a><?php endif; ?>
