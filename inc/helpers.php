@@ -255,13 +255,7 @@ function get_breadcrumb_structure(){
     get_the_permalink($frontpageID),  // url / active
   );
 
-  if(is_page() || is_single()){
-    $breadrumbStructure[] = array(
-      get_the_title(),
-      false
-    );
-  }
-  elseif(is_singular('rgm_phrase')){
+  if(is_singular('rgm_phrase')){
     $breadrumbStructure[] = array(
       __('Słownik'),
       get_post_type_archive_link('rgm_phrase')
@@ -271,5 +265,13 @@ function get_breadcrumb_structure(){
       false
     );
   }
+  elseif(is_page() || is_single()){
+    $breadrumbStructure[] = array(
+      get_the_title(),
+      false
+    );
+  }
+
   return $breadrumbStructure;
+  
 }
