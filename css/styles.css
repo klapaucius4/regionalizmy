@@ -590,7 +590,7 @@ footer .copyright {
   box-shadow: 0 0 0 0.2rem rgba(200, 35, 51, 0.5);
 }
 
-.breadcrumb__item a {
+.breadcrumb__item {
   font-size: 12px;
 }
 
