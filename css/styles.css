@@ -590,6 +590,10 @@ footer .copyright {
   box-shadow: 0 0 0 0.2rem rgba(200, 35, 51, 0.5);
 }
 
+.breadcrumb__item a {
+  font-size: 12px;
+}
+
 /* pages */
 .frontpage-search-section input[type=submit], .frontpage-search-section input[type=button] {
   padding-top: 7px;
