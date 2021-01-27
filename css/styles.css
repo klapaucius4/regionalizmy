@@ -594,6 +594,14 @@ footer .copyright {
   font-size: 14px;
 }
 
+.breadcrumb__item:first-of-type {
+  margin-left: 1.5rem;
+}
+
+.breadcrumb__item:last-of-type {
+  margin-right: 1.5rem;
+}
+
 /* pages */
 .frontpage-search-section input[type=submit], .frontpage-search-section input[type=button] {
   padding-top: 7px;
