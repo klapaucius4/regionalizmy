@@ -109,7 +109,7 @@
 
   </header>
 
-  <?php if(is_archive() || is_page()): ?>
+  <?php if(!is_front_page()): ?>
   <section class="section-space pb-0">
     <!-- Main Content -->
     <div class="container">
@@ -126,9 +126,9 @@
               <?php
                 $frontpageID = get_option( 'page_on_front' );
               ?>
-              <li class="breadcrumb__item"><a href="<?= get_the_permalink($frontpageID); ?>"><?= get_the_title($frontpageID); ?></a></li>
-              <li class="breadcrumb__item"><a href="#">Library</a></li>
-              <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Data</li>
+              <li class="breadcrumb__item breadcrumb-item ml-4"><a href="<?= get_the_permalink($frontpageID); ?>"><?= get_the_title($frontpageID); ?></a></li>
+              <li class="breadcrumb__item breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb__item breadcrumb-item breadcrumb__item--active active" aria-current="page">Data</li>
             </ol>
           </nav>
         </div>
