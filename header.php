@@ -108,3 +108,39 @@
     <?php endif; ?>
 
   </header>
+
+  <?php if(!is_front_page()): ?>
+  <section class="section-space pb-0">
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="mb-5"><?= get_the_archive_title(); ?></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <?php if($breadcrumbStructure = get_breadcrumb_structure()): ?>
+          <!-- Breadcrumbs -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <?php foreach($breadcrumbStructure as $crumb): ?>
+                <li class="breadcrumb__item breadcrumb-item<?= !$crumb[1] ? ' breadcrumb__item--active active' : ''; ?>">
+                  <?php if($crumb[1]): ?><a href="<?= $crumb[1]; ?>"><?php endif; ?>
+                    <?= $crumb[0]; ?>
+                  <?php if($crumb[1]): ?></a><?php endif; ?>
+                </li>
+              <?php endforeach; ?>
+              <?php /*
+              <li class="breadcrumb__item breadcrumb-item"><a href="<?= get_the_permalink($frontpageID); ?>"><?= get_the_title($frontpageID); ?></a></li>
+              <li class="breadcrumb__item breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb__item breadcrumb-item breadcrumb__item--active active" aria-current="page">Data</li>
+              */ ?>
+            </ol>
+          </nav>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>

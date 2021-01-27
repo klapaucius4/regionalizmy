@@ -5,6 +5,7 @@
             <!-- <h3 class="post-subtitle"><?= get_field('krotki_opis'); ?></h3> -->
         </a>
         <?php
+        $phraseID = get_the_ID();
         if(!$hidePostMeta):
             
             $meaning = get_field('znaczenie');
@@ -14,6 +15,7 @@
                     'post_type' => 'rgm_phrase',
                     'posts_per_page' => -1,
                     'post_status' => 'publish',
+                    'post__not_in' => array($phraseID),
                     'meta_query' => array(
                         array(
                             'key' => 'znaczenie', // name of custom field
