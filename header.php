@@ -126,7 +126,7 @@
               <?php
                 $frontpageID = get_option( 'page_on_front' );
               ?>
-              <li class="breadcrumb__item breadcrumb-item"><a href="<?= get_the_permalink($frontpageID); ?>"><?= get_the_title($frontpageID); ?></a></li>
+              <li class="breadcrumb__item breadcrumb-item ml-4"><a href="<?= get_the_permalink($frontpageID); ?>"><?= get_the_title($frontpageID); ?></a></li>
               <li class="breadcrumb__item breadcrumb-item"><a href="#">Library</a></li>
               <li class="breadcrumb__item breadcrumb-item breadcrumb__item--active active" aria-current="page">Data</li>
             </ol>
