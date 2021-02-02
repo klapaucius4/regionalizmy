@@ -28,15 +28,13 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
     public function create_item( $request ) {
         $item = $this->prepare_item_for_database( $request );
         if ( $item ) {
-          $voteRgmDatabase = new RGM_Database('wp_rgm_votes');
 
+          /// dokonczyc
+
+          $voteRgmDatabase = new RGM_Database('wp_rgm_votes');
           if($voteId = $voteRgmDatabase->insert($item)){
             return new WP_REST_Response( array('vote_id' => $voteId), 200 );
           }
-          // $data = slug_some_function_to_create_item( $item );
-          // if ( is_array( $data ) ) {
-          //   return new WP_REST_Response( $data, 200 );
-          // }
         }
         else{
           return new WP_Error( 'error', __( 'Not valid parameters' ), array( 'status' => 500 ) );
