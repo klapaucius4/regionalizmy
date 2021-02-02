@@ -27,7 +27,7 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
 
     public function create_item( $request ) {
         $item = $this->prepare_item_for_database( $request );
-        if ( !empty($item) ) {
+        if ( $item ) {
           $voteRgmDatabase = new RGM_Database('wp_rgm_votes');
 
           if($voteId = $voteRgmDatabase->insert($item)){
@@ -38,7 +38,10 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
           //   return new WP_REST_Response( $data, 200 );
           // }
         }
-        return new WP_Error( 'cant-create', __( 'message', 'text-domain' ), array( 'status' => 500 ) );
+        else{
+          return new WP_Error( 'error', __( 'Not valid parameters' ), array( 'status' => 500 ) );
+        }
+        return new WP_Error( 'error', __( 'Can\'t create item' ), array( 'status' => 500 ) );
     }
 
     ///
@@ -64,7 +67,7 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
         );
       }
 
-      return $returnData;
+      return !empty($returnData) ? $returnData : false;
     }
 
 
