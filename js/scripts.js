@@ -100,7 +100,8 @@
 
     if(!rgmCookie()){
       modalPopup2.modal('show');
-      modalPopup2.on('submit', function(){
+      modalPopup2.on('submit', function(e){
+        e.preventDefault();
         console.log('ustawiam domyslny region oraz otwieram modalpopup1');
       });
     }
@@ -126,7 +127,8 @@
         
       });
 
-      modalPopup.on("submit", function(){
+      modalPopup.on("submit", function(e){
+        e.preventDefault();
         console.log('oddajemy glos');
       });
     }
