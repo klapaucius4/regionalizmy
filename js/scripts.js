@@ -76,7 +76,7 @@
       };
       $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
       // console.log($(this));
-      if(!$(this).hasClass("findCountyInput2")){
+      if($(this).hasClass("findCountyInput")){
         location.reload();
       }
       
