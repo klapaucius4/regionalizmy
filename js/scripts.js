@@ -40,7 +40,7 @@
   }
 
 
-  //// counties begin
+  //// counties search form & modal popup begin
   if(rgmCookie()){
     $('.findCountyInput').val(rgmCookie().name);
   }
@@ -83,7 +83,8 @@
     },
     autoFill: true,
   });
-  //// counties end
+  
+  //// counties search form & modal popup end
 
   //// dictionary search begin
   $(".frontpage-search-section__input-search-dictionary").autocomplete({
