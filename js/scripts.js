@@ -101,7 +101,7 @@
     if(!rgmCookie()){
       modalPopup2.modal('show');
       modalPopup2.on('submit', function(){
-        console.log('ustawiam domyslny region oraz otwieram modalpopup1')
+        console.log('ustawiam domyslny region oraz otwieram modalpopup1');
       });
     }
     else if($(this).hasClass('btn-success')){
@@ -124,6 +124,10 @@
           modalPopup.find('.fieldset2').hide(500);
         }
         
+      });
+
+      modalPopup.on("submit", function(){
+        console.log('oddajemy glos');
       });
     }
     
