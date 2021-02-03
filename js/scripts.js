@@ -75,7 +75,8 @@
         'name': ui.item.label
       };
       $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
-      location.reload();
+      console.log($(this));
+      // location.reload();
     },
     autoFill: true,
   });
