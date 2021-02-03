@@ -57,7 +57,7 @@
           </fieldset>
         </form>
       </div>
-      <?php include( locate_template('./template-parts/fooer/modal/footer.php') ); ?>
+      <?php include( locate_template('./template-parts/footer/modal/footer.php') ); ?>
     </div>
   </div>
 </div>
@@ -113,7 +113,7 @@
         <?php endif; ?>
         </fieldset>
       </div>
-      <?php include( locate_template('./template-parts/fooer/modal/footer.php') ); ?>
+      <?php include( locate_template('./template-parts/footer/modal/footer.php') ); ?>
     </form>
   </div>
 </div>
