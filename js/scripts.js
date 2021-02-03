@@ -75,8 +75,11 @@
         'name': ui.item.label
       };
       $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
-      console.log($(this));
-      // location.reload();
+      // console.log($(this));
+      if($(this).hasClass("findCountyInput2")){
+        location.reload();
+      }
+      
     },
     autoFill: true,
   });
