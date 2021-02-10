@@ -114,12 +114,12 @@
     <!-- Main Content -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-md-12">
           <h1 class="mb-5"><?= get_the_archive_title(); ?></h1>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-md-12">
           <?php if($breadcrumbStructure = get_breadcrumb_structure()): ?>
           <!-- Breadcrumbs -->
           <nav aria-label="breadcrumb">
