@@ -238,7 +238,7 @@ function custom_rgm_phrase_column( $column, $post_id ) {
                     }
                 }
             }else{
-                echo __('Brak', 'rgm');
+                echo __('Brak', 'rgm'); echo ' | <a href="'.admin_url('post-new.php?post_type=rgm_meaning').'" target="_blank">Utwórz nowe znaczenie</a>';
             }
             
             break;
