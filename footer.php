@@ -57,6 +57,7 @@
           </fieldset>
         </form>
       </div>
+      <?php include( locate_template('./template-parts/footer/modal/footer.php') ); ?>
     </div>
   </div>
 </div>
@@ -112,10 +113,7 @@
         <?php endif; ?>
         </fieldset>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success"><?= __('Potwierdź', 'rgm'); ?></button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= __('Zamknij', 'rgm'); ?></button>
-      </div>
+      <?php include( locate_template('./template-parts/footer/modal/footer.php') ); ?>
     </form>
   </div>
 </div>

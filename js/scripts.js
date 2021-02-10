@@ -40,7 +40,7 @@
   }
 
 
-  //// counties begin
+  //// counties search form begin
   if(rgmCookie()){
     $('.findCountyInput').val(rgmCookie().name);
   }
@@ -75,11 +75,66 @@
         'name': ui.item.label
       };
       $.cookie('rgmUserCounty', JSON.stringify(newCookie), { expires: 7 });
-      location.reload();
+      // console.log($(this));
+      if($(this).hasClass("findCountyInput")){
+        location.reload();
+      }
+      
     },
     autoFill: true,
   });
-  //// counties end
+  //// counties search form end
+
+  //// modal popup vote begin
+  $("body").on('click', '.vote-buttons button', function(e){
+    e.preventDefault();
+    var phraseId = $(this).data('phrase-id');
+    var phraseName = $(this).data('phrase-name');
+    var countyId = -1;
+    var voteValue = $(this).data('vote-value');
+    var userId = 0;
+
+    var modalPopup = $('#voteModalPopup');
+    var modalPopup2 = $('#selectDistrictModalPopup');
+    modalPopup.find('h5.modal-title').text(phraseName);
+
+    if(!rgmCookie()){
+      modalPopup2.modal('show');
+      modalPopup2.on('submit', function(e){
+        e.preventDefault();
+        console.log('ustawiam domyslny region oraz otwieram modalpopup1');
+      });
+    }
+    else if($(this).hasClass('btn-success')){
+
+      modalPopup.modal('show');
+      // console.log(cookie.name);
+      modalPopup.find('.fieldset2, .fieldset3').hide();
+      modalPopup.find('label[for=voteModalPopupRadio1]').html("Znam z: <b>" + rgmCookie().name + '</b>');
+
+      modalPopup.find('input[type=radio][name=voteModalPopupRadio]').on('change', function(ee){
+        ee.preventDefault();
+        if ($(this).val() == 1) {
+          modalPopup.find('.fieldset2').hide(500);
+          modalPopup.find('.fieldset3').hide(500);
+        }else if($(this).val() == 2){
+          modalPopup.find('.fieldset3').hide(500);
+          modalPopup.find('.fieldset2').show(500);
+        }else if($(this).val() == 3){
+          modalPopup.find('.fieldset3').show(500);
+          modalPopup.find('.fieldset2').hide(500);
+        }
+        
+      });
+
+      modalPopup.on("submit", function(e){
+        e.preventDefault();
+        console.log('oddajemy glos');
+      });
+    }
+    
+  });
+  //// counties search form end
 
   //// dictionary search begin
   $(".frontpage-search-section__input-search-dictionary").autocomplete({
@@ -115,46 +170,5 @@
     autoFill: true,
   });
   //// dictionary search end
-
-
-  $("body").on('click', '.vote-buttons button', function(e){
-    e.preventDefault();
-    var phraseId = $(this).data('phrase-id');
-    var phraseName = $(this).data('phrase-name');
-    var countyId = -1;
-    var voteValue = $(this).data('vote-value');
-    var userId = 0;
-
-    var modalPopup = $('#voteModalPopup');
-    var modalPopup2 = $('#selectDistrictModalPopup');
-    modalPopup.find('h5.modal-title').text(phraseName);
-
-    if(!rgmCookie()){
-      modalPopup2.modal('show');
-    }
-    else if($(this).hasClass('btn-success')){
-
-      modalPopup.modal('show');
-      // console.log(cookie.name);
-      modalPopup.find('.fieldset2, .fieldset3').hide();
-      modalPopup.find('label[for=voteModalPopupRadio1]').html("Znam z: <b>" + rgmCookie().name + '</b>');
-
-      modalPopup.find('input[type=radio][name=voteModalPopupRadio]').on('change', function(ee){
-        ee.preventDefault();
-        if ($(this).val() == 1) {
-          modalPopup.find('.fieldset2').hide(500);
-          modalPopup.find('.fieldset3').hide(500);
-        }else if($(this).val() == 2){
-          modalPopup.find('.fieldset3').hide(500);
-          modalPopup.find('.fieldset2').show(500);
-        }else if($(this).val() == 3){
-          modalPopup.find('.fieldset3').show(500);
-          modalPopup.find('.fieldset2').hide(500);
-        }
-        
-      });
-    }
-    
-  });
 
 })(jQuery); // End of use strict
