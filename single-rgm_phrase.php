@@ -21,17 +21,14 @@
                 <i class="fas fa-angle-double-right mr-2"></i>
                 <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
                   <div class="d-flex justify-content-between align-items-center w-100">
-                    <!-- <strong class="text-gray-dark">Full Name</strong>
-                    <a href="#">Follow</a> -->
+                    <strong class="text-gray-dark">Full Name</strong>
+                    <a href="#">Follow</a>
                     <?= nl2br($example['przyklad']); ?>
                   </div>
                   <span class="d-block">@username</span>
                 </div>
               </div>
             <?php endforeach; ?>
-            <small class="d-block text-right mt-3">
-              <a href="#">All suggestions</a>
-            </small>
           </div>
           <?php endif; ?>
         </div>
