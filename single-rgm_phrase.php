@@ -18,7 +18,7 @@
             <h6 class="border-bottom border-gray pb-2 mb-0"><?= __('Przykłady użycia'); ?>:</h6>
             <?php foreach($examples as $example): if(!$example['przyklad']) continue; ?>
               <div class="media text-muted pt-3 d-flex">
-                <i class="fas fa-angle-double-right mr-2"></i>
+                <i class="fas fa-angle-double-right mr-4"></i>
                 <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
                   <div class="d-flex justify-content-between align-items-center w-100">
                     <strong class="text-gray-dark"><?= nl2br($example['przyklad']); ?></strong>
