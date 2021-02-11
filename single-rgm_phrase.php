@@ -11,7 +11,7 @@
       </div>
 
       <div class="row single-section__usage-examples">
-        <div class="col-md-8">
+        <div class="col-lg-8 col-md-10 mx-auto">
 
           <?php if($examples = get_field('przyklady_uzycia')): ?>
           <div class="my-3 p-3 bg-white rounded shadow-sm">
@@ -30,9 +30,9 @@
           </div>
           <?php endif; ?>
         </div>
-        <div class="col-md-4 single-section__usage-examples__bg-container">
+        <!-- <div class="col-md-4 single-section__usage-examples__bg-container">
             
-        </div>
+        </div> -->
       </div>
 
     </div>
