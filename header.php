@@ -118,7 +118,7 @@
           <h1 class="mb-5">
           <?php
             if(is_singular('rgm_phrase')){
-              echo __('Fraza') . ': ' . get_the_title();
+              echo '<span class="small">'.__('Fraza') . ':</span> ' . get_the_title();
             }else{
               echo get_the_archive_title();
             }
