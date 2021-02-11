@@ -722,9 +722,10 @@ form .form-group:first-child .floating-label-form-group {
 }
 
 .single-section__usage-examples__bg-container {
-  min-height: 460px;
+  min-height: 360px;
   background-image: url("../img/usage-examples.svg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* themes */
