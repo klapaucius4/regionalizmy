@@ -11,8 +11,7 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-
+        <div class="col-md-8">
           <?php if($examples = get_field('przyklady_uzycia')): ?>
           <div class="my-3 p-3 bg-white rounded shadow-sm">
             <h6 class="border-bottom border-gray pb-2 mb-0"><?= __('Przykłady użycia'); ?>:</h6>
@@ -29,6 +28,9 @@
             <?php endforeach; ?>
           </div>
           <?php endif; ?>
+        </div>
+        <div class="col-md-4">
+            ssss
         </div>
       </div>
 
