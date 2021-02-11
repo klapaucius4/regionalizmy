@@ -721,4 +721,10 @@ form .form-group:first-child .floating-label-form-group {
   padding-bottom: 10px;
 }
 
+.single-section__usage-examples__bg-container {
+  min-height: 300px;
+  background-image: url("../img/usage-examples.svg");
+  background-repeat: no-repeat;
+}
+
 /* themes */

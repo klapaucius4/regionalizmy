@@ -2,7 +2,7 @@
   <!-- Post Content -->
 
   <?php while(have_posts()): the_post(); ?>
-  <article>
+  <article class="single-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
@@ -10,8 +10,8 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="row single-section__usage-examples">
+        <div class="col-md-8">
 
           <?php if($examples = get_field('przyklady_uzycia')): ?>
           <div class="my-3 p-3 bg-white rounded shadow-sm">
@@ -29,6 +29,9 @@
             <?php endforeach; ?>
           </div>
           <?php endif; ?>
+        </div>
+        <div class="col-md-4 single-section__usage-examples__bg-container">
+            
         </div>
       </div>
 
