@@ -15,20 +15,14 @@
                       <tr>
                         <th scope="row">Regionalizm</th>
                         <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
                       </tr>
                       <tr>
                         <th scope="row">Znaczenie</th>
                         <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
                       </tr>
                       <tr>
                         <th scope="row">Synonimy</th>
                         <td>Larry the Bird</td>
-                        <td>Thornton</td>
-                        <td>@twitter</td>
                       </tr>
                     </tbody>
                   </table>
