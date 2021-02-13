@@ -18,11 +18,14 @@
                       </tr>
                       <tr>
                         <?php
+                        $meaningStringValue = '-';
                         $meaning = get_field('znaczenie');
-                        var_dump($meaning);
+                        if($meaning && isset($meaning[0])){
+                          $meaningStringValue = get_the_title($meaning->ID);
+                        }
                         ?>
                         <th scope="row">Znaczenie</th>
-                        <td></td>
+                        <td><?= $meaningStringValue; ?></td>
                       </tr>
                       <tr>
                         <th scope="row">Synonimy</th>
