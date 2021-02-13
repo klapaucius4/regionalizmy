@@ -21,7 +21,6 @@
                         $meaningStringValue = '-';
                         $meaning = get_field('znaczenie');
                         if($meaning && isset($meaning[0])){
-                          var_dump($meaning[0]); exit;
                           $meaningStringValue = $meaning[0]->post_title;
                         }
                         ?>
@@ -31,31 +30,32 @@
                       <tr>
                         <?php
                         $synonymsList = array();
-
-                        $args = array(
-                            'post_type' => 'rgm_phrase',
-                            'posts_per_page' => -1,
-                            'post_status' => 'publish',
-                            'meta_query' => array(
-                                array(
-                                    'key' => 'znaczenie',
-                                    'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
-                                    'compare' => 'LIKE'
-                                )
-                            )
-                        );
-                        $myQuery = new WP_Query($args);
-                        if($myQuery->have_posts()){
-                            $firstLoop = true;
-                            while($myQuery->have_posts()){
-                                $myQuery->the_post();
-                                $synonymsList[] = array(
-                                  get_the_ID(),
-                                  get_the_title(),
-                                  get_the_permalink()
-                                );
-                            }
-                            wp_reset_postdata();
+                        if($meaning && isset($meaning[0])){
+                          $args = array(
+                              'post_type' => 'rgm_phrase',
+                              'posts_per_page' => -1,
+                              'post_status' => 'publish',
+                              'meta_query' => array(
+                                  array(
+                                      'key' => 'znaczenie',
+                                      'value' => '"' . $meaning[0]->ID . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+                                      'compare' => 'LIKE'
+                                  )
+                              )
+                          );
+                          $myQuery = new WP_Query($args);
+                          if($myQuery->have_posts()){
+                              $firstLoop = true;
+                              while($myQuery->have_posts()){
+                                  $myQuery->the_post();
+                                  $synonymsList[] = array(
+                                    get_the_ID(),
+                                    get_the_title(),
+                                    get_the_permalink()
+                                  );
+                              }
+                              wp_reset_postdata();
+                          }
                         }
                         ?>
                         <th scope="row">Synonimy</th>
@@ -66,6 +66,8 @@
                                 <li><a href="<?= $synonym[2]; ?>"><?= $synonym[1]; ?></a></li>
                               <?php endforeach; ?>
                             </ul>
+                          <?php else: ?>
+                            <p><?= "Brak"; ?></p>
                           <?php endif; ?>
                         </td>
                       </tr>
