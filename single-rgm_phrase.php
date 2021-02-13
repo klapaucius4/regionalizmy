@@ -21,6 +21,7 @@
                         $meaningStringValue = '-';
                         $meaning = get_field('znaczenie');
                         if($meaning && isset($meaning[0])){
+                          var_dump($meaning[0]); exit;
                           $meaningStringValue = $meaning[0]->post_title;
                         }
                         ?>
@@ -30,6 +31,7 @@
                       <tr>
                         <?php
                         $synonymsList = array();
+
                         $args = array(
                             'post_type' => 'rgm_phrase',
                             'posts_per_page' => -1,
