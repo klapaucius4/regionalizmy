@@ -21,7 +21,7 @@
                         $meaningStringValue = '-';
                         $meaning = get_field('znaczenie');
                         if($meaning && isset($meaning[0])){
-                          $meaningStringValue = get_the_title($meaning->ID);
+                          $meaningStringValue = $meaning[0]->post_title;
                         }
                         ?>
                         <th scope="row">Znaczenie</th>
