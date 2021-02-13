@@ -14,11 +14,15 @@
                     <tbody>
                       <tr>
                         <th scope="row">Regionalizm</th>
-                        <td>Mark</td>
+                        <td><?= get_the_title(); ?></td>
                       </tr>
                       <tr>
+                        <?php
+                        $meaning = get_field('znaczenie');
+                        var_dump($meaning);
+                        ?>
                         <th scope="row">Znaczenie</th>
-                        <td>Jacob</td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row">Synonimy</th>
