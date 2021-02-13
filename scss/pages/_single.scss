@@ -1,0 +1,10 @@
+.single-section {
+    &__usage-examples {
+        &__bg-container {
+            min-height: 360px;
+            background-image: url('../img/usage-examples.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}

@@ -115,7 +115,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="mb-5"><?= get_the_archive_title(); ?></h1>
+          <h1 class="mb-5">
+          <?php
+            if(is_singular('rgm_phrase')){
+              echo '<span class="small">'.__('Fraza') . ':</span> ' . get_the_title();
+            }else{
+              echo get_the_archive_title();
+            }
+          ?>
+          </h1>
         </div>
       </div>
       <div class="row">
