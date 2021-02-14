@@ -28,7 +28,7 @@
                         }
                         ?>
                         </td>
-                        <?php if($meaningDefinition = get_field('definicja')): ?>
+                        <?php if($meaning && isset($meaning[0]) && $meaningDefinition = get_field('definicja', $meaning[0]->ID)): ?>
                         <th scope="row"><?= __('Definicja znaczenia'); ?></th>
                         <td><?= $meaningDefinition; ?></td>
                         <?php endif; ?>
