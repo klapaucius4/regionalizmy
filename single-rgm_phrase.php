@@ -23,18 +23,15 @@
                         $meaning = get_field('znaczenie');
                         if($meaning && isset($meaning[0])){
                           echo $meaning[0]->post_title;
+                          if($meaningDefinition = get_field('definicja', $meaning[0]->ID)){
+                            echo '<span class="small-text">' . $meaningDefinition . '</span>';
+                          }
                         }else{
                           echo '-';
                         }
                         ?>
                         </td>
                       </tr>
-                      <?php if($meaning && isset($meaning[0]) && $meaningDefinition = get_field('definicja', $meaning[0]->ID)): ?>
-                      <tr>
-                        <th scope="row"><?= __('Definicja znaczenia'); ?></th>
-                        <td><?= $meaningDefinition; ?></td>
-                      </tr>
-                      <?php endif; ?>
                       <tr>
                         <?php
                         $synonymsList = array();
