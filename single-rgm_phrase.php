@@ -14,7 +14,7 @@
                     <tbody>
                       <tr>
                         <th scope="row"><?= __('Regionalizm'); ?></th>
-                        <td><?= get_the_title(); ?></td>
+                        <td><p class="m-0"><?= get_the_title(); ?></p></td>
                       </tr>
                       <tr>
                         <th scope="row"><?= __('Znaczenie'); ?></th>
