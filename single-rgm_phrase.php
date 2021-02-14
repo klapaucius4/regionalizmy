@@ -13,19 +13,25 @@
                   <table class="table table-bordered">
                     <tbody>
                       <tr>
-                        <th scope="row">Regionalizm</th>
+                        <th scope="row"><?= __('Regionalizm'); ?></th>
                         <td><?= get_the_title(); ?></td>
                       </tr>
                       <tr>
+                        <th scope="row"><?= __('Znaczenie'); ?></th>
+                        <td>
                         <?php
-                        $meaningStringValue = '-';
                         $meaning = get_field('znaczenie');
                         if($meaning && isset($meaning[0])){
-                          $meaningStringValue = $meaning[0]->post_title;
+                          echo $meaning[0]->post_title;
+                        }else{
+                          echo '-';
                         }
                         ?>
-                        <th scope="row">Znaczenie</th>
-                        <td><?= $meaningStringValue; ?></td>
+                        </td>
+                        <?php if($meaningDefinition = get_field('definicja')): ?>
+                        <th scope="row"><?= __('Definicja znaczenia'); ?></th>
+                        <td><?= $meaningDefinition; ?></td>
+                        <?php endif; ?>
                       </tr>
                       <tr>
                         <?php
