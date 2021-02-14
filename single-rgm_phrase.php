@@ -13,7 +13,7 @@
                   <table class="table table-bordered">
                     <tbody>
                       <tr>
-                        <th scope="row"><?= __('Regionalizm'); ?></th>
+                        <th scope="row"><i class="fas fa-book"></i><?= __('Regionalizm'); ?></th>
                         <td><p class="m-0"><?= get_the_title(); ?></p></td>
                       </tr>
                       <tr>
