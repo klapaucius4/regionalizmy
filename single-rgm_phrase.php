@@ -13,11 +13,11 @@
                   <table class="table table-bordered">
                     <tbody>
                       <tr>
-                        <th scope="row"><i class="fas fa-book mr-4"></i><?= __('Regionalizm'); ?></th>
+                        <th scope="row"><i class="fas fa-book mr-3"></i><?= __('Regionalizm'); ?></th>
                         <td><p class="m-0"><?= get_the_title(); ?></p></td>
                       </tr>
                       <tr>
-                        <th scope="row"><i class="fas fa-lightbulb mr-4"></i><?= __('Znaczenie'); ?></th>
+                        <th scope="row"><i class="fas fa-lightbulb mr-3"></i><?= __('Znaczenie'); ?></th>
                         <td>
                         <?php
                         $meaning = get_field('znaczenie');
@@ -63,7 +63,7 @@
                           }
                         }
                         ?>
-                        <th scope="row"><i class="fas fa-book-medical mr-4"></i><?= __('Synonimy'); ?></th>
+                        <th scope="row"><i class="fas fa-book-medical mr-3"></i><?= __('Synonimy'); ?></th>
                         <td>
                           <?php if($synonymsList): ?>
                             <ul>
