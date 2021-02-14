@@ -22,9 +22,9 @@
                         <?php
                         $meaning = get_field('znaczenie');
                         if($meaning && isset($meaning[0])){
-                          echo '<p>' . $meaning[0]->post_title . '</p>';
+                          echo '<p class="m-0">' . $meaning[0]->post_title . '</p>';
                           if($meaningDefinition = get_field('definicja', $meaning[0]->ID)){
-                            echo '<p class="small">' . $meaningDefinition . '</p>';
+                            echo '<p class="small m-0">' . $meaningDefinition . '</p>';
                           }
                         }else{
                           echo '-';
