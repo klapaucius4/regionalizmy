@@ -28,11 +28,13 @@
                         }
                         ?>
                         </td>
-                        <?php if($meaning && isset($meaning[0]) && $meaningDefinition = get_field('definicja', $meaning[0]->ID)): ?>
+                      </tr>
+                      <?php if($meaning && isset($meaning[0]) && $meaningDefinition = get_field('definicja', $meaning[0]->ID)): ?>
+                      <tr>
                         <th scope="row"><?= __('Definicja znaczenia'); ?></th>
                         <td><?= $meaningDefinition; ?></td>
-                        <?php endif; ?>
                       </tr>
+                      <?php endif; ?>
                       <tr>
                         <?php
                         $synonymsList = array();
