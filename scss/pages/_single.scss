@@ -1,4 +1,19 @@
 .single-section {
+    &__data {
+        table {
+            tbody {
+                tr {
+                    th {
+                        font-weight: normal;
+                        width: 25%;
+                        i {
+                            color: $themeColor3;
+                        }
+                    }
+                }
+            }
+        }
+    }
     &__usage-examples {
         &__bg-container {
             min-height: 360px;

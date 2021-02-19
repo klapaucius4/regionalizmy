@@ -721,6 +721,15 @@ form .form-group:first-child .floating-label-form-group {
   padding-bottom: 10px;
 }
 
+.single-section__data table tbody tr th {
+  font-weight: normal;
+  width: 25%;
+}
+
+.single-section__data table tbody tr th i {
+  color: #4b4b5b;
+}
+
 .single-section__usage-examples__bg-container {
   min-height: 360px;
   background-image: url("../img/usage-examples.svg");
