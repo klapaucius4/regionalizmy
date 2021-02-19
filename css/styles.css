@@ -723,6 +723,7 @@ form .form-group:first-child .floating-label-form-group {
 
 .single-section__data table tbody tr th {
   font-weight: normal;
+  width: 25%;
 }
 
 .single-section__usage-examples__bg-container {
