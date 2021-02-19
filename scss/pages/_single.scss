@@ -1,4 +1,15 @@
 .single-section {
+    &__data {
+        table {
+            tbody {
+                tr {
+                    th {
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
     &__usage-examples {
         &__bg-container {
             min-height: 360px;

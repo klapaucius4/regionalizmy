@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-lg-8">
 
-              <div class="row">
+              <div class="row single-section__data">
                 <div class="col-md-12">
                   <table class="table table-bordered">
                     <tbody>
