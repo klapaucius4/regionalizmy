@@ -128,7 +128,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <?php include( locate_template('./header/breadcrumbs.php') ); ?>
+          <?php include( locate_template('template-parts/header/breadcrumbs.php') ); ?>
         </div>
       </div>
     </div>
