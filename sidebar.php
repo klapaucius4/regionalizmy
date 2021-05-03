@@ -22,7 +22,7 @@
             <div class="row">
                 <?php foreach($letters as $letter): ?>
                 <div class="col col-2">
-                    <a href="<?= get_term_link($letter->term_id, $letter->taxonomy); ?>"><?= mb_strtoupper($letter, "UTF-8"); ?></a>
+                    <a href="<?= http_build_query(array('litera' => $letter)); ?>"><?= mb_strtoupper($letter, "UTF-8"); ?></a>
                 </div>
                 <?php endforeach; ?>
             </div>
