@@ -266,10 +266,21 @@ function get_breadcrumb_structure(){
     );
   }
   elseif(is_post_type_archive('rgm_phrase')){
-    $breadrumbStructure[] = array(
-      __('Słownik', 'rgm'),
-      false
-    );
+    if(isset($_GET['litera'])){
+      $breadrumbStructure[] = array(
+        __('Słownik', 'rgm'),
+        get_post_type_archive_link('rgm_phrase')
+      );
+      $breadrumbStructure[] = array(
+        (__('Frazy na literę', 'rgm') . ' ' . strip_tags($_GET['litera'])),
+        false
+      );
+    }else{
+      $breadrumbStructure[] = array(
+        __('Słownik', 'rgm'),
+        false
+      );
+    }
   }
   elseif(is_page() || is_single()){
     $breadrumbStructure[] = array(
