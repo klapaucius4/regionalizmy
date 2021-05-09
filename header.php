@@ -124,7 +124,7 @@
               if(isset($_GET['litera'])){
                 echo '<span class="small">' . __('Frazy na literę:', 'rgm') . '</span>' . ' ' . '<i>' . strip_tags($_GET['litera']) . '</i>';
               }else{
-                echo get_the_archive_title();
+                echo __('Słownik', 'rgm');
               }
             }
             elseif(get_queried_object()){
