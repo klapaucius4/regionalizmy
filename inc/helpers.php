@@ -272,7 +272,7 @@ function get_breadcrumb_structure(){
         get_post_type_archive_link('rgm_phrase')
       );
       $breadrumbStructure[] = array(
-        (__('Frazy na literę', 'rgm') . ' ' . '<b>' . strtoupper(strip_tags($_GET['litera']))) . '</b>',
+        (__('Frazy na literę', 'rgm') . ': ' . '<b>' . strtoupper(strip_tags($_GET['litera']))) . '</b>',
         false
       );
     }else{
