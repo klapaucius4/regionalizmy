@@ -125,7 +125,7 @@
             }
             elseif(is_post_type_archive('rgm_phrase')){
               if(isset($_GET['litera'])){
-                echo '<span class="small">' . get_the_archive_title() . '</span>' . ' ' . __('Litera', 'rgm') . strip_tags($_GET['litera']);
+                echo '<span class="small">' . get_the_archive_title() . '</span>' . ' ' . __('Litera', 'rgm') . ': ' . strip_tags($_GET['litera']);
               }else{
                 echo get_the_archive_title();
               }
