@@ -118,16 +118,16 @@
           <h1 class="mb-5">
           <?php
             if(is_singular('rgm_phrase')){
-              echo '<span class="small">'.__('Fraza') . ':</span> ' . get_the_title();
+              echo '<span class="small">' . __('Fraza') . ':</span> ' . get_the_title();
             }
             elseif(is_single() && is_page()){
               echo get_the_title();
             }
             elseif(is_post_type_archive('rgm_phrase')){
               if(isset($_GET['litera'])){
-                
+                echo '<span class="small">' . get_the_archive_title() . ':</span>' . strip_tags($_GET['litera']);
               }else{
-                echo single_term_title();
+                echo get_the_archive_title();
               }
             }
             elseif(get_queried_object()){
