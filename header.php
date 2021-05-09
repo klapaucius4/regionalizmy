@@ -117,9 +117,16 @@
         <div class="col-md-12">
           <h1 class="mb-5">
           <?php
-            if(is_singular('rgm_phrase')){
+            if(is_single()){
+              echo get_the_title();
+            }
+            elseif(is_singular('rgm_phrase')){
               echo '<span class="small">'.__('Fraza') . ':</span> ' . get_the_title();
-            }else{
+            }
+            elseif(get_queried_object()){
+              var_dump(get_queried_object()); exit;
+            }
+            else{
               echo get_the_archive_title();
             }
           ?>
