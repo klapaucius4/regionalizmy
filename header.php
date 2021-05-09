@@ -124,7 +124,11 @@
               echo get_the_title();
             }
             elseif(is_post_type_archive('rgm_phrase')){
-              echo get_the_archive_title();
+              if(isset($_GET['litera'])){
+                
+              }else{
+                echo single_term_title();
+              }
             }
             elseif(get_queried_object()){
               var_dump(get_queried_object()); exit;
