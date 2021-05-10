@@ -10,6 +10,15 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
     public function register_routes() {
 
         register_rest_route( $this->namespace, '/' . $this->base, array(
+          array(
+            'methods'             => WP_REST_Server::READABLE,
+            'callback'            => array( $this, 'get_items' ),
+				  	'permission_callback' => array( $this, 'get_items_permissions_check' ),
+            'args'                => $this->get_collection_params(),
+          ),
+        ));
+
+        register_rest_route( $this->namespace, '/' . $this->base, array(
             array(
               'methods'             => WP_REST_Server::CREATABLE,
               'callback'            => array( $this, 'create_item' ),
@@ -25,6 +34,28 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
     }
 
 
+    public function get_items( $request ) {
+
+      // Ensure a search string is set in case the orderby is set to 'relevance'.
+      if ( !empty( $request['user_id']) ) {
+        return new WP_Error(
+          'error',
+          __( 'You need to set parameter \'user_id\'.' ),
+          array( 'status' => 400 )
+        );
+      }
+  
+  
+      // Retrieve the list of registered collection query parameters.
+      $registered = $this->get_collection_params();
+      $args       = array();
+
+
+
+
+    }
+
+
     public function create_item( $request ) {
         $item = $this->prepare_item_for_database( $request );
         if ( $item ) {
@@ -37,7 +68,7 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
           }
         }
         else{
-          return new WP_Error( 'error', __( 'Not valid parameters' ), array( 'status' => 500 ) );
+          return new WP_Error( 'error', __( 'Not valid parameters' ), array( 'status' => 400 ) );
         }
         return new WP_Error( 'error', __( 'Can\'t create item' ), array( 'status' => 500 ) );
     }
