@@ -1,6 +1,5 @@
 <?php
 if($breadcrumbs = get_breadcrumb_structure()){
-    var_dump($breadcrumbs);
     if( isset($breadcrumbs[count($breadcrumbs)-1]) ){
         echo $breadcrumbs[count($breadcrumbs)-1];
     }
