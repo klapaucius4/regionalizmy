@@ -10,6 +10,9 @@ elseif(is_post_type_archive('rgm_phrase')){
         echo __('Słownik', 'rgm');
     }
 }
+elseif(is_home()){
+    echo __('Blog', 'rgm');
+}
 elseif(get_queried_object()){
     var_dump(get_queried_object()); exit;
 }
