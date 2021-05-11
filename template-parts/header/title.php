@@ -14,6 +14,9 @@ elseif(is_home() && $blogId = get_option( 'page_for_posts' )){
     echo get_the_title($blogId);
     
 }
+elseif(is_page()){
+    echo get_the_title();
+}
 elseif(get_queried_object()){
     var_dump(get_queried_object()); exit;
 }
