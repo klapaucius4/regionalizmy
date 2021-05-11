@@ -116,7 +116,7 @@
       <div class="row">
         <div class="col-md-12">
           <h1 class="mb-5">
-            <?php include( locate_template('template-parts/title.php') ); ?>
+            <?php include( locate_template('template-parts/header/title.php') ); ?>
           </h1>
         </div>
       </div>
