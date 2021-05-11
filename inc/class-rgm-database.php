@@ -50,7 +50,7 @@ class RGM_Database
      *
      * @return Table result
      */
-    public function get_all( $orderBy = NULL )
+    public function get_all( $orderBy = NULL, $limit = NULL )
     {
         global $wpdb;
 
@@ -59,6 +59,11 @@ class RGM_Database
         if(!empty($orderBy))
         {
             $sql .= ' ORDER BY ' . $orderBy;
+        }
+
+        if(!empty($limit))
+        {
+            $sql .= ' LIMIT ' . $limit;
         }
 
         $all = $wpdb->get_results($sql);

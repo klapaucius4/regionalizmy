@@ -8,7 +8,6 @@ get_header();
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
           <?php
           $faqList = get_field('lista_faq');
           if($faqList):

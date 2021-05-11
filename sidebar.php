@@ -22,7 +22,7 @@
             <div class="row">
                 <?php foreach($letters as $letter): ?>
                 <div class="col col-2">
-                    <a href="#"><?= mb_strtoupper($letter, "UTF-8"); ?></a>
+                    <a href="<?= get_post_type_archive_link('rgm_phrase'); ?>?<?= http_build_query(array('litera' => $letter), null, "&", PHP_QUERY_RFC3986); ?>" class="<?= (isset($_GET['litera']) && $_GET['litera'] == $letter)?'active':''; ?>"><?= mb_strtoupper($letter, "UTF-8"); ?></a>
                 </div>
                 <?php endforeach; ?>
             </div>

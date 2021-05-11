@@ -54,7 +54,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -116,19 +116,13 @@
       <div class="row">
         <div class="col-md-12">
           <h1 class="mb-5">
-          <?php
-            if(is_singular('rgm_phrase')){
-              echo '<span class="small">'.__('Fraza') . ':</span> ' . get_the_title();
-            }else{
-              echo get_the_archive_title();
-            }
-          ?>
+            <?php include( locate_template('template-parts/title.php') ); ?>
           </h1>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <?php include( locate_template('./header/breadcrumbs.php') ); ?>
+          <?php include( locate_template('template-parts/header/breadcrumbs.php') ); ?>
         </div>
       </div>
     </div>

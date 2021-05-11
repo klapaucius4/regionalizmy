@@ -257,7 +257,7 @@ function get_breadcrumb_structure(){
 
   if(is_singular('rgm_phrase')){
     $breadrumbStructure[] = array(
-      __('Słownik'),
+      __('Słownik', 'rgm'),
       get_post_type_archive_link('rgm_phrase')
     );
     $breadrumbStructure[] = array(
@@ -265,7 +265,30 @@ function get_breadcrumb_structure(){
       false
     );
   }
+  elseif(is_post_type_archive('rgm_phrase')){
+    if(isset($_GET['litera'])){
+      $breadrumbStructure[] = array(
+        __('Słownik', 'rgm'),
+        get_post_type_archive_link('rgm_phrase')
+      );
+      $breadrumbStructure[] = array(
+        (__('Frazy na literę', 'rgm') . ': ' . '<b>' . strtoupper(strip_tags($_GET['litera']))) . '</b>',
+        false
+      );
+    }else{
+      $breadrumbStructure[] = array(
+        __('Słownik', 'rgm'),
+        false
+      );
+    }
+  }
   elseif(is_page() || is_single()){
+    $breadrumbStructure[] = array(
+      get_the_title(),
+      false
+    );
+  }
+  else{
     $breadrumbStructure[] = array(
       get_the_title(),
       false
