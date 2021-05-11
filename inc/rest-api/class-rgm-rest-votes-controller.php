@@ -50,7 +50,7 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
       $registered = $this->get_collection_params();
       $args       = array();
 
-
+      return new WP_REST_Response( array('trololo' => 'dev'), 200 );
 
 
     }
