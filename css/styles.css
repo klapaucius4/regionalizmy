@@ -234,7 +234,11 @@ img::-moz-selection {
 }
 
 ul {
-  list-style: lower-alpha;
+  list-style: disc;
+}
+
+ul.list-style {
+  list-style: none;
 }
 
 ul.list-style li::before {

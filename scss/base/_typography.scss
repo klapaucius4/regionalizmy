@@ -91,9 +91,10 @@ body {
 
   ul {
 
-    list-style: lower-alpha;
-    &.list-style {
+    list-style: disc;
 
+    &.list-style {
+      list-style: none;
       li::before {
         display: inline-block;
       }
@@ -105,5 +106,5 @@ body {
       }
 
     }
-    
+
   }
