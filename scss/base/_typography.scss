@@ -88,3 +88,15 @@ body {
   .color-primary {
     color: $themeColor1;
   }
+
+  ul {
+    list-style: lower-alpha;
+    &.list-style {
+      &--pushpin{
+        li::before {
+          display: inline-block;
+          content: "📌";
+        }
+      }
+    }
+  }

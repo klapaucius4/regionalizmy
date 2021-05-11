@@ -233,6 +233,15 @@ img::-moz-selection {
   color: #D4213D;
 }
 
+ul {
+  list-style: lower-alpha;
+}
+
+ul.list-style--pushpin li::before {
+  display: inline-block;
+  content: "📌";
+}
+
 /* layout */
 #mainNav {
   position: absolute;
