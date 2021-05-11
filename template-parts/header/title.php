@@ -1,7 +1,7 @@
 <?php
 if($breadcrumbs = get_breadcrumb_structure()){
     if( isset($breadcrumbs[count($breadcrumbs)-1]) ){
-        echo $breadcrumbs[count($breadcrumbs)-1];
+        echo $breadcrumbs[count($breadcrumbs)-1][0];
     }
 }
 // if(is_singular('rgm_phrase')){
