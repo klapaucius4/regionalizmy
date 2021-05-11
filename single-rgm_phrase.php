@@ -66,7 +66,7 @@
                         <th scope="row"><i class="fas fa-book-medical mr-2"></i><?= __('Synonimy'); ?></th>
                         <td>
                           <?php if($synonymsList): ?>
-                            <ul class="list-style--pushpin">
+                            <ul class="list-style list-style--pushpin">
                               <?php foreach($synonymsList as $synonym): ?>
                                 <li><a href="<?= $synonym[2]; ?>"><?= $synonym[1]; ?></a></li>
                               <?php endforeach; ?>
