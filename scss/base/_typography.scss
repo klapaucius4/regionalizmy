@@ -92,11 +92,12 @@ body {
   ul {
 
     list-style: disc;
+    margin: 0;
 
     &.list-style {
       list-style: none;
       padding: 0;
-      
+
       li::before {
         content: ">";
         display: inline-block;
