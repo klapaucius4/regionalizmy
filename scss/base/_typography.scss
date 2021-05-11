@@ -90,13 +90,20 @@ body {
   }
 
   ul {
+
     list-style: lower-alpha;
     &.list-style {
+
+      li::before {
+        display: inline-block;
+      }
+
       &--pushpin{
         li::before {
-          display: inline-block;
           content: "📌";
         }
       }
+
     }
+    
   }

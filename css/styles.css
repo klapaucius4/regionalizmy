@@ -237,8 +237,11 @@ ul {
   list-style: lower-alpha;
 }
 
-ul.list-style--pushpin li::before {
+ul.list-style li::before {
   display: inline-block;
+}
+
+ul.list-style--pushpin li::before {
   content: "📌";
 }
 
