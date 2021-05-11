@@ -46,11 +46,10 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
       }
   
   
-      // Retrieve the list of registered collection query parameters.
-      $registered = $this->get_collection_params();
-      $args       = array();
+      $rgmVotes = new RGM_Database('wp_rgm_votes');
 
-      return new WP_REST_Response( array('trololo' => 'dev'), 200 );
+
+      return new WP_REST_Response( $rgmVotes->get_all(), 200 );
 
 
     }
