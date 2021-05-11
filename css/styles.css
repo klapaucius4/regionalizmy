@@ -239,9 +239,11 @@ ul {
 
 ul.list-style {
   list-style: none;
+  padding: 0;
 }
 
 ul.list-style li::before {
+  content: ">";
   display: inline-block;
 }
 

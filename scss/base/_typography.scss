@@ -95,7 +95,10 @@ body {
 
     &.list-style {
       list-style: none;
+      padding: 0;
+      
       li::before {
+        content: ">";
         display: inline-block;
       }
 
