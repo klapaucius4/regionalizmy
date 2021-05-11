@@ -49,7 +49,7 @@ class RGM_REST_Votes_Controller extends RGM_REST_Controller {
       $rgmVotes = new RGM_Database('wp_rgm_votes');
 
 
-      return new WP_REST_Response( $rgmVotes->get_all(), 200 );
+      return new WP_REST_Response( $rgmVotes->get_all('id DESC'), 200 );
 
 
     }
