@@ -23,6 +23,11 @@
           letter-spacing: 1px;
           text-transform: uppercase;
         }
+        &.my-account {
+          > a {
+            color: red;
+          }
+        }
       }
     }
     @media only screen and (min-width: 992px) {

@@ -280,6 +280,10 @@ ul.list-style--pushpin li::before {
   text-transform: uppercase;
 }
 
+#mainNav .navbar-nav > li.nav-item.my-account > a {
+  color: red;
+}
+
 @media only screen and (min-width: 992px) {
   #mainNav {
     border-bottom: 1px solid transparent;
