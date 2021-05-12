@@ -25,7 +25,9 @@
         }
         &.my-account {
           > a {
-            color: red;
+            > span {
+              content: 'trololo';
+            }
           }
         }
       }
