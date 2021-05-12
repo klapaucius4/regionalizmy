@@ -26,8 +26,10 @@
         &.my-account {
           > a {
             > span {
+              display: none;
+            }
+            &:before {
               content: 'trololo';
-              color: green;
             }
           }
         }
