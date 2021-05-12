@@ -282,6 +282,7 @@ ul.list-style--pushpin li::before {
 
 #mainNav .navbar-nav > li.nav-item.my-account > a > span {
   content: 'trololo';
+  color: green;
 }
 
 @media only screen and (min-width: 992px) {
