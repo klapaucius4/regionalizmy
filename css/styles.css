@@ -249,7 +249,7 @@ ul.list-style li::before {
 }
 
 ul.list-style--pushpin li::before {
-  content: "1F4CC";
+  content: "\01F4CC";
 }
 
 /* layout */
