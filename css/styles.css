@@ -546,13 +546,13 @@ input[type='radio']:after, input[type='radio']:checked:after {
 }
 
 input[type='radio']:after {
-  background-color: #495057;
-  border: 2px solid #fff;
+  background-color: #dee2e6;
+  border: 2px solid #495057;
 }
 
 input[type='radio']:checked:after {
   background-color: #D4213D;
-  border: 2px solid #fff;
+  border: 2px solid #495057;
 }
 
 #rgm-map {
