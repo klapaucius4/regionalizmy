@@ -518,6 +518,34 @@ footer .copyright {
   border: none;
 }
 
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #dee2e6;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #fff;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #D4213D;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #fff;
+}
+
 /* components */
 .ui-menu {
   z-index: 1050;
