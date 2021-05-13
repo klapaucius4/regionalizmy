@@ -136,6 +136,82 @@ Sass/
 }
 
 /* base */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
 body {
   font-size: 18px;
   color: #212529;
@@ -518,6 +594,21 @@ footer .copyright {
   border: none;
 }
 
+/* components */
+.ui-menu {
+  z-index: 1050;
+}
+
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+* html .ui-autocomplete {
+  height: 200px;
+}
+
 input[type='radio']:after {
   width: 15px;
   height: 15px;
@@ -533,10 +624,10 @@ input[type='radio']:after {
 }
 
 input[type='radio']:checked:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  top: -4px;
   left: -1px;
   position: relative;
   background-color: #D4213D;
@@ -544,21 +635,6 @@ input[type='radio']:checked:after {
   display: inline-block;
   visibility: visible;
   border: 2px solid #fff;
-}
-
-/* components */
-.ui-menu {
-  z-index: 1050;
-}
-
-.ui-autocomplete {
-  max-height: 200px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-* html .ui-autocomplete {
-  height: 200px;
 }
 
 #rgm-map {
