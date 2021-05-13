@@ -9,3 +9,26 @@
 * html .ui-autocomplete {
     height: 200px;
 }
+
+input[type='radio']{
+    &:after, &:checked:after {
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+        top: -4px;
+        left: -1px;
+        position: relative;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+    }
+    &:after {
+        background-color: $gray-200;
+        border: 2px solid $gray-600;
+    }
+    &:checked:after {
+        background-color: $themeColor1;
+        border: 2px solid $gray-600;
+    }
+    
+}
