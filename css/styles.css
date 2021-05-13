@@ -546,7 +546,7 @@ input[type='radio']:after, input[type='radio']:checked:after {
 }
 
 input[type='radio']:after {
-  background-color: #dee2e6;
+  background-color: #495057;
   border: 2px solid #fff;
 }
 

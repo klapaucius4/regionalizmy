@@ -23,7 +23,7 @@ input[type='radio']{
         visibility: visible;
     }
     &:after {
-        background-color: $gray-300;
+        background-color: $gray-700;
         border: 2px solid $white;
     }
     &:checked:after {
