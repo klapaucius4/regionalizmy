@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+  <?php while(have_posts()): the_post(); ?>
   <section class="section-space">
     <div class="container">
       <div class="row">
@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-</section>
-
+  </section>
+  <?php endwhile; ?>
 <?php
 get_footer();
