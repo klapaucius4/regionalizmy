@@ -765,11 +765,6 @@ form .form-group:first-child .floating-label-form-group {
   }
 }
 
-.vote-buttons .btn {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .single-section__data table tbody tr th {
   font-weight: normal;
   width: 25%;
