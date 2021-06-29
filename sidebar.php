@@ -3,11 +3,11 @@
     <div class="sidebar__card">
         <h5 class="card-header sidebar__card__header"><?= __('Znajdź regionalizm', 'rgm'); ?></h5>
         <div class="card-body">
-            <form action="<?= get_post_type_archive_link('rgm_phrase'); ?>" method="GET">
+            <form action="<?= get_post_type_archive_link('rgm_phrase'); ?>" method="get">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="<?= __('Znajdź regionalizm', 'rgm'); ?>">
                     <span class="input-group-append">
-                    <button class="btn--smaller btn-secondary" type="button"><?= __('Szukaj', 'rgm'); ?></button>
+                    <button class="btn--smaller btn-secondary" type="submit"><?= __('Szukaj', 'rgm'); ?></button>
                     </span>
                 </div>
             </form>
